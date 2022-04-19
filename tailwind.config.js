@@ -11,8 +11,10 @@ module.exports = {
       dark: 'black',
       light: 'white',
       primary: '#01559A',
+      cyan: '#A5DCE3',
       accent: '#D25C78',
       red: '#D25C78',
+      white: '#ffffff',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],

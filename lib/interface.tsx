@@ -9,6 +9,14 @@ export type CommonType = {
   data: Common
 }
 
+export type LanguagesType = {
+  he: string
+  en: string
+  ar: string
+  am: string
+  ti: string
+}
+
 export type Homepage = {
   title: string
   description: string

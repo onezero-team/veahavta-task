@@ -8,5 +8,13 @@ export const Button = ({
   type?: string
   text?: string
 }) => {
-  return <button className={`${className}`}>{text}</button>
+  console.log('text:', text)
+
+  return (
+    <button
+      className={`${className} bg-icon-bg text-white font-bold text-xl rounded-full px-7 py-2 leading-9 pointer`}
+    >
+      {text}
+    </button>
+  )
 }
