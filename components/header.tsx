@@ -8,13 +8,15 @@ export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
   return (
     <>
+
       <OneZeroSkipToMainContent
         text={'skipToMainContent'}
         dir={dir}
         className={'bg-light text-primary'}
       />
-      <header className="h-header z-10 pt-4 px-4">
+      <header className="h-header z-10 pt-4 px-4 header" >
         <div className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg p-3 bg-light rounded-lg">
+
           <Logo />
           <ul className="flex flex-row gap-x-2">
             <li>
@@ -29,7 +31,9 @@ export default function Header({ data }: CommonType) {
             </li>
           </ul>
         </div>
+
       </header>
+  
     </>
   )
 }
