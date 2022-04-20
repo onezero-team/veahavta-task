@@ -35,7 +35,9 @@ export default function Banner({ data }: HomePageType) {
           <PageSubHeader>{data.homepage.description}</PageSubHeader>
           <Button
             text={data.homepage.getToKnowUsButton}
-            className={'my-9'}
+            className={
+              'my-9 bg-icon-bg hover:bg-blue text-white font-bold text-xl px-7 py-2 rounded-full'
+            }
           ></Button>
         </div>
 

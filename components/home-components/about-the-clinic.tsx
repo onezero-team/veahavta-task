@@ -18,8 +18,10 @@ export default function AboutTheClinic({ data }: HomePageType) {
           </h2>
           <p className="text-[18px]">{data.homepage.aboutUsText}</p>
           <Button
-            text={data.homepage.getToKnowUsButton}
-            className={'my-9'}
+            text={data.homepage.aboutUsButton}
+            className={
+              'my-9 bg-icon-bg hover:bg-blue text-white font-bold text-base px-14 rounded-full py-1'
+            }
           ></Button>
         </div>
       </WrapperLarge>

@@ -31,6 +31,7 @@ module.exports = {
         success: '#7AD17C',
         red: '#D25C78',
         blue: '#01559A',
+        'input-txt': '#52525B',
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
         cc: '',

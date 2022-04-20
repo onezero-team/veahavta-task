@@ -8,7 +8,7 @@ export default function WhatWeDo({ data }: HomePageType) {
 
   return (
     <WrapperLarge>
-      <section className="what-we-do">
+      <section className="what-we-do mb-64">
         <div className="header-container flex flex-col items-center">
           <h3 className="text-red text-xl font-normal mt-10 mb-3">
             {data.homepage.whatWeDoHeading}
