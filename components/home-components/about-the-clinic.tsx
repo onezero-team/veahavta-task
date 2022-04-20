@@ -1,8 +1,6 @@
 import { HomePageType } from '@/lib/interface'
-import Image from 'next/image'
 
 import { WrapperLarge } from '../wrapper'
-import HandsImg from '../../public/assets/img/hands.png'
 import { Button } from '../data-components/button'
 
 export default function AboutTheClinic({ data }: HomePageType) {

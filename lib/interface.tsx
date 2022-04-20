@@ -1,7 +1,16 @@
+import { array } from 'yup'
+
 export type HomePageType = {
   data: {
     homepage: Homepage
     common: Common
+  }
+}
+export type WhatWeDoCardType = {
+  card: {
+    title: string
+    text: string
+    imagePath: string
   }
 }
 

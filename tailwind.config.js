@@ -33,6 +33,7 @@ module.exports = {
         blue: '#01559A',
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
+        cc: '',
       },
       text: {
         medium: 'md:text-xl',
