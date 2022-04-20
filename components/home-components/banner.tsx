@@ -27,7 +27,7 @@ export default function Banner({ data }: HomePageType) {
 
   return (
     <div id="top-header">
-      <div className="wrapper">
+      <div className="wrapper overflow-hidden">
         <div className="background"></div>
 
         <div className="flex flex-col items-center">
