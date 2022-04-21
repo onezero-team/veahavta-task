@@ -2,9 +2,7 @@ import { HomePageType } from '@/lib/interface'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
 import { v4 as uuidv4 } from 'uuid'
-import { Button } from '../data-components/button'
 import Image from 'next/image'
-import Footer from '../footer'
 
 export default function WhatWeDo({ data }: HomePageType) {
   return (
@@ -28,12 +26,12 @@ export default function WhatWeDo({ data }: HomePageType) {
 
       <style jsx>{`
         .card {
-          border: 2px solid black;
+          border: 2px solid lightgrey;
           margin: 100px 20px;
           padding: 10px;
           border-radius: 10px;
-          width: 300px;
-          heigth: 300px;
+          width: 400px;
+          heigth: 400px;
         }
         .whatWeDoHeading {
           color: red;
