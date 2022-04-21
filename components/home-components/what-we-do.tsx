@@ -47,7 +47,7 @@ export default function WhatWeDo({ data }: HomePageType) {
           justify-content: center;
         }
         .cardTitle {
-          color: {theme.extend.colors.contact-bg};
+          color:;
         }
       `}</style>
     </WrapperLarge>

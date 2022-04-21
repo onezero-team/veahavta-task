@@ -1,8 +1,11 @@
 import React from 'react'
+import { HomePageType } from '@/lib/interface'
+import { WrapperLarge } from '../wrapper'
+
 import { Formik, Field, Form } from 'formik'
 const Basic = () => (
-  <div className="commonForm grid grid-col-1 ">
-    <h1>Sign Up</h1>
+  <WrapperLarge>
+  <div className="commonForm grid">
     <Formik
       className="formik"
       initialValues={{
@@ -15,9 +18,8 @@ const Basic = () => (
         alert(JSON.stringify(values, null, 2))
       }}
     >
-      <Form className="form">
-        <label className="label" htmlFor="firstName">
-          First Name
+      <Form className="form grid grid-col-2">
+        <label className="label" htmlFor="firstName">firstName
         </label>
         <Field
           className="field"
@@ -76,18 +78,20 @@ const Basic = () => (
     <style jsx>{`
       .formik,
       .form,
-      .field,
       .button,
       .commonForm {
         border: 1px solid black;
-        border-radius: 5px;
-        background: white;
+        border-radius:10px;
+        background: lightgrey;
       }
       .commonForm {
-        height: 400px;
+        height:400px;
+        width: 400px;
       }
+    
     `}</style>
   </div>
+  </WrapperLarge>
 )
 
 export default Basic

@@ -24,7 +24,7 @@ export default function Banner({ data }: HomePageType) {
           <div className="img7 -mt-36 ml-auto -mr-26"></div>
         </div>
         <Button
-          className="button"
+          className="button text-center"
           text={data.homepage.getToKnowUsButton}
         ></Button>
 

@@ -28,6 +28,6 @@
     "components/home-components",
     "components/data-components/card.tsx",
     "components/footer"
-  ],
+, "components/formik/Formik.js"  ],
   "exclude": ["node_modules"]
 }
