@@ -3,7 +3,6 @@ import themePreval from '@/lib/theme.preval'
 import React from 'react'
 import { PageHeader } from '../data-components/header-text'
 import { Button } from '../data-components/button';
-import pic1 from "../images/Rectangle.png"
 
 export default function Banner({ data }: HomePageType) {
   return (
@@ -11,9 +10,8 @@ export default function Banner({ data }: HomePageType) {
       <div className="wrapper text-center">
         <PageHeader>{data.homepage.title}</PageHeader>
         <h2 className="banner text-center text-xl">{data.homepage.description}</h2>
-   
         <Button
-          className="text-center text-lg mt-16"
+          className="text-center text-lg mt-40"
           text={data.homepage.getToKnowUsButton}
         ></Button>
 
@@ -58,31 +56,27 @@ export default function Banner({ data }: HomePageType) {
           }
           .img1 {
             z-index: 0;
-            background: grey;
+            background: lightgrey;
           }
           .img2 {
             z-index: 1;
-            background: green;
+            background: lightgreen;
           }
           .img3 {
             z-index: 0;
-            background: yellow;
+            background: lightyellow;
           }
           .img4 {
             z-index: 0;
-            background: red;
+            background: lightpink;
           }
           .img5 {
             z-index: 0;
-            background: white;
+            background: lightgreen;
           }
           .img6 {
             z-index: 1;
             background: blue;
-          }
-          .img7 {
-            z-index: 1;
-            background: brown;
           }
        
           .banner{

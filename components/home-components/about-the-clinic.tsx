@@ -9,7 +9,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
     <WrapperLarge>
       <div className="grid grid-cols-2">
         <div>
-          <h1 className="aboutImg"></h1>
+          <img className="aboutImg"></img>
         </div>
         <div>
           <h1 className="aboutHeading mt-32">{data.homepage.aboutHeading}</h1>
@@ -26,10 +26,10 @@ export default function AboutTheClinic({ data }: HomePageType) {
         <style jsx>{`
           .aboutImg {
             transform: scale(0.7);
-            background: lightgrey;
             width: 702px;
             height: 628px;
-            border:2px solid orange;
+            border : 2px solid orange;
+            background: lightgrey;
           }
           .aboutTitle {
             width: 350px;
