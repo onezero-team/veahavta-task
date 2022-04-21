@@ -54,7 +54,7 @@ export default function Footer({ data }: CommonType) {
             </div>
 
             <div className="footer-menu flex flex-col items-start justify-start">
-              <h2 className="text-xl font-bold">{data.footerMenuTitle}</h2>
+              <h2 className="text-xl font-bold mb-2">{data.footerMenuTitle}</h2>
               <ul>
                 <li></li>
                 <li>{data.footerContactUsTitle}</li>
@@ -64,7 +64,7 @@ export default function Footer({ data }: CommonType) {
 
             <div className="footer-contact flex flex-col items-center">
               <div>
-                <h2 className="text-xl font-bold">
+                <h2 className="text-xl font-bold mb-2">
                   {data.footerContactUsTitle}
                 </h2>
                 {contactItems.map((item, idx) => {

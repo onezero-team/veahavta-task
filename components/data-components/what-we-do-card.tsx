@@ -1,7 +1,7 @@
 export const WhatWeDoCard = ({ card }: { card: any }) => {
   return (
     <>
-      <div className="what-we-do-card flex flex-col w-[338px] h-[480px] shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-[31px]">
+      <div className="what-we-do-card flex flex-col w-[150px] sm:w-[338px] sm:h-[480px] shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-[31px]">
         <div className="card-thumbnail bg-contact-bg w-full flex items-center rounded-t-[31px]">
           <div className="card-img w-[128px] h-[128px] bg-cover my-[55px] mx-[100px]"></div>
         </div>

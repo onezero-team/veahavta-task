@@ -7,8 +7,8 @@ export default function WhatWeDo({ data }: HomePageType) {
   console.log('data:', data)
 
   return (
-    <WrapperLarge>
-      <section className="what-we-do mb-64">
+    <WrapperLarge id="what-we-do">
+      <section className="what-we-do mb-65">
         <div className="header-container flex flex-col items-center">
           <h3 className="text-red text-xl font-normal mt-10 mb-3">
             {data.homepage.whatWeDoHeading}
@@ -19,7 +19,7 @@ export default function WhatWeDo({ data }: HomePageType) {
         </div>
 
         <div className="cards-container flex justify-center">
-          <div className="cards-list grid grid-cols-4 gap-6 items-center w-fit">
+          <div className="cards-list grid grid-cols-2 sm:grid-cols-4 gap-6 items-center w-fit mb-[205px]">
             {data.homepage.whatWeDoCards.map((card, idx) => (
               <WhatWeDoCard card={card} key={idx} />
             ))}

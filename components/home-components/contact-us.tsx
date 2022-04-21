@@ -6,7 +6,7 @@ import { ContactForm } from '../data-components/contact-form'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
-    <WrapperLarge>
+    <WrapperLarge id="contact-us">
       <section className="contact-us h-[650px] bg-contact-bg relative">
         <div className="right-img absolute w-[316px] h-[316px] right-[-132px] top-[33px] bg-no-repeat opacity-30"></div>
         <div className="left-img absolute w-[297px] h-[297px] left-[-15px] bottom-[-70px] bg-no-repeat opacity-30"></div>

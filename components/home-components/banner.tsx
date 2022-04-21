@@ -26,11 +26,11 @@ export default function Banner({ data }: HomePageType) {
   ]
 
   return (
-    <div id="top-header">
-      <div className="wrapper overflow-hidden">
+    <div id="top-header" className="flex sm:inline-block w-full">
+      <div className="wrapper overflow-hidden h-fit sm:h-[780px]">
         <div className="background"></div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center">
           <PageHeader>{data.homepage.title}</PageHeader>
           <PageSubHeader>{data.homepage.description}</PageSubHeader>
           <Button
@@ -45,7 +45,7 @@ export default function Banner({ data }: HomePageType) {
           return (
             <div
               key={position.class}
-              className={`absolute ${position.class} w-[315px] h-[380px]`}
+              className={`absolute ${position.class} w-[315px] h-[380px] hidden sm:block`}
             >
               <Image src={position.name} alt="rect" />
             </div>
@@ -57,7 +57,6 @@ export default function Banner({ data }: HomePageType) {
             margin-top: -${themePreval.height.header};
             padding-top: ${themePreval.height.header};
             position: relative;
-            height: 780px;
           }
           div.background {
             position: absolute;

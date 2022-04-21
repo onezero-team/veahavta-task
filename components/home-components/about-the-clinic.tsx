@@ -6,7 +6,10 @@ import { Button } from '../data-components/button'
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
     <>
-      <WrapperLarge className="bg-white grid-cols-2 gap-28 pt-24 pb-48 px-60">
+      <WrapperLarge
+        id="about-us"
+        className="bg-white grid-cols-1 sm:grid-cols-2 gap-28 pt-24 pb-48 px-60"
+      >
         <div className="about-img w-[503px] h-[450px] bg-cover"></div>
 
         <div className="about-description">
