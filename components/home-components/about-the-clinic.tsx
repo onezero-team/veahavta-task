@@ -12,7 +12,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
           <h1 className="aboutImg"></h1>
         </div>
         <div>
-          <h1 className="aboutHeading">{data.homepage.aboutHeading}</h1>
+          <h1 className="aboutHeading mt-32">{data.homepage.aboutHeading}</h1>
 
           <h1 className="text-4xl font-bold aboutTitle">
             {data.homepage.aboutTitle}

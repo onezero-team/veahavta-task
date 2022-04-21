@@ -9,12 +9,12 @@ import {ButtonWhite} from "../data-components/buttonWhite"
 export default function ContactUs({ data }: HomePageType) {
   return (
     <WrapperLarge>
-     <div className="contactUs flex flex-col-2">
+     <div className="contactUs flex   justify-center">
        <div className="part" >
-     <ButtonWhite className='contactUsBtn font-bold text-center' text={data.homepage.contactUsHeading}></ButtonWhite>
+     <ButtonWhite className='contactUsBtn font-bold ml-20' text={data.homepage.contactUsHeading}></ButtonWhite>
       <h1 className='contactUsTitle text-3xl font-bold text-center'>{data.homepage.contactUsTitle}</h1>
-      <h3 className='contactUsText text-xl text-center' >{data.homepage.contactUsText}</h3>
-      <h1 className="flex flex-row-2">
+      <h3 className="contactUsText text-lg w-80 text-center">{data.homepage.contactUsText}</h3>
+      <h1 className="flex flex-row-2 text-md ">
         {data.common.contactUsLinks.map((link) => (
           <div key={uuidv4()} className="link">
             <img src={link.imagePath}></img>
@@ -40,6 +40,10 @@ export default function ContactUs({ data }: HomePageType) {
         .basic{
           margin-top: -20px;
           
+        }
+        .contactUsBtn{
+          margin-rigth: 300px;
+          margin-top: 30px;
         }
       `}</style>
       </div>

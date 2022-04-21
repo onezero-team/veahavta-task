@@ -1,7 +1,7 @@
 import React from 'react'
 import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
-
+import { Button } from '../data-components/button'
 import { Formik, Field, Form } from 'formik'
 const Basic = () => (
   <WrapperLarge>
@@ -69,9 +69,9 @@ const Basic = () => (
           name="fedback"
           type="text"
         />
-        <button className="button" type="submit">
+        <Button className="button" type="submit">
           Submit
-        </button>
+        </Button>
       </Form>
     </Formik>
 
@@ -85,7 +85,7 @@ const Basic = () => (
         background: lightgrey;
       }
       .commonForm {
-        height:400px;
+        height:500px;
         width: 400px;
       }
     

@@ -15,10 +15,10 @@ export default function WhatWeDo({ data }: HomePageType) {
       <h1 className="whatWeDoTitle text-center text-5xl">
         {data.homepage.whatWeDoTitle}
       </h1>
-      <h1 className="container  flex flex-row-4">
+      <h1 className="container items-stretch flex flex-row-4">
        
         {data.homepage.whatWeDoCards.map((card) => (
-          <div key={uuidv4()} className="card ">
+          <div key={uuidv4()} className="card">
             <Image height="50px" width="50px" className="whatWeDoImg"  src={card.imagePath}></Image>
             <div className="cardTitle">{card.title}</div>
             <div>{card.text}</div>
@@ -36,18 +36,19 @@ export default function WhatWeDo({ data }: HomePageType) {
           heigth: 300px;
         }
         .whatWeDoHeading {
-          color: black;
+          color: red;
+        }
+        .whatWeDoTitle{
+          font-weight:bold;
         }
         .whatWeDoingImg{
           border: 1px solid black;
         }
         .container {
-          margin: auto;
-          align-items: center;
-          justify-content: center;
+         height :400px;
         }
         .cardTitle {
-          color:;
+          color: blue;
         }
       `}</style>
     </WrapperLarge>

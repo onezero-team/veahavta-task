@@ -18,7 +18,8 @@ export const ButtonWhite = ({
             color: blue;
             border-radius: 50px;
             width: auto;
-            padding: 0 20px;
+            padding: 5px 20px;
+            font-weight: bold;
           }
         `}</style>
       </button>
