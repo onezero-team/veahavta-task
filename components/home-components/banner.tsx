@@ -2,7 +2,8 @@ import { HomePageType } from '@/lib/interface'
 import themePreval from '@/lib/theme.preval'
 import React from 'react'
 import { PageHeader } from '../data-components/header-text'
-import { Button } from '../data-components/button'
+import { Button } from '../data-components/button';
+import pic1 from "../images/Rectangle.png"
 
 export default function Banner({ data }: HomePageType) {
   return (

@@ -8,37 +8,38 @@ import { ButtonWhite } from '../data-components/buttonWhite'
 export default function ContactUs({ data }: HomePageType ) {
   return (
     <WrapperLarge>
-      <div className="contactUs flex justify-center">
-        <div className="part text-center">
-          <ButtonWhite className="contactUsBtn font-bold ml-20" text={data.homepage.contactUsHeading}></ButtonWhite>
+      <div className="contactUs flex justify-center ">
+        <div className="part text-center mt-20">
+          <ButtonWhite className="contactUsBtn font-bold ml-10" text={data.homepage.contactUsHeading}></ButtonWhite>
           <h1 className="contactUsTitle text-3xl font-bold text-center">{data.homepage.contactUsTitle}</h1>
-          <h3 className="contactUsText text-lg w-80 text-center">{data.homepage.contactUsText}</h3>
+          <h3 className="contactUsText text-lg w-80 text-center ">{data.homepage.contactUsText}</h3>
+          <div className='conainer grid grid-cols-2'>
             {data.common.contactUsLinks.map((contact) => (
-              <div key={uuidv4()} className="link text-xs flex flex-col-2">
+              <div key={uuidv4()} className="link text-xs">
                 <img src={contact.imagePath}></img>
                 <div >{contact.text}</div>
                 <div>{contact.linkType}</div>
                 <div>{contact.linkValue}</div>
               </div>
             ))}
+            </div>
         </div>
         <div className="basic">
           <Basic data={data} />
         </div>
         <style jsx>{`
           .link {
-            display: flex;
-            flex-direction: column;
-            flew-wrap: wrap;
             margin: 5px;
             border-radius: 10px;
+            align-items: end;
+
           }
          
           .contactUs {
             background:#F4F3FD;
           }
           .basic {
-            margin-top: -50px;
+            margin-top: -135px;
             margin-bottom: 50px;
             margin-right: 50px;
             background:white;

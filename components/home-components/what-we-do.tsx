@@ -17,7 +17,7 @@ export default function WhatWeDo({ data }: HomePageType) {
        
         {data.homepage.whatWeDoCards.map((card) => (
           <div key={uuidv4()} className="card">
-            <Image height="50px" width="50px" className="whatWeDoImg"  src={card.imagePath}></Image>
+            <img className="whatWeDoImg"  src={card.imagePath}></img>
             <div className="cardTitle">{card.title}</div>
             <div>{card.text}</div>
           </div>
@@ -38,12 +38,15 @@ export default function WhatWeDo({ data }: HomePageType) {
         }
         .whatWeDoTitle{
           font-weight:bold;
+          
         }
         .whatWeDoingImg{
           border: 1px solid black;
         }
         .container {
          height :400px;
+         margin-bottom: 180px;
+
         }
         .cardTitle {
           color: blue;
