@@ -36,10 +36,7 @@ export type Common = {
     imagePath: string
     linkValue: string
   }>
-  appLinks: Array<{
-    text: string
-    relativeLink: string
-  }>
+  appLinks: Array<AppLink>
   languageNames: Array<{
     he: string
     en: string
@@ -57,6 +54,10 @@ export type Common = {
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+}
+export interface AppLink {
+  text: string
+  relativeLink: string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {

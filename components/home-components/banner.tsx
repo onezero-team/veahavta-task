@@ -22,8 +22,8 @@ export default function Banner({ data }: HomePageType) {
             inset: 0;
             background: linear-gradient(
               109.17deg,
-              rgba(1, 157, 177, 0.21) 38.49%,
-              #019db1 98.95%
+              #f4f3fd 38.49%,
+              #d3d1fc 72.36%
             );
           }
         `}</style>
