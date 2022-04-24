@@ -92,7 +92,7 @@ const MenuItems = ({
     <>
       {appLinks.map(({ text, relativeLink }) => (
         <Link key={text} href={relativeLink} passHref>
-          <h1 className={`text-xl ${className}`}>{text}</h1>
+          <h1 className={`cursor-pointer text-xl ${className}`}>{text}</h1>
         </Link>
       ))}
     </>

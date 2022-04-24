@@ -2,12 +2,15 @@ import { HomePageType } from '@/lib/interface'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
 import Image from 'next/image'
-import img from '../../public/assets/images/Rect-about.png'
+import img from '../../public/images/Rect-about.png'
 import { Button } from '../data-components/button'
 
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
-    <div className="max-w-screen-lg mx-auto md:py-10 grid md:grid-cols-2 gap-14">
+    <WrapperLarge
+      id="about-us"
+      className="max-w-screen-lg mx-auto md:py-10 grid md:grid-cols-2 gap-14"
+    >
       <div>
         <Image
           src={img}
@@ -26,6 +29,6 @@ export default function AboutTheClinic({ data }: HomePageType) {
           text={data.homepage?.getToKnowUsButton}
         />
       </div>
-    </div>
+    </WrapperLarge>
   )
 }
