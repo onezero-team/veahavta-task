@@ -4,9 +4,6 @@ import Main from '@/components/main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
 
-// import smoothscroll from 'smoothscroll-polyfill'
-// smoothscroll.polyfill()
-
 export default function Layout({ children, pageProps }: any) {
   const { dir, locale, router } = useLocale()
   if (['/404', '/500'].includes(router.pathname)) {

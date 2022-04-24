@@ -7,7 +7,7 @@ import { ContactForm } from '../data-components/contact-form'
 export default function ContactUs({ data }: HomePageType) {
   return (
     <WrapperLarge>
-      <section className="contact-us h-fit bg-contact-bg relative overflow-x-clip">
+      <section className="contact-us h-fit bg-contact-bg relative overflow-x-clip sm:pb-[60px]">
         <div className="right-img absolute w-[316px] h-[316px] right-[-132px] top-[33px] bg-no-repeat opacity-30 hidden sm:inline-block"></div>
         <div className="left-img absolute w-[297px] h-[297px] left-[-15px] bottom-[-70px] bg-no-repeat opacity-30 hidden sm:inline-block"></div>
 
@@ -34,7 +34,7 @@ export default function ContactUs({ data }: HomePageType) {
             </div>
           </div>
 
-          <div className="contact-form-container mt-8 mb-10 sm:mb-0 sm:mt-[-130px] z-10 flex items-center justify-center">
+          <div className="contact-form-container mt-8 mb-10 sm:mb-0 sm:mt-[-130px] flex items-center justify-center">
             <ContactForm data={data} />
           </div>
         </div>

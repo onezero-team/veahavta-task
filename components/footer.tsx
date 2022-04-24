@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
+import _ from 'lodash'
 import { CommonType } from '@/lib/interface'
+
 import { WrapperLarge } from './wrapper'
 import { Button } from '../components/data-components/button'
 import { FooterContactItem } from '../components/data-components/footer-contact-item'
@@ -16,9 +18,10 @@ export default function Footer({ data }: CommonType) {
 
   useEffect(() => {
     if (data) {
+      const contactUsLinks = _.cloneDeep(data.contactUsLinks)
       const combinedTwoItemsTxt =
-        data.contactUsLinks[0].text + '/' + data.contactUsLinks[1].text
-      const tempArr = data.contactUsLinks
+        contactUsLinks[0].text + '/' + contactUsLinks[1].text
+      const tempArr = contactUsLinks
       tempArr.shift()
       tempArr[0].text = combinedTwoItemsTxt
       const tempAdress = tempArr[1]

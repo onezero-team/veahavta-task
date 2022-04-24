@@ -63,7 +63,10 @@ export default function Header({ data }: CommonType) {
               {data.appLinks.map((link) => {
                 return (
                   <Link href={link.relativeLink} key={link.text}>
-                    <span className="cursor-pointer hover:bg-cyan rounded-sm  sm:px-2 px-2  w-full sm:w-fit">
+                    <span
+                      className="cursor-pointer hover:bg-cyan rounded-sm  sm:px-2 px-2  w-full sm:w-fit"
+                      onClick={toggleMenu}
+                    >
                       {link.text}
                     </span>
                   </Link>
