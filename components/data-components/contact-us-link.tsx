@@ -29,26 +29,24 @@ export const ContactUsLink = ({ link }: { link: any }) => {
     }
   }
 
-  const onLinkClick = () => {
+  const getLinkPath = () => {
     if (link.linkType === 'email') {
-      //For Gmail (user has to be signed in to google)
-      window.location.href =
-        'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=veahavta.clinic@gmail.com&su="Website%20message"'
-
-      //For default email client
-      // window.location.href =
-      //   'mailto:veahavta.clinic@example.com?subject=Subject&body=message%20goes%20here'
+      return 'mailto:veahavta.clinic@example.com?subject=Subject&body=message%20goes%20here'
+    } else if (link.linkType === 'address') {
+      return 'https://www.google.com/maps/dir/?api=1&destination=32.815739,34.997805'
+    } else if (link.linkType === 'tel') {
+      return 'tel:+123456789'
     }
   }
 
   return (
     <>
-      <div className="contact-us-link flex flex-row gap-3">
+      <a
+        href={getLinkPath()}
+        className={`contact-us-link flex flex-row gap-3 'cursor-pointer'}`}
+      >
         <div
-          className={`link-img-container bg-header-blue w-[44px] h-[44px] rounded-full flex items-center justify-center bg-no-repeat ${
-            link.linkType === 'email' ? 'cursor-pointer' : ''
-          }`}
-          onClick={onLinkClick}
+          className={`link-img-container bg-header-blue w-[44px] h-[44px] rounded-full flex items-center justify-center bg-no-repeat`}
         >
           <div className={`link-img ${getImgSize()} bg-cover`}></div>
         </div>
@@ -57,7 +55,7 @@ export const ContactUsLink = ({ link }: { link: any }) => {
           <span className="link-text">{getLinkTxt()}</span>
           <span className="link-value">{getLinkVal()}</span>
         </div>
-      </div>
+      </a>
 
       <style jsx>{`
         div.link-img {

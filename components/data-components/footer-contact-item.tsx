@@ -30,7 +30,7 @@ export const FooterContactItem = ({ link }: { link: any }) => {
   const getClass = () => {
     switch (link.linkType) {
       case 'tel':
-        return 'w-[260px]'
+        return 'w-[133px] sm:w-[260px]'
       case 'address':
         return 'w-[160px]'
       case 'email':
@@ -41,35 +41,50 @@ export const FooterContactItem = ({ link }: { link: any }) => {
     }
   }
 
-  const onLinkClick = () => {
+  const getLinkPath = () => {
     if (link.linkType === 'email') {
-      //For Gmail (user has to be signed in to google)
-      window.location.href =
-        'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=veahavta.clinic@gmail.com&su="Website%20message"'
-
-      //For default email client
-      // window.location.href =
-      //   'mailto:veahavta.clinic@example.com?subject=Subject&body=message%20goes%20here'
+      return 'mailto:veahavta.clinic@example.com?subject=Subject&body=message%20goes%20here'
+    } else if (link.linkType === 'address') {
+      return 'https://www.google.com/maps/dir/?api=1&destination=32.815739,34.997805'
+    } else if (link.linkType === 'tel') {
+      return
     }
   }
 
+  if (!link) return <div></div>
   return (
     <>
-      <div className="contact-us-link flex flex-row gap-3">
-        <div
-          className={`flex items-center justify-center w-[27px] ${
-            link.linkType === 'email' ? 'cursor-pointer' : ''
-          }`}
-          onClick={onLinkClick}
+      {link.linkType !== 'tel' && (
+        <a
+          href={getLinkPath()}
+          className="footer-contact-item flex flex-row gap-3 cursor-pointer mb-2"
         >
-          <div className={`link-img ${getImgSize()} bg-cover`}></div>
-        </div>
+          <div className={`flex items-center justify-center w-[27px]`}>
+            <div className={`link-img ${getImgSize()} bg-cover`}></div>
+          </div>
 
-        <div className="link-description flex flex-col">
-          <span className={`link-text ${getClass()}`}>{link.text}</span>
-        </div>
-      </div>
+          <div className="link-description flex flex-col">
+            <span className={`link-text ${getClass()}`}>{link.text}</span>
+          </div>
+        </a>
+      )}
 
+      {link.linkType === 'tel' && (
+        <div className="footer-contact-item flex flex-row gap-3 cursor-pointer mb-2 ">
+          <div className={`flex items-center justify-center sm:w-[27px]`}>
+            <div className={`link-img ${getImgSize()} bg-cover`}></div>
+          </div>
+
+          <div className="link-description flex flex-col">
+            <a href={'tel:052-1234567'} className={`link-text ${getClass()}`}>
+              {link.text.split('/')[0]}
+            </a>
+            <a href={'tel:052-7654321'} className={`link-text ${getClass()}`}>
+              {link.text.split('/')[1]}
+            </a>
+          </div>
+        </div>
+      )}
       <style jsx>{`
         div.link-img {
           background-image: url('assets/icons/${getImgPath()}');

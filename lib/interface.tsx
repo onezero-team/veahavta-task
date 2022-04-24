@@ -36,11 +36,7 @@ export type Homepage = {
   aboutUsButton: string
   whatWeDoHeading: string
   whatWeDoTitle: string
-  whatWeDoCards: Array<{
-    title: string
-    text: string
-    imagePath: string
-  }>
+  whatWeDoCards: Array<WhatWeDoCardType>
   contactUsHeading: string
   contactUsTitle: string
   contactUsText: string

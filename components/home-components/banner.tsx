@@ -33,12 +33,14 @@ export default function Banner({ data }: HomePageType) {
         <div className="flex flex-col items-center justify-center">
           <PageHeader>{data.homepage.title}</PageHeader>
           <PageSubHeader>{data.homepage.description}</PageSubHeader>
-          <Button
-            text={data.homepage.getToKnowUsButton}
-            className={
-              'my-9 bg-icon-bg hover:bg-blue text-white font-bold text-xl px-7 py-2 rounded-full'
-            }
-          ></Button>
+          <a href="#about-us">
+            <Button
+              text={data.homepage.getToKnowUsButton}
+              className={
+                'my-9 bg-icon-bg hover:bg-blue text-white font-bold text-xl px-7 py-2 rounded-full'
+              }
+            ></Button>
+          </a>
         </div>
 
         {positions.map((position) => {

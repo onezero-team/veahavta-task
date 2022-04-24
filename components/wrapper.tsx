@@ -11,7 +11,7 @@ export function WrapperLarge({
 }: {
   children: React.ReactNode
   className?: string
-  id: string
+  id?: string
 }) {
   return (
     <section id={id} className={`grid ${className}`}>

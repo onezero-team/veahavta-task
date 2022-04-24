@@ -1,16 +1,16 @@
 export const WhatWeDoCard = ({ card }: { card: any }) => {
   return (
     <>
-      <div className="what-we-do-card flex flex-col w-[150px] sm:w-[338px] sm:h-[480px] shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-[31px]">
-        <div className="card-thumbnail bg-contact-bg w-full flex items-center rounded-t-[31px]">
-          <div className="card-img w-[128px] h-[128px] bg-cover my-[55px] mx-[100px]"></div>
+      <div className="what-we-do-card flex flex-col w-[170px] h-60 sm:w-[300px] sm:h-[429px] shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-2xl sm:rounded-3xl">
+        <div className="card-thumbnail bg-contact-bg w-full h-28 sm:h-56 flex items-center rounded-t-2xl sm:rounded-t-3xl">
+          <div className="card-img w-14 h-14 sm:w-28 sm:h-28 bg-cover m-auto"></div>
         </div>
 
-        <div className="card-description pt-[30px] px-[20px]">
-          <h3 className="text-header-blue rtl:text-right ltr:text-left text-xl font-bold">
+        <div className="card-description pt-2 px-3 sm:pt-8 sm:px-5">
+          <h3 className="text-header-blue rtl:text-right ltr:text-left text-base sm:text-xl font-bold">
             {card.title}
           </h3>
-          <p className="text-[18px]">{card.text}</p>
+          <p className=" text-xs sm:text-lg">{card.text}</p>
         </div>
       </div>
 

@@ -3,7 +3,9 @@ import Header from '@/components/header'
 import Main from '@/components/main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
-// import React from 'react'
+
+// import smoothscroll from 'smoothscroll-polyfill'
+// smoothscroll.polyfill()
 
 export default function Layout({ children, pageProps }: any) {
   const { dir, locale, router } = useLocale()
@@ -24,6 +26,7 @@ export default function Layout({ children, pageProps }: any) {
             min-height: 100% !important;
             height: 100%;
             scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
           }
           body {
             min-height: 100% !important;

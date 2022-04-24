@@ -6,13 +6,13 @@ import { ContactForm } from '../data-components/contact-form'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
-    <WrapperLarge id="contact-us">
-      <section className="contact-us h-[650px] bg-contact-bg relative">
-        <div className="right-img absolute w-[316px] h-[316px] right-[-132px] top-[33px] bg-no-repeat opacity-30"></div>
-        <div className="left-img absolute w-[297px] h-[297px] left-[-15px] bottom-[-70px] bg-no-repeat opacity-30"></div>
+    <WrapperLarge>
+      <section className="contact-us h-fit bg-contact-bg relative overflow-x-clip">
+        <div className="right-img absolute w-[316px] h-[316px] right-[-132px] top-[33px] bg-no-repeat opacity-30 hidden sm:inline-block"></div>
+        <div className="left-img absolute w-[297px] h-[297px] left-[-15px] bottom-[-70px] bg-no-repeat opacity-30 hidden sm:inline-block"></div>
 
-        <div className="flex flex-row gap-x-24">
-          <div className="contact-info rtl:pr-[250px] ltr:pl-[250px] pt-[110px] ">
+        <div className="grid grid-cols-1-auto sm:grid-cols-2 gap-x-2 w-fit m-auto">
+          <div className="contact-info w-fit m-auto pt-12sm:pt-28">
             <Button
               text={data.homepage.contactUsHeading}
               className={
@@ -27,14 +27,14 @@ export default function ContactUs({ data }: HomePageType) {
               {data.homepage.contactUsText}
             </p>
 
-            <div className="contact-options grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-4 w-fit">
+            <div className="contact-options grid sm:grid-cols-2 sm:grid-rows-2 gap-x-8 gap-y-4 w-fit sm:mb-14">
               {data.common.contactUsLinks.map((link, idx) => (
-                <ContactUsLink link={link} key={idx} />
+                <ContactUsLink link={link} key={`contact-us-link-${idx}`} />
               ))}
             </div>
           </div>
 
-          <div className="contact-form-container mt-[-130px] z-10">
+          <div className="contact-form-container mt-8 mb-10 sm:mb-0 sm:mt-[-130px] z-10 flex items-center justify-center">
             <ContactForm data={data} />
           </div>
         </div>

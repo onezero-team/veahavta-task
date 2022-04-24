@@ -8,18 +8,20 @@ export default function AboutTheClinic({ data }: HomePageType) {
     <>
       <WrapperLarge
         id="about-us"
-        className="bg-white grid-cols-1 sm:grid-cols-2 gap-28 pt-24 pb-48 px-60"
+        className="bg-white grid-cols-1 sm:grid-cols-2 pt-24 pb-20 sm:pb-48 m-auto w-fit"
       >
-        <div className="about-img w-[503px] h-[450px] bg-cover"></div>
+        <div className="about-img w-[280px] h-[250px] sm:w-[503px] sm:h-[450px] bg-cover flex self-center justify-self-center"></div>
 
-        <div className="about-description">
-          <h3 className="text-header-blue text-xl font-normal mt-10 mb-3">
+        <div className="about-description w-[503px] my-5 mx-6 sm:my-10 sm:mx-12">
+          <h3 className="text-header-blue text-xl font-normal mb-3">
             {data.homepage.aboutHeading}
           </h3>
-          <h2 className="text-5xl font-bold w-[430px] mb-12">
+          <h2 className="text-3xl sm:text-5xl font-bold w-[360px] sm:w-[430px] mb-12">
             {data.homepage.aboutTitle}
           </h2>
-          <p className="text-[18px]">{data.homepage.aboutUsText}</p>
+          <p className="text-[18px] w-[360px] sm:w-fit">
+            {data.homepage.aboutUsText}
+          </p>
           <Button
             text={data.homepage.aboutUsButton}
             className={

@@ -16,7 +16,6 @@ export const ChangeLangButton = ({
     const { pathname, asPath, query } = router
     router.push({ pathname, query }, asPath, { locale: lang })
   }
-  // box-shadow: 0 0 0 2px $clr0, 0 0 0 4px $clr6;
   return (
     <>
       <div

@@ -3,10 +3,8 @@ import { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 import { Button } from '../data-components/button'
-// import { ContactFormField } from '../data-components/contact-form-field'
 
 export const ContactForm = ({ data }: HomePageType) => {
-  console.log('ContactForm => data', data)
   const [formFieldValues] = useState({
     firstname: '',
     lastname: '',
@@ -16,28 +14,15 @@ export const ContactForm = ({ data }: HomePageType) => {
   })
 
   const [isInputValid, setIsInputValid] = useState(false)
-  const [isSubmitMsg, setIsSubmitMsg] = useState(false)
+  const [isSubmitMsgShown, setIsSubmitMsgShown] = useState(false)
 
-  {
-    /* Dynamically render a component if time permits */
+  const onSubmit = (values: any, actions: any) => {
+    setIsSubmitMsgShown(true)
+    actions.resetForm()
   }
-  // const formFields = [
-  //   { fieldType: 'firstname', label: data.common.contactUsFormFirstName },
-  //   { fieldType: 'lastname', label: data.common.contactUsFormLastName },
-  //   { fieldType: 'email', label: data.common.contactUsFormFirstName },
-  //   { fieldType: 'phone', label: data.common.contactUsFormEmail },
-  //   { fieldType: 'message', label: data.common.contactUsFormPhone },
-  // ]
-
-  const onSubmit = (values: any) => {
-    setIsSubmitMsg(true)
-  }
-
-  // contactUsFormSuccessMessage: 'קיבלנו את ההודעה! בקרוב ניצור קשר'
 
   const validate = async (values: any) => {
     const errors: any = {}
-    console.log('values:', values)
 
     if (values.firstname === '') {
       errors.firstname = `*${data.common.contactUsFormErrorFirstNameMissing}`
@@ -75,41 +60,33 @@ export const ContactForm = ({ data }: HomePageType) => {
 
   return (
     <>
-      <div className="contact-form w-[650px] h-[700px] shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-[31px] bg-white relative">
+      <div
+        id="contact-us"
+        className="contact-form w-[365px] sm:w-[650px] h-fit shadow-[0_0_4px_rgba(0,0,0,0.25)] rounded-[31px] bg-white relative"
+      >
         <Formik
           enableReinitialize={true}
           initialValues={formFieldValues}
           validate={validate}
           onSubmit={onSubmit}
-          validateOnChange={false}
+          validateOnChange={true}
           validateOnBlur={true}
         >
           <Form className="">
-            {/* <div className="errors">
-              
-            </div> */}
-
-            <div className="fields-container grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-6 pt-14 px-12">
-              {/* Dynamically render a component if time permits */}
-              {/* {formFields.map((formField, idx) => {
-                return (
-                  <ContactFormField
-                    key={`form-field-${idx}`}
-                    fieldData={formField}
-                  />
-                )
-              })} */}
-
-              <div className="flex flex-col">
-                <label htmlFor="firstname" className="text-2xl font-bold pb-3">
+            <div className="fields-container grid grid-flow-col-dense grid-rows-6-auto sm:grid-flow-row sm:grid-cols-2 sm:grid-rows-2 gap-y-2 sm:gap-x-8 sm:gap-y-5 pt-7 px-7 sm:pt-14 sm:px-12 h-fit">
+              <div className="flex flex-col h-fit">
+                <label
+                  htmlFor="firstname"
+                  className="text-xl sm:text-2xl font-bold pb-3"
+                >
                   {data.common.contactUsFormFirstName}
                 </label>
                 <Field
-                  type="firstname"
+                  type="text"
                   name="firstname"
                   id="firstname"
                   autoFocus
-                  className="form-field w-64 h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
+                  className="form-field w-64 h-10 sm:h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
                 />
                 <ErrorMessage
                   name="firstname"
@@ -118,15 +95,18 @@ export const ContactForm = ({ data }: HomePageType) => {
                 />
               </div>
 
-              <div className="flex flex-col">
-                <label htmlFor="lastname" className="text-2xl font-bold pb-3">
+              <div className="flex flex-col h-fit">
+                <label
+                  htmlFor="lastname"
+                  className="text-xl sm:text-2xl font-bold pb-3"
+                >
                   {data.common.contactUsFormLastName}
                 </label>
                 <Field
-                  type="lastname"
+                  type="text"
                   name="lastname"
                   id="lastname"
-                  className="form-field w-64 h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
+                  className="form-field w-64 h-10 sm:h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
                 />
                 <ErrorMessage
                   name="lastname"
@@ -136,14 +116,17 @@ export const ContactForm = ({ data }: HomePageType) => {
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="email" className="text-2xl font-bold pb-3">
+                <label
+                  htmlFor="email"
+                  className="text-xl sm:text-2xl font-bold pb-3"
+                >
                   {data.common.contactUsFormEmail}
                 </label>
                 <Field
                   type="email"
                   name="email"
                   id="email"
-                  className="form-field w-64 h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
+                  className="form-field w-64 h-10 sm:h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
                 />
                 <ErrorMessage
                   name="email"
@@ -153,14 +136,17 @@ export const ContactForm = ({ data }: HomePageType) => {
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="phone" className="text-2xl font-bold pb-3">
+                <label
+                  htmlFor="phone"
+                  className="text-xl sm:text-2xl font-bold pb-3"
+                >
                   {data.common.contactUsFormPhone}
                 </label>
                 <Field
-                  type="phone"
+                  type="tel"
                   name="phone"
                   id="phone"
-                  className="form-field w-64 h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
+                  className="form-field w-64 h-10 sm:h-14 rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 font-bold text-xl text-input-txt"
                 />
                 <ErrorMessage
                   name="phone"
@@ -170,15 +156,18 @@ export const ContactForm = ({ data }: HomePageType) => {
               </div>
 
               <div className="flex flex-col col-span-2">
-                <label htmlFor="message" className="text-2xl font-bold pb-3">
+                <label
+                  htmlFor="message"
+                  className="text-xl sm:text-2xl font-bold pb-3"
+                >
                   {data.common.contactUsFormMessage}
                 </label>
                 <Field
                   as="textarea"
-                  type="message"
+                  type="text"
                   name="message"
                   id="message"
-                  className="form-field w-[550px] h-[145px] rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 py-4 font-bold text-xl text-input-txt resize-none "
+                  className="form-field w-[320px] sm:w-[550px] sm:h-[145px] rounded-lg drop-shadow-[0_0_4px_rgba(0,0,0,0.25)] px-4 py-4 font-bold text-xl text-input-txt resize-none "
                 />
                 <ErrorMessage
                   name="message"
@@ -189,12 +178,13 @@ export const ContactForm = ({ data }: HomePageType) => {
 
               <Button
                 text={data.common.contactUsFormSendButton}
-                className={
-                  'my-9 bg-icon-bg hover:bg-blue text-white font-bold px-14 py-2 rounded-full mb-0 mt-2 w-fit text-2xl'
-                }
+                className={` text-white font-bold px-14 py-1 sm:py-2 rounded-full my-4 sm:mt-6 sm:mb-12 w-fit text-2xl ${
+                  isInputValid ? 'bg-icon-bg hover:bg-blue' : 'bg-input-txt'
+                }`}
+                isDisabled={!isInputValid}
               ></Button>
 
-              {isInputValid && isSubmitMsg && (
+              {isInputValid && isSubmitMsgShown && (
                 <div className="submit-message absolute inset-x-2/4 translate-x-2/4 translate-y-2/4 bg-success font-bold text-2xl flex items-center justify-center p-3 text-center rounded-lg w-[260px] h-[260px]">
                   <h1 className="">
                     {data.common.contactUsFormSuccessMessage}
