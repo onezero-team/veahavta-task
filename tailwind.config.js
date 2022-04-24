@@ -13,7 +13,6 @@ module.exports = {
       primary: '#01559A',
       accent: '#D25C78',
       red: '#D25C78',
-      purple: '#4E47F9',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],

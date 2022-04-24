@@ -16,24 +16,26 @@ export default function Banner({ data }: HomePageType) {
   const descriptionLines = data.homepage.description.split(',')
   const headerLines = data.homepage.title.split('-')
   const images = [
-    { img: img1, pos: 'top-[0px] right-[1000px]' },
-    { img: img2, pos: 'top-[0px] right-[500px]' },
-    { img: img3, pos: 'top-[90px] right-[100px]' },
-    { img: img4, pos: 'top-[250px] right-[-100px]' },
-    { img: img5, pos: 'top-[540px] right-[250px]' },
-    { img: img6, pos: 'top-[540px] right-[900px]' },
-    { img: img7, pos: 'top-[250px] left-[0px]' },
+    { img: img1, pos: 'top-[-400px] right-[300px]' },
+    { img: img2, pos: 'top-[-400px] right-[-150px]' },
+    { img: img3, pos: 'top-[-300px] right-[-650px]' },
+    { img: img4, pos: 'top-[-140px] right-[-880px]' },
+    { img: img5, pos: 'top-[140px] right-[-550px]' },
+    { img: img6, pos: 'top-[140px] right-[170px]' },
+    { img: img7, pos: 'top-[-100px] right-[500px]' },
   ]
 
   return (
     <div id="top-header">
       <div className="wrapper md:h-[780px] overflow-hidden flex flex-col items-center justify-center">
-        <div className="background">
-          {images.map(({ img, pos }) => (
-            <div key={pos} className={`hidden md:block absolute ${pos}`}>
-              <Image src={img} alt="img" layout="fixed" />
-            </div>
-          ))}
+        <div className="background flex items-center justify-center">
+          <div className="relative">
+            {images.map(({ img, pos }) => (
+              <div key={pos} className={`hidden md:block absolute ${pos}`}>
+                <Image src={img} alt="img" layout="fixed" />
+              </div>
+            ))}
+          </div>
         </div>
         <PageHeader>{`${headerLines[0]}-`}</PageHeader>
         <PageHeader>{headerLines[1]}</PageHeader>
@@ -42,7 +44,7 @@ export default function Banner({ data }: HomePageType) {
           {descriptionLines[1]}.
         </p>
         <Button
-          className="mt-5 rounded-full p-2 bg-purple text-light px-5 font-medium"
+          className="mt-5 rounded-full p-2 bg-icon-bg text-light px-5 font-medium"
           text={data.homepage?.getToKnowUsButton}
         />
 

@@ -31,11 +31,11 @@ const DesktopNavbar = ({
   className?: string
 }) => {
   return (
-    <nav className={`w-full items-center grid grid-cols-3 ${className}`}>
+    <nav className={`w-full items-center grid grid-cols-4 ${className}`}>
       <ul className="flex justify-around col-span-2">
         <MenuItems appLinks={data.appLinks} />
       </ul>
-      <ul className="flex justify-around items-center ">
+      <ul className="flex justify-around items-center col-start-4 ">
         <Flags languageNames={data.languageNames[0]} />
       </ul>
     </nav>

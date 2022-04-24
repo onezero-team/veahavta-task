@@ -20,12 +20,14 @@ export default function AboutTheClinic({ data }: HomePageType) {
           alt="about-clinic"
         />
       </div>
-      <div className="flex flex-col justify-center text-center  rtl:md:text-right ltr:md:text-left">
-        <div className="text-purple text-2xl">{data.homepage.aboutHeading}</div>
+      <div className="flex flex-col justify-center text-center px-10 md:px-5  rtl:md:text-right ltr:md:text-left">
+        <div className="text-header-blue text-2xl">
+          {data.homepage.aboutHeading}
+        </div>
         <div className="font-bold text-5xl">{data.homepage.aboutTitle}</div>
         <p className="mt-5">{data.homepage.aboutUsText}</p>
         <Button
-          className="mt-5 max-w-[185px] rounded-full p-2 bg-purple text-light px-5 font-medium self-center md:self-start"
+          className="mt-5 max-w-[185px] rounded-full p-2 bg-icon-bg text-light px-5 font-medium self-center md:self-start"
           text={data.homepage?.getToKnowUsButton}
         />
       </div>

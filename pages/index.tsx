@@ -18,12 +18,12 @@ export async function getStaticProps({ locale }: NextPageContext) {
 export default function Home({ data }: HomePageType) {
   console.log('Home data\n=========\n', data)
   return (
-    <>
+    <div className="grid grid-cols-1 gap-y-10">
       <Banner data={data} />
       <AboutTheClinic data={data} />
       <WhatWeDo data={data} />
       <ContactUs data={data} />
       Here is the structure of the home page data:
-    </>
+    </div>
   )
 }
