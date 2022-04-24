@@ -10,9 +10,11 @@ import img4 from '../../public/assets/images/Rectangle-4.png'
 import img5 from '../../public/assets/images/Rectangle-5.png'
 import img6 from '../../public/assets/images/Rectangle-6.png'
 import img7 from '../../public/assets/images/Rectangle-7.png'
+import { Button } from '../data-components/button'
 
 export default function Banner({ data }: HomePageType) {
-  const description = data.homepage.description.split(',')
+  const descriptionLines = data.homepage.description.split(',')
+  const headerLines = data.homepage.title.split('-')
   const images = [
     { img: img1, pos: 'top-[0px] right-[1000px]' },
     { img: img2, pos: 'top-[0px] right-[500px]' },
@@ -33,12 +35,16 @@ export default function Banner({ data }: HomePageType) {
             </div>
           ))}
         </div>
-        <PageHeader>{`${data.homepage.title.split('-')[0]}-`}</PageHeader>
-        <PageHeader>{data.homepage.title.split('-')[1]}</PageHeader>
+        <PageHeader>{`${headerLines[0]}-`}</PageHeader>
+        <PageHeader>{headerLines[1]}</PageHeader>
         <p className="text-center mt-3">
-          {description[0]},<br />
-          {description[1]}.
+          {descriptionLines[0]},<br />
+          {descriptionLines[1]}.
         </p>
+        <Button
+          className="mt-5 rounded-full p-2 bg-purple text-light px-5 font-medium"
+          text={data.homepage?.getToKnowUsButton}
+        />
 
         <style jsx>{`
           div.wrapper {

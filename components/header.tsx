@@ -20,7 +20,7 @@ export default function Header({ data }: CommonType) {
       <header className="h-header z-10 lg:pt-4 lg:px-4">
         <div className="grid grid-cols-auto-1fr mx-auto max-w-screen-lg p-3 bg-light rounded-lg">
           <Image
-            src="/icons/veahavta-icon.svg"
+            src="/assets/images/veahavta-icon.svg"
             height={'62px'}
             width={'142px'}
             alt="logo"

@@ -3,11 +3,11 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 const flagsMap: { [key: string]: string } = {
-  ar: '/assets/flags/SAU_2x.png',
-  am: '/assets/flags/ETH_2x.png',
-  en: '/assets/flags/GBR_2x.png',
-  he: '/assets/flags/ISR_2x.png',
-  ti: '/assets/flags/ERI_2x.png',
+  ar: '/assets/flags/SAU_2x.svg',
+  am: '/assets/flags/ETH_2x.svg',
+  en: '/assets/flags/GBR_2x.svg',
+  he: '/assets/flags/ISR_2x.svg',
+  ti: '/assets/flags/ERI_2x.svg',
 }
 
 export const ChangeLangButton = ({
