@@ -3,6 +3,14 @@ import React from 'react'
 import { WrapperLarge } from '../wrapper'
 import Image from 'next/image'
 import { Button } from '../data-components/button'
+import {
+  Formik,
+  Field,
+  Form,
+  useField,
+  FieldAttributes,
+  FieldArray,
+} from 'formik'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
@@ -17,7 +25,7 @@ export default function ContactUs({ data }: HomePageType) {
             <ContactUsInfoSection data={data} />
           </div>
         </div>
-        <div className="form-card flex justify-self-center items-center justify-center h-[700px]  bg-light">
+        <div className="form-card flex xl:justify-self-start justify-self-center items-center justify-center h-[700px]  bg-light">
           <ContactUsForm data={data} />
         </div>
       </div>
@@ -50,7 +58,7 @@ function ContactUsInfoSection({ data }: HomePageType) {
   return (
     <div className="px-10 flex flex-col">
       <Button
-        className="rounded-full w-[120px] p-2 px-4 mb-5 bg-light text-xl text-header-blue font-bold"
+        className="rounded-full w-[130px] p-2 px-4 mb-5 bg-light text-xl text-header-blue font-bold"
         text={data.homepage.contactUsHeading}
       />
       <h1 className="text-4xl font-bold mb-5">
@@ -71,7 +79,7 @@ function ContactUsInfoSection({ data }: HomePageType) {
                 alt={data.linkType}
               />
             </div>
-            <div className="px-4">{data.text}</div>
+            <div className="px-5 ">{data.text}</div>
           </div>
         ))}
       </div>
@@ -82,6 +90,23 @@ function ContactUsInfoSection({ data }: HomePageType) {
 function ContactUsForm({ data }: HomePageType) {
   return (
     <div>
+      <Formik
+        initialValues={{}}
+        onSubmit={(data, { setSubmitting }) => {
+          //setSubmitting(true)
+          // make async call
+          console.log('submit: ', data)
+          //setSubmitting(false)
+        }}
+      >
+        {({ values, errors, isSubmitting }) => (
+          <Form>
+            <Field placeholder="last name" place name="name" type="input" />
+            <Button text="submit" type="submit" />
+          </Form>
+        )}
+      </Formik>
+      <input></input>
       <Button text={data.homepage.contactUsHeading} />
       <h1>{data.homepage.contactUsTitle}</h1>
       <p>{data.homepage.contactUsText}</p>

@@ -11,14 +11,8 @@ export default function AboutTheClinic({ data }: HomePageType) {
       id="about-us"
       className="max-w-screen-lg mx-auto md:py-10 grid md:grid-cols-2 gap-14"
     >
-      <div>
-        <Image
-          src={img}
-          width="702px"
-          height="628px"
-          layout="responsive"
-          alt="about-clinic"
-        />
+      <div className="px-5">
+        <Image src={img} width="702px" height="628px" alt="about-clinic" />
       </div>
       <div className="flex flex-col justify-center text-center px-10 md:px-5  rtl:md:text-right ltr:md:text-left">
         <div className="text-header-blue text-2xl">
