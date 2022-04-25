@@ -22,11 +22,11 @@ export default function Footer({ data }: CommonType) {
         </div>
         <div className="flex flex-col  justify-self-center">
           <Button
-            className="mb-5 w-[128px] rounded-full border-2 p-2 text-header-blue font-bold  px-5 self-center md:self-start"
+            className="mb-5 w-[135px] rounded-full border-2 p-2 text-header-blue font-bold  px-5 self-center md:self-start"
             text={data.footerScheduleButton}
           />
           <Button
-            className="mb-5 w-[128px] rounded-full border-2 p-2 text-header-blue font-bold  px-5 self-center md:self-start"
+            className="mb-5 w-[135px] rounded-full border-2 p-2 text-header-blue font-bold  px-5 self-center md:self-start"
             text={data.footerSupportUsButton}
           />
         </div>

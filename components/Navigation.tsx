@@ -71,7 +71,10 @@ const MobileHamburgerMenu = ({
         } w-full h-full flex-col absolute top-0 right-0 left-0 p-5 bg-light`}
       >
         <ul className="justify-around absolute top-20 ">
-          <Flags languageNames={data.languageNames[0]} />
+          <Flags
+            languageNames={data.languageNames[0]}
+            onClick={() => setIsHamburgerMenuOpen(false)}
+          />
         </ul>
         <ul className=" items-center absolute top-20 rtl:right-40 ltr:left-40">
           <MenuItems
@@ -98,7 +101,7 @@ const MenuItems = ({
     <>
       {appLinks.map(({ text, relativeLink }) => (
         <Link key={text} href={relativeLink || '#top-header'} passHref>
-          <div onClick={(e) => onClick && onClick()}>
+          <div onClick={(e) => onClick && onClick()} className="hover:bg-azure">
             <h1 className={`cursor-pointer text-xl ${className}`}>{text}</h1>
           </div>
         </Link>
@@ -109,15 +112,17 @@ const MenuItems = ({
 
 const Flags = ({
   languageNames,
+  onClick,
 }: {
   languageNames: { [key: string]: any } | undefined
+  onClick?: Function
 }) => {
   return (
     <>
       {languageNames
         ? Object.keys(languageNames).map((key: string) => (
             <li key={key} className="mx-1">
-              <ChangeLangButton lang={key}>
+              <ChangeLangButton lang={key} onClick={onClick}>
                 {languageNames[key]}
               </ChangeLangButton>
             </li>

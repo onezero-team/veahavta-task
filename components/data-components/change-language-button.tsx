@@ -14,15 +14,18 @@ export const ChangeLangButton = ({
   className,
   children,
   lang,
+  onClick,
 }: {
   className?: string
   children?: React.ReactNode
   lang: string
+  onClick?: Function
 }) => {
   const router = useRouter()
   const changeLocale = (lang: string) => {
     const { pathname, asPath, query } = router
     router.push({ pathname, query }, asPath, { locale: lang })
+    if (onClick) onClick()
   }
   return (
     <div>

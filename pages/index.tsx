@@ -16,7 +16,6 @@ export async function getStaticProps({ locale }: NextPageContext) {
 }
 
 export default function Home({ data }: HomePageType) {
-  console.log('Home data\n=========\n', data)
   return (
     <div className="grid grid-cols-1 gap-y-16">
       <Banner data={data} />
