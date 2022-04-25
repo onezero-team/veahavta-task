@@ -18,7 +18,7 @@ const InnerForm = (props: HomePageType & FormikProps<FormValues>): any => {
   const { touched, errors, isSubmitting, data, submitCount } = props
   return (
     <Form>
-      <div className="grid grid-cols-2 gap-7">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
         <div>
           <Field
             type="text"
@@ -69,7 +69,7 @@ const InnerForm = (props: HomePageType & FormikProps<FormValues>): any => {
         as={Input}
       />
       <Button
-        className="rounded-full w-[130px] p-2 mt-8 text-light text-xl bg-header-blue font-bold"
+        className="rounded-full w-[140px] p-3 mt-8 text-light text-2xl bg-header-blue font-bold"
         text={data.common.contactUsFormSendButton}
       />
       {isSubmitting && (

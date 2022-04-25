@@ -27,7 +27,7 @@ export default function Banner({ data }: HomePageType) {
 
   return (
     <div id="top-header">
-      <div className="wrapper md:h-[780px] overflow-hidden flex flex-col items-center justify-center">
+      <div className="wrapper md:h-[780px] overflow-hidden flex flex-col items-center justify-center p-5">
         <div className="background flex items-center justify-center">
           <div className="relative">
             {images.map(({ img, pos }) => (
@@ -37,8 +37,11 @@ export default function Banner({ data }: HomePageType) {
             ))}
           </div>
         </div>
-        <PageHeader>{`${headerLines[0]}-`}</PageHeader>
-        <PageHeader>{headerLines[1]}</PageHeader>
+        <div>
+          <PageHeader>{`${headerLines[0]}-`}</PageHeader>
+          <PageHeader>{headerLines[1]}</PageHeader>
+        </div>
+
         <p className="text-center mt-3">
           {descriptionLines[0]},<br />
           {descriptionLines[1]}.

@@ -20,7 +20,7 @@ export default function ContactUs({ data }: HomePageType) {
             <ContactUsInfoSection data={data} />
           </div>
         </div>
-        <div className="form-card xl:absolute xl:right-[50%] xl:top-[-100px] flex xl:justify-self-start justify-self-center items-center justify-center h-[700px] p-6 bg-light">
+        <div className="form-card xl:absolute xl:right-[50%] xl:top-[-100px] flex xl:justify-self-start justify-self-center items-center justify-center h-[800px] md:h-[700px]  p-6 bg-light">
           <ContactUsForm data={data} />
         </div>
       </div>

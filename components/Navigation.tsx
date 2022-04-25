@@ -74,7 +74,11 @@ const MobileHamburgerMenu = ({
           <Flags languageNames={data.languageNames[0]} />
         </ul>
         <ul className=" items-center absolute top-20 rtl:right-40 ltr:left-40">
-          <MenuItems appLinks={data.appLinks} className="mb-5 text-3xl" />
+          <MenuItems
+            appLinks={data.appLinks}
+            onClick={() => setIsHamburgerMenuOpen(false)}
+            className="mb-5 text-3xl"
+          />
         </ul>
       </nav>
     </>
@@ -84,15 +88,19 @@ const MobileHamburgerMenu = ({
 const MenuItems = ({
   appLinks,
   className,
+  onClick,
 }: {
   appLinks: Array<AppLink>
   className?: string
+  onClick?: Function
 }) => {
   return (
     <>
       {appLinks.map(({ text, relativeLink }) => (
-        <Link key={text} href={relativeLink} passHref>
-          <h1 className={`cursor-pointer text-xl ${className}`}>{text}</h1>
+        <Link key={text} href={relativeLink || '#top-header'} passHref>
+          <div onClick={(e) => onClick && onClick()}>
+            <h1 className={`cursor-pointer text-xl ${className}`}>{text}</h1>
+          </div>
         </Link>
       ))}
     </>
