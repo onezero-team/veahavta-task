@@ -44,7 +44,7 @@ export default function Banner({ data }: HomePageType) {
           {descriptionLines[1]}.
         </p>
         <Button
-          className="mt-5 rounded-full p-2 bg-icon-bg text-light px-5 font-medium"
+          className="mt-5 rounded-full p-2 bg-icon-bg text-light px-5 font-bold"
           text={data.homepage?.getToKnowUsButton}
         />
 

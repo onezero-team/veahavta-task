@@ -9,7 +9,7 @@ export default function WhatWeDo({ data }: HomePageType) {
       <div className="text-center text-red text-2xl">
         {data.homepage.whatWeDoHeading}
       </div>
-      <div className="text-center font-bold text-6xl mb-5">
+      <div className="text-center font-bold text-6xl mb-14">
         {data.homepage.whatWeDoTitle}
       </div>
       <div className="grid gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm:gap-0">
