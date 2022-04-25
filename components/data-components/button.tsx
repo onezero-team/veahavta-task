@@ -5,8 +5,12 @@ export const Button = ({
   ...props
 }: {
   className?: string
-  type?: string
+  type?: 'button' | 'submit' | 'reset' | undefined
   text?: string
 }) => {
-  return <button className={`${className}`}>{text}</button>
+  return (
+    <button type={type} className={`${className}`}>
+      {text}
+    </button>
+  )
 }

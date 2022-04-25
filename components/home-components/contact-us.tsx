@@ -3,18 +3,12 @@ import React from 'react'
 import { WrapperLarge } from '../wrapper'
 import Image from 'next/image'
 import { Button } from '../data-components/button'
-import {
-  Formik,
-  Field,
-  Form,
-  useField,
-  FieldAttributes,
-  FieldArray,
-} from 'formik'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import ContactUsForm from '../data-components/ContactUsForm'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
-    <WrapperLarge id="contact-us" className="h-[800px] -z-10 relative mt-8">
+    <WrapperLarge id="contact-us" className="h-[800px] relative mt-8">
       <div className="background h-[1300px] xl:h-[700px] overflow-hidden w-full -z-10 bg-contact-bg absolute xl:top-[100px] grid grid-cols-2 ">
         <Circle pos="top-[20px] right-[-120px]" />
         <Circle pos="bottom-[-40px] left-[-50px]" />
@@ -25,7 +19,7 @@ export default function ContactUs({ data }: HomePageType) {
             <ContactUsInfoSection data={data} />
           </div>
         </div>
-        <div className="form-card flex xl:justify-self-start justify-self-center items-center justify-center h-[700px]  bg-light">
+        <div className="form-card flex xl:justify-self-start justify-self-center items-center justify-center h-[700px] p-6 bg-light">
           <ContactUsForm data={data} />
         </div>
       </div>
@@ -81,38 +75,6 @@ function ContactUsInfoSection({ data }: HomePageType) {
             </div>
             <div className="px-5 ">{data.text}</div>
           </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function ContactUsForm({ data }: HomePageType) {
-  return (
-    <div>
-      <Formik
-        initialValues={{}}
-        onSubmit={(data, { setSubmitting }) => {
-          //setSubmitting(true)
-          // make async call
-          console.log('submit: ', data)
-          //setSubmitting(false)
-        }}
-      >
-        {({ values, errors, isSubmitting }) => (
-          <Form>
-            <Field placeholder="last name" place name="name" type="input" />
-            <Button text="submit" type="submit" />
-          </Form>
-        )}
-      </Formik>
-      <input></input>
-      <Button text={data.homepage.contactUsHeading} />
-      <h1>{data.homepage.contactUsTitle}</h1>
-      <p>{data.homepage.contactUsText}</p>
-      <div>
-        {data.common.contactUsLinks.map((data) => (
-          <div key={data.text}>{data.text}</div>
         ))}
       </div>
     </div>
