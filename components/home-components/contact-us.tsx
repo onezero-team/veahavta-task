@@ -1,25 +1,26 @@
-import { HomePageType } from '@/lib/interface'
+import { ContactUsLink, HomePageType } from '@/lib/interface'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
 import Image from 'next/image'
 import { Button } from '../data-components/button'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import ContactUsForm from '../data-components/ContactUsForm'
+import { ContactUsItem } from '../data-components/ContactUsItem'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
-    <WrapperLarge id="contact-us" className="h-[800px] relative mt-8">
-      <div className="background h-[1300px] xl:h-[700px] overflow-hidden w-full -z-10 bg-contact-bg absolute xl:top-[100px] grid grid-cols-2 ">
+    <WrapperLarge id="contact-us" className=" relative mt-8 xl:mt-28">
+      <div className="background h-full xl:h-[700px] overflow-hidden w-full -z-10 bg-contact-bg absolute grid grid-cols-2 ">
         <Circle pos="top-[20px] right-[-120px]" />
         <Circle pos="bottom-[-40px] left-[-50px]" />
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 relative ">
         <div className="flex justify-center xl:justify-end relative">
-          <div className="xl:absolute xl:top-[100px] h-[500px] xl:h-[700px] flex items-center justify-center">
+          <div className=" h-[500px] xl:h-[700px] flex items-center justify-center">
             <ContactUsInfoSection data={data} />
           </div>
         </div>
-        <div className="form-card flex xl:justify-self-start justify-self-center items-center justify-center h-[700px] p-6 bg-light">
+        <div className="form-card xl:absolute xl:right-[50%] xl:top-[-100px] flex xl:justify-self-start justify-self-center items-center justify-center h-[700px] p-6 bg-light">
           <ContactUsForm data={data} />
         </div>
       </div>
@@ -58,23 +59,10 @@ function ContactUsInfoSection({ data }: HomePageType) {
       <h1 className="text-4xl font-bold mb-5">
         {data.homepage.contactUsTitle}
       </h1>
-      <p className="text-xl">{data.homepage.contactUsText}</p>
+      <p className="text-xl mb-5">{data.homepage.contactUsText}</p>
       <div className="grid grid-cols-1 xl:grid-cols-2 self-start">
         {data.common.contactUsLinks.map((data) => (
-          <div
-            key={data.text}
-            className="flex mt-5 justify-start items-center "
-          >
-            <div className="rounded-full flex items-center justify-center w-[44px] h-[44px]  bg-header-blue">
-              <Image
-                src={data.imagePath}
-                width="20px"
-                height="20px"
-                alt={data.linkType}
-              />
-            </div>
-            <div className="px-5 ">{data.text}</div>
-          </div>
+          <ContactUsItem key={data.text} {...data} />
         ))}
       </div>
     </div>

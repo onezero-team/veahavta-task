@@ -23,7 +23,6 @@ export default function Home({ data }: HomePageType) {
       <AboutTheClinic data={data} />
       <WhatWeDo data={data} />
       <ContactUs data={data} />
-      Here is the structure of the home page data:
     </div>
   )
 }
