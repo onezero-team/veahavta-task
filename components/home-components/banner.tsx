@@ -38,8 +38,11 @@ export default function Banner({ data }: HomePageType) {
           </div>
         </div>
         <div>
-          <PageHeader>{`${headerLines[0]}-`}</PageHeader>
-          <PageHeader>{headerLines[1]}</PageHeader>
+          <h1 className="font-bold text-7xl text-center px-3">
+            {`${headerLines[0]}-`}
+            <br />
+            {headerLines[1]}
+          </h1>
         </div>
 
         <p className="text-center mt-3">

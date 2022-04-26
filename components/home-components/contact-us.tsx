@@ -56,9 +56,9 @@ function ContactUsInfoSection({ data }: HomePageType) {
         className="rounded-full w-[130px] p-2 px-4 mb-5 bg-light text-xl text-header-blue font-bold"
         text={data.homepage.contactUsHeading}
       />
-      <h1 className="text-4xl font-bold mb-5">
+      <h2 className="text-4xl font-bold mb-5">
         {data.homepage.contactUsTitle}
-      </h1>
+      </h2>
       <p className="text-xl mb-5">{data.homepage.contactUsText}</p>
       <div className="grid grid-cols-1 xl:grid-cols-2 self-start">
         {data.common.contactUsLinks.map((data) => (

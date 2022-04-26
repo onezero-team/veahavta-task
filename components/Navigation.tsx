@@ -102,7 +102,7 @@ const MenuItems = ({
       {appLinks.map(({ text, relativeLink }) => (
         <Link key={text} href={relativeLink || '#top-header'} passHref>
           <div onClick={(e) => onClick && onClick()} className="hover:bg-azure">
-            <h1 className={`cursor-pointer text-xl ${className}`}>{text}</h1>
+            <h2 className={`cursor-pointer text-xl ${className}`}>{text}</h2>
           </div>
         </Link>
       ))}

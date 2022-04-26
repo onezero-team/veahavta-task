@@ -31,19 +31,19 @@ export default function Footer({ data }: CommonType) {
           />
         </div>
         <div className="flex flex-col  justify-self-center">
-          <h1 className="text-xl font-bold">{data.footerMenuTitle}</h1>
+          <h2 className="text-xl font-bold">{data.footerMenuTitle}</h2>
           {menuLinks.map((menuLink) => (
             <Link key={menuLink.text} href={menuLink.relativeLink} passHref>
-              <h1 className={`cursor-pointer text-l `}>{menuLink.text}</h1>
+              <h2 className={`cursor-pointer text-l `}>{menuLink.text}</h2>
             </Link>
           ))}
         </div>
         <div className="flex flex-col  justify-self-center">
-          <h1 className="">
+          <h2 className="">
             {data.contactUsLinks.map((contactUsLink) => (
               <ContactUsItem key={contactUsLink.text} {...contactUsLink} />
             ))}
-          </h1>
+          </h2>
         </div>
       </footer>
     </WrapperLarge>
