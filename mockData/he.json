@@ -1,0 +1,113 @@
+{
+  "data": {
+    "homepage": {
+      "title": "מרפאת ואהבת - בריאות שוויונית לכולם",
+      "description": "המרפאה מספקת שירותי רפואה כלליים למשפחה, וכן מגוון שירותים רפואה מקצועיים",
+      "getToKnowUsButton": "הכירו אותנו",
+      "aboutHeading": "אודות המרפאה",
+      "aboutTitle": "המטרה: שירותי בריאות מצויינים לכל איש ואישה בישראל.",
+      "aboutUsText": "המרפאה פועלת כולה בהתנדבות ומספקת שירותים לאנשים שנמנעו מהם תושבות רשמית בישראל כתוצאה מעקירה מארץ המקור...",
+      "aboutUsButton": "קרא עוד",
+      "whatWeDoHeading": "מה אנחנו עושים?",
+      "whatWeDoTitle": "שירותי המרפאה",
+      "whatWeDoCards": [
+        {
+          "title": "רפואת ילדים",
+          "text": "במרפאת הילדים ניתנים כל שירותי הביראות לילדים...",
+          "imagePath": "/icons/pediatrics-icon.svg"
+        },
+        {
+          "title": "רפואת משפחה",
+          "text": "שירותי רפואה למשפחה ורפואה מקצועית ניתנים במגוון תחומים לכלל המשפחה. המרפאה נעזרת במגוון רחב של אנשי רפואה, לפי הצורך.",
+          "imagePath": "/icons/family-mdicine-icon.svg"
+        },
+        {
+          "title": "רפואת נשים",
+          "text": "מרפאת הנשים מטפלת בנשים הזקוקות למגוון שירותי הבריאות...",
+          "imagePath": "/icons/womens-health-icon.svg"
+        },
+        {
+          "title": "רפואת נפש",
+          "text": "המרפאה לרפואת הנפש מטפלת במבוגרים הזקוקים לשירותי ייעוץ נפשי...",
+          "imagePath": "/icons/mental-health-icon.svg"
+        }
+      ],
+      "contactUsHeading": "צרו קשר",
+      "contactUsTitle": "אנחנו פה ",
+      "contactUsText": "המרפאה פעילה בימים ג׳ ו- ה׳ בין השעות 16:00-19:00 וביום שבת בשעות 10:00-14:00"
+    },
+    "common": {
+      "languageNames": [
+        {
+          "he": "עברית",
+          "en": "אנגלית",
+          "ar": "ערבית",
+          "am": "אמהרית",
+          "ti": "טיגריניה"
+        }
+      ],
+      "contactUsLinks": [
+        {
+          "text": "עברית, אנגלית, ערבית 052-1234567",
+          "linkType": "tel",
+          "linkValue": "+972.052.1234567",
+          "imagePath": "/icons/phone-icon.svg"
+        },
+        {
+          "text": "טיגריניה, אמהרית 052-7654321",
+          "linkType": "tel",
+          "linkValue": "+972.052-7654321",
+          "imagePath": "/icons/phone-icon.svg"
+        },
+        {
+          "text": "מגדל הנביאים, ח׳ורי 2, קומה 6, חיפה",
+          "linkType": "address",
+          "linkValue": "",
+          "imagePath": "/icons/address-icon.svg"
+        },
+        {
+          "text": "veahavta.clinic@gmail.com",
+          "linkType": "email",
+          "linkValue": "",
+          "imagePath": "/icons/email-icon.svg"
+        }
+      ],
+      "appLinks": [
+        {
+          "text": "בית",
+          "relativeLink": ""
+        },
+        {
+          "text": "אודות המרפאה",
+          "relativeLink": "#about-us"
+        },
+        {
+          "text": "צרו קשר",
+          "relativeLink": "#contact-us"
+        },
+        {
+          "text": "תמכו בנו",
+          "relativeLink": "#support-us"
+        }
+      ],
+      "contactUsFormFirstName": "שם פרטי",
+      "contactUsFormLastName": "שם משפחה",
+      "contactUsFormEmail": "אימייל",
+      "contactUsFormPhone": "טלפון",
+      "contactUsFormMessage": "מה תרצו לומר לנו?",
+      "contactUsFormSendButton": "שליחה",
+      "contactUsFormSuccessMessage": "קיבלנו את ההודעה! בקרוב ניצור קשר",
+      "contactUsFormErrorFirstNameMissing": "יש להזין שם פרטי",
+      "contactUsFormErrorLastNameMissing": "יש להזין שם משפחה",
+      "contactUsFormErrorEmailMissing": "יש להזין אימייל",
+      "contactUsFormErrorEmailInvalid": "האימייל לא תקין",
+      "contactUsFormErrorPhoneMissing": "יש להזין טלפון",
+      "contactUsFormErrorPhoneInvalid": "הטלפון לא תקין",
+      "contactUsFormErrorMessageMissing": "יש להזין הודעה",
+      "footerMenuTitle": "תפריט",
+      "footerContactUsTitle": "צרו קשר",
+      "footerScheduleButton": "לקביעת תור",
+      "footerSupportUsButton": "תמכו בנו"
+    }
+  }
+}

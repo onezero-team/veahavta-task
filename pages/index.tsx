@@ -7,9 +7,22 @@ import { NextPageContext } from 'next'
 import { request } from '../lib/datocms'
 
 export async function getStaticProps({ locale }: NextPageContext) {
-  const data = await request({
-    query: HOMEPAGE_QUERY(locale as string),
-  })
+  let data: any
+  try {
+    data = await request({
+      query: HOMEPAGE_QUERY(locale as string),
+    })
+  } catch {
+    console.warn(
+      '\x1b[33m%s\x1b[0m',
+      '[ USING MOCK DATA ]: Failed to receive data from datocms, probably because .env.local file is missing.',
+    )
+    data =
+      locale === 'he'
+        ? require('../mockData/he.json')?.data
+        : require('../mockData/en.json')?.data
+  }
+
   return {
     props: { data },
   }
