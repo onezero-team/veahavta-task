@@ -5,6 +5,7 @@ import { ChangeLangButton } from './data-components/change-language-button'
 import { useState } from 'react'
 import { TiThMenu } from 'react-icons/ti'
 import { AiFillCloseCircle } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
 export default function Navigation({ data }: CommonType) {
   const { dir } = useLocale()
@@ -53,6 +54,11 @@ const MobileHamburgerMenu = ({
   isHamburgerMenuOpen: boolean
   setIsHamburgerMenuOpen: Function
 }) => {
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: '-100%' },
+  }
+
   return (
     <>
       <button
@@ -65,10 +71,13 @@ const MobileHamburgerMenu = ({
           <TiThMenu className="mx-8" size={25} />
         )}
       </button>
-      <nav
-        className={`${
-          isHamburgerMenuOpen ? 'flex' : 'hidden'
-        } w-full h-full flex-col absolute top-0 right-0 left-0 p-5 bg-light`}
+
+      <motion.nav
+        animate={isHamburgerMenuOpen ? 'open' : 'closed'}
+        transition={{ duration: 0.8 }}
+        initial={false}
+        variants={variants}
+        className={` w-full h-full flex-col fixed top-0 right-0 left-0 p-5 bg-light `}
       >
         <ul className="justify-around absolute top-20 ">
           <Flags
@@ -83,7 +92,7 @@ const MobileHamburgerMenu = ({
             className="mb-5 text-3xl"
           />
         </ul>
-      </nav>
+      </motion.nav>
     </>
   )
 }

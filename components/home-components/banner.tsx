@@ -11,6 +11,7 @@ import img5 from '../../public/images/Rectangle-5.png'
 import img6 from '../../public/images/Rectangle-6.png'
 import img7 from '../../public/images/Rectangle-7.png'
 import { Button } from '../data-components/button'
+import { WrapperLarge } from '../wrapper'
 
 export default function Banner({ data }: HomePageType) {
   const descriptionLines = data.homepage.description.split(',')
@@ -26,7 +27,7 @@ export default function Banner({ data }: HomePageType) {
   ]
 
   return (
-    <div id="top-header">
+    <WrapperLarge id="top-header">
       <div className="wrapper md:h-[780px] overflow-hidden flex flex-col items-center justify-center p-5">
         <div className="background flex items-center justify-center">
           <div className="relative">
@@ -73,6 +74,6 @@ export default function Banner({ data }: HomePageType) {
           }
         `}</style>
       </div>
-    </div>
+    </WrapperLarge>
   )
 }
