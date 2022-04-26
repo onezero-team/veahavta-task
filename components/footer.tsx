@@ -40,8 +40,8 @@ export default function Footer({ data }: CommonType) {
         </div>
         <div className="flex flex-col  justify-self-center">
           <h1 className="">
-            {data.contactUsLinks.map((data) => (
-              <ContactUsItem key={data.text} {...data} />
+            {data.contactUsLinks.map((contactUsLink) => (
+              <ContactUsItem key={contactUsLink.text} {...contactUsLink} />
             ))}
           </h1>
         </div>

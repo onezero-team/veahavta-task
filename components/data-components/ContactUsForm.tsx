@@ -68,10 +68,13 @@ const InnerForm = (props: HomePageType & FormikProps<FormValues>): any => {
         text={data.common.contactUsFormMessage}
         as={Input}
       />
-      <Button
-        className="rounded-full w-[140px] p-3 mt-8 text-light text-2xl bg-header-blue font-bold"
-        text={data.common.contactUsFormSendButton}
-      />
+      <div className="flex justify-center md:justify-start p-0 m-0 ">
+        <Button
+          className="rounded-full w-[140px] p-3 mt-8 text-light text-2xl bg-header-blue font-bold "
+          text={data.common.contactUsFormSendButton}
+        />
+      </div>
+
       {isSubmitting && (
         <div className="mt-5 text-success">
           {data.common.contactUsFormSuccessMessage}
