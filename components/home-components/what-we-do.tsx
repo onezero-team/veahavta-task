@@ -12,7 +12,7 @@ export default function WhatWeDo({ data }: HomePageType) {
       <div className="text-center font-bold text-6xl mb-14">
         {data.homepage.whatWeDoTitle}
       </div>
-      <div className="grid gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm:gap-0">
+      <ul className="grid gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm:gap-0">
         {data.homepage.whatWeDoCards.map(({ title, text, imagePath }) => (
           <WhatWeDoCard
             key={title}
@@ -21,7 +21,7 @@ export default function WhatWeDo({ data }: HomePageType) {
             imagePath={imagePath}
           />
         ))}
-      </div>
+      </ul>
     </WrapperLarge>
   )
 }
@@ -36,7 +36,7 @@ function WhatWeDoCard({
   imagePath: string
 }) {
   return (
-    <div className=" flex items-top justify-center mx-2">
+    <li className="flex items-top justify-center mx-2">
       <div className="card-shadow w-[338px] h-auto mb-5">
         <div className="h-[241px] rounded-t-lg flex items-center justify-center bg-contact-bg">
           <Image src={imagePath} alt={title} width="128px" height="128px" />
@@ -55,6 +55,6 @@ function WhatWeDoCard({
           overflow: hidden;
         }
       `}</style>
-    </div>
+    </li>
   )
 }

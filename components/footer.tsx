@@ -32,18 +32,23 @@ export default function Footer({ data }: CommonType) {
         </div>
         <div className="flex flex-col  justify-self-center">
           <h2 className="text-xl font-bold">{data.footerMenuTitle}</h2>
-          {menuLinks.map((menuLink) => (
-            <Link key={menuLink.text} href={menuLink.relativeLink} passHref>
-              <h2 className={`cursor-pointer text-l `}>{menuLink.text}</h2>
-            </Link>
-          ))}
-        </div>
-        <div className="flex flex-col  justify-self-center">
-          <h2 className="">
-            {data.contactUsLinks.map((contactUsLink) => (
-              <ContactUsItem key={contactUsLink.text} {...contactUsLink} />
+          <ul>
+            {menuLinks.map((menuLink) => (
+              <li
+                key={menuLink.text}
+                className="cursor-pointer text-l hover:bg-azure"
+              >
+                <Link href={menuLink.relativeLink} passHref>
+                  {menuLink.text}
+                </Link>
+              </li>
             ))}
-          </h2>
+          </ul>
+        </div>
+        <div className="flex flex-col justify-self-center">
+          {data.contactUsLinks.map((contactUsLink) => (
+            <ContactUsItem key={contactUsLink.text} {...contactUsLink} />
+          ))}
         </div>
       </footer>
     </WrapperLarge>

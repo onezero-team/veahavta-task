@@ -24,7 +24,7 @@ export function ContactUsItem({
   return (
     <Link href={link} passHref>
       <a target="_blank">
-        <div className="flex mb-5 justify-start items-center relative cursor-pointer	">
+        <div className="flex mb-5 justify-start items-center relative cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105  duration-200">
           <div className="rounded-full flex items-center justify-center w-[44px] h-[44px] bg-header-blue">
             <Image src={imagePath} width="20px" height="20px" alt={linkType} />
           </div>

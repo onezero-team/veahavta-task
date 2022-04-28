@@ -109,11 +109,15 @@ const MenuItems = ({
   return (
     <>
       {appLinks.map(({ text, relativeLink }) => (
-        <Link key={text} href={relativeLink || '#top-header'} passHref>
-          <div onClick={(e) => onClick && onClick()} className="hover:bg-azure">
-            <h2 className={`cursor-pointer text-xl ${className}`}>{text}</h2>
-          </div>
-        </Link>
+        <li
+          key={text}
+          className={`cursor-pointer text-xl hover:bg-azure ${className}`}
+          onClick={(e) => onClick && onClick()}
+        >
+          <Link href={relativeLink || '#top-header'} passHref>
+            {text}
+          </Link>
+        </li>
       ))}
     </>
   )
@@ -130,7 +134,7 @@ const Flags = ({
     <>
       {languageNames
         ? Object.keys(languageNames).map((key: string) => (
-            <li key={key} className="mx-1">
+            <li key={key} className="mx-1 ">
               <ChangeLangButton lang={key} onClick={onClick}>
                 {languageNames[key]}
               </ChangeLangButton>
