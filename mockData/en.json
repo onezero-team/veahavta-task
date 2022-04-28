@@ -1,0 +1,113 @@
+{
+  "data": {
+    "homepage": {
+      "title": "VeAhavta Clinic - Equal health for all",
+      "description": "description",
+      "getToKnowUsButton": "Get To Know Us Button",
+      "aboutHeading": "About Heading",
+      "aboutTitle": "About Title",
+      "aboutUsText": "About Us Text",
+      "aboutUsButton": "About Us Button",
+      "whatWeDoHeading": "What We Do Heading",
+      "whatWeDoTitle": "What We Do Title",
+      "whatWeDoCards": [
+        {
+          "title": "Pediatrics",
+          "text": "Pediatrics text...",
+          "imagePath": "/icons/pediatrics-icon.svg"
+        },
+        {
+          "title": "Family Medicine...",
+          "text": "Family Medicine...",
+          "imagePath": "/icons/family-mdicine-icon.svg"
+        },
+        {
+          "title": "Womens Health",
+          "text": "Womens Health text...",
+          "imagePath": "/icons/womens-health-icon.svg"
+        },
+        {
+          "title": "Mental Health",
+          "text": "Mental health text...",
+          "imagePath": "/icons/mental-health-icon.svg"
+        }
+      ],
+      "contactUsHeading": "Contact Us",
+      "contactUsTitle": "We Are Here For You",
+      "contactUsText": "The clinic is open Tuesday and Thursday 16:00-19:00 and Saturday 10:00-14:00"
+    },
+    "common": {
+      "languageNames": [
+        {
+          "he": "Hebrew",
+          "en": "English",
+          "ar": "Arabic",
+          "am": "Amharic",
+          "ti": "Tigrinya"
+        }
+      ],
+      "contactUsLinks": [
+        {
+          "text": "Hebrew, English, Arabic 052-1234567",
+          "linkType": "tel",
+          "linkValue": "+972.052.1234567",
+          "imagePath": "/icons/phone-icon.svg"
+        },
+        {
+          "text": "Tigrinya, Amharic 052-7654321",
+          "linkType": "tel",
+          "linkValue": "+972.052-7654321",
+          "imagePath": "/icons/phone-icon.svg"
+        },
+        {
+          "text": "Haneviim Tower, Huri 2, Haifa",
+          "linkType": "address",
+          "linkValue": "",
+          "imagePath": "/icons/address-icon.svg"
+        },
+        {
+          "text": "veahavta.clinic@gmail.com",
+          "linkType": "email",
+          "linkValue": "",
+          "imagePath": "/icons/email-icon.svg"
+        }
+      ],
+      "appLinks": [
+        {
+          "text": "Home",
+          "relativeLink": ""
+        },
+        {
+          "text": "About The Clinic",
+          "relativeLink": "#about-us"
+        },
+        {
+          "text": "Contact us",
+          "relativeLink": "#contact-us"
+        },
+        {
+          "text": "Support us",
+          "relativeLink": "#support-us"
+        }
+      ],
+      "contactUsFormFirstName": "First name",
+      "contactUsFormLastName": "Last name",
+      "contactUsFormEmail": "Email",
+      "contactUsFormPhone": "Phone",
+      "contactUsFormMessage": "Message",
+      "contactUsFormSendButton": "Submit",
+      "contactUsFormSuccessMessage": "We got your message! We'll contact you soon.",
+      "contactUsFormErrorFirstNameMissing": "First name is needed",
+      "contactUsFormErrorLastNameMissing": "Last name is needed",
+      "contactUsFormErrorEmailMissing": "Email is needed",
+      "contactUsFormErrorEmailInvalid": "Email is invalid",
+      "contactUsFormErrorPhoneMissing": "Phone is needed",
+      "contactUsFormErrorPhoneInvalid": "Phone is invalid",
+      "contactUsFormErrorMessageMissing": "Message is needed",
+      "footerMenuTitle": "Menu",
+      "footerContactUsTitle": "Contact us",
+      "footerScheduleButton": "Schedule an appointment",
+      "footerSupportUsButton": "Support us"
+    }
+  }
+}

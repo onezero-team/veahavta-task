@@ -30,16 +30,8 @@ export type Homepage = {
 }
 
 export type Common = {
-  contactUsLinks: Array<{
-    text: string
-    linkType: string
-    imagePath: string
-    linkValue: string
-  }>
-  appLinks: Array<{
-    text: string
-    relativeLink: string
-  }>
+  contactUsLinks: Array<ContactUsLink>
+  appLinks: Array<AppLink>
   languageNames: Array<{
     he: string
     en: string
@@ -57,6 +49,25 @@ export type Common = {
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorMessageMissing: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormSuccessMessage: string
+}
+export interface AppLink {
+  text: string
+  relativeLink: string
+}
+
+export interface ContactUsLink {
+  text: string
+  linkType: string
+  imagePath: string
+  linkValue: string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {
