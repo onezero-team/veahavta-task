@@ -13,6 +13,9 @@ module.exports = {
       primary: '#01559A',
       accent: '#D25C78',
       red: '#D25C78',
+      btnblue: '#4E47F9',
+      cardbg: '#F4F3FD',
+      redtxt: '#D25C78',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
@@ -21,6 +24,7 @@ module.exports = {
       serif: ['"Assistant"', 'sans-serif'],
       mono: ['"Assistant"', 'sans-serif'],
     },
+
     extend: {
       colors: {
         'header-blue': '#4E47F9',
@@ -31,6 +35,7 @@ module.exports = {
         blue: '#01559A',
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
+        lightpurle: '#f4f3fd;',
       },
       text: {
         medium: 'md:text-xl',
