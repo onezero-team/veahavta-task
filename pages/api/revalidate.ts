@@ -1,11 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import dotenv from 'dotenv'
+dotenv.config()
+
+// console.log(process.env.REVALIDATE_TOKEN);
+
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
   // Check for secret to confirm this is a valid request
-  if (req.query.revalidate_token !== process.env.REVALIDATE_TOKEN) {
+  // if (req.query.revalidate_token !== process.env.REVALIDATE_TOKEN) {
+  if (req.query.revalidate_token !== "62ef44e0be8d04e57bf8e1b8605eef") {
     console.debug('[revalidate] path:', req.query.path, 'invalid token')
     return res.status(401).json({ message: 'Invalid token' })
   }

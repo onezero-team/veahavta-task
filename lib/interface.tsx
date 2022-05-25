@@ -61,7 +61,7 @@ export type Common = {
 
 export function HOMEPAGE_QUERY(locale: string) {
   return `
-query Homepage {
+  query Homepage {
   homepage(locale: ${locale}) {
     title
     description

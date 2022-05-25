@@ -11,8 +11,9 @@ export async function getStaticProps({ locale }: NextPageContext) {
     query: HOMEPAGE_QUERY(locale as string),
   })
   return {
-    props: { data },
-  }
+  props: { data },}
+// {
+  // data: JSON.parse(JSON.stringify(data)),}
 }
 
 export default function Home({ data }: HomePageType) {
