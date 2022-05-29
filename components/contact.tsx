@@ -9,7 +9,13 @@ export default function Contact({ data }: CommonType) {
       <div className="w-full grid grid-cols-2 mt-4">
         {data.contactUsLinks.map((item, index) => {
           return (
-            <div className="flex items-center mt-6" key={index}>
+            <div className="flex items-center mt-6" key={index}
+              onClick={() => {
+                item.linkType === "tel" ?
+                  window.open(`tel:${item.linkValue.replace(/[".0"-.]/g, "")}`) :
+                  item.linkType === "email" ?
+                    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${item.text}`) : null
+              }}>
               <div className="h-11 w-11 mx-3 relative bg-header-blue flex justify-center items-center rounded-full my-2 ">
                 <div className="h-5 w-5 relative">
                   <Image
@@ -22,7 +28,6 @@ export default function Contact({ data }: CommonType) {
                 </div>
               </div>
               <div className="">
-                {/* <div className='text-3xl text-header-blue font-bold'>{item.linkValue}</div> */}
                 <div className="text-base">
                   {reactStringReplace(
                     item.text.replace('0', ''),

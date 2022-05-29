@@ -5,7 +5,7 @@ import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import Image from 'next/image'
 import logo from '/public/logo.png'
-import Menu from './menu'
+import Menu from '@/components/menu'
 
 export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
@@ -29,7 +29,7 @@ export default function Header({ data }: CommonType) {
         <div className="w-full grid justify-between grid-cols-auto-1fr gap-x-6 px-3 bg-light rounded-lg h-16 items-center">
           <div className="flex flex-row gap-x-8 items-center text-2xl">
             <Logo />
-            {/* <Menu data={data} /> */}
+            <Menu data={data} />
           </div>
           <div className="flex flex-row gap-x-4 justify-end">
             {btnChangeLang}

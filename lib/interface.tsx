@@ -7,6 +7,7 @@ export type HomePageType = {
 
 export type CommonType = {
   data: Common
+  replace?: string | any
 }
 
 export type Homepage = {
