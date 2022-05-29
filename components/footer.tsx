@@ -10,11 +10,15 @@ export default function Footer({ data }: CommonType) {
 
   const contact = (
     <div className="flex items-center flex-wrap">
-      <div className="flex items-center mt-4 cursor-pointer" onClick={() => {
-        window.open(`tel:${data.contactUsLinks[0].linkValue.replace(/[".0"-.]/g, "")}`);
-      }}>
-        <div className="h-5 w-5 relative"
-        >
+      <div
+        className="flex items-center mt-4 cursor-pointer"
+        onClick={() => {
+          window.open(
+            `tel:${data.contactUsLinks[0].linkValue.replace(/[".0"-.]/g, '')}`,
+          )
+        }}
+      >
+        <div className="h-5 w-5 relative">
           <Image
             src={data.contactUsLinks[0].imagePath.replace(
               '/icons/',
