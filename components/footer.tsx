@@ -2,57 +2,99 @@ import { CommonType } from '@/lib/interface'
 import { WrapperLarge } from './wrapper'
 import Image from 'next/image'
 import logo from '/public/logo.png'
-import Menu from './menu'
+// import Menu from './menu'
 import Link from 'next/link'
 import Contact from './contact'
 
 export default function Footer({ data }: CommonType) {
+  const classBtn =
+    'font-bold text-base text-center mx-auto mt-3 w-32 h-12 border-header-blue border-2 rounded-3xl flex justify-center items-center text-header-blue my-auto'
 
-  const classBtn = "font-bold text-base text-center mx-auto mt-3 w-32 h-12 border-header-blue border-2 rounded-3xl flex justify-center items-center text-header-blue my-auto"
-
-  const contact =
-    <div className='flex items-center mt-4 flex-wrap' >
-
+  const contact = (
+    <div className="flex items-center mt-4 flex-wrap">
       <div className="h-5 w-5 relative">
-        <Image src={data.contactUsLinks[0].imagePath.replace("/icons/", "/icons/footer-")} alt="" width={"100"} height={"100"} layout={"fill"} /></div>
-      <div className='text-base font-normal mx-3'>{data.contactUsLinks[0].text}
+        <Image
+          src={data.contactUsLinks[0].imagePath.replace(
+            '/icons/',
+            '/icons/footer-',
+          )}
+          alt=""
+          width={'100'}
+          height={'100'}
+          layout={'fill'}
+        />
+      </div>
+      <div className="text-base font-normal mx-3">
+        {data.contactUsLinks[0].text}
         <div>{data.contactUsLinks[1].text}</div>
       </div>
-      <div className='flex items-center mt-4' >
+      <div className="flex items-center mt-4">
         <div className="h-5 w-5 relative">
-          <Image src={data.contactUsLinks[2].imagePath.replace("/icons/", "/icons/footer-")} alt="" width={"100"} height={"100"} layout={"fill"} /></div>
-        <div className='text-base font-normal mx-3'>{data.contactUsLinks[2].text}
+          <Image
+            src={data.contactUsLinks[2].imagePath.replace(
+              '/icons/',
+              '/icons/footer-',
+            )}
+            alt=""
+            width={'100'}
+            height={'100'}
+            layout={'fill'}
+          />
+        </div>
+        <div className="text-base font-normal mx-3">
+          {data.contactUsLinks[2].text}
         </div>
       </div>
-      <div className='flex items-center mt-4' >
+      <div className="flex items-center mt-4">
         <div className="h-5 w-5 relative">
-          <Image src={data.contactUsLinks[3].imagePath.replace("/icons/", "/icons/footer-")} alt="" width={"100"} height={"100"} layout={"fill"} /></div>
-        <div className='text-base font-normal mx-3'>{data.contactUsLinks[3].text}
+          <Image
+            src={data.contactUsLinks[3].imagePath.replace(
+              '/icons/',
+              '/icons/footer-',
+            )}
+            alt=""
+            width={'100'}
+            height={'100'}
+            layout={'fill'}
+          />
+        </div>
+        <div className="text-base font-normal mx-3">
+          {data.contactUsLinks[3].text}
         </div>
       </div>
     </div>
+  )
 
   return (
     <WrapperLarge>
       <footer className="bg-light w-9/12 mx-auto gap-6 grid grid-cols-4 h-96">
-        <div className='w-80 h-40 relative mt-16'>
-          <Image src={logo} alt="" width={"100%"} height={"100%"} layout="fill" />
+        <div className="w-80 h-40 relative mt-16">
+          <Image
+            src={logo}
+            alt=""
+            width={'100%'}
+            height={'100%'}
+            layout="fill"
+          />
         </div>
 
-        <div className='mt-24'>
+        <div className="mt-24">
           <div className={classBtn}>{data.footerScheduleButton}</div>
           <div className={classBtn}>{data.footerSupportUsButton}</div>
         </div>
 
-        <div className='mt-24 text-2xl font-bold flex flex-col mx-14'>
+        <div className="mt-24 text-2xl font-bold flex flex-col mx-14">
           {data.footerMenuTitle}
           {/* <div className='text-base font-normal contents leading-9'> {menuFooter}</div> */}
-          <div className='text-base font-normal contents leading-9'> <Menu data={data} replace={data.appLinks[0].text} /></div>
+          <div className="text-base font-normal contents leading-9">
+            {' '}
+            {/* <Menu data={data} replace={data.appLinks[0].text} /> */}
+          </div>
         </div>
-        <div className='mt-24 text-2xl font-bold flex flex-col'>
+        <div className="mt-24 text-2xl font-bold flex flex-col">
           {data.footerContactUsTitle}
-          {contact}</div>
-
+          {contact}
+        </div>
       </footer>
     </WrapperLarge>
   )

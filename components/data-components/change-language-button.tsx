@@ -17,11 +17,21 @@ export const ChangeLangButton = ({
     router.push({ pathname, query }, asPath, { locale: lang })
   }
 
-    const  imgLang  = <Image src={`/lang/${lang}.png`} alt=""  width={"100%"} height={"100%"} layout="fill"/>
+  const imgLang = (
+    <Image
+      src={`/lang/${lang}.png`}
+      alt=""
+      width={'100%'}
+      height={'100%'}
+      layout="fill"
+    />
+  )
 
   return (
     <div>
-      <button className='w-12 h-8 relative' onClick={() => changeLocale(lang)}>{imgLang}</button>
+      <button className="w-12 h-8 relative" onClick={() => changeLocale(lang)}>
+        {imgLang}
+      </button>
     </div>
   )
 }
