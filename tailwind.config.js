@@ -27,7 +27,8 @@ module.exports = {
         'contact-bg': '#F4F3FD',
         'icon-bg': '#4E47F9',
         success: '#7AD17C',
-        red: '#D25C78',
+        brown: '#D25C78',
+        red: '#FF0000',
         blue: '#01559A',
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
@@ -40,6 +41,9 @@ module.exports = {
         '4xl': '0px 0px 4px rgba(0,0,0,0.25)',
       },
       height: { header: '95px' },
+      spacing: {
+        192: '48rem',
+      },
       minHeight: {
         'screen-50': '50vh',
       },

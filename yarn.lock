@@ -2687,6 +2687,11 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
+libphonenumber-js@^1.10.6:
+  version "1.10.6"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.10.6.tgz#a453efe9d692cc9457abb20a712dec34472a7164"
+  integrity sha512-CIjT100/SmntsUjsLVs2t3ufeN4KdNXUxhD07tH153pdbaCWuAjv0jK/gPuywR3IImB/U/MQM+x9RfhMs5XZiA==
+
 lilconfig@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.4.tgz#f4507d043d7058b380b6a8f5cb7bcd4b34cee082"
@@ -3221,6 +3226,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-string-replace@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-string-replace/-/react-string-replace-1.1.0.tgz#a3f7b458e697e77d70b0ea663caf38ab38f7cc17"
+  integrity sha512-N6RalSDFGbOHs0IJi1H611WbZsvk3ZT47Jl2JEXFbiS3kTwsdCYij70Keo/tWtLy7sfhDsYm7CwNM/WmjXIaMw==
 
 react@17.0.2:
   version "17.0.2"
