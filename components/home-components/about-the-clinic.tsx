@@ -25,7 +25,9 @@ export default function AboutTheClinic({ data }: HomePageType) {
             <div className="text-4xl mt-4 font-bold sm:text-5xl">
               {data.homepage.aboutTitle}
             </div>
-            <div className="text-lg mt-9 sm:mt-14">{data.homepage.aboutUsText}</div>
+            <div className="text-lg mt-9 sm:mt-14">
+              {data.homepage.aboutUsText}
+            </div>
             <div
               className="font-bold text-1xl mt-9 w-44 h-14 bg-header-blue rounded-3xl flex justify-center items-center 
   text-light my-auto"

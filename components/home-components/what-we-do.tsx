@@ -6,14 +6,13 @@ import Image from 'next/image'
 export default function WhatWeDo({ data }: HomePageType) {
   const [numCard, setNumCard] = useState(0)
 
-  let innerWidth: number;
+  let innerWidth: number
   if (typeof window !== 'undefined') {
-    innerWidth = window.innerWidth;
+    innerWidth = window.innerWidth
   }
 
   const clinicService = (
     <div className="flex flex-row justify-between">
-
       {data.homepage.whatWeDoCards.map((item, index) => {
         if (innerWidth < 640 ? index === numCard : index !== 5) {
           return (
@@ -56,24 +55,31 @@ export default function WhatWeDo({ data }: HomePageType) {
             {data.homepage.whatWeDoTitle}
           </div>
           <div className="mt-6 text-lg sm:mt-14 relative">
-            <button className='w-16 h-16 rounded-full bg-light shadow-4xl flex items-center justify-center absolute right-0 top-52 sm:hidden'
-              onClick={() => numCard === 3 ? setNumCard(0) : setNumCard(numCard + 1)} >
-              <div className='w-12 h-12 relative flex items-center justify-center rotate-180'>
+            <button
+              className="w-16 h-16 rounded-full bg-light shadow-4xl flex items-center justify-center absolute right-0 top-52 sm:hidden"
+              onClick={() =>
+                numCard === 3 ? setNumCard(0) : setNumCard(numCard + 1)
+              }
+            >
+              <div className="w-12 h-12 relative flex items-center justify-center rotate-180">
                 <Image
-                  src={"/arrow.png"}
+                  src={'/arrow.png'}
                   alt=""
                   width={'100%'}
                   height={'100%'}
                   layout="fill"
                 />
               </div>
-
             </button>
-            <button className='w-16 h-16 rounded-full bg-light shadow-4xl flex items-center justify-center absolute left-0 top-52 sm:hidden'
-              onClick={() => numCard === 0 ? setNumCard(3) : setNumCard(numCard - 1)}>
-              <div className='w-12 h-12 relative flex items-center justify-center'>
+            <button
+              className="w-16 h-16 rounded-full bg-light shadow-4xl flex items-center justify-center absolute left-0 top-52 sm:hidden"
+              onClick={() =>
+                numCard === 0 ? setNumCard(3) : setNumCard(numCard - 1)
+              }
+            >
+              <div className="w-12 h-12 relative flex items-center justify-center">
                 <Image
-                  src={"/arrow.png"}
+                  src={'/arrow.png'}
                   alt=""
                   width={'100%'}
                   height={'100%'}
@@ -89,4 +95,3 @@ export default function WhatWeDo({ data }: HomePageType) {
     </WrapperLarge>
   )
 }
-

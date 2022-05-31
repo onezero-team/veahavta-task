@@ -5,7 +5,7 @@ import { PageHeader } from '../data-components/header-text'
 import Image from 'next/image'
 
 export default function Banner({ data }: HomePageType) {
-  const divImg = "hidden sm:block absolute h-96 w-80"
+  const divImg = 'hidden sm:block absolute h-96 w-80'
 
   return (
     <div id="top-header">

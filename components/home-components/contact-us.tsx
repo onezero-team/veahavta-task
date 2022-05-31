@@ -10,9 +10,23 @@ export default function ContactUs({ data }: HomePageType) {
     <WrapperLarge>
       <div className="z-10 w-full background sm:mt-40 sm:h-[42rem] relative pb-10">
         <div className="w-72 h-56 absolute left-0 bottom-0">
-          <Image src={"/circle-left.svg"} alt="" width={"100"} height={"100"} layout="fill" /></div>
+          <Image
+            src={'/circle-left.svg'}
+            alt=""
+            width={'100'}
+            height={'100'}
+            layout="fill"
+          />
+        </div>
         <div className="hidden sm:block w-48 h-80 absolute top-8 right-0">
-          <Image src={"/circle-right.svg"} alt="" width={"100"} height={"100"} layout="fill" /></div>
+          <Image
+            src={'/circle-right.svg'}
+            alt=""
+            width={'100'}
+            height={'100'}
+            layout="fill"
+          />
+        </div>
 
         <div className="sm:w-2/5 sm:mt-40 absoluteContact">
           <div
@@ -25,7 +39,9 @@ export default function ContactUs({ data }: HomePageType) {
             {data.homepage.contactUsTitle}
           </div>
           <div className="text-base sm:text-xl mt-3">
-            {data.homepage.contactUsText.split('19:00')[0].replace("0-", "0-19:00")}
+            {data.homepage.contactUsText
+              .split('19:00')[0]
+              .replace('0-', '0-19:00')}
           </div>
           <div className="text-base sm:text-xl">
             {data.homepage.contactUsText.split('16:00-19:00')[1]}
@@ -40,24 +56,20 @@ export default function ContactUs({ data }: HomePageType) {
             position: absolute;
             inset-inline-start: 15%;
           }
-          .background{        
-            background:#F4F3FD 
+          .background {
+            background: #f4f3fd;
           }
 
-         @media (max-width: 640px) {
-           .absoluteContact {
-             position: relative;
-             margin: 3rem 1rem;
-             inset-inline-start: 0;
+          @media (max-width: 640px) {
+            .absoluteContact {
+              position: relative;
+              margin: 3rem 1rem;
+              inset-inline-start: 0;
             }
-            .background{        
-              background: linear-gradient(
-           #fff 50%,
-           #F4F3FD 50%
-         )}
-
+            .background {
+              background: linear-gradient(#fff 50%, #f4f3fd 50%);
             }
-  
+          }
         `}
       </style>
     </WrapperLarge>

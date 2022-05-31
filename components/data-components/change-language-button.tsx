@@ -3,7 +3,10 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 export function ChangeLangButton({
-  className, children, lang, setIsMenuOpen,
+  className,
+  children,
+  lang,
+  setIsMenuOpen,
 }: {
   className?: string
   children?: React.ReactNode
@@ -22,12 +25,19 @@ export function ChangeLangButton({
       alt=""
       width={'100%'}
       height={'100%'}
-      layout="fill" />
+      layout="fill"
+    />
   )
 
   return (
     <div>
-      <button className="w-12 h-8 relative" onClick={() => { changeLocale(lang); setIsMenuOpen(false) }}>
+      <button
+        className="w-12 h-8 relative"
+        onClick={() => {
+          changeLocale(lang)
+          setIsMenuOpen(false)
+        }}
+      >
         {imgLang}
       </button>
     </div>

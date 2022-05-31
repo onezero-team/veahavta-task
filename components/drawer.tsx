@@ -8,19 +8,30 @@ import logo from '/public/logo.png'
 import Menu from '@/components/menu'
 import { useState } from 'react'
 
-export default function Drawer({ data, setIsMenuOpen, btnChangeLang }: CommonType) {
-
-
-
+export default function Drawer({
+  data,
+  setIsMenuOpen,
+  btnChangeLang,
+}: CommonType) {
   return (
     <>
-      <div className="fixed top-0 left-0 h-screen w-full bg-dark/[.5] z-0" onClick={() => setIsMenuOpen(false)}>
-        <div className="absolute top-0 left-0 h-96 w-full bg-light font-bold z-10" onClick={(event) =>
-          event.stopPropagation()
-        }>
-          <div onClick={() => setIsMenuOpen(false)} className="mx-10 mt-10 text-3xl w-3" >X</div>
+      <div
+        className="fixed top-0 left-0 h-screen w-full bg-dark/[.5] z-0"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        <div
+          className="absolute top-0 left-0 h-96 w-full bg-light font-bold z-10"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div
+            onClick={() => setIsMenuOpen(false)}
+            className="mx-10 mt-10 text-3xl w-3"
+          >
+            X
+          </div>
           <div className="flex flex-col items-center text-xl mt-3 leading-10">
-            <Menu data={data} setIsMenuOpen={setIsMenuOpen} /></div>
+            <Menu data={data} setIsMenuOpen={setIsMenuOpen} />
+          </div>
 
           <div className="mx-5 my-16 flex flex-row gap-x-4 justify-between">
             {btnChangeLang}
@@ -30,4 +41,3 @@ export default function Drawer({ data, setIsMenuOpen, btnChangeLang }: CommonTyp
     </>
   )
 }
-
