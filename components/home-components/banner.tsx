@@ -5,10 +5,12 @@ import { PageHeader } from '../data-components/header-text'
 import Image from 'next/image'
 
 export default function Banner({ data }: HomePageType) {
+  const divImg = "hidden sm:block absolute h-96 w-80"
+
   return (
     <div id="top-header">
       <div className="background h-192 w-full relative -z-10">
-        <div className="absolute h-96 w-80 top-64 right-0 z-10">
+        <div className={`${divImg} top-64 right-0 z-10`}>
           <Image
             src={'/imgHeader/1.png'}
             alt=""
@@ -18,7 +20,7 @@ export default function Banner({ data }: HomePageType) {
           />{' '}
         </div>
 
-        <div className="absolute h-96 w-80 top-20 right-52">
+        <div className={`${divImg} top-20 right-52`}>
           <Image
             src={'/imgHeader/2.png'}
             alt=""
@@ -28,7 +30,7 @@ export default function Banner({ data }: HomePageType) {
           />{' '}
         </div>
 
-        <div className="absolute h-96 w-80 -bottom-36 right-80">
+        <div className={`${divImg} -bottom-36 right-80`}>
           <Image
             src={'/imgHeader/3.png'}
             alt=""
@@ -38,7 +40,7 @@ export default function Banner({ data }: HomePageType) {
           />{' '}
         </div>
 
-        <div className="absolute h-48 w-80 top-0 left-[40rem]">
+        <div className={`${divImg} h-48 top-0 left-[40rem]`}>
           <Image
             src={'/imgHeader/4.png'}
             alt=""
@@ -48,7 +50,7 @@ export default function Banner({ data }: HomePageType) {
           />{' '}
         </div>
 
-        <div className="absolute h-96 w-80 left-80 -bottom-36 -z-10">
+        <div className={`${divImg} left-80 -bottom-36 -z-10`}>
           <Image
             src={'/imgHeader/5.png'}
             alt=""
@@ -58,7 +60,7 @@ export default function Banner({ data }: HomePageType) {
           />{' '}
         </div>
 
-        <div className="absolute h-96 w-80 top-72 -left-4 z-10">
+        <div className={`${divImg} top-72 -left-4 z-10`}>
           <Image
             src={'/imgHeader/6.png'}
             alt=""
@@ -68,7 +70,7 @@ export default function Banner({ data }: HomePageType) {
           />{' '}
         </div>
 
-        <div className="absolute h-96 w-80 top-0 left-40">
+        <div className={`${divImg} top-0 left-40`}>
           <Image
             src={'/imgHeader/7.png'}
             alt=""

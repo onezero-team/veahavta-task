@@ -16,10 +16,10 @@ export default function Layout({ children, pageProps }: any) {
         <Main>{children}</Main>
         <Header data={pageProps.data.common} />
         <Footer data={pageProps.data.common} />
-        Here is the structure of the home page data:
+        {/* Here is the structure of the home page data:
         <pre className="bg-dark text-light">
-          {JSON.stringify(pageProps.data.common, null, 2)}
-        </pre>
+          {JSON.stringify(pageProps, null, 2)}
+        </pre> */}
       </div>
       <style jsx global>
         {`

@@ -7,8 +7,8 @@ export default function AboutTheClinic({ data }: HomePageType) {
   return (
     <WrapperLarge>
       <div className="z-10 w-full bg-light " id="about-us">
-        <div className="w-3/4 my-24 mx-auto h-[40rem] grid grid-rows-1 grid-flow-col relative ">
-          <div className="w-[42rem] h-[40rem] relative">
+        <div className="w-full  mx-auto relative grid sm:grid-rows-1 sm:grid-flow-col sm:my-24 sm:w-3/4 sm:h-[40rem]">
+          <div className="w-11/12 mx-auto h-[80vw] relative mt-10 sm:w-[42rem] sm:h-[40rem] sm:mt-0">
             <Image
               src={'/hand&love.png'}
               alt=""
@@ -18,14 +18,14 @@ export default function AboutTheClinic({ data }: HomePageType) {
             />
           </div>
 
-          <div className="mt-10 mx-20 ">
-            <div className="text-3xl text-header-blue">
+          <div className="mt-10 mx-5 sm:mx-20 ">
+            <div className="text-xl text-header-blue sm:text-3xl">
               {data.homepage.aboutHeading}{' '}
             </div>
-            <div className="text-5xl mt-4 font-bold">
+            <div className="text-4xl mt-4 font-bold sm:text-5xl">
               {data.homepage.aboutTitle}
             </div>
-            <div className="text-lg mt-14">{data.homepage.aboutUsText}</div>
+            <div className="text-lg mt-9 sm:mt-14">{data.homepage.aboutUsText}</div>
             <div
               className="font-bold text-1xl mt-9 w-44 h-14 bg-header-blue rounded-3xl flex justify-center items-center 
   text-light my-auto"

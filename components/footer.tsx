@@ -80,8 +80,8 @@ export default function Footer({ data }: CommonType) {
 
   return (
     <WrapperLarge>
-      <footer className="bg-light w-9/12 mx-auto gap-6 grid grid-cols-4 h-96">
-        <div className="w-80 h-40 relative mt-16">
+      <footer className="bg-light w-11/12 sm:w-9/12 mx-auto gap-6 grid sm:grid-cols-4 sm:h-96 pb-24">
+        <div className="w-3/5 sm:w-80 h-24 sm:h-40 relative mt-12 sm:mt-16 mx-auto sm:mx-0">
           <Image
             src={logo}
             alt=""
@@ -91,19 +91,19 @@ export default function Footer({ data }: CommonType) {
           />
         </div>
 
-        <div className="mt-24">
+        <div className="mt-2 sm:mt-24">
           <div className={classBtn}>{data.footerScheduleButton}</div>
           <div className={classBtn}>{data.footerSupportUsButton}</div>
         </div>
 
-        <div className="mt-24 text-2xl font-bold flex flex-col mx-14">
+        <div className="hidden sm:flex mt-24 text-2xl font-bold  flex-col mx-14">
           {data.footerMenuTitle}
           <div className="text-base font-normal contents leading-9">
             {' '}
             <Menu data={data} replace={data.appLinks[0].text} />
           </div>
         </div>
-        <div className="mt-24 text-2xl font-bold flex flex-col">
+        <div className="mt-11 sm:mt-24 w-4/5 sm:w-full mx-auto text-2xl font-bold flex flex-col">
           {data.footerContactUsTitle}
           {contact}
         </div>

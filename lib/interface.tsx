@@ -8,6 +8,8 @@ export type HomePageType = {
 export type CommonType = {
   data: Common
   replace?: string | any
+  setIsMenuOpen?: boolean | any
+  btnChangeLang?: JSX.Element[]
 }
 
 export type Homepage = {

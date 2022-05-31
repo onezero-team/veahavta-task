@@ -2,15 +2,14 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
-export const ChangeLangButton = ({
-  className,
-  children,
-  lang,
+export function ChangeLangButton({
+  className, children, lang, setIsMenuOpen,
 }: {
   className?: string
   children?: React.ReactNode
   lang: string
-}) => {
+  setIsMenuOpen: (isMenuOpen: boolean) => void
+}): JSX.Element {
   const router = useRouter()
   const changeLocale = (lang: string) => {
     const { pathname, asPath, query } = router
@@ -23,13 +22,12 @@ export const ChangeLangButton = ({
       alt=""
       width={'100%'}
       height={'100%'}
-      layout="fill"
-    />
+      layout="fill" />
   )
 
   return (
     <div>
-      <button className="w-12 h-8 relative" onClick={() => changeLocale(lang)}>
+      <button className="w-12 h-8 relative" onClick={() => { changeLocale(lang); setIsMenuOpen(false) }}>
         {imgLang}
       </button>
     </div>

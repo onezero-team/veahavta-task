@@ -6,25 +6,25 @@ import reactStringReplace from 'react-string-replace'
 export default function Contact({ data }: CommonType) {
   return (
     <WrapperLarge>
-      <div className="w-full grid grid-cols-2 mt-4">
+      <div className="w-full grid sm:grid-cols-2 sm:mt-4">
         {data.contactUsLinks.map((item, index) => {
           return (
             <div
-              className="flex items-center mt-6"
+              className="mt-3 flex items-center sm:mt-6"
               key={index}
               onClick={() => {
                 item.linkType === 'tel'
                   ? window.open(
-                      `tel:${item.linkValue.replace(/[".0"-.]/g, '')}`,
-                    )
+                    `tel:${item.linkValue.replace(/[".0"-.]/g, '')}`,
+                  )
                   : item.linkType === 'email'
-                  ? window.open(
+                    ? window.open(
                       `https://mail.google.com/mail/?view=cm&fs=1&to=${item.text}`,
                     )
-                  : null
+                    : null
               }}
             >
-              <div className="h-11 w-11 mx-3 relative bg-header-blue flex justify-center items-center rounded-full my-2 ">
+              <div className="h-11 w-11 relative bg-header-blue flex justify-center items-center rounded-full my-2 ">
                 <div className="h-5 w-5 relative">
                   <Image
                     src={item.imagePath}
@@ -36,7 +36,7 @@ export default function Contact({ data }: CommonType) {
                 </div>
               </div>
               <div className="">
-                <div className="text-base">
+                <div className="text-base mx-3">
                   {reactStringReplace(
                     item.text.replace('0', ''),
                     item.text.split('0')[1],

@@ -52,8 +52,8 @@ export default function FormContant({ data }: CommonType) {
   return (
     <WrapperLarge>
       <div
-        className="pos-absolute z-10 w-1/3 bg-light h-[44rem] bottom-32 border-2 border-contact-bg 
-        rounded-3xl p-12 text-xl font-bold"
+        className="w-11/12 mx-auto pos-absolute z-10 sm:w-1/3 bg-light sm:h-[44rem] sm:bottom-32 border-2 border-contact-bg 
+        rounded-3xl p-8 sm:p-12 text-xl font-bold"
         id="contact-us"
       >
         <Formik
@@ -75,7 +75,7 @@ export default function FormContant({ data }: CommonType) {
         >
           {({ errors, touched }) => (
             <Form>
-              <div className="gap-x-6 grid grid-cols-2">
+              <div className="gap-x-6 grid sm:grid-cols-2">
                 <div className={classDivInput}>
                   {data.contactUsFormFirstName}
                   <Field name="firstName" className={classInput} />
@@ -154,7 +154,13 @@ export default function FormContant({ data }: CommonType) {
           {`
             .pos-absolute {
               position: absolute;
-              inset-inline-end: 14%;
+              inset-inline-end: 16%;
+            }
+            @media (max-width: 640px) {
+              .pos-absolute {
+                position: relative;
+                inset-inline-end: 0;
+              }
             }
           `}
         </style>
