@@ -13,9 +13,13 @@ export default function Layout({ children, pageProps }: any) {
   return (
     <>
       <div className="app-wrapper" dir={dir}>
-        <Header data={pageProps.data.common} />
         <Main>{children}</Main>
+        <Header data={pageProps.data.common} />
         <Footer data={pageProps.data.common} />
+        {/* Here is the structure of the home page data:
+        <pre className="bg-dark text-light">
+          {JSON.stringify(pageProps, null, 2)}
+        </pre> */}
       </div>
       <style jsx global>
         {`

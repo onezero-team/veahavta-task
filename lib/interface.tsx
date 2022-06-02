@@ -7,6 +7,9 @@ export type HomePageType = {
 
 export type CommonType = {
   data: Common
+  replace?: string | any
+  setIsMenuOpen?: boolean | any
+  btnChangeLang?: JSX.Element[]
 }
 
 export type Homepage = {
@@ -36,6 +39,7 @@ export type Common = {
     imagePath: string
     linkValue: string
   }>
+  // replace: string
   appLinks: Array<{
     text: string
     relativeLink: string
@@ -57,6 +61,14 @@ export type Common = {
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormErrorMessageMissing: string
+  contactUsFormSuccessMessage: string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {
