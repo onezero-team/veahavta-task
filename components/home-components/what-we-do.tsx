@@ -16,7 +16,7 @@ export default function WhatWeDo({ data }: HomePageType) {
     }
     window.addEventListener('resize', handleResize)
 
-    console.log(innerWidth);
+    console.log(innerWidth)
   }, [innerWidth])
 
   const clinicService = (
@@ -43,7 +43,9 @@ export default function WhatWeDo({ data }: HomePageType) {
                 <div className="text-3xl text-header-blue font-bold">
                   {item.title}
                 </div>
-                <div className="text-2xl md:text-2xl lg:text-lg mt-2">{item.text}</div>
+                <div className="text-2xl md:text-2xl lg:text-lg mt-2">
+                  {item.text}
+                </div>
               </div>
             </div>
           )

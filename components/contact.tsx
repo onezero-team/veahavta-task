@@ -15,13 +15,13 @@ export default function Contact({ data }: CommonType) {
               onClick={() => {
                 item.linkType === 'tel'
                   ? window.open(
-                    `tel:${item.linkValue.replace(/[".0"-.]/g, '')}`,
-                  )
+                      `tel:${item.linkValue.replace(/[".0"-.]/g, '')}`,
+                    )
                   : item.linkType === 'email'
-                    ? window.open(
+                  ? window.open(
                       `https://mail.google.com/mail/?view=cm&fs=1&to=${item.text}`,
                     )
-                    : null
+                  : null
               }}
             >
               <div className="h-11 w-11 relative bg-header-blue flex justify-center items-center rounded-full my-2 ">
