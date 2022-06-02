@@ -47,13 +47,13 @@ export default function FormContant({ data }: CommonType) {
 
   const classDivInput = 'flex flex-col items-start '
   const classInput = 'w-full h-16 border-2 border-contact-bg rounded-lg mt-3'
-  const classError = 'w-full h-8 text-base text-red font-normal'
+  const classError = 'w-full h-8 text-2xl md:text-xl lg:text-base text-red font-normal'
 
   return (
     <WrapperLarge>
       <div
         className="w-11/12 mx-auto pos-absolute z-10 sm:w-1/3 bg-light sm:h-[44rem] sm:bottom-32 border-2 border-contact-bg 
-        rounded-3xl p-8 sm:p-12 text-xl font-bold"
+        rounded-3xl p-8 sm:p-12  text-3xl md:text-2xl lg:text-xl font-bold"
         id="contact-us"
       >
         <Formik

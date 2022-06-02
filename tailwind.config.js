@@ -36,6 +36,12 @@ module.exports = {
       text: {
         medium: 'md:text-xl',
         large: 'lg:text-2xl',
+        // "16": ["sm:text-7xl", "md:text-case", "lg:text-3xl"],
+        // 16: 'lg:text-2xl md:text-xl lg:text-base md:text-xl',
+        // 16: 'lg:text-2xl md:text-xl lg:text-base md:text-xl',
+      },
+      fontSize: {
+        16: "lg:2rem",
       },
       boxShadow: {
         '4xl': '0px 0px 4px rgba(0,0,0,0.25)',

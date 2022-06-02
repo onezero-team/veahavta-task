@@ -29,7 +29,7 @@ export default function Drawer({
           >
             X
           </div>
-          <div className="flex flex-col items-center text-xl mt-3 leading-10">
+          <div className="flex flex-col items-center text-3xl md:text-2xl lg:text-xl mt-3 leading-10">
             <Menu data={data} setIsMenuOpen={setIsMenuOpen} />
           </div>
 

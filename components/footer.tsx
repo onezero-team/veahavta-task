@@ -6,7 +6,7 @@ import Menu from './menu'
 
 export default function Footer({ data }: CommonType) {
   const classBtn =
-    'font-bold text-base text-center mx-auto mt-3 w-32 h-12 border-header-blue border-2 rounded-3xl flex justify-center items-center text-header-blue my-auto'
+    'font-bold text-2xl md:text-xl lg:text-base text-center mx-auto mt-3 w-32 h-12 border-header-blue border-2 rounded-3xl flex justify-center items-center text-header-blue my-auto'
 
   const contact = (
     <div className="flex items-center flex-wrap">
@@ -30,7 +30,7 @@ export default function Footer({ data }: CommonType) {
             layout={'fill'}
           />
         </div>
-        <div className="text-base font-normal mx-3">
+        <div className="text-2xl md:text-xl lg:text-base font-normal mx-3">
           {data.contactUsLinks[0].text}
           <div>{data.contactUsLinks[1].text}</div>
         </div>
@@ -48,7 +48,7 @@ export default function Footer({ data }: CommonType) {
             layout={'fill'}
           />
         </div>
-        <div className="text-base font-normal mx-4">
+        <div className="text-2xl md:text-xl lg:text-base font-normal mx-4">
           {data.contactUsLinks[2].text}
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function Footer({ data }: CommonType) {
               layout={'fill'}
             />
           </div>
-          <div className="text-base font-normal mx-3">
+          <div className="text-2xl md:text-xl lg:text-base font-normal mx-3">
             {data.contactUsLinks[3].text}
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function Footer({ data }: CommonType) {
 
         <div className="hidden sm:flex mt-24 text-2xl font-bold  flex-col mx-14">
           {data.footerMenuTitle}
-          <div className="text-base font-normal contents leading-9">
+          <div className="text-2xl font-normal contents leading-9 md:text-xl lg:text-base ">
             {' '}
             <Menu data={data} replace={data.appLinks[0].text} />
           </div>

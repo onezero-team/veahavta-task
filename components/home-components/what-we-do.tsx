@@ -1,15 +1,23 @@
 import { HomePageType } from '@/lib/interface'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { WrapperLarge } from '../wrapper'
 import Image from 'next/image'
 
 export default function WhatWeDo({ data }: HomePageType) {
   const [numCard, setNumCard] = useState(0)
+  const [innerWidth, setinnerWidth] = useState(0)
 
-  let innerWidth: number
-  if (typeof window !== 'undefined') {
-    innerWidth = window.innerWidth
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setinnerWidth(window.innerWidth)
+    }
+    function handleResize() {
+      setinnerWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+
+    console.log(innerWidth);
+  }, [innerWidth])
 
   const clinicService = (
     <div className="flex flex-row justify-between">
@@ -31,11 +39,11 @@ export default function WhatWeDo({ data }: HomePageType) {
                   />
                 </div>
               </div>
-              <div className="h-60 p-5 flex flex-col justify-start ">
+              <div className="h-64 p-5 flex flex-col justify-start ">
                 <div className="text-3xl text-header-blue font-bold">
                   {item.title}
                 </div>
-                <div className="text-lg mt-2">{item.text}</div>
+                <div className="text-2xl md:text-2xl lg:text-lg mt-2">{item.text}</div>
               </div>
             </div>
           )
@@ -54,7 +62,7 @@ export default function WhatWeDo({ data }: HomePageType) {
           <div className="hidden sm:block text-7xl mt-4 font-bold text-center">
             {data.homepage.whatWeDoTitle}
           </div>
-          <div className="mt-6 text-lg sm:mt-14 relative">
+          <div className="mt-6 text-2xl md:text-2xl lg:text-lg sm:mt-14 relative">
             <button
               className="w-16 h-16 rounded-full bg-light shadow-4xl flex items-center justify-center absolute right-0 top-52 sm:hidden"
               onClick={() =>
@@ -88,7 +96,7 @@ export default function WhatWeDo({ data }: HomePageType) {
               </div>
             </button>
 
-            <div className="mx-auto ">{clinicService}</div>
+            <div className="mx-auto">{clinicService}</div>
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ export default function ContactUs({ data }: HomePageType) {
 
         <div className="sm:w-2/5 sm:mt-40 absoluteContact">
           <div
-            className="sm:font-bold text-xl sm:w-32 h-10 bg-light rounded-3xl flex sm:justify-center items-center 
+            className="sm:font-bold text-3xl md:text-2xl lg:text-xl sm:w-32 h-10 bg-light rounded-3xl flex sm:justify-center items-center 
   text-header-blue"
           >
             {data.homepage.contactUsHeading}{' '}
@@ -38,12 +38,12 @@ export default function ContactUs({ data }: HomePageType) {
           <div className="text-4xl font-bold sm:text-5xl mt-5">
             {data.homepage.contactUsTitle}
           </div>
-          <div className="text-base sm:text-xl mt-3">
+          <div className="text-2xl md:text-xl lg:text-base sm:text-xl mt-3">
             {data.homepage.contactUsText
               .split('19:00')[0]
               .replace('0-', '0-19:00')}
           </div>
-          <div className="text-base sm:text-xl">
+          <div className="text-2xl md:text-xl lg:text-base sm:text-xl">
             {data.homepage.contactUsText.split('16:00-19:00')[1]}
           </div>
           <Contact data={data.common} />

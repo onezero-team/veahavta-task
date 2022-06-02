@@ -18,7 +18,7 @@ export const PageHeader = ({ children }: { children: Homepage }) => {
       <div className="font-bold text-4xl w-11/12 text-center leading-tight sm:text-7xl sm:w-5/12 sm:leading-tight">
         {childrenTitle}
       </div>
-      <div className="text-lg font-normal text-center mt-6 sm:text-2xl sm:mt-3">
+      <div className="text-2xl md:text-2xl lg:text-lg font-normal text-center mt-6 sm:text-2xl sm:mt-3">
         {childrenDescription}
       </div>
       <div
