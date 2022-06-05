@@ -1,6 +1,7 @@
 import { Common } from '@/lib/interface'
 import Image from 'next/image'
 import Link from 'next/link'
+import { type } from 'os'
 import React from 'react'
 
 interface ILink {

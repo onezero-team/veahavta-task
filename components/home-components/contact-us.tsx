@@ -1,12 +1,9 @@
-import { HomePageType, Values } from '@/lib/interface'
+import { HomePageType } from '@/lib/interface'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
-import { Formik, Field, Form, FormikHelpers } from 'formik'
 import ContactUsInfo from './contact-us-info'
-import { boolean } from 'yup'
-import ContactUsForm from './about-us-form'
+import ContactUsForm from './contact-us-form'
 
 export default function ContactUs({ data }: HomePageType) {
   const {

@@ -109,23 +109,3 @@ export default function Banner({ data }: HomePageType) {
     </div>
   )
 }
-
-{
-  /* <style jsx>{`
-          div.wrapper {
-            margin-top: -${themePreval.height.header};
-            padding-top: ${themePreval.height.header};
-            position: relative;
-          }
-          div.background {
-            position: absolute;
-            z-index: -1;
-            inset: 0;
-            background: linear-gradient(
-              109.17deg,
-              rgba(1, 157, 177, 0.21) 38.49%,
-              #019db1 98.95%
-            );
-          }
-        `}</style> */
-}

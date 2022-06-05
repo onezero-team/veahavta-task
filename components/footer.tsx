@@ -1,13 +1,17 @@
 import { Common, CommonType, Homepage } from '@/lib/interface'
-import { link } from 'fs'
 import Image from 'next/image'
 import Link from 'next/link'
-import AboutTheClinic from './home-components/about-the-clinic'
-import ContactUsInfo from './home-components/contact-us-info'
 import { WrapperLarge } from './wrapper'
 
 type iFooter = {
   data: Common
+}
+
+type Ilink = {
+  text: string
+  linkType: string
+  imagePath: string
+  linkValue: string
 }
 
 export default function Footer({ data }: iFooter) {
@@ -30,6 +34,18 @@ export default function Footer({ data }: iFooter) {
         )
       }
     })
+  }
+
+  const customHref = (link: Ilink) => {
+    if (link.linkType === 'tel') {
+      return `tel:${link.linkValue}`
+    }
+    if (link.linkType === 'email') {
+      return `mailto:${link.text}`
+    }
+    if (link.linkType === 'address') {
+      return `http://maps.google.com/maps?q=${link.text.trim()}`
+    }
   }
 
   return (
@@ -79,67 +95,34 @@ export default function Footer({ data }: iFooter) {
           </span>
           <div className=" flex flex-col gap-3">
             {contactUsLinks.map((link) => {
-              if (link.linkType === 'tel') {
-                return (
-                  <Link key={link.text} href={`tel:${link.linkValue}`}>
-                    <a className="flex text-xl">
-                      <div className="w-7 h-7">
-                        <Image
-                          src={`/footer/${link.imagePath}`}
-                          width={25}
-                          height={25}
-                          layout={'fixed'}
-                          className=" bg-clip-text"
-                          alt={link.text}
-                        />
-                      </div>
-                      {link.text}
-                    </a>
-                  </Link>
-                )
-              }
-              if (link.linkType === 'address') {
-                return (
-                  <Link
-                    key={link.text}
-                    href={`http://maps.google.com/maps?q=${link.text}`}
-                  >
-                    <a className="flex text-xl">
-                      <div className="w-7 h-7">
-                        <Image
-                          src={`/footer/${link.imagePath}`}
-                          width={25}
-                          height={25}
-                          layout={'fixed'}
-                          className=" bg-clip-text"
-                          alt={link.text}
-                        />
-                      </div>
-                      {link.text}
-                    </a>
-                  </Link>
-                )
-              }
+              const myhref = customHref(link)
+              console.log(myhref)
 
-              if (link.linkType === 'email') {
-                return (
-                  <Link key={link.text} href={`mailto:${link.text}`}>
-                    <a className="flex text-xl">
-                      <div className="w-7 h-7">
-                        <Image
-                          src={`/footer/${link.imagePath}`}
-                          width={25}
-                          height={25}
-                          layout={'fixed'}
-                          className=" bg-clip-text"
-                          alt={link.text}
-                        />
-                      </div>
-                      {link.text}
-                    </a>
-                  </Link>
-                )
-              }
+              return (
+                <Link
+                  key={link.text}
+                  href={{
+                    pathname: myhref,
+                  }}
+                >
+                  <a
+                    className="flex text-xl"
+                    target={link.linkType === 'address' ? '_blank' : '_self'}
+                  >
+                    <div className="w-7 h-7">
+                      <Image
+                        src={`/footer/${link.imagePath}`}
+                        width={25}
+                        height={25}
+                        layout={'fixed'}
+                        className=" bg-clip-text"
+                        alt={link.text}
+                      />
+                    </div>
+                    {link.text}
+                  </a>
+                </Link>
+              )
             })}
           </div>
         </div>

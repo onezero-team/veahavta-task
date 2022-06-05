@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
-import {
-  Formik,
-  FormikHelpers,
-  FormikProps,
-  Form,
-  Field,
-  FieldProps,
-} from 'formik'
+import { Formik, FormikHelpers, Form, Field } from 'formik'
 import { Values } from '@/lib/interface'
 import * as Yup from 'yup'
 
-type Istate = {}
+type Iprops = {
+  data: {
+    contactUsFormEmail: string
+    contactUsFormPhone: string
+    contactUsFormFirstName: string
+    contactUsFormLastName: string
+    contactUsFormMessage: string
+    contactUsFormSendButton: string
+  }
+}
 
-function ContactUsForm({ data }: any) {
+function ContactUsForm({ data }: Iprops) {
   const initialValues = {
     name: '',
     lastName: '',
@@ -20,14 +22,14 @@ function ContactUsForm({ data }: any) {
     text: '',
     tel: 0,
   }
-  function onSendData(calback: any, values: Values) {
+  function onSendData(setSubmitting: Function, values: Values) {
     setTimeout(() => {
       const { name, lastName, email, text, tel } = values
       alert(
         `name: ${name} \n lastname: ${lastName} \n email: ${email} \n phone: ${tel} \n text: ${text}
           \n                                     Sent Succussfully`,
       )
-      calback(false)
+      setSubmitting(false)
     }, 500)
   }
 

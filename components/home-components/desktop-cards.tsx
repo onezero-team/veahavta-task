@@ -1,6 +1,5 @@
 import { CardProps } from '@/lib/interface'
 import Image from 'next/image'
-import { type } from 'os'
 import React from 'react'
 
 interface Iprops {
