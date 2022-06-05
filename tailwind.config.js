@@ -13,6 +13,26 @@ module.exports = {
       primary: '#01559A',
       accent: '#D25C78',
       red: '#D25C78',
+      purple: '#D3D1FC',
+      lightPurple: '#F4F3FD',
+      darkPurple: '#4E47F9',
+    },
+
+    screens: {
+      mobile: [{ min: '350px', max: '600px' }],
+
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+      desktop: '1920px',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
@@ -22,6 +42,17 @@ module.exports = {
       mono: ['"Assistant"', 'sans-serif'],
     },
     extend: {
+      spacing: {
+        100: '26rem',
+        110: '31rem',
+        125: '40rem',
+        150: '45rem',
+        160: '55rem',
+        200: '70rem',
+        210: '80rem',
+        220: '90rem',
+        240: '110rem',
+      },
       colors: {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
@@ -32,6 +63,7 @@ module.exports = {
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
       },
+
       text: {
         medium: 'md:text-xl',
         large: 'lg:text-2xl',

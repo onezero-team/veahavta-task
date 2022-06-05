@@ -5,8 +5,21 @@ export type HomePageType = {
   }
 }
 
+export type CardProps = {
+  imagePath: string
+  title: string
+  text: string
+}
+
 export type CommonType = {
   data: Common
+}
+export interface Values {
+  name: string
+  lastName: string
+  email: string
+  tel: number
+  text: string
 }
 
 export type Homepage = {
