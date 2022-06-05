@@ -34,7 +34,9 @@ export default function ContactUs({ data }: HomePageType) {
       <section
         id="contact-us"
         className="bg-lightPurple  h-125 mt-16 flex relative justify-around items-center p-20
-        mobile:flex-col mobile:h-240 mobile:p-1 mobile:mt-0 mobile:justify-around mobile:items-start mobile:bg-light"
+        mobile:flex-col mobile:w-100 mobile:h-240 mobile:p-1 mobile:mt-0
+        
+         mobile:justify-around mobile:items-start mobile:bg-light"
       >
         <ContactUsInfo
           contactUsLinks={contactUsLinks}
