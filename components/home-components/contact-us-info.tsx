@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-interface Link {
+interface ILink {
   text: string
   linkType: string
   imagePath: string
@@ -11,14 +11,19 @@ interface Link {
 }
 
 interface Iprops {
-  contactUsLinks: Link[]
+  contactUsLinks: {
+    text: string
+    linkType: string
+    imagePath: string
+    linkValue: string
+  }[]
   contactUsText: string
   contactUsTitle: string
   contactUsHeading: string
 }
 
-const Links = ({ contactUsLinks }: any) => {
-  return contactUsLinks.map((link: Link) => {
+const Links: any = ({ contactUsLinks }: Iprops) => {
+  return contactUsLinks.map((link: ILink) => {
     return (
       <div key={link.text} className="flex items-center gap-1">
         <div className=" p-2 flex justify-center items-center bg-primary rounded-full">
@@ -36,7 +41,7 @@ const Links = ({ contactUsLinks }: any) => {
           </Link>
         )}
         {link.linkType === 'tel' && (
-          <Link href={`tel:${link.text}`}>
+          <Link href={`tel:${link.linkValue}`}>
             <a className="w-40"> {link.text}</a>
           </Link>
         )}
