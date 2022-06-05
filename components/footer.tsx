@@ -79,23 +79,67 @@ export default function Footer({ data }: iFooter) {
           </span>
           <div className=" flex flex-col gap-3">
             {contactUsLinks.map((link) => {
-              return (
-                <Link key={link.text} href={link.linkValue}>
-                  <a className="flex text-xl">
-                    <div className="w-7 h-7">
-                      <Image
-                        src={`/footer/${link.imagePath}`}
-                        width={25}
-                        height={25}
-                        layout={'fixed'}
-                        className=" bg-clip-text"
-                        alt={link.text}
-                      />
-                    </div>
-                    {link.text}
-                  </a>
-                </Link>
-              )
+              if (link.linkType === 'tel') {
+                return (
+                  <Link key={link.text} href={`tel:${link.linkValue}`}>
+                    <a className="flex text-xl">
+                      <div className="w-7 h-7">
+                        <Image
+                          src={`/footer/${link.imagePath}`}
+                          width={25}
+                          height={25}
+                          layout={'fixed'}
+                          className=" bg-clip-text"
+                          alt={link.text}
+                        />
+                      </div>
+                      {link.text}
+                    </a>
+                  </Link>
+                )
+              }
+              if (link.linkType === 'address') {
+                return (
+                  <Link
+                    key={link.text}
+                    href={`http://maps.google.com/maps?q=${link.text}`}
+                  >
+                    <a className="flex text-xl">
+                      <div className="w-7 h-7">
+                        <Image
+                          src={`/footer/${link.imagePath}`}
+                          width={25}
+                          height={25}
+                          layout={'fixed'}
+                          className=" bg-clip-text"
+                          alt={link.text}
+                        />
+                      </div>
+                      {link.text}
+                    </a>
+                  </Link>
+                )
+              }
+
+              if (link.linkType === 'email') {
+                return (
+                  <Link key={link.text} href={`mailto:${link.text}`}>
+                    <a className="flex text-xl">
+                      <div className="w-7 h-7">
+                        <Image
+                          src={`/footer/${link.imagePath}`}
+                          width={25}
+                          height={25}
+                          layout={'fixed'}
+                          className=" bg-clip-text"
+                          alt={link.text}
+                        />
+                      </div>
+                      {link.text}
+                    </a>
+                  </Link>
+                )
+              }
             })}
           </div>
         </div>
