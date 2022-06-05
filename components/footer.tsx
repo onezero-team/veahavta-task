@@ -44,6 +44,7 @@ export default function Footer({ data }: iFooter) {
             height={152}
             src={'/footer/footer-logo.png'}
             layout="responsive"
+            alt="logo"
           />
         </div>
         <div
@@ -88,6 +89,7 @@ export default function Footer({ data }: iFooter) {
                         height={25}
                         layout={'fixed'}
                         className=" bg-clip-text"
+                        alt={link.text}
                       />
                     </div>
                     {link.text}

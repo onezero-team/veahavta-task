@@ -22,6 +22,7 @@ function MobileCards({ whatWeDoCards, currentSlide }: Imobile) {
                 height={205}
                 key={card.title}
                 layout={'fixed'}
+                alt={card.title}
                 className="animate-fadeIn "
               />
             </div>

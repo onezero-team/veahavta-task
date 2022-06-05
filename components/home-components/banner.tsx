@@ -31,6 +31,7 @@ export default function Banner({ data }: HomePageType) {
               objectFit="contain"
               objectPosition={'center'}
               layout="responsive"
+              alt={'photo'}
             />
           </div>
           <div className="absolute w-72 right-0 bottom-36">
@@ -40,6 +41,7 @@ export default function Banner({ data }: HomePageType) {
               width={315}
               height={380}
               layout="responsive"
+              alt={'photo'}
             />
           </div>
           <div className="absolute w-72 right-80 -bottom-12">
@@ -51,6 +53,7 @@ export default function Banner({ data }: HomePageType) {
               objectFit="contain"
               objectPosition={'center'}
               layout="responsive"
+              alt={'photo'}
             />
           </div>
           <div className="absolute w-72 left-72 -bottom-32">
@@ -62,6 +65,7 @@ export default function Banner({ data }: HomePageType) {
               objectFit="contain"
               objectPosition={'center'}
               layout="responsive"
+              alt={'photo'}
             />
           </div>
           <div className="absolute w-72 left-36 -top-3">
@@ -73,6 +77,7 @@ export default function Banner({ data }: HomePageType) {
               objectFit="contain"
               objectPosition={'center'}
               layout="responsive"
+              alt={'photo'}
             />
           </div>
           <div className="absolute w-72 -left-5 bottom-32">
@@ -84,6 +89,7 @@ export default function Banner({ data }: HomePageType) {
               objectFit="contain"
               objectPosition={'center'}
               layout="responsive"
+              alt={'photo'}
             />
           </div>
           <div className="absolute w-72 left-96 -top-40">
@@ -95,6 +101,7 @@ export default function Banner({ data }: HomePageType) {
               objectFit="contain"
               objectPosition={'center'}
               layout="responsive"
+              alt={'photo'}
             />
           </div>
         </div>

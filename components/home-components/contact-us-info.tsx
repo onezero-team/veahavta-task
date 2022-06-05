@@ -22,7 +22,13 @@ const Links = ({ contactUsLinks }: any) => {
     return (
       <div key={link.text} className="flex items-center gap-1">
         <div className=" p-2 flex justify-center items-center bg-primary rounded-full">
-          <Image src={link.imagePath} width={20} height={20} key={link.text} />
+          <Image
+            src={link.imagePath}
+            width={20}
+            alt={link.text}
+            height={20}
+            key={link.text}
+          />
         </div>
         {link.linkType === 'email' && (
           <Link href={`mailto:${link.text}`}>

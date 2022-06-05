@@ -49,6 +49,7 @@ export default function ContactUs({ data }: HomePageType) {
             width={300}
             height={300}
             layout={'responsive'}
+            alt={'phone'}
           />
         </div>
         <div className="w-80  absolute -bottom-10 -left-2 opacity-20 mobile:w-48 ">
@@ -57,6 +58,7 @@ export default function ContactUs({ data }: HomePageType) {
             width={300}
             height={300}
             layout={'responsive'}
+            alt={'phone'}
           />
         </div>
       </section>

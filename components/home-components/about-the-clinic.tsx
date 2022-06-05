@@ -32,6 +32,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
             width={570}
             height={450}
             layout={'responsive'}
+            alt={'photo'}
           />
         </div>
       </section>

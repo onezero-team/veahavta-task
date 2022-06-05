@@ -36,6 +36,7 @@ function DesktopCards({
                       height={100}
                       layout={'fixed'}
                       className="bg-lightPurple rounded-sm"
+                      alt={card.title}
                     />
                   </div>
                 </div>

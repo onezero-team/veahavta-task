@@ -60,7 +60,7 @@ const Logo = () => {
   return (
     <Link href="/">
       <a>
-        <Image src={'/logo.png'} width={75} height={34} alt="1" />
+        <Image src={'/logo.png'} width={75} height={34} alt="1ogo" />
       </a>
     </Link>
   )
