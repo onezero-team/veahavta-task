@@ -29,7 +29,7 @@ export default function Footer({ data }: iFooter) {
       if (i !== 0) {
         return (
           <Link key={link.text} href={link.relativeLink}>
-            <a>{link.text}</a>
+            <a className="text-xl">{link.text}</a>
           </Link>
         )
       }
@@ -87,14 +87,14 @@ export default function Footer({ data }: iFooter) {
             {footerSupportUsButton ? footerSupportUsButton : 'Support us'}
           </button>
         </div>
-        <div className="flex flex-col h-44 mobile:hidden md:hidden lg:flex-col  ">
-          <span className="font-bold">{footerMenuTitle}</span>
+        <div className="flex flex-col h-44 mobile:hidden  lg:flex-col gap-2 md:flex-col ">
+          <span className="font-bold text-xl">{footerMenuTitle}</span>
 
           <MenuLinks />
         </div>
 
         <div className="flex flex-col gap-1 h-44 mobile:order-3 mobile:gap-5 ">
-          <span className="font-bold mobile:text-2xl">
+          <span className="font-bold mobile:text-2xl md:text-xl">
             {footerContactUsTitle}
           </span>
           <div className=" flex flex-col gap-3 ">
