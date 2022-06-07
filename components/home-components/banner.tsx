@@ -18,10 +18,12 @@ export default function Banner({ data }: HomePageType) {
             {data.homepage.description}
           </p>
           <button className="bg-header-blue font-bold text-light pr-4 pl-4 pt-1 pb-1 rounded-3xl">
-            {data.homepage.getToKnowUsButton}
+            {data.homepage.getToKnowUsButton
+              ? data.homepage.getToKnowUsButton
+              : 'Get to know us'}
           </button>
         </div>
-        <div className="hidden w-full h-full absolute sm:none md:none lg:block">
+        <div className="hidden w-full h-full absolute sm:none md:none xxl:block">
           <div className="absolute w-72 right-40 -top-10">
             <Image
               className=""

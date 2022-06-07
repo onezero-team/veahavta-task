@@ -1,7 +1,5 @@
-import { Common } from '@/lib/interface'
 import Image from 'next/image'
 import Link from 'next/link'
-import { type } from 'os'
 import React from 'react'
 
 interface ILink {
@@ -71,17 +69,24 @@ export default function ContactUsInfo({
   return (
     <article
       className="flex flex-col h-52 justify-around items-start gap-6
-   mobile:h-96 mobile:gap-6 mobile:w-1/2 mobile: p-4"
+    mobile:gap-10 mobile:w-full sm:w-1/2 mobile:p-4 mobile:items-start mobile:h-auto "
     >
-      <span className="bg-light w-20 text-center text-darkPurple font-bold rounded-xl pl-2 pt-1 pb-1">
-        {contactUsHeading}
+      <span className="bg-light w-20 text-center text-darkPurple font-bold rounded-xl">
+        {contactUsHeading ? contactUsHeading : 'Contact Us'}
       </span>
-      <h2 className="font-bold text-3xl text-center mobile:text-4xl mobile:w-full mobile:text-right">
-        {contactUsTitle}
+      <h2 className="font-bold text-3xl text-center mobile:text-4xl mobile:w-full mobile:text-center">
+        {contactUsTitle ? contactUsTitle : 'We Are Here For You'}
       </h2>
-      <p className="w-96 text-lg">{contactUsText}</p>
+      <p className="w-96 text-lg mobile:w-50 mobile:text-xl ">
+        {contactUsText
+          ? contactUsText
+          : 'The clinic is open Tuesday and Thursday 16:00-19:00 and Saturday 10:00-14:00'}
+      </p>
 
-      <div className="gap-3 flex flex-wrap  w-100 mobile:flex-col mobile:h-80 ">
+      <div
+        className="gap-3 flex flex-wrap  w-100  mobile:flex-col
+       mobile:h-auto mobile:w-full items-center mobile:items-center "
+      >
         <Links contactUsLinks={contactUsLinks} />
       </div>
     </article>

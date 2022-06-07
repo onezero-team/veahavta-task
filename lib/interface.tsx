@@ -1,3 +1,5 @@
+import { type } from 'os'
+
 export type HomePageType = {
   data: {
     homepage: Homepage
@@ -70,6 +72,14 @@ export type Common = {
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+  contactUsFormSuccessMessage: string
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorMessageMissing: string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {
@@ -142,3 +152,22 @@ common(locale: ${locale}) {
   footerSupportUsButton
 }
 `
+
+export type Iform = {
+  data: {
+    contactUsFormEmail: string
+    contactUsFormPhone: string
+    contactUsFormFirstName: string
+    contactUsFormLastName: string
+    contactUsFormMessage: string
+    contactUsFormSendButton: string
+    contactUsFormSuccessMessage: string
+    contactUsFormErrorFirstNameMissing: string
+    contactUsFormErrorLastNameMissing: string
+    contactUsFormErrorEmailMissing: string
+    contactUsFormErrorEmailInvalid: string
+    contactUsFormErrorPhoneMissing: string
+    contactUsFormErrorPhoneInvalid: string
+    contactUsFormErrorMessageMissing: string
+  }
+}

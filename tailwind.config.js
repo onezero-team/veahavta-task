@@ -19,7 +19,7 @@ module.exports = {
     },
 
     screens: {
-      mobile: [{ min: '350px', max: '600px' }],
+      mobile: [{ min: '330px', max: '639px' }],
 
       sm: '640px',
       // => @media (min-width: 640px) { ... }
@@ -32,6 +32,8 @@ module.exports = {
 
       xl: '1280px',
       // => @media (min-width: 1280px) { ... }
+
+      xxl: '1530px',
       desktop: '1920px',
     },
     fontFamily: {

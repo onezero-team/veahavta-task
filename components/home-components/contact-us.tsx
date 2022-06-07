@@ -14,6 +14,14 @@ export default function ContactUs({ data }: HomePageType) {
     contactUsFormLastName,
     contactUsFormMessage,
     contactUsFormSendButton,
+    contactUsFormSuccessMessage,
+    contactUsFormErrorFirstNameMissing,
+    contactUsFormErrorLastNameMissing,
+    contactUsFormErrorEmailMissing,
+    contactUsFormErrorEmailInvalid,
+    contactUsFormErrorPhoneMissing,
+    contactUsFormErrorPhoneInvalid,
+    contactUsFormErrorMessageMissing,
   } = data.common
   const { contactUsHeading, contactUsTitle, contactUsText } = data.homepage
 
@@ -24,6 +32,14 @@ export default function ContactUs({ data }: HomePageType) {
     contactUsFormLastName,
     contactUsFormMessage,
     contactUsFormSendButton,
+    contactUsFormSuccessMessage,
+    contactUsFormErrorFirstNameMissing,
+    contactUsFormErrorLastNameMissing,
+    contactUsFormErrorEmailMissing,
+    contactUsFormErrorEmailInvalid,
+    contactUsFormErrorPhoneMissing,
+    contactUsFormErrorPhoneInvalid,
+    contactUsFormErrorMessageMissing,
   }
 
   return (
@@ -31,9 +47,11 @@ export default function ContactUs({ data }: HomePageType) {
       <section
         id="contact-us"
         className="bg-lightPurple  h-125 mt-16 flex relative justify-around items-center p-20
-        mobile:flex-col mobile:w-100 mobile:h-240 mobile:p-1 mobile:mt-0
-        
-         mobile:justify-around mobile:items-start mobile:bg-light"
+        mobile:flex-col mobile:w-full  mobile:p-1 mobile:mt-0
+         mobile:justify-around mobile:items-center mobile:bg-light
+          md:flex-col  flex-col sm:h-auto md:h-auto lg:h-auto mobile:h-210 sm:gap-32 xl:flex-row
+
+         "
       >
         <ContactUsInfo
           contactUsLinks={contactUsLinks}

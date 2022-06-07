@@ -52,7 +52,10 @@ export default function Footer({ data }: iFooter) {
     <WrapperLarge>
       <footer
         className="bg-light h-100 flex items-center justify-evenly
-      mobile:flex-col mobile:h-160  overflow-hidden relative"
+         xl:flex-row mobile:flex-col md:flex-col md:h-auto
+          md:p-10 mobile:h-150 mobile:p-10  mobile:gap-10  overflow-hidden relative
+          sm:flex-col sm:h-auto sm:p-10 
+          "
       >
         <div className="w-80 h-44">
           <Image
@@ -66,37 +69,37 @@ export default function Footer({ data }: iFooter) {
         <div
           className="flex flex-col h-44 justify-start gap-2
 
-        mobile:order-2 mobile:w-36"
+        mobile:order-2 mobile:w-2/3"
         >
           <button
             className="border-2 border-darkPurple font-bold text-darkPurple p-4 pt-2 pb-2  rounded-full
-           mobile:text-xl mobile:p-3
-           "
+           mobile:text-lg mobile:p-3"
           >
-            {footerScheduleButton}
+            {footerScheduleButton
+              ? footerScheduleButton
+              : 'Schedule an appointment'}
           </button>
           <button
             className="border-2 border-darkPurple font-bold text-darkPurple p-4 pt-2 pb-2  rounded-full
           mobile:text-xl mobile:p-3
           "
           >
-            {footerSupportUsButton}
+            {footerSupportUsButton ? footerSupportUsButton : 'Support us'}
           </button>
         </div>
-        <div className="flex flex-col h-44 mobile:hidden">
+        <div className="flex flex-col h-44 mobile:hidden md:hidden lg:flex-col  ">
           <span className="font-bold">{footerMenuTitle}</span>
 
           <MenuLinks />
         </div>
 
-        <div className="flex flex-col gap-1 h-44 mobile:order-3 mobile:gap-5">
+        <div className="flex flex-col gap-1 h-44 mobile:order-3 mobile:gap-5 ">
           <span className="font-bold mobile:text-2xl">
             {footerContactUsTitle}
           </span>
-          <div className=" flex flex-col gap-3">
+          <div className=" flex flex-col gap-3 ">
             {contactUsLinks.map((link) => {
               const myhref = customHref(link)
-              console.log(myhref)
 
               return (
                 <Link

@@ -1,39 +1,86 @@
+import { useLocale } from '@/lib/hooks'
 import { CardProps } from '@/lib/interface'
 import Image from 'next/image'
 
-interface Imobile {
-  whatWeDoCards: CardProps[] | any
+type Imobile = {
+  whatWeDoCards: CardProps[]
   currentSlide: number
+  handlePrevSlide: Function
+  handleNextSlide: Function
 }
 
-function MobileCards({ whatWeDoCards, currentSlide }: Imobile) {
+const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
+  const local = useLocale()
+
+  let btnRight = local.dir === 'ltr' ? 'left' : 'right'
+  let btnLeft = local.dir === 'ltr' ? 'right' : 'left'
+
+  return (
+    <>
+      <button
+        className={`absolute -${btnLeft}-8 m-auto text-2xl
+         inset-y-1/2 cursor-pointer text-gray-400 z-20
+         bg-light border-2 border-brown-bg p-4 rounded-full h-16 w-16`}
+        onClick={handlePrevSlide}
+      >
+        &#10095;
+      </button>
+      <button
+        className={`absolute -${btnRight}-8 m-auto text-2xl
+         inset-y-1/2 cursor-pointer text-gray-400 z-20
+          bg-light p-4 rounded-full h-16 w-16
+          border-2 border-brown-bg`}
+        onClick={handleNextSlide}
+      >
+        &#10094;
+      </button>
+    </>
+  )
+}
+
+function MobileCards({
+  whatWeDoCards,
+  currentSlide,
+  handlePrevSlide,
+  handleNextSlide,
+}: Imobile): any {
   return whatWeDoCards.map((card: CardProps, index: number) => {
     if (index === currentSlide) {
       return (
-        <div key={card.title} className="border-2 m-9">
+        <>
           <div
             key={card.title}
-            className="flex flex-col h-100 items-center bg-light justify-between  "
+            className="border-2 mt-5 relative max-w-xs w-75
+             mobile:w-100"
           >
-            <div className="bg-lightPurple w-full flex justify-center">
-              <Image
-                src={card.imagePath}
-                width={150}
-                height={205}
-                key={card.title}
-                layout={'fixed'}
-                alt={card.title}
-                className="animate-fadeIn "
-              />
-            </div>
-            <div className="flex flex-col h-1/2 w-2/3 pt-4">
-              <span className="text-xl text-right text-darkPurple font-bold ">
-                {card.title}
-              </span>
-              <p>{card.text}</p>
+            <Buttons
+              handlePrevSlide={handlePrevSlide}
+              handleNextSlide={handleNextSlide}
+            />
+            <div
+              key={card.title}
+              className="flex flex-col  h-96 items-center sm:w-72 bg-light justify-between  "
+            >
+              <div className="bg-lightPurple w-full h-1/2 flex justify-center">
+                <Image
+                  src={card.imagePath}
+                  width={150}
+                  height={200}
+                  key={card.title}
+                  layout={'fixed'}
+                  alt={card.title}
+                  className="animate-fadeIn "
+                />
+              </div>
+              <div className="flex flex-col h-1/2 w-2/3 pt-4">
+                <span className="text-xl text-right text-darkPurple font-bold ">
+                  {card.title}
+                </span>
+                <p>{card.text}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )
     }
   })

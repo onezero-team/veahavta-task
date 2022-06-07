@@ -4,6 +4,7 @@ import React, { useMemo, useState } from 'react'
 import { WrapperLarge } from '../wrapper'
 import MobileCards from './mobile-cards'
 import DesktopCards from './desktop-cards'
+import { useLocale } from '@/lib/hooks'
 
 export default function WhatWeDo({ data }: HomePageType) {
   const { whatWeDoHeading, whatWeDoTitle, whatWeDoCards } = data.homepage
@@ -27,48 +28,33 @@ export default function WhatWeDo({ data }: HomePageType) {
     setCurrentSlide(newSlide)
   }
 
-  const Buttons = () => {
-    return (
-      <>
-        <button
-          className="absolute left-0 m-auto text-2xl
-           inset-y-1/2 cursor-pointer text-gray-400 z-20
-           bg-light border-2 border-brown-bg p-4 rounded-full h-16 w-16
-           "
-          onClick={handlePrevSlide}
-        >
-          &#10095;
-        </button>
-        <button
-          className="absolute right-0 m-auto text-2xl
-           inset-y-1/2 cursor-pointer text-gray-400 z-20
-            bg-light p-4 rounded-full h-16 w-16
-            border-2 border-brown-bg
-            "
-          onClick={handleNextSlide}
-        >
-          &#10094;
-        </button>
-      </>
-    )
-  }
   return (
     <WrapperLarge>
-      <div className="relative animate-fadeIn mobile:flex mobile:flex-col">
-        {width && whatWeDoCards && width < 450 ? (
+      <div
+        className="relative flex animate-fadeIn mobile:flex mobile:flex-col h-auto
+         sm:h-auto  mobile:mt-0 sm:mt-10 sm:flex-col justify-center sm:items-center
+         mobile:h-auto w-full 
+      "
+      >
+        {width && whatWeDoCards.length > 0 && width < 1024 && (
           <>
-            <Buttons />
-            <span className="text-red text-xl text-center w-100">
+            <span className="text-red text-xl text-right mr-5 ">
               {whatWeDoHeading}
             </span>
-            <div className="mt-20 mobile:mt-3">
+            <div
+              className="mt-20 mobile:mt-3 flex justify-center
+             sm:mt-2 md:mt-2"
+            >
               <MobileCards
+                handleNextSlide={handleNextSlide}
+                handlePrevSlide={handlePrevSlide}
                 whatWeDoCards={whatWeDoCards}
                 currentSlide={currentSlide}
               />
             </div>
           </>
-        ) : (
+        )}
+        {width && whatWeDoCards.length > 0 && width > 1024 && (
           <DesktopCards
             whatWeDoTitle={title}
             whatWeDoHeading={heading}

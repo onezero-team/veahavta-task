@@ -19,6 +19,7 @@ function DesktopCards({
       <h2 className="font-bold text-5xl text-center mobile:text-4xl mobile:w-full mobile:text-center">
         {whatWeDoTitle}
       </h2>
+
       <div className="cards w-full flex justify-center gap-10">
         {whatWeDoCards &&
           whatWeDoCards.map((card: CardProps) => {
