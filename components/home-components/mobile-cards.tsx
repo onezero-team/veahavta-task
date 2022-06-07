@@ -12,21 +12,26 @@ type Imobile = {
 const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
   const local = useLocale()
 
-  let btnRight = local.dir === 'ltr' ? 'left' : 'right'
-  let btnLeft = local.dir === 'ltr' ? 'right' : 'left'
+  let dir = local.dir
+  console.log(dir)
 
   return (
     <>
       <button
-        className={`absolute -${btnLeft}-8 m-auto text-2xl
-         inset-y-1/2 cursor-pointer text-gray-400 z-20
-         bg-light border-2 border-brown-bg p-4 rounded-full h-16 w-16`}
+        className={` absolute ${
+          dir === 'rtl' ? 'left-0' : 'right-0'
+        }  m-auto text-2xl
+                 inset-y-1/2 cursor-pointer text-gray-400 z-20
+                  bg-light p-4 rounded-full h-16 w-16
+                  border-2 border-brown-bg`}
         onClick={handlePrevSlide}
       >
         &#10095;
       </button>
       <button
-        className={`absolute -${btnRight}-8 m-auto text-2xl
+        className={`absolute ${
+          dir === 'rtl' ? 'right-0' : 'left-0'
+        } m-auto text-2xl
          inset-y-1/2 cursor-pointer text-gray-400 z-20
           bg-light p-4 rounded-full h-16 w-16
           border-2 border-brown-bg`}
@@ -51,12 +56,13 @@ function MobileCards({
           <div
             key={card.title}
             className="border-2 mt-5 relative max-w-xs w-75
-             mobile:w-100"
+             mobile:w-full"
           >
             <Buttons
               handlePrevSlide={handlePrevSlide}
               handleNextSlide={handleNextSlide}
             />
+
             <div
               key={card.title}
               className="flex flex-col  h-96 items-center sm:w-72 bg-light justify-between  "

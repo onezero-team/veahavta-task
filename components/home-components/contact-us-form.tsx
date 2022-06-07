@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Formik, FormikHelpers, Form, Field } from 'formik'
 import { Iform, Values } from '@/lib/interface'
 import * as Yup from 'yup'
+import { useLocale } from '@/lib/hooks'
 
 function ContactUsForm({ data }: Iform) {
   const initialValues = {
@@ -21,7 +22,6 @@ function ContactUsForm({ data }: Iform) {
       setSubmitting(false)
     }, 500)
   }
-
   const contactSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, 'Too Short!')
