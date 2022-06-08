@@ -11,16 +11,13 @@ type Imobile = {
 
 const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
   const local = useLocale()
-
   let dir = local.dir
-  console.log(dir)
-
+  const btnOne = dir === 'rtl' ? '-left-8' : '-right-8'
+  const btnTwo = dir === 'rtl' ? '-right-8' : '-left-8'
   return (
     <>
       <button
-        className={` absolute ${
-          dir === 'rtl' ? 'left-0' : 'right-0'
-        }  m-auto text-2xl
+        className={` absolute ${btnOne}  m-auto text-2xl
                  inset-y-1/2 cursor-pointer text-gray-400 z-20
                   bg-light p-4 rounded-full h-16 w-16
                   border-2 border-brown-bg`}
@@ -29,9 +26,7 @@ const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
         &#10095;
       </button>
       <button
-        className={`absolute ${
-          dir === 'rtl' ? 'right-0' : 'left-0'
-        } m-auto text-2xl
+        className={`absolute ${btnTwo} m-auto text-2xl
          inset-y-1/2 cursor-pointer text-gray-400 z-20
           bg-light p-4 rounded-full h-16 w-16
           border-2 border-brown-bg`}
