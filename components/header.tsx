@@ -54,7 +54,7 @@ export default function Header({ data }: CommonType) {
               )
             })}
           </ul>
-          <div className="sm:block  pl-10 cursor-pointer  relative  ">
+          <div className="  pl-10 cursor-pointer  relative mobile:block md:block lg:hidden    ">
             <Image src="/header/mobile-menu.svg" alt="menu" layout="fill" />
           </div>
         </div>
