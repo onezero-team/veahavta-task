@@ -19,7 +19,7 @@ const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
       <button
         className={` absolute ${btnOne}  m-auto text-2xl
                  inset-y-1/2 cursor-pointer text-gray-400 z-20
-                  bg-light p-4 rounded-full h-16 w-16
+                  bg-light p-1 mobile:p-2 rounded-full h-16 w-16 mobile:h-14 mobile:w-14
                   border-2 border-brown-bg`}
         onClick={handlePrevSlide}
       >
@@ -28,7 +28,7 @@ const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
       <button
         className={`absolute ${btnTwo} m-auto text-2xl
          inset-y-1/2 cursor-pointer text-gray-400 z-20
-          bg-light p-4 rounded-full h-16 w-16
+          bg-light p-4 mobile:p-1 rounded-full h-16 w-16 mobile:h-14 mobile:w-14
           border-2 border-brown-bg`}
         onClick={handleNextSlide}
       >
@@ -50,8 +50,8 @@ function MobileCards({
         <>
           <div
             key={card.title}
-            className="border-2 mt-5 relative max-w-xs w-75
-             mobile:w-full"
+            className="border-2 mt-5 relative max-w-lg w-75
+             mobile:w-64"
           >
             <Buttons
               handlePrevSlide={handlePrevSlide}
@@ -60,7 +60,7 @@ function MobileCards({
 
             <div
               key={card.title}
-              className="flex flex-col  h-96 items-center sm:w-72 bg-light justify-between  "
+              className="flex flex-col  h-96 items-center sm:w-72  bg-light justify-between  "
             >
               <div className="bg-lightPurple w-full h-1/2 flex justify-center">
                 <Image

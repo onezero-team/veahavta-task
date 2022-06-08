@@ -37,7 +37,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
           </p>
           <button
             className="bg-header-blue font-bold text-light
-           pr-4 pl-4 pt-1 pb-1 rounded-3xl self-start cursor-pointer"
+           p-10 pt-3 pb-3 rounded-3xl self-start cursor-pointer "
           >
             {aboutUsButton ? aboutUsButton : 'Read more'}
           </button>

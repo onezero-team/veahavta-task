@@ -53,11 +53,11 @@ export default function Footer({ data }: iFooter) {
       <footer
         className="bg-light  flex items-center justify-evenly
          xl:flex-row mobile:flex-col md:flex-col 
-          md:p-10 mobile:h-150 mobile:p-10    overflow-hidden relative
-          sm:flex-col sm:p-10 xl:h-80 lg:h-125 md:h-125 sm:h-125 mobile:gap-0 mobile:pb-20
+          md:p-10 mobile:h-150 overflow-hidden relative
+          sm:flex-col sm:p-10 xl:h-80 lg:h-125 md:h-125 sm:h-125 mobile:gap-0 mobile:p-0 
           "
       >
-        <div className="w-80 h-full sm:h-1/3 lg:h-1/3 md:h-1/3 mobile:h-1/4">
+        <div className="w-80 h-full sm:h-1/3 lg:h-1/3 md:h-1/3 mobile:h-1/5">
           <Image
             width={350}
             height={152}
@@ -68,13 +68,14 @@ export default function Footer({ data }: iFooter) {
         </div>
         <div
           className="flex flex-col h-2/3 justify-start gap-2 
-                      mobile:w-2/3 mobile:items-center lg:justify-center sm:gap-6 
-                      sm:justify-center md:justify-center mobile:h-1/4 mobile:justify-center
-                       mobile:gap-6 md:gap-6 lg:gap-6    "
+                      mobile:w-full  lg:justify-center sm:gap-6 
+                      sm:justify-center md:justify-center mobile:h-1/5 mobile:justify-center
+                       mobile:gap-6 md:gap-6 lg:gap-6 mobile:items-center sm:items-center "
         >
           <button
-            className="border-2 border-darkPurple font-bold text-darkPurple p-6 pt-2 pb-2  rounded-full
-            mobile:w-36 sm:w-36"
+            className="border-2 border-darkPurple  
+            font-bold text-darkPurple p-6 pt-2 pb-2  rounded-full
+            mobile:w-40 mobile:min-w-fit sm:min-w-fit sm:w-full"
           >
             {footerScheduleButton
               ? footerScheduleButton

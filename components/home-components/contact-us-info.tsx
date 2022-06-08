@@ -69,14 +69,14 @@ export default function ContactUsInfo({
   return (
     <article
       className="flex flex-col  h-52 justify-around items-start gap-6
-    mobile:gap-10 mobile:w-2/3  mobile:p-4  mobile:items-center mobile:h-auto
+    mobile:gap-10 mobile:w-10/12  mobile:p-4  mobile:items-center mobile:h-auto
     xl:w-1/4 md:w-fit 
     "
     >
       <span className="bg-light w-24 p-2 text-center text-darkPurple font-bold rounded-xl">
         {contactUsHeading ? contactUsHeading : 'Contact Us'}
       </span>
-      <h2 className="font-bold text-3xl text-center mobile:text-4xl mobile:w-full mobile:text-right ">
+      <h2 className="font-bold text-3xl text-center mobile:text-2xl mobile:w-full mobile:text-right ">
         {contactUsTitle ? contactUsTitle : 'We Are Here For You'}
       </h2>
       <p className="w-96 text-lg mobile:w-full mobile:text-xl ">

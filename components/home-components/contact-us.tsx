@@ -49,7 +49,7 @@ export default function ContactUs({ data }: HomePageType) {
         className="bg-lightPurple    mt-16 flex  relative justify-evenly items-center p-20
         mobile:flex-col mobile:w-full  mobile:p-1 mobile:mt-0
          mobile:justify-around mobile:items-center sm:bg-light xl:bg-lightPurple mobile:bg-light
-          md:flex-col   sm:h-auto md:h-auto lg:h-auto mobile:h-210 sm:gap-32 xl:flex-row
+          md:flex-col   sm:h-auto md:h-auto lg:h-auto mobile:h-220 sm:gap-32 xl:flex-row
           md:p-0 md:pt-20 md:pb-10  sm:flex-col
          "
       >

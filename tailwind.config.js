@@ -19,7 +19,7 @@ module.exports = {
     },
 
     screens: {
-      mobile: [{ min: '330px', max: '639px' }],
+      mobile: [{ min: '320px', max: '639px' }],
 
       sm: '640px',
       // => @media (min-width: 640px) { ... }
