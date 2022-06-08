@@ -69,17 +69,17 @@ export default function ContactUsInfo({
   return (
     <article
       className="flex flex-col  h-52 justify-around items-start gap-6
-    mobile:gap-10 mobile:w-full sm:w-1/2 mobile:p-4 mobile:items-start mobile:h-auto
-    xl:w-1/4
+    mobile:gap-10 mobile:w-2/3  mobile:p-4  mobile:items-center mobile:h-auto
+    xl:w-1/4 md:w-fit 
     "
     >
       <span className="bg-light w-24 p-2 text-center text-darkPurple font-bold rounded-xl">
         {contactUsHeading ? contactUsHeading : 'Contact Us'}
       </span>
-      <h2 className="font-bold text-3xl text-center mobile:text-4xl mobile:w-full mobile:text-center">
+      <h2 className="font-bold text-3xl text-center mobile:text-4xl mobile:w-full mobile:text-right ">
         {contactUsTitle ? contactUsTitle : 'We Are Here For You'}
       </h2>
-      <p className="w-96 text-lg mobile:w-50 mobile:text-xl ">
+      <p className="w-96 text-lg mobile:w-full mobile:text-xl ">
         {contactUsText
           ? contactUsText
           : 'The clinic is open Tuesday and Thursday 16:00-19:00 and Saturday 10:00-14:00'}
@@ -87,7 +87,7 @@ export default function ContactUsInfo({
 
       <div
         className="gap-3 flex flex-wrap  w-100  mobile:flex-col
-       mobile:h-auto mobile:w-full items-center mobile:items-center "
+       mobile:h-auto mobile:w-full items-center mobile:items-start "
       >
         <Links contactUsLinks={contactUsLinks} />
       </div>

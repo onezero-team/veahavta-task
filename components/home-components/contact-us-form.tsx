@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Formik, FormikHelpers, Form, Field } from 'formik'
 import { Iform, Values } from '@/lib/interface'
 import * as Yup from 'yup'
-import { useLocale } from '@/lib/hooks'
 
 function ContactUsForm({ data }: Iform) {
   const initialValues = {
@@ -55,10 +54,9 @@ function ContactUsForm({ data }: Iform) {
     >
       {({ errors, touched }) => (
         <Form
-          className="relative  min-h-100  border-2 border-light rounded-xl
-    w-110 right-36 bottom-20 flex flex-col bg-light p-4 shadow-4xl text-xl 
-    mobile:static mobile:w-full mobile:max-w-sm  mobile:p-4 z-40 mobile:self-center
-      md:static sm:static mobile:h-150 
+          className=" -top-36  min-h-100  border-2 border-light rounded-xl
+    w-110 right-0 bottom-20 flex flex-col bg-light p-4 shadow-4xl text-xl 
+    mobile:static mobile:w-full mobile:max-w-sm  mobile:p-4 z-40 mobile:self-center lg:static xl:relative
     "
         >
           <div
@@ -75,7 +73,9 @@ function ContactUsForm({ data }: Iform) {
                 name="name"
                 type="text"
               />
-              {errors.name && touched.name ? errors.name : null}
+              <div className="h-6 flex w-full  text-red">
+                {errors.name && touched.name ? errors.name : null}
+              </div>
             </div>
             <div className=" flex flex-col w-2/5 gap-2 mobile:w-full">
               <label className="font-bold" htmlFor="lastName">
@@ -87,7 +87,9 @@ function ContactUsForm({ data }: Iform) {
                 name="lastName"
                 type="text"
               />
-              {errors.lastName && touched.lastName ? errors.lastName : null}
+              <div className="h-6 flex w-full  text-red">
+                {errors.lastName && touched.lastName ? errors.lastName : null}
+              </div>
             </div>
             <div className=" flex flex-col w-w-2/5 gap-2 mobile:w-full">
               <label className="font-bold mobile:w-full" htmlFor="email">
@@ -99,7 +101,9 @@ function ContactUsForm({ data }: Iform) {
                 name="email"
                 type="email"
               />
-              {errors.email && touched.email ? errors.email : null}
+              <div className="h-6 flex w-full  text-red">
+                {errors.email && touched.email ? errors.email : null}
+              </div>
             </div>
             <div className=" flex flex-col w-2/5 gap-2 mobile:w-full">
               <label className="font-bold" htmlFor="tel">
@@ -108,12 +112,15 @@ function ContactUsForm({ data }: Iform) {
               <Field
                 className="shadow-4xl h-16 text-xl rounded-xl  mobile:h-12 "
                 id="tel"
-                type="number"
+                type="tel"
                 name="tel"
+                value=""
               />
-              {errors.tel && touched.tel ? errors.tel : null}
+              <div className="h-6 flex w-full  text-red">
+                {errors.tel && touched.tel ? errors.tel : null}
+              </div>
             </div>
-            <div className=" flex flex-col w-full  gap-4 mobile:text-center ">
+            <div className=" flex flex-col w-full  gap-4 ">
               <label className="font-bold" htmlFor="text">
                 {data.contactUsFormMessage}
               </label>
@@ -124,11 +131,15 @@ function ContactUsForm({ data }: Iform) {
                 name="text"
               />
             </div>
-            {data.contactUsFormErrorMessageMissing}
-            <div className="flex  w-80 h-12">
+            {
+              <div className="h-6 flex w-full  text-red">
+                {errors.text && data.contactUsFormErrorMessageMissing}
+              </div>
+            }
+            <div className="flex w-full h-12 justify-center">
               <button
                 className="bg-header-blue font-bold text-light
-            pr-8 pl-8 rounded-3xl text-xl"
+                pr-8 pl-8 rounded-3xl text-xl mobile:mt-3"
               >
                 {data.contactUsFormSendButton}
               </button>

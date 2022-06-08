@@ -44,20 +44,20 @@ export default function Footer({ data }: iFooter) {
       return `mailto:${link.text}`
     }
     if (link.linkType === 'address') {
-      return `http://maps.google.com/maps?q=${link.text.trim()}`
+      return `http://maps.google.com/maps?q=${link.text}`
     }
   }
 
   return (
     <WrapperLarge>
       <footer
-        className="bg-light h-100 flex items-center justify-evenly
-         xl:flex-row mobile:flex-col md:flex-col md:h-auto
-          md:p-10 mobile:h-150 mobile:p-10  mobile:gap-10  overflow-hidden relative
-          sm:flex-col sm:h-auto sm:p-10 
+        className="bg-light  flex items-center justify-evenly
+         xl:flex-row mobile:flex-col md:flex-col 
+          md:p-10 mobile:h-150 mobile:p-10    overflow-hidden relative
+          sm:flex-col sm:p-10 xl:h-80 lg:h-125 md:h-125 sm:h-125 mobile:gap-0 mobile:pb-20
           "
       >
-        <div className="w-80 h-44">
+        <div className="w-80 h-full sm:h-1/3 lg:h-1/3 md:h-1/3 mobile:h-1/4">
           <Image
             width={350}
             height={152}
@@ -67,13 +67,14 @@ export default function Footer({ data }: iFooter) {
           />
         </div>
         <div
-          className="flex flex-col h-44 justify-start gap-2
-
-        mobile:order-2 mobile:w-2/3"
+          className="flex flex-col h-2/3 justify-start gap-2 
+                      mobile:w-2/3 mobile:items-center lg:justify-center sm:gap-6 
+                      sm:justify-center md:justify-center mobile:h-1/4 mobile:justify-center
+                       mobile:gap-6 md:gap-6 lg:gap-6    "
         >
           <button
-            className="border-2 border-darkPurple font-bold text-darkPurple p-4 pt-2 pb-2  rounded-full
-           mobile:text-lg mobile:p-3"
+            className="border-2 border-darkPurple font-bold text-darkPurple p-6 pt-2 pb-2  rounded-full
+            mobile:w-36 sm:w-36"
           >
             {footerScheduleButton
               ? footerScheduleButton
@@ -81,13 +82,13 @@ export default function Footer({ data }: iFooter) {
           </button>
           <button
             className="border-2 border-darkPurple font-bold text-darkPurple p-4 pt-2 pb-2  rounded-full
-          mobile:text-xl mobile:p-3
+           mobile:p-2 mobile:w-36 sm:w-36
           "
           >
             {footerSupportUsButton ? footerSupportUsButton : 'Support us'}
           </button>
         </div>
-        <div className="flex flex-col h-44 mobile:hidden  lg:flex-col gap-2 md:flex-col ">
+        <div className="flex flex-col h-44 mobile:hidden sm:hidden lg:hidden xl:flex gap-2 md:flex-col ">
           <span className="font-bold text-xl">
             {footerMenuTitle.length > 0 ? footerMenuTitle : 'Menu'}
           </span>
@@ -95,20 +96,21 @@ export default function Footer({ data }: iFooter) {
           <MenuLinks />
         </div>
 
-        <div className="flex flex-col gap-1 h-44 mobile:order-3 mobile:gap-5 ">
-          <span className="font-bold mobile:text-2xl md:text-xl">
+        <div className="flex flex-col gap-1 h-44 mobile:order-3 mobile:gap-5 sm:gap-5 md:gap-5 lg:gap-2 ">
+          <span className="font-bold mobile:text-2xl sm:text-2xl md:text-2xl lg:text-xl ">
             {footerContactUsTitle}
           </span>
           <div className=" flex flex-col gap-3 ">
-            {contactUsLinks.map((link) => {
+            {contactUsLinks.map((link, i) => {
               const myhref = customHref(link)
-
               return (
                 <Link
                   key={link.text}
-                  href={{
-                    pathname: myhref,
-                  }}
+                  href={
+                    link.linkType === 'address'
+                      ? `http://maps.google.com/maps?q=${link.text}`
+                      : { pathname: myhref }
+                  }
                 >
                   <a
                     className="flex text-xl"
@@ -120,7 +122,7 @@ export default function Footer({ data }: iFooter) {
                         width={25}
                         height={25}
                         layout={'fixed'}
-                        className=" bg-clip-text"
+                        className={`bg-clip-text`}
                         alt={link.text}
                       />
                     </div>
