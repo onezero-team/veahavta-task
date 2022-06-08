@@ -88,7 +88,9 @@ export default function Footer({ data }: iFooter) {
           </button>
         </div>
         <div className="flex flex-col h-44 mobile:hidden  lg:flex-col gap-2 md:flex-col ">
-          <span className="font-bold text-xl">{footerMenuTitle}</span>
+          <span className="font-bold text-xl">
+            {footerMenuTitle.length > 0 ? footerMenuTitle : 'Menu'}
+          </span>
 
           <MenuLinks />
         </div>

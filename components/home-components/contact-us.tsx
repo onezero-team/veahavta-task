@@ -46,7 +46,7 @@ export default function ContactUs({ data }: HomePageType) {
     <WrapperLarge>
       <section
         id="contact-us"
-        className="bg-lightPurple  h-125 mt-16 flex relative justify-around items-center p-20
+        className="bg-lightPurple   h-125 mt-16 flex  relative justify-evenly items-center p-20
         mobile:flex-col mobile:w-full  mobile:p-1 mobile:mt-0
          mobile:justify-around mobile:items-center mobile:bg-light
           md:flex-col  flex-col sm:h-auto md:h-auto lg:h-auto mobile:h-210 sm:gap-32 xl:flex-row

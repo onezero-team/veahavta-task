@@ -17,7 +17,7 @@ export default function Banner({ data }: HomePageType) {
             {' '}
             {data.homepage.description}
           </p>
-          <button className="bg-header-blue font-bold text-light pr-4 pl-4 pt-1 pb-1 rounded-3xl">
+          <button className="bg-header-blue font-bold text-light pr-4 pl-4 pt-1 pb-1 rounded-3xl cursor-pointer">
             {data.homepage.getToKnowUsButton
               ? data.homepage.getToKnowUsButton
               : 'Get to know us'}

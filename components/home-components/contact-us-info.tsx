@@ -68,10 +68,12 @@ export default function ContactUsInfo({
 }: Iprops) {
   return (
     <article
-      className="flex flex-col h-52 justify-around items-start gap-6
-    mobile:gap-10 mobile:w-full sm:w-1/2 mobile:p-4 mobile:items-start mobile:h-auto "
+      className="flex flex-col  h-52 justify-around items-start gap-6
+    mobile:gap-10 mobile:w-full sm:w-1/2 mobile:p-4 mobile:items-start mobile:h-auto
+    xl:w-1/4
+    "
     >
-      <span className="bg-light w-20 text-center text-darkPurple font-bold rounded-xl">
+      <span className="bg-light w-24 p-2 text-center text-darkPurple font-bold rounded-xl">
         {contactUsHeading ? contactUsHeading : 'Contact Us'}
       </span>
       <h2 className="font-bold text-3xl text-center mobile:text-4xl mobile:w-full mobile:text-center">
