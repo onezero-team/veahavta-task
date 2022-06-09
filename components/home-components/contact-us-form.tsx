@@ -9,7 +9,7 @@ function ContactUsForm({ data }: Iform) {
     lastName: '',
     email: '',
     text: '',
-    tel: 0,
+    tel: '',
   }
   function onSendData(setSubmitting: Function, values: Values) {
     setTimeout(() => {
@@ -112,9 +112,8 @@ function ContactUsForm({ data }: Iform) {
               <Field
                 className="shadow-4xl h-16 text-xl rounded-xl  mobile:h-12 "
                 id="tel"
-                type="tel"
                 name="tel"
-                value=""
+                type="text"
               />
               <div className="h-6 flex w-full  text-red">
                 {errors.tel && touched.tel ? errors.tel : null}

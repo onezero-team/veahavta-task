@@ -20,7 +20,7 @@ export interface Values {
   name: string
   lastName: string
   email: string
-  tel: number
+  tel: string
   text: string
 }
 
