@@ -8,9 +8,10 @@ export default function Banner({ data }: HomePageType) {
   return (
     <div id="top-header">
       <div
-        className="wrapper h-150  z-10 relative  pt-4 overflow-hidden 
-       bg-gradient-to-br from-light to-purple flex flex-col  justify-center items-center  "
+        className="wrapper h-150 z-10 relative pt-4 overflow-hidden 
+            bg-gradient-to-br from-light to-purple flex flex-col  justify-center items-center"
       >
+        <BannerImageList />
         <div className="flex flex-col justify-between h-64 items-center gap-10 mobile:gap-5">
           <PageHeader>{data.homepage.title}</PageHeader>
           <p className=" text-center w-3/5 text-2xl mobile:w-5/6 ">
@@ -23,7 +24,6 @@ export default function Banner({ data }: HomePageType) {
               : 'Get to know us'}
           </button>
         </div>
-        <BannerImageList />
       </div>
     </div>
   )
