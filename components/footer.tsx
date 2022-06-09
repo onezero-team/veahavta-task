@@ -97,7 +97,10 @@ export default function Footer({ data }: iFooter) {
           <MenuLinks />
         </div>
 
-        <div className="flex flex-col gap-1 h-44 mobile:order-3 mobile:gap-5 sm:gap-5 md:gap-5 lg:gap-2 ">
+        <div
+          className="flex flex-col gap-1 h-44 mobile:order-3 
+        mobile:gap-2 sm:gap-5 md:gap-5 lg:gap-2 "
+        >
           <span className="font-bold mobile:text-2xl sm:text-2xl md:text-2xl lg:text-xl ">
             {footerContactUsTitle}
           </span>
