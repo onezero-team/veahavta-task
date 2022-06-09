@@ -57,7 +57,7 @@ export default function Footer({ data }: iFooter) {
           sm:flex-col sm:p-10 xl:h-80 lg:h-125 md:h-125 sm:h-125 mobile:gap-0 mobile:p-0 
           "
       >
-        <div className="w-80 h-full sm:h-1/3 lg:h-1/3 md:h-1/3 mobile:h-1/5">
+        <div className="w-80 h-full sm:h-1/3 lg:h-1/3 md:h-1/3 mobile:h-1/5 ">
           <Image
             width={350}
             height={152}

@@ -47,9 +47,8 @@ function MobileCards({
   return whatWeDoCards.map((card: CardProps, index: number) => {
     if (index === currentSlide) {
       return (
-        <>
+        <div key={card.title}>
           <div
-            key={card.title}
             className="border-2 mt-5 relative max-w-lg w-75
              mobile:w-64"
           >
@@ -81,7 +80,7 @@ function MobileCards({
               </div>
             </div>
           </div>
-        </>
+        </div>
       )
     }
   })
