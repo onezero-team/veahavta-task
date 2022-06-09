@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Formik, FormikHelpers, Form, Field } from 'formik'
 import { Iform, Values } from '@/lib/interface'
-import * as Yup from 'yup'
+import { createSchema } from '@/lib/form-validation'
 
 function ContactUsForm({ data }: Iform) {
   const initialValues = {
@@ -21,24 +21,7 @@ function ContactUsForm({ data }: Iform) {
       setSubmitting(false)
     }, 500)
   }
-  const contactSchema = Yup.object().shape({
-    name: Yup.string()
-      .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required(`${data.contactUsFormErrorFirstNameMissing}`),
-    lastName: Yup.string()
-      .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required(`${data.contactUsFormErrorLastNameMissing}`),
-    email: Yup.string()
-      .email(`${data.contactUsFormErrorEmailInvalid}`)
-      .required(`${data.contactUsFormErrorEmailMissing}`),
-    tel: Yup.string()
-      .min(9, data.contactUsFormErrorPhoneInvalid)
-      .max(10, data.contactUsFormErrorPhoneInvalid)
-      .required(data.contactUsFormErrorPhoneMissing),
-    text: Yup.string().required(data.contactUsFormErrorMessageMissing),
-  })
+  const contactSchema = createSchema(data)
 
   return (
     <Formik

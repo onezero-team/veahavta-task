@@ -171,3 +171,15 @@ export type Iform = {
     contactUsFormErrorMessageMissing: string
   }
 }
+
+export interface IcontactUsLinks {
+  contactUsLinks: {
+    text: string
+    linkType: string
+    imagePath: string
+    linkValue: string
+  }[]
+  contactUsText: string
+  contactUsTitle: string
+  contactUsHeading: string
+}

@@ -4,7 +4,6 @@ import React, { useMemo, useState } from 'react'
 import { WrapperLarge } from '../wrapper'
 import MobileCards from './mobile-cards'
 import DesktopCards from './desktop-cards'
-import { useLocale } from '@/lib/hooks'
 
 export default function WhatWeDo({ data }: HomePageType) {
   const { whatWeDoHeading, whatWeDoTitle, whatWeDoCards } = data.homepage

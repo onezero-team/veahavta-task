@@ -1,3 +1,4 @@
+import { IcontactUsLinks } from '@/lib/interface'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -9,19 +10,7 @@ interface ILink {
   linkValue: string
 }
 
-interface Iprops {
-  contactUsLinks: {
-    text: string
-    linkType: string
-    imagePath: string
-    linkValue: string
-  }[]
-  contactUsText: string
-  contactUsTitle: string
-  contactUsHeading: string
-}
-
-const Links: any = ({ contactUsLinks }: Iprops) => {
+const Links: any = ({ contactUsLinks }: IcontactUsLinks) => {
   return contactUsLinks.map((link: ILink) => {
     return (
       <div key={link.text} className="flex items-center gap-1">
@@ -65,7 +54,7 @@ export default function ContactUsInfo({
   contactUsText,
   contactUsTitle,
   contactUsHeading,
-}: Iprops) {
+}: IcontactUsLinks) {
   return (
     <article
       className="flex flex-col  h-52 justify-around items-start gap-6

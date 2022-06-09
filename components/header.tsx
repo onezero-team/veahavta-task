@@ -3,22 +3,13 @@ import { CommonType } from '@/lib/interface'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChangeLangButton } from './data-components/change-language-button'
+import LangsLinks from './data-components/langs-links'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 
 export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
   const { appLinks, languageNames } = data
   const langs = Object.keys(languageNames[0])
-
-  const LangsLinks = (): any => {
-    return appLinks.map((link) => {
-      return (
-        <Link key={link.text} href={link.relativeLink}>
-          {link.text}
-        </Link>
-      )
-    })
-  }
 
   return (
     <>
@@ -35,7 +26,7 @@ export default function Header({ data }: CommonType) {
           <Logo />
           <ul className="flex flex-row gap-x-2   self-stretch">
             <div className="lg:flex flex-row gap-x-6  w-4/4  items-center hidden  md:visible  ">
-              <LangsLinks />
+              <LangsLinks appLinks={appLinks} />
             </div>
           </ul>
           <ul
