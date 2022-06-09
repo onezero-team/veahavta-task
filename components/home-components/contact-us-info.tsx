@@ -76,7 +76,7 @@ export default function ContactUsInfo({
       <span className="bg-light w-24 p-2 text-center text-darkPurple font-bold rounded-xl">
         {contactUsHeading ? contactUsHeading : 'Contact Us'}
       </span>
-      <h2 className="font-bold text-3xl text-center mobile:text-2xl mobile:w-full mobile:text-right ">
+      <h2 className="font-bold text-3xl text-center mobile:text-2xl mobile:w-full  ">
         {contactUsTitle ? contactUsTitle : 'We Are Here For You'}
       </h2>
       <p className="w-96 text-lg mobile:w-full mobile:text-xl ">

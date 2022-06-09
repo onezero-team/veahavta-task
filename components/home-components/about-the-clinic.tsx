@@ -32,7 +32,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
           >
             {aboutTitle ? aboutTitle : 'About title'}
           </h2>
-          <p className="w-full text-xl mobile:w-full mobile:text-right">
+          <p className="w-full text-xl mobile:w-full ">
             {aboutUsText ? aboutUsText : 'About us Text'}
           </p>
           <button
