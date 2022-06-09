@@ -1,6 +1,4 @@
 import { HomePageType } from '@/lib/interface'
-import Image from 'next/image'
-import React from 'react'
 import { PageHeader } from '../data-components/header-text'
 import BannerImageList from './banner-image-list'
 

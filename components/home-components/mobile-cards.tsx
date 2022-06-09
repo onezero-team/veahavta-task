@@ -20,7 +20,7 @@ const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
         className={` absolute ${btnOne}  m-auto text-2xl
                  inset-y-1/2 cursor-pointer text-gray-400 z-20
                   bg-light p-1 mobile:p-2 rounded-full h-16 w-16 mobile:h-14 mobile:w-14
-                  border-2 border-brown-bg`}
+                  border-2 border-brown-bg `}
         onClick={handlePrevSlide}
       >
         &#10095;
