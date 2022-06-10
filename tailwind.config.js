@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   // mode: 'jit',
   // // These paths are just examples, customize them to match your project structure
@@ -13,7 +15,11 @@ module.exports = {
       primary: '#01559A',
       accent: '#D25C78',
       red: '#D25C78',
+      purple: '#D3D1FC',
+      lightPurple: '#F4F3FD',
+      darkPurple: '#4E47F9',
     },
+
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
       display: ['"Assistant"', 'sans-serif'],
@@ -22,6 +28,17 @@ module.exports = {
       mono: ['"Assistant"', 'sans-serif'],
     },
     extend: {
+      spacing: {
+        100: '26rem',
+        110: '31rem',
+        125: '40rem',
+        150: '45rem',
+        160: '55rem',
+        200: '70rem',
+        210: '80rem',
+        220: '90rem',
+        240: '110rem',
+      },
       colors: {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
@@ -32,6 +49,7 @@ module.exports = {
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
       },
+
       text: {
         medium: 'md:text-xl',
         large: 'lg:text-2xl',
