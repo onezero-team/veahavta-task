@@ -53,11 +53,11 @@ export default function Footer({ data }: iFooter) {
       <footer
         className="bg-light  flex items-center justify-evenly
          xl:flex-row flex-col
-           h-150 overflow-hidden relative
+           h-110 overflow-hidden relative
           sm:flex-col sm:p-10 xl:h-80 xl:p-0 sm:h-125  
           "
       >
-        <div className="w-80 h-full sm:h-1/3 mobile:h-1/5 ">
+        <div className="w-80 h-1/5 sm:h-1/3  ">
           <Image
             width={350}
             height={152}
@@ -67,15 +67,15 @@ export default function Footer({ data }: iFooter) {
           />
         </div>
         <div
-          className="flex flex-col h-2/3 justify-center 
+          className="flex flex-col h-2/3  
                       w-full sm:w-fit   
-                      sm:justify-center md:justify-center mobile:h-1/5 mobile:justify-center
-                      gap-6   mobile:items-center sm:items-center "
+                         justify-center
+                      gap-6    items-center "
         >
           <button
             className="border-2 border-darkPurple  
             font-bold text-darkPurple p-6 pt-2 pb-2  rounded-full
-            mobile:w-40 min-w-fit  sm:w-full"
+            w-40 min-w-fit  sm:w-full"
           >
             {footerScheduleButton
               ? footerScheduleButton
@@ -83,7 +83,7 @@ export default function Footer({ data }: iFooter) {
           </button>
           <button
             className="border-2 border-darkPurple font-bold text-darkPurple p-4 pt-2 pb-2  rounded-full
-           mobile:p-2 w-36 
+            w-36 
           "
           >
             {footerSupportUsButton ? footerSupportUsButton : 'Support us'}
@@ -97,7 +97,7 @@ export default function Footer({ data }: iFooter) {
           <MenuLinks />
         </div>
         <div
-          className="flex flex-col h-44 mobile:order-3 
+          className="flex flex-col h-44  
         gap-2 sm:gap-5  lg:gap-2 "
         >
           <span className="font-bold text-2xl  lg:text-xl ">
