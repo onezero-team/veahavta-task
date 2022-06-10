@@ -16,7 +16,7 @@ function DesktopCards({
   return (
     <section className="flex flex-col h-125 text-center justify-center gap-8">
       <span className="text-red text-xl">{whatWeDoHeading}</span>
-      <h2 className="font-bold text-5xl text-center mobile:text-4xl mobile:w-full mobile:text-center">
+      <h2 className="font-bold lg:text-5xl text-center text-4xl w-full ">
         {whatWeDoTitle}
       </h2>
 

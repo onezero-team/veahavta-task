@@ -20,19 +20,19 @@ export default function Header({ data }: CommonType) {
       />
       <header className=" z-50 justify-center   overflow-hidden  bg-gradient-to-br   ">
         <div
-          className="flex mt-8  fixed z-50 right-2/4 p-4 translate-x-2/4  gap-x-2 mx-auto justify-around bg-light rounded-lg 
-        sm:w-150 lg:w-160 mobile:w-screen "
+          className="flex mt-8  fixed z-50 right-2/4 pt-4 pb-4 translate-x-2/4  gap-x-2 mx-auto justify-around bg-light rounded-lg 
+        sm:w-150 lg:w-160 w-full "
         >
           <Logo />
-          <ul className="flex flex-row gap-x-2   self-stretch">
-            <div className="lg:flex flex-row gap-x-6  w-4/4  items-center hidden  md:visible  ">
+          <ul className="flex flex-row    self-stretch">
+            <div className="lg:flex flex-row gap-x-3  w-4/4  items-center hidden  md:visible  ">
               <LangsLinks appLinks={appLinks} />
             </div>
           </ul>
           <ul
             className="flex flex-row gap-x-2 items-center  mx-r-auto  w-1/3 justify-end
           
-          mobile:hidden  sm:hidden  md:flex"
+          mobile:hidden  md:flex"
           >
             {langs.map((lang, i) => {
               return (
@@ -45,7 +45,7 @@ export default function Header({ data }: CommonType) {
               )
             })}
           </ul>
-          <div className="  pl-10 cursor-pointer  relative mobile:block md:block lg:hidden    ">
+          <div className="  pl-10 cursor-pointer  relative block lg:hidden     ">
             <Image src="/header/mobile-menu.svg" alt="menu" layout="fill" />
           </div>
         </div>

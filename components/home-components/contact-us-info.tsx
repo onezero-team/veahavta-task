@@ -58,25 +58,25 @@ export default function ContactUsInfo({
   return (
     <article
       className="flex flex-col  h-52 justify-around items-start gap-6
-    mobile:gap-10 mobile:w-10/12  mobile:p-4  mobile:items-center mobile:h-auto
+     mobile:w-10/12  p-4   
     xl:w-1/4 md:w-fit 
     "
     >
       <span className="bg-light w-24 p-2 text-center text-darkPurple font-bold rounded-xl">
         {contactUsHeading ? contactUsHeading : 'Contact Us'}
       </span>
-      <h2 className="font-bold text-3xl text-center mobile:text-2xl mobile:w-full  ">
+      <h2 className="font-bold text-3xl text-center">
         {contactUsTitle ? contactUsTitle : 'We Are Here For You'}
       </h2>
-      <p className="w-96 text-lg mobile:w-full mobile:text-xl ">
+      <p className=" md:text-lg sm:w-96 w-full text-xl ">
         {contactUsText
           ? contactUsText
           : 'The clinic is open Tuesday and Thursday 16:00-19:00 and Saturday 10:00-14:00'}
       </p>
 
       <div
-        className="gap-3 flex flex-wrap  w-100  mobile:flex-col
-       mobile:h-auto mobile:w-full items-center mobile:items-start "
+        className="gap-3 flex flex-wrap lg:flex-row flex-col
+       h-auto lg:w-100 items-center  "
       >
         <Links contactUsLinks={contactUsLinks} />
       </div>

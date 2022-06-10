@@ -46,11 +46,11 @@ export default function ContactUs({ data }: HomePageType) {
     <WrapperLarge>
       <section
         id="contact-us"
-        className="bg-lightPurple    mt-16 flex  relative justify-evenly items-center p-20
-        mobile:flex-col mobile:w-full  mobile:p-1 mobile:mt-0
-         mobile:justify-around mobile:items-center sm:bg-light xl:bg-lightPurple mobile:bg-light
-          md:flex-col   sm:h-auto md:h-auto lg:h-auto mobile:h-220 sm:gap-32 xl:flex-row
-          md:p-0 md:pt-20 md:pb-10  sm:flex-col
+        className=" bg-light flex flex-col xl:flex-row relative  justify-evenly  items-center 
+         w-full  p-1 mt-16
+          xl:bg-lightPurple 
+          h-240 sm:h-220 lg:h-200 xl:h-auto  sm:gap-32 
+          md:p-0 md:pt-20 md:pb-10  gap-0
          "
       >
         <ContactUsInfo
@@ -60,7 +60,7 @@ export default function ContactUs({ data }: HomePageType) {
           contactUsHeading={contactUsHeading}
         />
         <ContactUsForm data={contactFormData} />
-        <div className="w-80 absolute -right-20 top-12 opacity-20 mobile:hidden lg:hidden sm:hidden xl:block">
+        <div className="w-80 absolute -right-20 top-12 opacity-20 hidden  xl:block">
           <Image
             src={'/shapes/Vector-1.svg'}
             width={300}
@@ -69,7 +69,7 @@ export default function ContactUs({ data }: HomePageType) {
             alt={'phone'}
           />
         </div>
-        <div className="w-80  absolute -bottom-10 -left-2 opacity-20 mobile:w-48 ">
+        <div className=" w-48 xl:w-80  absolute -bottom-10 -left-2 opacity-20 ">
           <Image
             src={'/shapes/Vector.svg'}
             width={300}

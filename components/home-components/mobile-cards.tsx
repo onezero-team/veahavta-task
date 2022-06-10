@@ -19,7 +19,7 @@ const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
       <button
         className={` absolute ${btnOne}  m-auto text-2xl
                  inset-y-1/2 cursor-pointer text-gray-400 z-20
-                  bg-light p-1 mobile:p-2 rounded-full h-16 w-16 mobile:h-14 mobile:w-14
+                  bg-light p-1  rounded-full h-14 w-14 
                   border-2 border-brown-bg `}
         onClick={handlePrevSlide}
       >
@@ -28,7 +28,7 @@ const Buttons = ({ handlePrevSlide, handleNextSlide }: any) => {
       <button
         className={`absolute ${btnTwo} m-auto text-2xl
          inset-y-1/2 cursor-pointer text-gray-400 z-20
-          bg-light p-4 mobile:p-1 rounded-full h-16 w-16 mobile:h-14 mobile:w-14
+          bg-light  p-1 rounded-full h-14 w-14
           border-2 border-brown-bg`}
         onClick={handleNextSlide}
       >

@@ -52,12 +52,12 @@ export default function Footer({ data }: iFooter) {
     <WrapperLarge>
       <footer
         className="bg-light  flex items-center justify-evenly
-         xl:flex-row mobile:flex-col md:flex-col 
-          md:p-10 mobile:h-150 overflow-hidden relative
-          sm:flex-col sm:p-10 xl:h-80 lg:h-125 md:h-125 sm:h-125 mobile:gap-0 mobile:p-0 
+         xl:flex-row flex-col
+           h-150 overflow-hidden relative
+          sm:flex-col sm:p-10 xl:h-80 xl:p-0 sm:h-125  
           "
       >
-        <div className="w-80 h-full sm:h-1/3 lg:h-1/3 md:h-1/3 mobile:h-1/5 ">
+        <div className="w-80 h-full sm:h-1/3 mobile:h-1/5 ">
           <Image
             width={350}
             height={152}
@@ -67,15 +67,15 @@ export default function Footer({ data }: iFooter) {
           />
         </div>
         <div
-          className="flex flex-col h-2/3 justify-start gap-2 
-                      mobile:w-full  lg:justify-center sm:gap-6 
+          className="flex flex-col h-2/3 justify-center 
+                      w-full sm:w-fit   
                       sm:justify-center md:justify-center mobile:h-1/5 mobile:justify-center
-                       mobile:gap-6 md:gap-6 lg:gap-6 mobile:items-center sm:items-center "
+                      gap-6   mobile:items-center sm:items-center "
         >
           <button
             className="border-2 border-darkPurple  
             font-bold text-darkPurple p-6 pt-2 pb-2  rounded-full
-            mobile:w-40 mobile:min-w-fit sm:min-w-fit sm:w-full"
+            mobile:w-40 min-w-fit  sm:w-full"
           >
             {footerScheduleButton
               ? footerScheduleButton
@@ -83,25 +83,24 @@ export default function Footer({ data }: iFooter) {
           </button>
           <button
             className="border-2 border-darkPurple font-bold text-darkPurple p-4 pt-2 pb-2  rounded-full
-           mobile:p-2 mobile:w-36 sm:w-36
+           mobile:p-2 w-36 
           "
           >
             {footerSupportUsButton ? footerSupportUsButton : 'Support us'}
           </button>
         </div>
-        <div className="flex flex-col h-44 mobile:hidden sm:hidden lg:hidden xl:flex gap-2 md:flex-col ">
+        <div className=" flex-col h-44 hidden xl:flex gap-2 md:flex-col ">
           <span className="font-bold text-xl">
             {footerMenuTitle.length > 0 ? footerMenuTitle : 'Menu'}
           </span>
 
           <MenuLinks />
         </div>
-
         <div
-          className="flex flex-col gap-1 h-44 mobile:order-3 
-        mobile:gap-2 sm:gap-5 md:gap-5 lg:gap-2 "
+          className="flex flex-col h-44 mobile:order-3 
+        gap-2 sm:gap-5  lg:gap-2 "
         >
-          <span className="font-bold mobile:text-2xl sm:text-2xl md:text-2xl lg:text-xl ">
+          <span className="font-bold text-2xl  lg:text-xl ">
             {footerContactUsTitle}
           </span>
           <div className=" flex flex-col gap-3 ">

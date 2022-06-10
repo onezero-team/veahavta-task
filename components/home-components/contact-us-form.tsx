@@ -38,20 +38,19 @@ function ContactUsForm({ data }: Iform) {
       {({ errors, touched }) => (
         <Form
           className=" -top-36  min-h-100  border-2 border-light rounded-xl
-    w-110 right-0 bottom-20 flex flex-col bg-light p-4 shadow-4xl text-xl 
-    mobile:static mobile:w-full mobile:max-w-sm  mobile:p-4 z-40 mobile:self-center lg:static xl:relative
-    "
+              w-full md:w-110 right-0 bottom-20 flex flex-col bg-light p-4 shadow-4xl text-xl 
+              static   h-160 md:h-125   z-40 self-center lg:static xl:relative"
         >
           <div
-            className="flex flex-wrap justify-between gap-4 h-full items-center z-40
-       mobile:flex-col mobile:items-center mobile:w-full mobile:gap-1  "
+            className="flex flex-wrap justify-between  h-full  z-40
+       flex-col sm:flex-row items-center  w-full  "
           >
-            <div className=" flex flex-col w-3/7 gap-2 mobile:w-full z-40">
+            <div className=" flex flex-col w-full sm:w-2/5 gap-2  z-40">
               <label className="font-bold" htmlFor="name">
                 {data.contactUsFormFirstName}
               </label>
               <Field
-                className=" shadow-4xl h-16 text-xl rounded-xl mobile:h-12 mobile:w-full"
+                className=" shadow-4xl  text-xl rounded-xl h-12"
                 id="name"
                 name="name"
                 type="text"
@@ -60,12 +59,12 @@ function ContactUsForm({ data }: Iform) {
                 {errors.name && touched.name ? errors.name : null}
               </div>
             </div>
-            <div className=" flex flex-col w-2/5 gap-2 mobile:w-full">
+            <div className=" flex flex-col sm:w-2/5 gap-2 w-full">
               <label className="font-bold" htmlFor="lastName">
                 {data.contactUsFormLastName}
               </label>
               <Field
-                className="shadow-4xl h-16 text-xl rounded-xl mobile:h-12 "
+                className="shadow-4xl h-12 text-xl rounded-xl  "
                 id="lastName"
                 name="lastName"
                 type="text"
@@ -74,12 +73,12 @@ function ContactUsForm({ data }: Iform) {
                 {errors.lastName && touched.lastName ? errors.lastName : null}
               </div>
             </div>
-            <div className=" flex flex-col w-w-2/5 gap-2 mobile:w-full">
-              <label className="font-bold mobile:w-full" htmlFor="email">
+            <div className=" flex flex-col sm:w-2/5 gap-2 w-full">
+              <label className="font-bold w-full" htmlFor="email">
                 {data.contactUsFormEmail}
               </label>
               <Field
-                className="shadow-4xl h-16 text-xl rounded-xl mobile:w-full mobile:h-12 "
+                className="shadow-4xl h-12 text-xl rounded-xl w-full  "
                 id="email"
                 name="email"
                 type="email"
@@ -88,12 +87,12 @@ function ContactUsForm({ data }: Iform) {
                 {errors.email && touched.email ? errors.email : null}
               </div>
             </div>
-            <div className=" flex flex-col w-2/5 gap-2 mobile:w-full">
+            <div className=" flex flex-col sm:w-2/5 gap-2 w-full">
               <label className="font-bold" htmlFor="tel">
                 {data.contactUsFormPhone}
               </label>
               <Field
-                className="shadow-4xl h-16 text-xl rounded-xl  mobile:h-12 "
+                className="shadow-4xl h-12 text-xl rounded-xl "
                 id="tel"
                 name="tel"
                 type="text"
@@ -108,7 +107,7 @@ function ContactUsForm({ data }: Iform) {
               </label>
               <Field
                 component="textarea"
-                className="shadow-4xl rounded-xl h-40 mobile:h-20"
+                className="shadow-4xl rounded-xl lg:h-40 h-20"
                 id="text"
                 name="text"
               />
@@ -121,7 +120,7 @@ function ContactUsForm({ data }: Iform) {
             <div className="flex w-full h-12 justify-center">
               <button
                 className="bg-header-blue font-bold text-light
-                pr-8 pl-8 rounded-3xl text-xl mobile:mt-3"
+                pr-8 pl-8 rounded-3xl text-xl mt-3"
               >
                 {data.contactUsFormSendButton}
               </button>

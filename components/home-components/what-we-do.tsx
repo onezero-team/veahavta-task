@@ -30,9 +30,9 @@ export default function WhatWeDo({ data }: HomePageType) {
   return (
     <WrapperLarge>
       <div
-        className="relative flex animate-fadeIn mobile:flex mobile:flex-col h-auto
-         sm:h-auto  mobile:mt-16 sm:mt-10 sm:flex-col justify-center sm:items-center
-         mobile:h-auto w-full 
+        className="relative flex animate-fadeIn  flex-col h-auto
+         sm:h-auto  mt-16 sm:mt-10  justify-center sm:items-center
+          w-full 
       "
       >
         {width && whatWeDoCards.length > 0 && width < 1024 && (
@@ -41,8 +41,8 @@ export default function WhatWeDo({ data }: HomePageType) {
               {whatWeDoHeading}
             </span>
             <div
-              className="mt-20 mobile:mt-3 flex justify-center
-             sm:mt-2 md:mt-2 "
+              className="mt-3  flex justify-center
+              "
             >
               <MobileCards
                 handleNextSlide={handleNextSlide}

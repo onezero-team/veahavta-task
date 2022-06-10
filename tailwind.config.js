@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   // mode: 'jit',
   // // These paths are just examples, customize them to match your project structure
@@ -18,24 +20,6 @@ module.exports = {
       darkPurple: '#4E47F9',
     },
 
-    screens: {
-      mobile: [{ min: '320px', max: '639px' }],
-
-      sm: '640px',
-      // => @media (min-width: 640px) { ... }
-
-      md: '768px',
-      // // => @media (min-width: 768px) { ... }
-
-      lg: '1024px',
-      // // => @media (min-width: 1024px) { ... }
-
-      xl: '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      xxl: '1530px',
-      desktop: '1920px',
-    },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
       display: ['"Assistant"', 'sans-serif'],

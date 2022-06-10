@@ -12,10 +12,7 @@ export default function Layout({ children, pageProps }: any) {
   }
   return (
     <>
-      <div
-        className="app-wrapper  mx-auto desktop:max-w-screen-desktop overflow-x-hidden   "
-        dir={dir}
-      >
+      <div className="app-wrapper  mx-auto  overflow-x-hidden   " dir={dir}>
         <Header data={pageProps.data.common} />
         <Main>{children}</Main>
         <Footer data={pageProps.data.common} />
