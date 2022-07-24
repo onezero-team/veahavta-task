@@ -17,7 +17,9 @@ export const ChangeLangButton = ({
   }
   return (
     <div>
-      <button onClick={() => changeLocale(lang)}>{children}</button>
+      <button className={className} onClick={() => changeLocale(lang)}>
+        {children}
+      </button>
     </div>
   )
 }

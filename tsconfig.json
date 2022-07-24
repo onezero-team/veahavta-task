@@ -27,7 +27,8 @@
     "**/*.tsx",
     "components/home-components",
     "components/data-components/card.tsx",
-    "components/footer"
-, "components/Logo.jsx"  ],
+    "components/footer",
+    "components/Logo.jsx"
+  ],
   "exclude": ["node_modules"]
 }
