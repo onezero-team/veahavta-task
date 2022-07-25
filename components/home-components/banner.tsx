@@ -24,7 +24,7 @@ export default function Banner({ data }: HomePageType) {
           div.wrapper {
             margin-top: -${themePreval.height.header};
             padding-top: ${themePreval.height.header};
-            width:1920px;
+            width: 1920px;
             height: 780px;
             position: relative;
           }
