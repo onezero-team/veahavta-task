@@ -28,9 +28,9 @@ export default function Header({ data }: CommonType) {
             ))}
 
             <li>
-              <ChangeLangButton className="" lang="ar">
+              <ChangeLangButton className="ml-4" lang="ar">
                 <Image
-                  src="/SAU_2x.png"
+                  src="/img/lang/SAU_2x.png"
                   alt={data.languageNames[0].ar}
                   width={52}
                   height={32}
@@ -38,9 +38,9 @@ export default function Header({ data }: CommonType) {
               </ChangeLangButton>
             </li>
             <li>
-              <ChangeLangButton className="" lang="he">
+              <ChangeLangButton className="ml-4" lang="he">
                 <Image
-                  src="/ISR_2x.png"
+                  src="/img/lang/ISR_2x.png"
                   alt={data.languageNames[0].he}
                   width={52}
                   height={32}
@@ -48,9 +48,9 @@ export default function Header({ data }: CommonType) {
               </ChangeLangButton>
             </li>
             <li>
-              <ChangeLangButton className="" lang="en">
+              <ChangeLangButton className="ml-4" lang="en">
                 <Image
-                  src="/GBR_2x.png"
+                  src="/img/lang/GBR_2x.png"
                   alt={data.languageNames[0].en}
                   width={52}
                   height={32}
@@ -58,9 +58,9 @@ export default function Header({ data }: CommonType) {
               </ChangeLangButton>
             </li>
             <li>
-              <ChangeLangButton className="" lang="am">
+              <ChangeLangButton className="ml-4" lang="am">
                 <Image
-                  src="/ETH_2x.png"
+                  src="/img/lang/ETH_2x.png"
                   alt={data.languageNames[0].am}
                   width={52}
                   height={32}
@@ -68,9 +68,9 @@ export default function Header({ data }: CommonType) {
               </ChangeLangButton>
             </li>
             <li>
-              <ChangeLangButton className="" lang="ti">
+              <ChangeLangButton className="ml-4" lang="ti">
                 <Image
-                  src="/ERI_2x.png"
+                  src="/img/lang/ERI_2x.png"
                   alt={data.languageNames[0].ti}
                   width={52}
                   height={32}

@@ -25,12 +25,14 @@ module.exports = {
       colors: {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
+        'card-bg': '#F4F3FD',
         'icon-bg': '#4E47F9',
         success: '#7AD17C',
         red: '#D25C78',
         blue: '#01559A',
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
+        white:'#FFFFFF'
       },
       text: {
         medium: 'md:text-xl',
@@ -46,6 +48,8 @@ module.exports = {
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',
         'auto-1fr-auto': 'auto 1fr auto',
+        '1fr-1fr': '1fr 1fr',
+        '1fr-1fr-1fr': '1fr 1fr 1fr',
         'auto-auto-1fr': 'auto auto 1fr',
         '2-auto': 'auto auto',
         '4-auto': 'auto auto auto auto',
