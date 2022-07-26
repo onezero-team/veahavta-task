@@ -15,7 +15,7 @@ export default function Banner({ data }: HomePageType) {
             <PageHeader>{data.homepage.title}</PageHeader>
             <Heading className="mb-3 ">{data.homepage.description}</Heading>
             <Button
-              className="col-start-2 mx-auto mt-10"
+              className="col-start-2 mx-auto mt-10  text-3xl "
               text={data.homepage.getToKnowUsButton}
             />
           </div>

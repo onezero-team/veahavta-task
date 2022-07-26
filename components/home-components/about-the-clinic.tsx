@@ -21,9 +21,9 @@ export default function AboutTheClinic({ data }: HomePageType) {
         <Heading className="text-header-blue mb-3 ">
           {data.homepage.aboutHeading}
         </Heading>
-        <ItemHeader>{data.homepage.aboutTitle}</ItemHeader>
+        <ItemHeader className="text-5xl mb-12">{data.homepage.aboutTitle}</ItemHeader>
         <Textarea>{data.homepage.aboutUsText}</Textarea>
-        <Button text={data.homepage.aboutUsButton} />
+        <Button className='text-2xl' text={data.homepage.aboutUsButton} />
       </AboutBox>
     </WrapperLarge>
   )
