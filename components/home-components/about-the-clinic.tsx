@@ -1,15 +1,14 @@
 import { HomePageType } from '@/lib/interface'
-import React, { ReactChild, ReactNode } from 'react'
 import { WrapperLarge } from '../wrapper'
 import { Heading, ItemHeader } from '../data-components/header-text'
 import { Textarea } from '../data-components/content-text'
 import Image from 'next/image'
-import { Button } from '../data-components/button'
+import { BlueButton } from '../data-components/button'
 
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
-    <WrapperLarge className=" grid-cols-1fr-1fr mt-24 mx-auto gap-5 ">
-      <div className="flex justify-end">
+    <WrapperLarge className="max-w-screen-xl grid-cols-1fr-1fr mt-24 mx-auto gap-5 ">
+      <div className=" flex justify-end relative">
         <Image
           src={'/img/about/Rectangle 8.png'}
           alt={''}
@@ -18,7 +17,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
           width={702}
         />
       </div>
-      <AboutBox>
+      <div className="m-20" id={'about-us'}>
         <Heading className="text-header-blue mb-3 ">
           {data.homepage.aboutHeading}
         </Heading>
@@ -26,16 +25,8 @@ export default function AboutTheClinic({ data }: HomePageType) {
           {data.homepage.aboutTitle}
         </ItemHeader>
         <Textarea>{data.homepage.aboutUsText}</Textarea>
-        <Button className="text-2xl" text={data.homepage.aboutUsButton} />
-      </AboutBox>
+        <BlueButton className="text-2xl" text={data.homepage.aboutUsButton} />
+      </div>
     </WrapperLarge>
-  )
-}
-
-export const AboutBox = ({ children }: { children?: ReactNode }) => {
-  return (
-    <div className="m-20" id={'about-us'}>
-      {children}
-    </div>
   )
 }

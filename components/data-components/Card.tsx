@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { Heading } from '../data-components/header-text'
-import { Textarea } from '../data-components/content-text'
+import { Heading } from './header-text'
+import { Textarea } from './content-text'
 
 export default function Card({
   title,
@@ -11,12 +11,11 @@ export default function Card({
   text: string
   img: string
 }) {
-  console.log(img)
   return (
     <>
       <div className="card  overflow-clip ">
         <div className="flex justify-center items-center bg-card-bg py-16">
-          <Image src={img} height={128} width={128} />
+          <Image src={img} alt={title} height={128} width={128} />
         </div>
         <div className=" px-5 py-7">
           <Heading className="text-header-blue font-bold mb-1">{title}</Heading>

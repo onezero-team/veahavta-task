@@ -51,6 +51,7 @@ module.exports = {
         '1fr-1fr': '1fr 1fr',
         '1fr-1fr-1fr': '1fr 1fr 1fr',
         'auto-auto-1fr': 'auto auto 1fr',
+        '1fr-auto-1fr': '1fr auto 1fr',
         '2-auto': 'auto auto',
         '4-auto': 'auto auto auto auto',
         '4-auto-1fr': 'auto auto auto auto 1fr',

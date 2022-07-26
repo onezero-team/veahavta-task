@@ -3,18 +3,20 @@ import themePreval from '@/lib/theme.preval'
 import React from 'react'
 import { PageHeader, Heading } from '../data-components/header-text'
 import { WrapperLarge } from '../wrapper'
-import { Button } from '../data-components/button'
+import { BlueButton } from '../data-components/button'
 
 export default function Banner({ data }: HomePageType) {
   return (
     <div id="top-header">
       <div className="wrapper ">
         <div className="background"></div>
-        <WrapperLarge className=" grid-cols-1fr-1fr-1fr">
-          <div className="text-xl col-span-1 col-start-2 text-center mt-60">
+        <WrapperLarge className="grid-cols-1fr-auto-1fr text-center mt-60 ">
+          <div className="max-w-screen-md col-start-2 px-8">
             <PageHeader>{data.homepage.title}</PageHeader>
-            <Heading className="mb-3 ">{data.homepage.description}</Heading>
-            <Button
+            <Heading className="mb-3 px-20">
+              {data.homepage.description}
+            </Heading>
+            <BlueButton
               className="col-start-2 mx-auto mt-10  text-3xl "
               text={data.homepage.getToKnowUsButton}
             />
