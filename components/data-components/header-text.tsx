@@ -2,7 +2,13 @@ export const PageHeader = ({ children }: { children: string }) => {
   return <h1 className=" font-bold text-7xl text-center ">{children}</h1>
 }
 
-export const ItemHeader = ({ children ,className}: { children: string,className?:string }) => {
+export const ItemHeader = ({
+  children,
+  className,
+}: {
+  children: string
+  className?: string
+}) => {
   return <h2 className={` font-bold ${className}`}>{children}</h2>
 }
 export const Heading = ({
