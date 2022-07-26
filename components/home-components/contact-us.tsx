@@ -58,8 +58,8 @@ export default function ContactUs({ data }: HomePageType) {
             height: 680px;
             z-index: -1;
             opacity: 0.2;
-            background: url('/img/contact/Vector-1.png') 100% 30px no-repeat,
-              url('/img/contact/Vector.png') 0 100% no-repeat;
+            background: url('/img/contact/Vector-1.svg') 100% 30px no-repeat,
+              url('/img/contact/Vector.svg') 0 100% no-repeat;
           }
 
           div.AboutWrapper {
