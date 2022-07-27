@@ -16,7 +16,7 @@ export const PageHeader = ({ children }: { children: string }) => {
 
 export const ItemHeader = ({
   children,
-  className,
+  className = '',
 }: {
   children: string
   className?: string
@@ -24,7 +24,7 @@ export const ItemHeader = ({
 
 export const Heading = ({
   children,
-  className,
+  className = '',
 }: {
   children: string
   className?: string
@@ -34,7 +34,7 @@ export const Heading = ({
 
 export const ContactHeading = ({
   children,
-  className,
+  className = '',
 }: {
   children: string
   className?: string
@@ -43,7 +43,7 @@ export const ContactHeading = ({
 }
 export const FooterHeading = ({
   children,
-  className,
+  className = '',
 }: {
   children: string
   className?: string

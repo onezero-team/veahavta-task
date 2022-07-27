@@ -11,18 +11,9 @@ export default function MenuHrefList({
   }>
 }) {
   const links = appLinks?.map((page, idx) => (
-    <>
-      <li className={`NavLink ${className}`} key={idx}>
-        <Link href={page.relativeLink}>{page.text}</Link>
-      </li>
-      <style jsx>
-        {`
-          li.NavLink {
-            font-size: 28px;
-          }
-        `}
-      </style>
-    </>
+    <li className={className} key={idx}>
+      <Link href={page.relativeLink}>{page.text}</Link>
+    </li>
   ))
 
   return <>{links}</>

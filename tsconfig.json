@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/home-components",
-    "components/data-components/card.tsx",
+    "components/what-we-do-components/card.tsx",
     "components/footer",
     "components/Logo.jsx"
   ],

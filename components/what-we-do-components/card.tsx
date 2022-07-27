@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { Heading } from './header-text'
-import { Textarea } from './content-text'
+import { Heading } from '../data-components/header-text'
+import { Textarea } from '../data-components/content-text'
 
 export default function Card({
   title,

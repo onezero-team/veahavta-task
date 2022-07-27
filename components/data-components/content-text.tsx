@@ -1,15 +1,15 @@
 export const BaseTextarea = ({
   children,
-  className,
+  className = '',
 }: {
   children: string
   className?: string
 }) => {
-  return <p className={`text-base${className} `}>{children}</p>
+  return <p className={`text-base ${className} `}>{children}</p>
 }
 export const Textarea = ({
   children,
-  className,
+  className = '',
 }: {
   children: string
   className?: string
@@ -18,7 +18,7 @@ export const Textarea = ({
 }
 export const ContextText = ({
   children,
-  className,
+  className = '',
 }: {
   children: string
   className?: string

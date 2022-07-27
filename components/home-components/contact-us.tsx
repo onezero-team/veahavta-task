@@ -1,19 +1,14 @@
 import { HomePageType } from '@/lib/interface'
-import React from 'react'
 import { WrapperLarge } from '../wrapper'
-import Image from 'next/image'
-import {
-  ContactHeading,
-  Heading,
-  ItemHeader,
-} from '../data-components/header-text'
+import { ContactHeading, ItemHeader } from '../data-components/header-text'
 import { ContextText, BaseTextarea } from '../data-components/content-text'
 import { CircleImage } from '../data-components/circle-icon'
+import ContactForm from '../form-components/contact-form'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
     <>
-      <div className="ContactUsBackground mt-64">
+      <div className="ContactUsBackground mt-64" id="contact-us">
         <div className="circlesBackground" />
         <div className="AboutWrapper mr-80 mt-40 ">
           <ContactHeading className=" text-header-blue font-bold bg-white w-max rounded-full text-center px-6 py-1 mb-6">
@@ -39,10 +34,9 @@ export default function ContactUs({ data }: HomePageType) {
               </WrapperLarge>
             ))}
           </WrapperLarge>
-          <form className="contact-form"></form>
+          <ContactForm />
         </div>
       </div>
-
       <style jsx>
         {`
           div.ContactUsBackground {
@@ -64,18 +58,6 @@ export default function ContactUs({ data }: HomePageType) {
 
           div.AboutWrapper {
             width: 500px;
-          }
-
-          form.contact-form {
-            position: absolute;
-            height: 700px;
-            width: 650px;
-            bottom: 115px;
-            left: 348px;
-            background: #ffffff;
-            border: 2px solid #ffffff;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 36px;
           }
         `}
       </style>

@@ -1,5 +1,5 @@
 export const BlueButton = ({
-  className,
+  className = '',
   type,
   text,
   ...props
@@ -27,7 +27,7 @@ export const BlueButton = ({
   )
 }
 export const WhiteButton = ({
-  className,
+  className = '',
   type,
   text,
   ...props

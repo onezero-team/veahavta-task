@@ -1,7 +1,7 @@
 export default function OneZeroSkipToMainContent({
   text,
   dir,
-  className,
+  className = '',
   style,
 }: {
   text: string

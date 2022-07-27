@@ -1,4 +1,3 @@
-import Home from 'pages'
 import React from 'react'
 
 export default function Main({ children }: { children: React.ReactNode }) {
