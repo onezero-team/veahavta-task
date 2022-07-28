@@ -11,7 +11,7 @@ export const BlueButton = ({
   return (
     <>
       <button
-        className={`rounded-full bg-icon-bg w-max font-bold text-center whitespace-nowrap text-white px-7 pt-2 pb-3 ${className}`}
+        className={`rounded-full bg-icon-bg w-max font-bold text-center whitespace-nowrap text-white pt-2 pb-3 ${className}`}
         {...props}
       >
         {text}
@@ -45,7 +45,7 @@ export const WhiteButton = ({
   return (
     <>
       <button
-        className={`rounded-full bg-white text-icon-bg border-2 border-icon-bg w-max font-bold text-center whitespace-nowrap  px-7 py-3 ${className}`}
+        className={`rounded-full bg-white text-icon-bg border-2 border-icon-bg w-max font-bold text-center whitespace-nowrap py-3 ${className}`}
       >
         {text}
       </button>

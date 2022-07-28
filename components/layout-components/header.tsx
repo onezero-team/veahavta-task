@@ -15,8 +15,8 @@ export default function Header({ data }: CommonType) {
         dir={dir}
         className={'bg-light text-primary'}
       />
-      <header className="h-header z-10 pt-4 px-4">
-        <WrapperLarge className=" grid-cols-auto-1fr gap-6 mx-64 bg-light rounded-lg whitespace-nowrap flex-nowrap">
+      <header className="h-header z-10 pt-4 px-5">
+        <WrapperLarge className="xl:mx-60 grid-cols-auto-1fr xl:gap-6 bg-light rounded-lg whitespace-nowrap flex-nowrap">
           <Logo
             height={62}
             width={142}
@@ -31,8 +31,19 @@ export default function Header({ data }: CommonType) {
               <LanguagesButtonList languageNames={data.languageNames[0]} />
             </div>
           </ul>
+          <img />
         </WrapperLarge>
       </header>
+
+      <style jsx>
+        {`
+          li.NavLink {
+            font-size: 28px;
+          }
+        `}
+      </style>
+
     </>
+
   )
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 
 export const CircleImage = ({
@@ -12,9 +13,9 @@ export const CircleImage = ({
   return (
     <>
       <div
-        className={`CircleImage rounded-full w-max text-center p-2 ${className}`}
+        className={`flex CircleImage rounded-full w-max text-center p-2 ${className}`}
       >
-        <Image src={src} width={26} height={26} alt={alt ? alt : ''} />
+        <img src={src} width={26} height={26} alt={alt ? alt : ''} />
       </div>
       <style jsx>
         {`
