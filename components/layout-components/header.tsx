@@ -20,14 +20,14 @@ export default function Header({ data }: CommonType) {
           <Logo
             height={62}
             width={142}
-            className="mt-2 mr-3 flex flex-shrink-0 "
+            className="my-1 mr-3 flex flex-shrink-0 "
           />
           <ul className="flex flex-row flex-shrink-0 items-center text-2xl whitespace-nowrap flex-nowrap">
             <MenuHerfList
               appLinks={data.appLinks}
               className="NavLink ml-8 mr-7 flex-nowrap "
             />
-            <div className={dir === 'ltr' ? 'ml-auto' : 'mr-auto'}>
+            <div className={dir === 'ltr' ? 'ml-auto mr-5' : 'mr-auto ml-2'}>
               <LanguagesButtonList languageNames={data.languageNames[0]} />
             </div>
           </ul>
