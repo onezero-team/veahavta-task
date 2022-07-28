@@ -41,12 +41,13 @@ module.exports = {
       boxShadow: {
         '4xl': '0px 0px 4px rgba(0,0,0,0.25)',
       },
-      height: { header: '95px' },
+      height: { header: '95px', closeMenu:'73px' },
       minHeight: {
         'screen-50': '50vh',
       },
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',
+        '1fr-auto': '1fr auto',
         'auto-1fr-auto': 'auto 1fr auto',
         '1fr-1fr': '1fr 1fr',
         '1fr-1fr-1fr': '1fr 1fr 1fr',
