@@ -27,7 +27,7 @@ export default function ContactUs({ data }: HomePageType) {
             />
           </WrapperLarge>
         </div>
-          <ContactForm data={data.common} />
+        <ContactForm data={data.common} />
       </div>
 
       <style jsx>
