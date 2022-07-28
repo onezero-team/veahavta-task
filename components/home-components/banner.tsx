@@ -12,7 +12,7 @@ export default function Banner({ data }: HomePageType) {
         <div className="background">
           <div className="hidden lg:block backgroundImages"></div>
         </div>
-        <WrapperLarge className="grid-cols-1fr-auto-1fr text-center mt-60 ">
+        <WrapperLarge className="text-center mt-56 sm:grid-cols-1fr-auto-1fr  ">
           <div className="max-w-screen-md col-start-2 px-8">
             <PageHeader>{data.homepage.title}</PageHeader>
             <Heading className="mb-3 px-9">{data.homepage.description}</Heading>
