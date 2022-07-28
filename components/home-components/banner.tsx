@@ -10,16 +10,16 @@ export default function Banner({ data }: HomePageType) {
     <div id="top-header">
       <div className="wrapper ">
         <div className="background">
-          <div className="hidden sm:block backgroundImages"></div>
+          <div className="hidden lg:block backgroundImages"></div>
         </div>
         <WrapperLarge className="grid-cols-1fr-auto-1fr text-center mt-60 ">
           <div className="max-w-screen-md col-start-2 px-8">
             <PageHeader>{data.homepage.title}</PageHeader>
-            <Heading className="mb-3 px-20">
+            <Heading className="mb-3 px-9">
               {data.homepage.description}
             </Heading>
             <BlueButton
-              className="col-start-2 mx-auto mt-10  text-3xl "
+              className="text-3xl col-start-2 mx-auto mt-9.9"
               text={data.homepage.getToKnowUsButton}
             />
           </div>

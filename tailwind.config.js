@@ -21,12 +21,15 @@ module.exports = {
       serif: ['"Assistant"', 'sans-serif'],
       mono: ['"Assistant"', 'sans-serif'],
     },
-    fontSize: {
-      mainHeader: ['82px', '107px'],
-      mobileMainHeader: ['38px', '50px'],
-    },
-
+  
     extend: {
+      fontSize: {
+        xl_1_5: ['22px', '29px'],
+        xl_2_5: ['28px', '37px'],
+        xl_5_5: ['52px', '60px'],      
+        mainHeader: ['82px', '107px'],
+        mobileMainHeader: ['38px', '50px'],
+      },
       colors: {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
@@ -43,6 +46,23 @@ module.exports = {
         medium: 'md:text-xl',
         large: 'lg:text-2xl',
       },
+      spacing:{
+        "5.1":"21px",
+        "8.1":"33px",
+        "9.9":"39px",
+        "11.5":"46px",
+        '13':'52px',
+        "35":"142px",        
+        "38":"214px",
+        "54":"214px",
+        'closeMenu': '73px',
+        'mobileForm':'calc(100vw - 40px)',
+        'formSpace':'922px',
+        'formBottom':'115px',
+        'formMinHight':'700px',
+        
+
+      },
 
       boxShadow: {
         '4xl': '0px 0px 4px rgba(0,0,0,0.25)',
@@ -51,9 +71,9 @@ module.exports = {
       minHeight: {
         'screen-50': '50vh',
       },
-      maxHeight: {
-        closeMenu: '73px',
-      },
+      // maxHeight: {
+      //   closeMenu: '73px',
+      // },
 
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',

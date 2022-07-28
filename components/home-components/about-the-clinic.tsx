@@ -9,24 +9,22 @@ import { BlueButton } from '../data-components/text-button'
 
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
-    <WrapperLarge className="max-w-screen-xl grid-cols-1fr-1fr mt-24 mx-auto gap-5 ">
-      <div className=" flex justify-end relative">
+    <WrapperLarge className="mt-10 mx-5 pb-10  lg:mx-auto lg:grid-cols-1fr-1fr lg:mt-24 lg:gap-5 lg:max-w-screen-lg xl:max-w-screen-xl">
+      <div className=" flex justify-center ">
         <img
-          src={'/img/about/Rectangle 8.png'}
-          alt={''}
-          height={628}
-          width={702}
+          src={'/img/about/Rectangle 8.png'}          
+          alt=''
         />
       </div>
-      <div className="m-20" id={'about-us'}>
-        <Heading className="text-header-blue mb-3 ">
+      <div className="mt-10" id={'about-us'}>
+        <Heading className=" text-xl_1_5 text-header-blue mb-2 sm:text-xl_2_5 ">
           {data.homepage.aboutHeading}
         </Heading>
-        <ItemHeader className="text-5xl mb-12">
+        <ItemHeader className=" text-4xl mb-9 sm:text-xl_5_5 sm:mb-13">
           {data.homepage.aboutTitle}
         </ItemHeader>
         <Textarea>{data.homepage.aboutUsText}</Textarea>
-        <BlueButton className="text-2xl" text={data.homepage.aboutUsButton} />
+        <BlueButton className="text-xl_1_5 mt-5.1 sm:mt-8.1 " text={data.homepage.aboutUsButton} />
       </div>
     </WrapperLarge>
   )

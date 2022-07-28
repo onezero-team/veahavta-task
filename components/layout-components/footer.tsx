@@ -10,21 +10,21 @@ export default function Footer({ data }: CommonType) {
   return (
     <>
       <WrapperLarge>
-        <footer className=" h-full bg-light mt-16 mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4 ">
-          <Logo height={152} width={348} />          
+        <footer className=" h-screen sm:h-min justify-items-center	bg-light mt-12 md:mt-16 mx-auto grid md:gap-6 md:grid-cols-2 lg:grid-cols-4 ">
+          <Logo className=' w-38 h-auto'/>          
           <WrapperLarge className=" grid-rows-auto-1fr justify-center items-start gap-3">
             <WhiteButton text={data.footerScheduleButton}  />
             <WhiteButton text={data.footerSupportUsButton}  />
           </WrapperLarge>
-          <WrapperLarge className=" justify-center items-start ">
+          <WrapperLarge className="hidden md:grid justify-center items-start ">
             <ul>
-              <FieldsetHeading className=" font-bold">
+              <FieldsetHeading className="font-bold">
                 {data.footerMenuTitle}
               </FieldsetHeading>
               <MenuHrefList appLinks={data.appLinks} className="" />
             </ul>
           </WrapperLarge>
-          <WrapperLarge className=" justify-center items-start ">
+          <WrapperLarge className=" mt-11.5 justify-center items-start md:mt-0">
             <ul>
               <FieldsetHeading className=" font-bold">
                 {data.footerContactUsTitle}

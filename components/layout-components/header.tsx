@@ -25,7 +25,7 @@ export default function Header({ data }: CommonType) {
       />
       <header className="h-header pt-12 z-10 sm:pt-5 px-5">
         <WrapperLarge
-          className={`${openMenu} NavBar grid-cols-1fr-auto h-auto transition-all overflow-hidden lg:grid-cols-auto-auto-1fr 2xl:mx-60 bg-light rounded-lg whitespace-nowrap flex-nowrap`}
+          className={`${openMenu}  grid-cols-1fr-auto transition-all overflow-hidden lg:grid-cols-auto-auto-1fr 2xl:mx-60 bg-light rounded-lg whitespace-nowrap flex-nowrap`}
         >
           <Logo
             height={62}
@@ -34,13 +34,13 @@ export default function Header({ data }: CommonType) {
           />
           <BurgerMenuButton
             alt={data.footerMenuTitle}
-            className={' ml-3 sm:hidden justify-self-end'}
+            className={'ml-3 sm:hidden justify-self-end'}
             onClick={toggleBurgerHandler}
           />
-          <ul className="  flex flex-col sm:flex-row flex-shrink-0 sm:items-center text-2xl whitespace-nowrap flex-nowrap mr-6">
+          <ul className="flex flex-col sm:flex-row flex-shrink-0 sm:items-center text-2xl whitespace-nowrap flex-nowrap mr-6">
             <MenuHerfList
               appLinks={data.appLinks}
-              className="NavLink ml-8 mr-7 flex-nowrap "
+              className=" text-xl_2_5 ml-8 mr-7 flex-nowrap "
             />
           </ul>
           <ul
@@ -53,13 +53,6 @@ export default function Header({ data }: CommonType) {
         </WrapperLarge>
       </header>
 
-      <style jsx>
-        {`
-          li.NavLink {
-            font-size: 28px;
-          }
-        `}
-      </style>
     </>
   )
 }

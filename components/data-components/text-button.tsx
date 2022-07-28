@@ -1,5 +1,5 @@
 export const BlueButton = ({
-  className = '',
+  className = 'text-xl_2_5',
   type,
   text,
   ...props
@@ -11,7 +11,7 @@ export const BlueButton = ({
   return (
     <>
       <button
-        className={`rounded-full bg-icon-bg w-max font-bold text-center whitespace-nowrap text-white pt-2 pb-3 ${className}`}
+        className={`rounded-full bg-icon-bg w-max font-bold text-center  text-white  ${className}`}
         {...props}
       >
         {text}
@@ -19,10 +19,8 @@ export const BlueButton = ({
       <style jsx>
         {`
           button {
-            font-size: 28px;
-            line-height: 37px;
             min-width: 185px;
-            min-heigth: 60px;
+            height: 60px;
           }
           button:disabled {
             --tw-bg-opacity: 0.2;

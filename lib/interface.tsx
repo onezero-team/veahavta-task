@@ -30,6 +30,7 @@ export type Homepage = {
 }
 
 export type Common = {
+  contactUsFormSuccessMessage: string
   contactUsLinks: Array<{
     text: string
     linkType: string

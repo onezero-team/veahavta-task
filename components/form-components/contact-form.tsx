@@ -79,8 +79,11 @@ export default function ContactForm({ data }: { data: Common }) {
           errors,
           status,
         }) => (
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <WrapperLarge className=" grid-cols-1fr-1fr mt-12 mx-6 relative">
+          <form className={`${(dir === 'rtl')? 'xl:left-auto xl:right-formSpace':' xl:left-formSpace xl:right-auto'} 
+          sm:w-fit sm:h-formMinHight sm:bottom-formBottom absolute left-0 shadow-4xl bottom-9 w-mobileForm
+           mx-5 z-10 px-10 border-2 border-white rounded-[36px] bg-white`} 
+          onSubmit={handleSubmit}>
+            <div className="flex flex-col sm:grid sm:grid-cols-1fr-1fr mt-12 mx-6 relative">
               <fieldset className="my-3 mx-4 ">
                 <Field
                   name="firstName"
@@ -140,16 +143,16 @@ export default function ContactForm({ data }: { data: Common }) {
               {status?.success && (
                 <p className="font-bold">{data.contactUsFormSuccessMessage}</p>
               )}
-            </WrapperLarge>
+            </div>
           </form>
         )}
       </Formik>
-
+{/* 
       <style jsx>
         {`
           form.contact-form {
             position: absolute;
-            height: 700px;
+            min-height: 700px;
             width: 650px;
             bottom: 115px;
             right: ${dir === 'rtl' ? '922px' : 'auto'};
@@ -160,7 +163,7 @@ export default function ContactForm({ data }: { data: Common }) {
             border-radius: 36px;
           }
         `}
-      </style>
+      </style> */}
     </>
   )
 }

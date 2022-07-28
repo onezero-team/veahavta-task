@@ -41,6 +41,10 @@ export default function Layout({ children, pageProps }: any) {
             height: 100%;
           }
 
+          *{
+            box-sizing: border-box;
+          }
+
           *:focus-visible {
             outline: none !important;
             box-shadow: 0 0 0 2px ${theme.colors.primary} !important;

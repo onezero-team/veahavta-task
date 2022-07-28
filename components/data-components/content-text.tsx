@@ -14,7 +14,7 @@ export const Textarea = ({
   children: string
   className?: string
 }) => {
-  return <p className={`text-lg pb-8 ${className} `}>{children}</p>
+  return <p className={`text-lg ${className} `}>{children}</p>
 }
 export const ContextText = ({
   children,
@@ -23,5 +23,5 @@ export const ContextText = ({
   children: string
   className?: string
 }) => {
-  return <p className={`text-xl pb-8 ${className} `}>{children}</p>
+  return <p className={`text-xl ${className} `}>{children}</p>
 }

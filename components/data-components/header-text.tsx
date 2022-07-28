@@ -7,6 +7,15 @@ export const PageHeader = ({ children }: { children: string }) => {
     </>
   )
 }
+export const ServicesHeader = ({ children }: { children: string }) => {
+  return (
+    <>
+      <h1 className="hidden text-mainHeader font-bold text-center md:inline">
+        {children}
+      </h1>
+    </>
+  )
+}
 
 export const ItemHeader = ({
   children,
@@ -23,7 +32,7 @@ export const Heading = ({
   children: string
   className?: string
 }) => {
-  return <h3 className={`text-3xl ${className}`}>{children}</h3>
+  return <h3 className={`text-xl_1_5 sm:text-xl_2_5 ${className}`}>{children}</h3>
 }
 
 export const ContactHeading = ({
@@ -42,5 +51,5 @@ export const FieldsetHeading = ({
   children: string
   className?: string
 }) => {
-  return <h5 className={`text-xl ${className}`}>{children}</h5>
+  return <h5 className={`text-xl_1_5 ${className}`}>{children}</h5>
 }
