@@ -19,11 +19,13 @@ interface Errors {
   phone?: string
   message?: string
 }
-const emailRegex = new RegExp('^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$')
+const emailRegex = new RegExp(
+  '^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$',
+)
 const phoneRegex = new RegExp('^[0][1-9]{1,2}[-]{0,1}[0-9]{7}$')
 
 export default function ContactForm({ data }: { data: Common }) {
-  const {dir} =useLocale();
+  const { dir } = useLocale()
   return (
     <>
       <Formik<Values>
@@ -57,14 +59,16 @@ export default function ContactForm({ data }: { data: Common }) {
           }
           return errors
         }}
-        onSubmit={(values, { resetForm,setSubmitting,setStatus}) => {
-          setSubmitting(true);
-          console.log('values to send : ', values );
-          resetForm();
-          setStatus({success:true})
-          setSubmitting(false);    
+        onSubmit={(values, { resetForm, setSubmitting, setStatus }) => {
+          setSubmitting(true)
+          console.log('values to send : ', values)
+          resetForm()
+          setStatus({ success: true })
+          setSubmitting(false)
         }}
-        OnBlur={(setStatus)=>{setStatus({})}}
+        OnBlur={(setStatus) => {
+          setStatus({})
+        }}
       >
         {({
           handleSubmit,
@@ -73,7 +77,7 @@ export default function ContactForm({ data }: { data: Common }) {
           handleBlur,
           touched,
           errors,
-          status
+          status,
         }) => (
           <form className="contact-form" onSubmit={handleSubmit}>
             <WrapperLarge className=" grid-cols-1fr-1fr mt-12 mx-6 relative">
@@ -133,7 +137,9 @@ export default function ContactForm({ data }: { data: Common }) {
                 className="mx-4 my-5"
                 type="submit"
               />
-              {status?.success && <p className="font-bold" >{data.contactUsFormSuccessMessage }</p>}
+              {status?.success && (
+                <p className="font-bold">{data.contactUsFormSuccessMessage}</p>
+              )}
             </WrapperLarge>
           </form>
         )}
@@ -147,7 +153,7 @@ export default function ContactForm({ data }: { data: Common }) {
             width: 650px;
             bottom: 115px;
             right: ${dir === 'rtl' ? '922px' : 'auto'};
-            left: ${dir === 'ltr' ? '922px' : 'auto'};                                   
+            left: ${dir === 'ltr' ? '922px' : 'auto'};
             background: #ffffff;
             border: 2px solid #ffffff;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);

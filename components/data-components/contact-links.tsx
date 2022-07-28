@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { WrapperLarge } from '../wrapper'
 import { CircleImage } from './circle-icon'
 import { BaseTextarea } from './content-text'
@@ -15,16 +16,20 @@ export default function ContactLinks({
   }>
 }) {
   const linkList = contactLinks?.map((link, idx) => (
-    <WrapperLarge className=" grid-cols-auto-1fr items-center" key={idx}>
-      <CircleImage
-        src={link.imagePath}
-        alt={link.linkType}
-        className={className}
-      />
-      <WrapperLarge className=" mr-4">
-        <BaseTextarea>{link.text}</BaseTextarea>
+    <a href={`${(link.linkType !== 'email') ? link.linkType : 'mailto'}: ${(link.linkType === 'phone') ? link.linkValue : link.text} `} key={idx}>
+      <WrapperLarge className=" grid-cols-auto-1fr items-center" >
+        <CircleImage
+          src={link.imagePath}
+          alt={link.linkType}
+          className={className}
+        />
+        <WrapperLarge className=" mr-4">
+          <BaseTextarea>
+          {link.text}
+          </BaseTextarea>
+        </WrapperLarge>
       </WrapperLarge>
-    </WrapperLarge>
+    </a>
   ))
 
   return <>{linkList}</>
@@ -83,7 +88,12 @@ export function ContactLinksTypes({
         />
         <WrapperLarge className=" mr-4">
           {reduced.tel.map((link, idx) => (
-            <BaseTextarea key={idx}>{link.text}</BaseTextarea>
+            <BaseTextarea key={idx}>
+              <a href={`${(link.linkType !== 'email') ? link.linkType : 'mailto'}: ${(link.linkType === 'phone') ? link.linkValue : link.text} `} >            
+                {link.text}
+              </a>
+
+            </BaseTextarea>
           ))}
         </WrapperLarge>
         <CircleImage
@@ -93,7 +103,11 @@ export function ContactLinksTypes({
         />
         <WrapperLarge className=" mr-4">
           {reduced.email.map((link, idx) => (
-            <BaseTextarea key={idx}>{link.text}</BaseTextarea>
+            <BaseTextarea key={idx}>
+               <a href={`${(link.linkType !== 'email') ? link.linkType : 'mailto'}: ${(link.linkType === 'phone') ? link.linkValue : link.text} `} >            
+                {link.text}
+              </a>
+              </BaseTextarea>
           ))}
         </WrapperLarge>
         <CircleImage
