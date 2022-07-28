@@ -1,15 +1,8 @@
 export const PageHeader = ({ children }: { children: string }) => {
   return (
     <>
-      <h1 className="PageHeader font-bold text-center ">{children}</h1>
-      <style jsx>
-        {`
-          h1.PageHeader {
-            font-size: 82px;
-            line-height: 107px;
-          }
-        `}
-      </style>
+      <h1 className=" text-mobileMainHeader md:text-mainHeader font-bold text-center ">{children}</h1>
+     
     </>
   )
 }

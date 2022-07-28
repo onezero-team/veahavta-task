@@ -9,7 +9,9 @@ export default function Banner({ data }: HomePageType) {
   return (
     <div id="top-header">
       <div className="wrapper ">
-        <div className="background"></div>
+        <div className="background">
+          <div className='hidden sm:block backgroundImages'></div>
+        </div>
         <WrapperLarge className="grid-cols-1fr-auto-1fr text-center mt-60 ">
           <div className="max-w-screen-md col-start-2 px-8">
             <PageHeader>{data.homepage.title}</PageHeader>
@@ -26,11 +28,11 @@ export default function Banner({ data }: HomePageType) {
           div.wrapper {
             margin-top: -${themePreval.height.header};
             padding-top: ${themePreval.height.header};
-            width: 1920px;
+            // width: 1920px;
             height: 780px;
             position: relative;
           }
-          div.background {
+          div.backgroundImages {
             position: absolute;
             width: 1920px;
             height: 780px;
@@ -43,6 +45,15 @@ export default function Banner({ data }: HomePageType) {
               url('/img/baner/Rectangle 8.png') 0px 300px no-repeat,
               url('/img/baner/Rectangle 9.png') 165px 0px no-repeat,
               url('/img/baner/Rectangle 10.png') 637px 0px no-repeat,
+              linear-gradient(109.17deg, #f4f3fd 38.49%, #d3d1fc 72.36%);
+          }
+          div.background{
+            position: absolute;
+            width: 1920px;
+            height: 780px;
+            z-index: -1;
+            inset: 0;
+            background: 
               linear-gradient(109.17deg, #f4f3fd 38.49%, #d3d1fc 72.36%);
           }
         `}</style>

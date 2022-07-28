@@ -21,6 +21,11 @@ module.exports = {
       serif: ['"Assistant"', 'sans-serif'],
       mono: ['"Assistant"', 'sans-serif'],
     },
+    fontSize:{
+      'mainHeader':['82px','107px'],
+      'mobileMainHeader':['38px','50px'],
+    },
+
     extend: {
       colors: {
         'header-blue': '#4E47F9',
@@ -38,13 +43,18 @@ module.exports = {
         medium: 'md:text-xl',
         large: 'lg:text-2xl',
       },
+        
       boxShadow: {
         '4xl': '0px 0px 4px rgba(0,0,0,0.25)',
       },
-      height: { header: '95px', closeMenu: '73px' },
+      height: { header: '95px' },
       minHeight: {
         'screen-50': '50vh',
       },
+      maxHeight:{
+        'closeMenu': '73px'
+      },
+    
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',
         '1fr-auto': '1fr auto',

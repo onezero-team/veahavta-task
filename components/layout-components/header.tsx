@@ -10,10 +10,10 @@ import { useState } from 'react'
 
 export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
-  const [openMenu, SetOpenMenu] = useState('h-closeMenu')
+  const [openMenu, SetOpenMenu] = useState('max-h-closeMenu')
 
   const toggleBurgerHandler = () => {
-    SetOpenMenu(openMenu === '' ? 'h-closeMenu' : '')
+    SetOpenMenu(openMenu === '' ? 'max-h-closeMenu' : '')
   }
 
   return (
@@ -25,7 +25,7 @@ export default function Header({ data }: CommonType) {
       />
       <header className="h-header pt-12 z-10 sm:pt-5 px-5">
         <WrapperLarge
-          className={` ${openMenu} NavBar grid-cols-1fr-auto h-auto transition-all overflow-hidden lg:grid-cols-auto-auto-1fr 2xl:mx-60 bg-light rounded-lg whitespace-nowrap flex-nowrap`}
+          className={`${openMenu} NavBar grid-cols-1fr-auto h-auto transition-all overflow-hidden lg:grid-cols-auto-auto-1fr 2xl:mx-60 bg-light rounded-lg whitespace-nowrap flex-nowrap`}
         >
           <Logo
             height={62}
