@@ -30,7 +30,7 @@ export default function ContactLinks({
   return <>{linkList}</>
 }
 
-type Reduce ={
+type Reduce = {
   tel: Array<{
     text: string
     linkType: string
@@ -63,7 +63,7 @@ export function ContactLinksTypes({
     linkValue: string
   }>
 }) {
-  const reduced:Reduce = contactLinks.reduce((allLinks, link) => {
+  const reduced: Reduce = contactLinks.reduce((allLinks, link) => {
     if (link.linkType in allLinks) {
       Object.assign(allLinks, {
         [link.linkType]: [...allLinks[link.linkType], link],

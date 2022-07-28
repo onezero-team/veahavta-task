@@ -8,7 +8,6 @@ import MenuHrefList from '../data-components/menu-href-list'
 import { ContactLinksTypes } from '../data-components/contact-links'
 
 export default function Footer({ data }: CommonType) {
-
   return (
     <>
       <WrapperLarge>
