@@ -11,15 +11,21 @@ export const BlueButton = ({
   return (
     <>
       <button
-        className={`rounded-full bg-icon-bg w-max font-bold text-center whitespace-nowrap text-white  px-7 pt-2 pb-3 ${className}`}
+        className={`rounded-full bg-icon-bg w-max font-bold text-center whitespace-nowrap text-white px-7 pt-2 pb-3 ${className}`}
+        {...props}
       >
         {text}
       </button>
       <style jsx>
         {`
           button {
+            font-size: 28px;
+            line-height: 37px;
             min-width: 185px;
-            hegiht: 60px;
+            min-heigth: 60px;
+          }
+          button:disabled {
+            --tw-bg-opacity: 0.2;
           }
         `}
       </style>

@@ -11,14 +11,10 @@ export const CircleImage = ({
 }) => {
   return (
     <>
-      <div className="CircleImage rounded-full bg-icon-bg w-max text-center p-2">
-        <Image
-          src={src}
-          width={26}
-          height={26}
-          alt={alt ? alt : ''}
-          className={`${className}`}
-        />
+      <div
+        className={`CircleImage rounded-full w-max text-center p-2 ${className}`}
+      >
+        <Image src={src} width={26} height={26} alt={alt ? alt : ''} />
       </div>
       <style jsx>
         {`

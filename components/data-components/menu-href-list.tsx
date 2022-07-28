@@ -12,7 +12,9 @@ export default function MenuHrefList({
 }) {
   const links = appLinks?.map((page, idx) => (
     <li className={className} key={idx}>
-      <Link href={page.relativeLink}>{page.text}</Link>
+      <Link href={page.relativeLink ? page.relativeLink : '/'}>
+        {page.text}
+      </Link>
     </li>
   ))
 

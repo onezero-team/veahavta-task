@@ -39,14 +39,14 @@ export const ContactHeading = ({
   children: string
   className?: string
 }) => {
-  return <h3 className={`text-2xl ${className}`}>{children}</h3>
+  return <h4 className={`text-2xl ${className}`}>{children}</h4>
 }
-export const FooterHeading = ({
+export const FieldsetHeading = ({
   children,
   className = '',
 }: {
   children: string
   className?: string
 }) => {
-  return <h3 className={`text-xl ${className}`}>{children}</h3>
+  return <h5 className={`text-xl ${className}`}>{children}</h5>
 }

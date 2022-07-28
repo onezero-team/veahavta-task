@@ -3,10 +3,12 @@ import { WrapperLarge } from '../wrapper'
 import Logo from '../data-components/Logo'
 import { WhiteButton } from '../data-components/button'
 import { BaseTextarea } from '../data-components/content-text'
-import { FooterHeading } from '../data-components/header-text'
+import { FieldsetHeading } from '../data-components/header-text'
 import MenuHrefList from '../data-components/menu-href-list'
+import { ContactLinksTypes } from '../data-components/contact-links'
 
 export default function Footer({ data }: CommonType) {
+
   return (
     <>
       <WrapperLarge>
@@ -18,18 +20,18 @@ export default function Footer({ data }: CommonType) {
           </WrapperLarge>
           <WrapperLarge className=" justify-center items-center ">
             <ul>
-              <FooterHeading className=" font-bold">
+              <FieldsetHeading className=" font-bold">
                 {data.footerMenuTitle}
-              </FooterHeading>
+              </FieldsetHeading>
               <MenuHrefList appLinks={data.appLinks} className="" />
             </ul>
           </WrapperLarge>
           <WrapperLarge className=" justify-center items-center ">
             <ul>
-              <FooterHeading className=" font-bold">
+              <FieldsetHeading className=" font-bold">
                 {data.footerContactUsTitle}
-              </FooterHeading>
-              <MenuHrefList appLinks={data.appLinks} className="" />
+              </FieldsetHeading>
+              <ContactLinksTypes contactLinks={data.contactUsLinks} />
             </ul>
           </WrapperLarge>
         </footer>

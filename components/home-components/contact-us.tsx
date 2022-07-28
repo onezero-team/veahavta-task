@@ -1,9 +1,9 @@
 import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { ContactHeading, ItemHeader } from '../data-components/header-text'
-import { ContextText, BaseTextarea } from '../data-components/content-text'
-import { CircleImage } from '../data-components/circle-icon'
+import { ContextText } from '../data-components/content-text'
 import ContactForm from '../form-components/contact-form'
+import ContactLinks from '../data-components/contact-links'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
@@ -21,39 +21,34 @@ export default function ContactUs({ data }: HomePageType) {
             {data.homepage.contactUsText}
           </ContextText>
           <WrapperLarge className=" grid-cols-1fr-1fr ">
-            {data?.common?.contactUsLinks?.map((link, idx) => (
-              <WrapperLarge
-                className=" grid-cols-auto-1fr items-center"
-                key={idx}
-              >
-                <CircleImage src={link.imagePath} alt={link.linkType} />
-                <WrapperLarge className=" mr-4">
-                  <BaseTextarea>{link.text}</BaseTextarea>
-                  <BaseTextarea>{link.linkValue}</BaseTextarea>
-                </WrapperLarge>
-              </WrapperLarge>
-            ))}
+            <ContactLinks
+              contactLinks={data.common.contactUsLinks}
+              className={'bg-icon-bg'}
+            />
           </WrapperLarge>
-          <ContactForm />
+          <ContactForm data={data.common} />
         </div>
       </div>
+
       <style jsx>
         {`
           div.ContactUsBackground {
             position: relative;
-            width: 1920px;
+            width: 100%;
+            //width: 1920px;
             height: 680px;
             background: #f4f3fd;
-            z-index: -1;
+            // z-index:-1;
           }
           div.circlesBackground {
             position: absolute;
-            width: 1920px;
+            width: 100%;
+            //width: 1920px;
             height: 680px;
-            z-index: -1;
             opacity: 0.2;
             background: url('/img/contact/Vector-1.svg') 100% 30px no-repeat,
               url('/img/contact/Vector.svg') 0 100% no-repeat;
+            // z-index:-1;
           }
 
           div.AboutWrapper {
