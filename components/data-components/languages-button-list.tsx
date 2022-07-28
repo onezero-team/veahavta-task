@@ -9,7 +9,7 @@ export default function LanguagesButtonList({
 }) {
   const languagesButtons = Object.entries(languageNames).map((entry, key) => {
     return (
-      <li className="ml-2 justify-self-start float-left" key={key}>
+      <li className="ml-2 justify-self-start float-left self-center" key={key}>
         <ChangeLangButton lang={entry[0]}>
           <div>
             <img
