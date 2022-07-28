@@ -10,9 +10,9 @@ export default function Banner({ data }: HomePageType) {
     <div id="top-header">
       <div className="wrapper ">
         <div className="background">
-          <div className="hidden lg:block backgroundImages"></div>
+          <div className="hidden lg:block backgroundImages bg-center"></div>
         </div>
-        <WrapperLarge className="text-center mt-56 sm:grid-cols-1fr-auto-1fr  ">
+        <WrapperLarge className="text-center mt-56 sm:mt-42 sm:grid-cols-1fr-auto-1fr  ">
           <div className="max-w-screen-md col-start-2 px-8">
             <PageHeader>{data.homepage.title}</PageHeader>
             <Heading className="mb-3 px-9">{data.homepage.description}</Heading>
@@ -31,8 +31,9 @@ export default function Banner({ data }: HomePageType) {
             position: relative;
           }
           div.backgroundImages {
-            position: absolute;
-            width: 1920px;
+            // position: absolute;
+            background-position: center; 
+            max-width: 1920px;
             height: 780px;
             z-index: -1;
             inset: 0;
@@ -47,7 +48,7 @@ export default function Banner({ data }: HomePageType) {
           }
           div.background {
             position: absolute;
-            width: 1920px;
+            // width: 1920px;
             height: 780px;
             z-index: -1;
             inset: 0;

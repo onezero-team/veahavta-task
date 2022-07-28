@@ -48,22 +48,23 @@ module.exports = {
       },
       spacing: {
         5.1: '21px',
-        6.5:'26px',
+        6.5: '26px',
         8.1: '33px',
         9.9: '39px',
         11.5: '46px',
         13: '52px',
-        30:'121px',
+        30: '121px',
         35: '142px',
         38: '150px',
+        42:'164px',
         54: '214px',
 
-        banerHight:'780px',
+        banerHight: '780px',
         closeMenu: '73px',
         mobileForm: 'calc(100vw - 40px)',
         formSpace: '922px',
         formBottom: '115px',
-        formMinHight: '700px',        
+        formMinHight: '700px',
       },
 
       boxShadow: {
