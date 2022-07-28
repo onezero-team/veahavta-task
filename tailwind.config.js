@@ -41,7 +41,7 @@ module.exports = {
       boxShadow: {
         '4xl': '0px 0px 4px rgba(0,0,0,0.25)',
       },
-      height: { header: '95px', closeMenu:'73px' },
+      height: { header: '95px', closeMenu: '73px' },
       minHeight: {
         'screen-50': '50vh',
       },
