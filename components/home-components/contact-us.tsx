@@ -10,7 +10,7 @@ export default function ContactUs({ data }: HomePageType) {
     <>
       <div className="ContactUsBackground mt-64" id="contact-us">
         <div className="circlesBackground" />
-        <div className="AboutWrapper mr-80 mt-40 ">
+        <div className=" hidden lg:block AboutWrapper mr-80 mt-40 ">
           <ContactHeading className=" text-header-blue font-bold bg-white w-max rounded-full text-center px-6 py-1 mb-6">
             {data.homepage.contactUsHeading}
           </ContactHeading>
@@ -26,8 +26,8 @@ export default function ContactUs({ data }: HomePageType) {
               className={'bg-icon-bg'}
             />
           </WrapperLarge>
-          <ContactForm data={data.common} />
         </div>
+          <ContactForm data={data.common} />
       </div>
 
       <style jsx>
