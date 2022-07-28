@@ -32,7 +32,7 @@ export default function Banner({ data }: HomePageType) {
           }
           div.backgroundImages {
             // position: absolute;
-            background-position: center; 
+            background-position: center;
             max-width: 1920px;
             height: 780px;
             z-index: -1;
