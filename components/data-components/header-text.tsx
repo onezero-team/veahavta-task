@@ -1,8 +1,9 @@
 export const PageHeader = ({ children }: { children: string }) => {
   return (
     <>
-      <h1 className=" text-mobileMainHeader md:text-mainHeader font-bold text-center ">{children}</h1>
-     
+      <h1 className=" text-mobileMainHeader md:text-mainHeader font-bold text-center ">
+        {children}
+      </h1>
     </>
   )
 }

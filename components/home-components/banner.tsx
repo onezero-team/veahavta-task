@@ -10,7 +10,7 @@ export default function Banner({ data }: HomePageType) {
     <div id="top-header">
       <div className="wrapper ">
         <div className="background">
-          <div className='hidden sm:block backgroundImages'></div>
+          <div className="hidden sm:block backgroundImages"></div>
         </div>
         <WrapperLarge className="grid-cols-1fr-auto-1fr text-center mt-60 ">
           <div className="max-w-screen-md col-start-2 px-8">
@@ -47,14 +47,17 @@ export default function Banner({ data }: HomePageType) {
               url('/img/baner/Rectangle 10.png') 637px 0px no-repeat,
               linear-gradient(109.17deg, #f4f3fd 38.49%, #d3d1fc 72.36%);
           }
-          div.background{
+          div.background {
             position: absolute;
             width: 1920px;
             height: 780px;
             z-index: -1;
             inset: 0;
-            background: 
-              linear-gradient(109.17deg, #f4f3fd 38.49%, #d3d1fc 72.36%);
+            background: linear-gradient(
+              109.17deg,
+              #f4f3fd 38.49%,
+              #d3d1fc 72.36%
+            );
           }
         `}</style>
       </div>
