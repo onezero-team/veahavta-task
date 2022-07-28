@@ -79,10 +79,16 @@ export default function ContactForm({ data }: { data: Common }) {
           errors,
           status,
         }) => (
-          <form className={`${(dir === 'rtl')? 'xl:left-auto xl:right-formSpace':' xl:left-formSpace xl:right-auto'} 
+          <form
+            className={`${
+              dir === 'rtl'
+                ? 'xl:left-auto xl:right-formSpace'
+                : ' xl:left-formSpace xl:right-auto'
+            } 
           sm:w-fit sm:h-formMinHight sm:bottom-formBottom absolute left-0 shadow-4xl bottom-9 w-mobileForm
-           mx-5 z-10 px-10 border-2 border-white rounded-[36px] bg-white`} 
-          onSubmit={handleSubmit}>
+           mx-5 z-10 px-10 border-2 border-white rounded-[36px] bg-white`}
+            onSubmit={handleSubmit}
+          >
             <div className="flex flex-col sm:grid sm:grid-cols-1fr-1fr mt-12 mx-6 relative">
               <fieldset className="my-3 mx-4 ">
                 <Field
@@ -147,7 +153,7 @@ export default function ContactForm({ data }: { data: Common }) {
           </form>
         )}
       </Formik>
-{/* 
+      {/* 
       <style jsx>
         {`
           form.contact-form {

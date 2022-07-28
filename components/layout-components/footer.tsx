@@ -11,10 +11,10 @@ export default function Footer({ data }: CommonType) {
     <>
       <WrapperLarge>
         <footer className=" h-screen sm:h-min justify-items-center	bg-light mt-12 md:mt-16 mx-auto grid md:gap-6 md:grid-cols-2 lg:grid-cols-4 ">
-          <Logo className=' w-38 h-auto'/>          
+          <Logo className=" w-38 h-auto" />
           <WrapperLarge className=" grid-rows-auto-1fr justify-center items-start gap-3">
-            <WhiteButton text={data.footerScheduleButton}  />
-            <WhiteButton text={data.footerSupportUsButton}  />
+            <WhiteButton text={data.footerScheduleButton} />
+            <WhiteButton text={data.footerSupportUsButton} />
           </WrapperLarge>
           <WrapperLarge className="hidden md:grid justify-center items-start ">
             <ul>
@@ -34,9 +34,6 @@ export default function Footer({ data }: CommonType) {
           </WrapperLarge>
         </footer>
       </WrapperLarge>
-      
     </>
-
-    
   )
 }

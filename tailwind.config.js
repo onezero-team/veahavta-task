@@ -21,12 +21,12 @@ module.exports = {
       serif: ['"Assistant"', 'sans-serif'],
       mono: ['"Assistant"', 'sans-serif'],
     },
-  
+
     extend: {
       fontSize: {
         xl_1_5: ['22px', '29px'],
         xl_2_5: ['28px', '37px'],
-        xl_5_5: ['52px', '60px'],      
+        xl_5_5: ['52px', '60px'],
         mainHeader: ['82px', '107px'],
         mobileMainHeader: ['38px', '50px'],
       },
@@ -46,22 +46,20 @@ module.exports = {
         medium: 'md:text-xl',
         large: 'lg:text-2xl',
       },
-      spacing:{
-        "5.1":"21px",
-        "8.1":"33px",
-        "9.9":"39px",
-        "11.5":"46px",
-        '13':'52px',
-        "35":"142px",        
-        "38":"214px",
-        "54":"214px",
-        'closeMenu': '73px',
-        'mobileForm':'calc(100vw - 40px)',
-        'formSpace':'922px',
-        'formBottom':'115px',
-        'formMinHight':'700px',
-        
-
+      spacing: {
+        5.1: '21px',
+        8.1: '33px',
+        9.9: '39px',
+        11.5: '46px',
+        13: '52px',
+        35: '142px',
+        38: '214px',
+        54: '214px',
+        closeMenu: '73px',
+        mobileForm: 'calc(100vw - 40px)',
+        formSpace: '922px',
+        formBottom: '115px',
+        formMinHight: '700px',
       },
 
       boxShadow: {

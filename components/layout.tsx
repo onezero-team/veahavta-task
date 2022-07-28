@@ -41,7 +41,7 @@ export default function Layout({ children, pageProps }: any) {
             height: 100%;
           }
 
-          *{
+          * {
             box-sizing: border-box;
           }
 

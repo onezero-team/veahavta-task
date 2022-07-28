@@ -11,10 +11,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
   return (
     <WrapperLarge className="mt-10 mx-5 pb-10  lg:mx-auto lg:grid-cols-1fr-1fr lg:mt-24 lg:gap-5 lg:max-w-screen-lg xl:max-w-screen-xl">
       <div className=" flex justify-center ">
-        <img
-          src={'/img/about/Rectangle 8.png'}          
-          alt=''
-        />
+        <img src={'/img/about/Rectangle 8.png'} alt="" />
       </div>
       <div className="mt-10" id={'about-us'}>
         <Heading className=" text-xl_1_5 text-header-blue mb-2 sm:text-xl_2_5 ">
@@ -24,7 +21,10 @@ export default function AboutTheClinic({ data }: HomePageType) {
           {data.homepage.aboutTitle}
         </ItemHeader>
         <Textarea>{data.homepage.aboutUsText}</Textarea>
-        <BlueButton className="text-xl_1_5 mt-5.1 sm:mt-8.1 " text={data.homepage.aboutUsButton} />
+        <BlueButton
+          className="text-xl_1_5 mt-5.1 sm:mt-8.1 "
+          text={data.homepage.aboutUsButton}
+        />
       </div>
     </WrapperLarge>
   )

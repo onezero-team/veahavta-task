@@ -1,7 +1,11 @@
 import { HomePageType } from '@/lib/interface'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
-import { Heading, PageHeader, ServicesHeader } from '../data-components/header-text'
+import {
+  Heading,
+  PageHeader,
+  ServicesHeader,
+} from '../data-components/header-text'
 import Card from '../what-we-do-components/card'
 
 export default function WhatWeDo({ data }: HomePageType) {

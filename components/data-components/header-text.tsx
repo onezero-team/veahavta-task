@@ -32,7 +32,9 @@ export const Heading = ({
   children: string
   className?: string
 }) => {
-  return <h3 className={`text-xl_1_5 sm:text-xl_2_5 ${className}`}>{children}</h3>
+  return (
+    <h3 className={`text-xl_1_5 sm:text-xl_2_5 ${className}`}>{children}</h3>
+  )
 }
 
 export const ContactHeading = ({

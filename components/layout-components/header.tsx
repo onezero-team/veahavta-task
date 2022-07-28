@@ -52,7 +52,6 @@ export default function Header({ data }: CommonType) {
           </ul>
         </WrapperLarge>
       </header>
-
     </>
   )
 }
