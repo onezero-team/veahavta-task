@@ -16,20 +16,19 @@ export default function Header({ data }: CommonType) {
         className={'bg-light text-primary'}
       />
       <header className="h-header z-10 pt-4 px-5">
-        <WrapperLarge className="xl:mx-60 grid-cols-auto-1fr xl:gap-6 bg-light rounded-lg whitespace-nowrap flex-nowrap">
+        <WrapperLarge className="2xl:mx-60 grid-cols-auto-auto-1fr bg-light rounded-lg whitespace-nowrap flex-nowrap">
           <Logo
             height={62}
             width={142}
             className="my-1 mr-3 flex flex-shrink-0 "
           />
-          <ul className="flex flex-row flex-shrink-0 items-center text-2xl whitespace-nowrap flex-nowrap">
+          <ul className="flex flex-row flex-shrink-0 items-center text-2xl whitespace-nowrap flex-nowrap mr-6">
             <MenuHerfList
               appLinks={data.appLinks}
-              className="NavLink ml-8 mr-7 flex-nowrap "
-            />
-            <div className={dir === 'ltr' ? 'ml-auto mr-5' : 'mr-auto ml-2'}>
-              <LanguagesButtonList languageNames={data.languageNames[0]} />
-            </div>
+              className="NavLink ml-8 mr-7 flex-nowrap " />
+          </ul>
+          <ul className={`flex align-middle ${dir === 'ltr' ? 'ml-auto mr-5' : 'mr-auto ml-2'}`}>
+            <LanguagesButtonList languageNames={data.languageNames[0]} />
           </ul>
           <img />
         </WrapperLarge>
