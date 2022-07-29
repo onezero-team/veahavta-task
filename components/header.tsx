@@ -3,6 +3,7 @@ import { CommonType } from '@/lib/interface'
 import Link from 'next/link'
 import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
+import Logo from './modular-components/Logo'
 
 export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
@@ -16,6 +17,7 @@ export default function Header({ data }: CommonType) {
       <header className="h-header z-10 pt-4 px-4">
         <div className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg p-3 bg-light rounded-lg">
           <Logo />
+
           <ul className="flex flex-row gap-x-2">
             <li>
               <ChangeLangButton className="" lang="en">
@@ -31,13 +33,5 @@ export default function Header({ data }: CommonType) {
         </div>
       </header>
     </>
-  )
-}
-
-const Logo = () => {
-  return (
-    <Link href="/">
-      <a>Logo</a>
-    </Link>
   )
 }
