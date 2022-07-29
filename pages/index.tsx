@@ -16,7 +16,7 @@ export async function getStaticProps({ locale }: NextPageContext) {
 }
 
 export default function Home({ data }: HomePageType) {
-  // console.log('Home data\n=========\n', data)
+  console.log('Home data\n=========\n', data)
   return (
     <>
       <Banner data={data} />
@@ -24,7 +24,7 @@ export default function Home({ data }: HomePageType) {
       <WhatWeDo data={data} />
       <ContactUs data={data} />
       Here is the structure of the home page data:
-      <pre className="bg-dark text-light">{JSON.stringify(data, null, 2)}</pre>
+      {/* <pre className="bg-dark text-light">{JSON.stringify(data, null, 2)}</pre> */}
     </>
   )
 }
