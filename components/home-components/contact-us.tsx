@@ -10,7 +10,10 @@ export default function ContactUs({ data }: HomePageType) {
   const contactData = data.common.contactUsLinks
   return (
     <WrapperLarge>
-      <div className="mt-52 bg-contact-bg contacts-container relative">
+      <div
+        className="mt-52 bg-contact-bg contacts-container relative"
+        id="contact-us"
+      >
         <span className="circle-1">
           <Image src={Circle} />
         </span>
@@ -32,6 +35,7 @@ export default function ContactUs({ data }: HomePageType) {
                   linkValue={contact.linkValue}
                   linkType={contact.linkType}
                   imagePath={contact.imagePath}
+                  setBackground={true}
                 />
               )
             })}
