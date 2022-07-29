@@ -7,11 +7,11 @@ export default function WhatWeDo({ data }: HomePageType) {
   const cards = data.homepage.whatWeDoCards
   return (
     <WrapperLarge>
-      <div>
+      <div className="whatWeDo-container">
         <div className="whatWeDo-text">
           <h2 className="whatWeDo__heading">{data.homepage.whatWeDoHeading}</h2>
           <h3 className="whatWeDo__title">{data.homepage.whatWeDoTitle}</h3>
-          <div className="cards">
+          <div className="cards mt-10">
             {cards.map((card, index) => (
               <Card
                 key={index}
@@ -23,7 +23,7 @@ export default function WhatWeDo({ data }: HomePageType) {
           </div>
         </div>
         <style jsx>{`
-          div {
+          .whatWeDo-container {
             margin-top: 5%;
             display: flex;
             flex-direction: column;
@@ -47,6 +47,7 @@ export default function WhatWeDo({ data }: HomePageType) {
             flex-direction: row;
             justify-content: center;
             column-gap: 5%;
+            max-width: 85%;
           }
         `}</style>
       </div>
