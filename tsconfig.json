@@ -29,7 +29,8 @@
     "components/data-components/card.tsx",
     "components/footer",
     "components/modular-components/HeaderLinks.jsx",
-    "components/data-components/change-language-button.jsx"
+    "components/data-components/change-language-button.jsx",
+    "components/main.jsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -19,10 +19,12 @@ export default function Header({ data }: CommonType) {
         dir={dir}
         className={'bg-light text-primary'}
       />
-      <header className="h-header z-10 pt-4 px-4">
-        <div className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg p-3 bg-light rounded-lg">
-          <Logo />
-          <ul className="flex flex-row gap-x-2 font-bold items-center justify-between">
+      <header className="h-header z-10 pt-4 px-4 relative">
+        <div className="grid grid-cols-auto-1fr  mx-auto max-w-screen-2xl p-3 bg-light rounded-lg z-1">
+          <div className="ml-36">
+            <Logo />
+          </div>
+          <ul className="flex flex-row font-bold gap-x-24">
             <HeaderLinks headerData={data.appLinks} />
             <div className="flex flex-row gap-x-2 font-bold items-center mr-auto">
               <li>
