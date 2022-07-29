@@ -26,6 +26,7 @@ module.exports = {
       fontSize: {
         xl_1_5: ['22px', '29px'],
         xl_2_5: ['28px', '37px'],
+        xl_4_5: ['42px', '55px'],
         xl_5_5: ['52px', '60px'],
         mainHeader: ['82px', '107px'],
         mobileMainHeader: ['38px', '50px'],
@@ -55,10 +56,12 @@ module.exports = {
         13: '52px',
         17: '68px',
         30: '121px',
+        33: '139px',
         35: '142px',
         38: '150px',
         42: '164px',
         54: '214px',
+        100:'500px',
 
         banerHight: '780px',
         closeMenu: '73px',

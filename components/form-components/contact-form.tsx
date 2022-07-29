@@ -86,58 +86,58 @@ export default function ContactForm({ data }: { data: Common }) {
                 : ' xl:left-formSpace xl:right-auto'
             } 
           sm:w-fit sm:h-formMinHight sm:bottom-formBottom absolute left-0 shadow-4xl bottom-9 w-mobileForm
-           mx-5 z-10 px-10 border-2 border-white rounded-[36px] bg-white`}
+           mx-5 z-10  border-2 border-white rounded-[36px] bg-white`}
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col sm:grid sm:grid-cols-1fr-1fr mt-12 mx-6 relative">
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="firstName"
                   label={data.contactUsFormFirstName}
                   component={InputTextField}
                 />
                 {touched.firstName && errors.firstName && (
-                  <p className="font-bold text-red">{errors.firstName}</p>
+                  <p className=" absolute bottom-0 right-1 font-bold text-red">{errors.firstName}</p>
                 )}
               </fieldset>
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="lastName"
                   label={data.contactUsFormLastName}
                   component={InputTextField}
                 />
                 {touched.lastName && errors.lastName && (
-                  <p className="font-bold text-red">{errors.lastName}</p>
+                  <p className="absolute bottom-0 right-1  font-bold text-red">{errors.lastName}</p>
                 )}
               </fieldset>
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="email"
                   label={data.contactUsFormEmail}
                   component={InputTextField}
                 />
                 {touched.email && errors.email && (
-                  <p className="font-bold text-red">{errors.email}</p>
+                  <p className="absolute bottom-0 right-1  font-bold text-red">{errors.email}</p>
                 )}
               </fieldset>
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="phone"
                   label={data.contactUsFormPhone}
                   component={InputTextField}
                 />
                 {touched.phone && errors.phone && (
-                  <p className="font-bold text-red">{errors.phone}</p>
+                  <p className="absolute  bottom-0 right-1 font-bold text-red">{errors.phone}</p>
                 )}
               </fieldset>
-              <fieldset className="my-3 mx-4 col-span-2 ">
+              <fieldset className="my-3 mx-4 col-span-2 relative">
                 <Field
                   name="message"
                   label={data.contactUsFormMessage}
                   component={TextAreaField}
                 />
                 {touched.message && errors.message && (
-                  <p className="font-bold text-red">{errors.message}</p>
+                  <p className="absolute bottom-1 right-1  font-bold text-red">{errors.message}</p>
                 )}
               </fieldset>
               <BlueButton

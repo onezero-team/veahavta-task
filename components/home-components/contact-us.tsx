@@ -8,26 +8,28 @@ import ContactLinks from '../data-components/contact-links'
 export default function ContactUs({ data }: HomePageType) {
   return (
     <>
-      <div className="ContactUsBackground mt-64" id="contact-us">
-        <div className="circlesBackground" />
-        <div className=" hidden lg:block AboutWrapper mr-80 mt-40 ">
-          <ContactHeading className=" text-header-blue font-bold bg-white w-max rounded-full text-center px-6 py-1 mb-6">
+      <div className='relative'>
+        <div className=" mx-5 my-14 w-100 z-10 xl:absolute xl:mr-80 xl:bottom-33 " >
+          <ContactHeading className=" text-header-blue mb-5.1 bg-white w-max rounded-full xl:font-bold xl:text-center xl:px-6 xl:py-1 ">
             {data.homepage.contactUsHeading}
           </ContactHeading>
-          <ItemHeader className=" text-5xl mb-4">
+          <ItemHeader className="text-4xl xl:text-xl_4_5 mb-4">
             {data.homepage.contactUsTitle}
           </ItemHeader>
-          <ContextText className="whitespace-normal ml-24">
+          <ContextText className=" text-lg whitespace-normal ml-24 xl:text-xl_1_5">
             {data.homepage.contactUsText}
           </ContextText>
-          <WrapperLarge className=" grid-cols-1fr-1fr ">
+          <WrapperLarge className=" mt-6.5 gap-4 md:grid-cols-1fr-1fr ">
             <ContactLinks
               contactLinks={data.common.contactUsLinks}
               className={'bg-icon-bg'}
             />
           </WrapperLarge>
         </div>
-        <ContactForm data={data.common} />
+        <div className="ContactUsBackground mt-64" id="contact-us">
+          <div className="circlesBackground" />
+          <ContactForm data={data.common} />
+        </div>
       </div>
 
       <style jsx>
@@ -51,9 +53,6 @@ export default function ContactUs({ data }: HomePageType) {
             // z-index:-1;
           }
 
-          div.AboutWrapper {
-            width: 500px;
-          }
         `}
       </style>
     </>
