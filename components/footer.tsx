@@ -45,7 +45,7 @@ export default function Footer({ data }: CommonType) {
           <h3 className="font-bold text-2xl mb-2">
             {data.footerContactUsTitle}
           </h3>
-          <ul>
+          <ul className="flex flex-col gap-y-2">
             {newArray.map((contact, index) => {
               return (
                 <Contact
