@@ -7,7 +7,7 @@ export default function WhatWeDo({ data }: HomePageType) {
   const cards = data.homepage.whatWeDoCards
   return (
     <WrapperLarge>
-      <div className="whatWeDo-container">
+      <div className="whatWeDo-container" id="support-us">
         <div className="whatWeDo-text">
           <h2 className="whatWeDo__heading">{data.homepage.whatWeDoHeading}</h2>
           <h3 className="whatWeDo__title">{data.homepage.whatWeDoTitle}</h3>

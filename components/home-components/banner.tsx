@@ -2,18 +2,15 @@ import { HomePageType } from '@/lib/interface'
 import themePreval from '@/lib/theme.preval'
 import React from 'react'
 import { PageHeader } from '../data-components/header-text'
-import background from '../../public/assets/main-background.png'
 import groupImage from '../../public/assets/group.png'
 import Image from 'next/image'
 
 export default function Banner({ data }: HomePageType) {
   return (
-    <div id="top-header">
-      <div className="wrapper">
-        <div className="background">
-          <Image src={background} />
-        </div>
-        <div className="background group">
+    <div id="top-header" className="overflow-hidden box-border">
+      <div className="wrapper pb-6 bg-banner   max-w-full  mobile:pb-20">
+        <div className="background"></div>
+        <div className="absolute -bottom-36  group">
           <Image src={groupImage} />
         </div>
 
@@ -23,26 +20,19 @@ export default function Banner({ data }: HomePageType) {
         </button>
 
         <style jsx>{`
-          div {
-            gap: 0;
-            padding-bottom: 5%;
-          }
-          div.wrapper {
+          .wrapper {
             display: flex;
             flex-direction: column;
             margin-top: -${themePreval.height.header};
             padding-top: ${themePreval.height.header};
-
+            box-size: border-box;
             position: relative;
-          }
-          div.background {
-            position: absolute;
+            background: linear-gradient(
+              109.17deg,
+              #f4f3fd 38.49%,
+              #d3d1fc 72.36%
+            );
             z-index: -1;
-            inset: 0;
-            overflow: hidden;
-          }
-          div.group {
-            margin-top: -5%;
           }
           button {
             margin-top: 2%;
@@ -53,6 +43,11 @@ export default function Banner({ data }: HomePageType) {
             align-self: center;
             color: #ffffff;
             font-size: 25px;
+          }
+          @media screen and (max-width: 400px) {
+            .group {
+              display: none;
+            }
           }
         `}</style>
       </div>

@@ -54,12 +54,16 @@ function ContactForm({
 
   return (
     <form
-      className="form grid grid-cols-2 gap-y-10"
+      className="form grid grid-cols-2 gap-y-10  bg-light p-12 z-20 rounded-xl  -mt-60"
       onSubmit={formState.handleSubmit}
+      id="contact-us"
     >
       <div className="input-container">
-        <label htmlFor="firstName">{firstNamePlaceHolder}</label>
+        <label htmlFor="firstName " className="font-bold text-xl">
+          {firstNamePlaceHolder}
+        </label>
         <input
+          className="input"
           id="firstName"
           name="firstName"
           type="text"
@@ -71,8 +75,11 @@ function ContactForm({
         )}
       </div>
       <div className="input-container">
-        <label htmlFor="lastName">{lastNamePlaceHolder}</label>
+        <label htmlFor="lastName" className="font-bold  text-xl">
+          {lastNamePlaceHolder}
+        </label>
         <input
+          className="input"
           id="lastName"
           name="lastName"
           type="text"
@@ -84,8 +91,11 @@ function ContactForm({
         )}
       </div>
       <div className="input-container">
-        <label htmlFor="email">{emailPlaceHolder}</label>
+        <label htmlFor="email" className="font-bold  text-xl">
+          {emailPlaceHolder}
+        </label>
         <input
+          className="input"
           id="email"
           name="email"
           type="email"
@@ -93,12 +103,15 @@ function ContactForm({
           onChange={formState.handleChange}
         ></input>
         {formState.errors.email && (
-          <p className="text-red font-bold">{formState.errors.email}</p>
+          <p className="text-red font-bold ">{formState.errors.email}</p>
         )}
       </div>
       <div className="input-container">
-        <label htmlFor="phone">{phonePlaceHolder}</label>
+        <label htmlFor="phone" className="font-bold  text-xl">
+          {phonePlaceHolder}
+        </label>
         <input
+          className="input"
           id="phone"
           name="phone"
           type="tel"
@@ -110,9 +123,11 @@ function ContactForm({
         )}
       </div>
       <div className="input-container col-span-full min-w-full">
-        <label htmlFor="text">{textPlaceHolder}</label>
+        <label htmlFor="text" className="font-bold  text-xl">
+          {textPlaceHolder}
+        </label>
         <textarea
-          className="h-72  w-full"
+          className="h-72  w-full input"
           id="text"
           name="text"
           value={formState.values.text}
@@ -123,7 +138,7 @@ function ContactForm({
         )}
       </div>
       <button
-        className=" bg-header-blue w-40 h-16 rounded-full text-contact-bg font-bold text-lg"
+        className=" bg-header-blue w-40 h-16 rounded-full text-contact-bg font-bold text-lg p-3"
         type="submit"
       >
         {submitButton}
@@ -134,10 +149,21 @@ function ContactForm({
         </p>
       )}
       <style jsx>{`
+        .form {
+          border: 2px solid #ffffff;
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        }
         .input-container {
           display: flex;
           flex-direction: column;
           max-width: 260px;
+        }
+        .input {
+          border: 1px solid #ffffff;
+          filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+          border-radius: 8px;
+          padding: 3%;
+          text-indent: 15px;
         }
       `}</style>
     </form>

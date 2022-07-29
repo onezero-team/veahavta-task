@@ -7,6 +7,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      mobile: { max: '400px' },
+    },
     colors: {
       dark: 'black',
       light: 'white',
@@ -31,6 +34,7 @@ module.exports = {
         blue: '#01559A',
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
+        banner: 'linear-gradient(109.17deg,#f4f3fd 38.49%,#d3d1fc 72.36%)',
       },
       text: {
         medium: 'md:text-xl',

@@ -18,9 +18,9 @@ export default function Footer({ data }: CommonType) {
 
   return (
     <WrapperLarge>
-      <footer className="footer bg-light gap-6 grid md:grid-cols-2 lg:grid-cols-4 px-36 mt-36 pb-36 ">
+      <footer className="footer bg-light gap-6 grid grid-cols-4-auto px-36 mt-36 pb-36 ">
         <Image src={logo} width="348" height="152" />
-        <div className="footer-buttons flex flex-col gap-y-2 justify-center mr-20 ">
+        <div className="footer-buttons flex flex-col gap-y-10 justify-center mr-20 ">
           <button
             className="footer__button text-header-blue font-bold "
             type="button"

@@ -27,7 +27,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
             justify-content: center;
             margin-top: 3%;
           }
-          div.about-text {
+          .about-text {
             margin-top: 5%;
             display: flex;
             flex-direction: column;
@@ -35,25 +35,25 @@ export default function AboutTheClinic({ data }: HomePageType) {
             overflow: visible;
             max-width: 530px;
           }
-          div.about__image {
+          .about__image {
             max-width: 700px;
             max-height: 630px;
           }
-          div .about__heading {
+           .about__heading {
             color: #4e47f9;
             font-weight: 400;
             font-size: 28px;
           }
-          div .about__title {
+           .about__title {
             font-weight: 700;
             font-size: 52px;
             line-height: 115%;
           }
-          div .about__text {
+           .about__text {
             font-weight: 400;
             font-size: 18px;
           }
-          div .about__button {
+           .about__button {
             margin-top: 5%;
             align-self: flex-start;
             background: #4e47f9;
