@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { WrapperLarge } from '../wrapper'
-import { CircleImage } from './circle-icon'
+import { CircleIcon } from './circle-icon'
 import { BaseTextarea } from './content-text'
 
 export default function ContactLinks({
@@ -23,7 +23,7 @@ export default function ContactLinks({
       key={idx}
     >
       <WrapperLarge className=" grid-cols-auto-1fr items-center">
-        <CircleImage
+        <CircleIcon
           src={link.imagePath}
           alt={link.linkType}
           className={className}
@@ -84,7 +84,7 @@ export function ContactLinksTypes({
   return (
     <>
       <WrapperLarge className=" grid-cols-auto-1fr items-center">
-        <CircleImage
+        <CircleIcon
           src={'/icons/blue-phone-icon.svg'}
           alt={reduced.tel[0].linkType}
           className={className}
@@ -102,7 +102,7 @@ export function ContactLinksTypes({
             </BaseTextarea>
           ))}
         </WrapperLarge>
-        <CircleImage
+        <CircleIcon
           src={'/icons/blue-email-icon.svg'}
           alt={reduced.email[0].linkType}
           className={className}
@@ -120,7 +120,7 @@ export function ContactLinksTypes({
             </BaseTextarea>
           ))}
         </WrapperLarge>
-        <CircleImage
+        <CircleIcon
           src={'/icons/blue-address-icon.svg'}
           alt={reduced.address[0].linkType}
           className={className}

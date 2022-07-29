@@ -143,7 +143,7 @@ export default function ContactForm({ data }: { data: Common }) {
               <BlueButton
                 text={data.contactUsFormSendButton}
                 disabled={Object.keys(errors).length}
-                className="mx-4 my-5"
+                className="text-xl_2_5 mx-4 my-5"
                 type="submit"
               />
               {status?.success && (

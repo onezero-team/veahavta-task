@@ -13,7 +13,7 @@ export default function Card({
 }) {
   return (
     <>
-      <div className="card  overflow-clip ">
+      <div className="card mx-3 first:mr-5 last:ml-5 overflow-clip ">
         <div className="flex justify-center items-center bg-card-bg py-16">
           <Image src={img} alt={title} height={128} width={128} />
         </div>
