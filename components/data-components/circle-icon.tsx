@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const CircleIcon = ({
   src,
-  className='',
+  className = '',
   alt,
 }: {
   src: string
@@ -15,7 +15,7 @@ export const CircleIcon = ({
       <div
         className={`flex rounded-full h-11 w-11 justify-center items-center  ${className}`}
       >
-        <img src={src}  height={26} alt={alt ? alt : ''} />
+        <img src={src} height={26} alt={alt ? alt : ''} />
       </div>
     </>
   )

@@ -9,12 +9,12 @@ export default function PagingButton({
   onClick?: MouseEventHandler<HTMLButtonElement>
   src: string
   className?: string
-  dir: "left" | "right"
+  dir: 'left' | 'right'
 }) {
-  return(
+  return (
     <>
       <button
-      onClick={onClick}
+        onClick={onClick}
         className={`
         h-17 w-17 z-20
         box-border shadow-4xl bg-white border-brown-bg border-2 rounded-full
@@ -22,7 +22,6 @@ export default function PagingButton({
       >
         <img src={src} height={13} alt={dir} />
       </button>
-
     </>
   )
 }

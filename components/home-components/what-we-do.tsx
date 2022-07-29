@@ -1,25 +1,19 @@
 import { HomePageType } from '@/lib/interface'
 import React, { LegacyRef } from 'react'
-import { CircleIcon } from '../data-components/circle-icon';
-import {
-  Heading,
-  ServicesHeader,
-} from '../data-components/header-text'
-import PagingButton from '../data-components/paging-button';
+import { CircleIcon } from '../data-components/circle-icon'
+import { Heading, ServicesHeader } from '../data-components/header-text'
+import PagingButton from '../data-components/paging-button'
 import Card from '../what-we-do-components/card'
 
-
-
-
 export default function WhatWeDo({ data }: HomePageType) {
+  const contentWrapper: LegacyRef<HTMLDivElement> = React.useRef()
 
-  const contentWrapper: LegacyRef<HTMLDivElement> = React.useRef();
-
-  const sideScroll = (side: 'left' | 'right'
-  ) => {
-    contentWrapper.current.scrollLeft += (side === 'left') ? -(contentWrapper.current.clientWidth-24) : contentWrapper.current.clientWidth-24;
-  };
-
+  const sideScroll = (side: 'left' | 'right') => {
+    contentWrapper.current.scrollLeft +=
+      side === 'left'
+        ? -(contentWrapper.current.clientWidth - 24)
+        : contentWrapper.current.clientWidth - 24
+  }
 
   return (
     <>
@@ -27,21 +21,31 @@ export default function WhatWeDo({ data }: HomePageType) {
         {data.homepage.whatWeDoHeading}
       </Heading>
 
-
       <ServicesHeader>{data.homepage.whatWeDoTitle}</ServicesHeader>
 
-        <div className=' relative 2xl:hidden'>
-          <PagingButton dir='left'
-            onClick={() => { sideScroll('left') }}
-            className=' left-2'
-            src='./icons/Phone/left.svg' />
+      <div className=" relative 2xl:hidden">
+        <PagingButton
+          dir="left"
+          onClick={() => {
+            sideScroll('left')
+          }}
+          className=" left-2"
+          src="./icons/Phone/left.svg"
+        />
 
-          <PagingButton dir='right'
-            onClick={() => { sideScroll('right') }}
-            className='right-2'
-            src='./icons/Phone/right.svg' />
-        </div>
-      <div ref={contentWrapper} className=" grid  grid-cols-4-auto overflow-x-hidden scroll-smooth w-full xl:w-auto sm:mx-auto py-1 scroll-touch mt-6.5 sm:mt-14  ">
+        <PagingButton
+          dir="right"
+          onClick={() => {
+            sideScroll('right')
+          }}
+          className="right-2"
+          src="./icons/Phone/right.svg"
+        />
+      </div>
+      <div
+        ref={contentWrapper}
+        className=" grid  grid-cols-4-auto overflow-x-hidden scroll-smooth w-full xl:w-auto sm:mx-auto py-1 scroll-touch mt-6.5 sm:mt-14  "
+      >
         {data?.homepage?.whatWeDoCards?.map((card, idx) => (
           <Card
             title={card.title}
@@ -50,14 +54,8 @@ export default function WhatWeDo({ data }: HomePageType) {
             key={idx}
           />
         ))}
-
       </div>
-      <style>
-
-
-      </style>
-
-
+      <style></style>
     </>
   )
 }
