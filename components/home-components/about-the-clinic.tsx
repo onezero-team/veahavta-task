@@ -18,7 +18,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
         <ItemHeader className=" text-4xl mb-9 sm:text-xl_5_5 sm:mb-13">
           {data.homepage.aboutTitle}
         </ItemHeader>
-        <Text className='text-lg'>{data.homepage.aboutUsText}</Text>
+        <Text className="text-lg">{data.homepage.aboutUsText}</Text>
         <BlueButton
           className="text-xl_1_5 mt-5.1 sm:mt-8.1 "
           text={data.homepage.aboutUsButton}

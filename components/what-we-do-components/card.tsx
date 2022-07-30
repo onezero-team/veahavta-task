@@ -5,7 +5,7 @@ import { Text } from '../data-components/paragraph-text'
 export default function Card({
   title,
   text,
-  img
+  img,
 }: {
   title: string
   text: string
@@ -18,7 +18,7 @@ export default function Card({
       </div>
       <div className=" px-5 py-7.1">
         <Heading className="text-header-blue font-bold mb-1">{title}</Heading>
-        <Text className='text-lg'>{text}</Text>
+        <Text className="text-lg">{text}</Text>
       </div>
     </div>
   )
