@@ -11,8 +11,18 @@ export default function ContactUs({ data }: HomePageType) {
   const contactData = data.common.contactUsLinks
   return (
     <WrapperLarge
-      className="pb-20  grid-cols-2-auto mt-52 bg-contact-bg contacts-container relative p-36 mobile:block   laptop:mt-96
-    mobile:p-0 mobile:mt-16 mobile:pt-10 mobile:px-2  mobile:pb-24 tablet:flex tablet:flex-col  notMobileOrDesk:mt-20 notMobileOrDesk:p-10"
+      className="
+      pb-20  
+      grid-cols-2-auto mt-52 
+      bg-contact-bg
+       contacts-container 
+       relative 
+       p-36 
+       mobile:block  mobile:p-0 mobile:mt-16 mobile:pt-10 mobile:px-2 mobile:pb-24 
+       tablet:flex tablet:flex-col 
+       laptop:mt-96
+       notMobileOrDesk:mt-20 notMobileOrDesk:p-10
+        "
     >
       <span className="circle-1">
         <Image src={Circle} alt="" />

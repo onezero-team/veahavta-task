@@ -18,9 +18,21 @@ export default function Footer({ data }: CommonType) {
 
   return (
     <WrapperLarge>
-      <footer className="footer bg-light gap-6 grid grid-cols-4-auto px-36 mt-36 pb-36 mobile:flex laptop:flex laptop:flex-col laptop:items-center  tablet:flex tablet:flex-col tablet:items-center mobile:flex-col mobile:p-0 mobile:items-center mobile:gap-y-16 ">
+      <footer
+        className="
+      footer bg-light gap-6 grid grid-cols-4-auto px-36 mt-36 pb-36 
+      mobile:flex mobile:flex-col mobile:p-0 mobile:items-center mobile:gap-y-16
+      laptop:flex laptop:flex-col laptop:items-center  
+      tablet:flex tablet:flex-col tablet:items-center  "
+      >
         <Image src={logo} width="348" height="152" alt="" />
-        <div className="footer-buttons flex flex-col gap-y-10 justify-center mr-20 mobile:mr-0 mobile:gap-y-5 laptop:flex-row laptop:mr-0 laptop:gap-x-5 tablet:flex-row tablet:mr-0 tablet:gap-x-5">
+        <div
+          className="
+        footer-buttons flex flex-col gap-y-10 justify-center mr-20 
+        mobile:mr-0 mobile:gap-y-5 
+        laptop:flex-row laptop:mr-0 laptop:gap-x-5 
+        tablet:flex-row tablet:mr-0 tablet:gap-x-5"
+        >
           <button
             className="footer__button text-header-blue font-bold "
             type="button"
@@ -45,7 +57,13 @@ export default function Footer({ data }: CommonType) {
           <h3 className="font-bold text-2xl mb-2">
             {data.footerContactUsTitle}
           </h3>
-          <ul className="flex flex-col gap-y-2  notMobileOrDesk:grid  notMobileOrDesk:grid-cols-2-auto  notMobileOrDesk:gap-y-5  notMobileOrDesk:gap-x-5">
+          <ul
+            className="flex flex-col gap-y-2  
+          notMobileOrDesk:grid  
+          notMobileOrDesk:grid-cols-2-auto  
+          notMobileOrDesk:gap-y-5  
+          notMobileOrDesk:gap-x-5"
+          >
             {newArray.map((contact, index) => {
               return (
                 <Contact

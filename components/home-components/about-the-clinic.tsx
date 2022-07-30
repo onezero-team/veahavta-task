@@ -7,9 +7,27 @@ import aboutLogo from '../../public/assets/about-hands.png'
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
     <WrapperLarge>
-      <div className="flex flex-row-reverse gap-x-20 justify-center  mt-36 mobile:flex-col-reverse mobile:gap-y-5 mobile:mb-28 mobile:p-2  notMobileOrDesk:items-center notMobileOrDesk:flex-col-reverse notMobileOrDesk:gap-y-5 notMobileOrDesk:mb-28 notMobileOrDesk:pr-4">
+      <div
+        className="
+       flex 
+       flex-row-reverse 
+       gap-x-20 justify-center 
+       mt-36 mobile:flex-col-reverse 
+       mobile:gap-y-5 mobile:mb-28 mobile:p-2  
+       notMobileOrDesk:items-center 
+       notMobileOrDesk:flex-col-reverse 
+       notMobileOrDesk:gap-y-5 
+       notMobileOrDesk:mb-28
+       notMobileOrDesk:pr-4"
+      >
         <div
-          className=" mt-10 flex flex-col justify-start  max-w-xl mobile:flex mobile:flex-col mobile:gap-y-5 "
+          className=" mt-10 
+          flex flex-col 
+          justify-start  
+          max-w-xl 
+          mobile:flex 
+          mobile:flex-col 
+          mobile:gap-y-5"
           id="about-us"
         >
           <h2 className=" text-icon-bg text-3xl ">
@@ -20,7 +38,14 @@ export default function AboutTheClinic({ data }: HomePageType) {
           </h3>
           <p className=" text-lg">{data.homepage.aboutUsText}</p>
           <button
-            className=" self-start bg-icon-bg rounded-full w-48 h-16 text-contact-bg font-bold text-xl mt-4"
+            className="
+            self-start
+           bg-icon-bg 
+           rounded-full 
+           w-48 
+           h-16
+           text-contact-bg 
+            font-bold text-xl mt-4"
             type="button"
           >
             {data.homepage.aboutUsButton}
