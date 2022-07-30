@@ -32,11 +32,11 @@ export default function Banner({ data }: HomePageType) {
             margin-top: -${themePreval.height.header};
             padding-top: ${themePreval.height.header};
             height: 780px;
-            position: relative;            
+            position: relative;
           }
           div.backgroundImagesRight {
             position: absolute;
-            width: ${dir==='rtl'? '1920px': 'auto'};
+            width: ${dir === 'rtl' ? '1920px' : 'auto'};
             z-index: -1;
             inset: 0;
             background: url('/img/baner/Rectangle 6.png') 1262px 540px no-repeat,
@@ -46,7 +46,7 @@ export default function Banner({ data }: HomePageType) {
           div.backgroundImagesLeft {
             position: absolute;
             z-index: -1;
-            
+
             inset: 0;
             background: url('/img/baner/Rectangle 7.png') 322px 540px no-repeat,
               url('/img/baner/Rectangle 8.png') 0px 300px no-repeat,
