@@ -9,7 +9,7 @@ export default function ContactUs({ data }: HomePageType) {
   return (
     <>
       <div className="relative">
-        <div className=" mx-5 my-14 xl:w-500 z-10 xl:absolute xl:mr-80 xl:bottom-33 ">
+        <div className=" mx-5 my-14 xl:w-100 z-10 xl:absolute xl:mr-80 xl:bottom-33 ">
           <ContactHeading className="text-xl_1_5 text-header-blue mb-5.1 bg-white w-max rounded-full xl:font-bold xl:text-center xl:px-6 xl:py-1 ">
             {data.homepage.contactUsHeading}
           </ContactHeading>
