@@ -54,7 +54,7 @@ function ContactForm({
 
   return (
     <form
-      className="grid grid-cols-2 gap-y-10  bg-light p-12 z-20 rounded-xl  -mt-60 shadow-4xl border-solid border-light border-2 mobile:flex mobile:flex-col mobile:p-5"
+      className="grid grid-cols-2 gap-y-10  bg-light p-12 z-20 rounded-xl  -mt-60 shadow-4xl border-solid border-light border-2 mobile:flex mobile:flex-col mobile:p-5 laptop:p-3"
       onSubmit={formState.handleSubmit}
       id="contact-us"
     >

@@ -25,7 +25,7 @@ export default function Header({ data }: CommonType) {
           </div>
           <button
             type="button"
-            className="ml-5 mobile:visible laptop:hidden "
+            className="ml-5  laptop:hidden tablet:hidden desk:hidden"
             onClick={() => setNavBar(!navBar)}
           >
             <Image src={burgerIcon} alt="" />
@@ -40,11 +40,11 @@ export default function Header({ data }: CommonType) {
               </ul>
             </nav>
           )}
-          <nav className="flex  self-center  laptop:gap-x-10  text-3xl laptop:text-2xl mobile:hidden">
+          <nav className="flex flex-row self-center desk:gap-x-10  notMobileOrDesk:gap-x-5  text-3xl laptop:text-2xl mobile:hidden tablet:text-2xl">
             <HeaderLinks headerData={data.appLinks} />
           </nav>
-          <ul className="flex flex-row    laptop:gap-x-24  text-xl  list mobile:hidden">
-            <div className="flex flex-row gap-x-2  ">
+          <ul className="mobile:hidden">
+            <div className="flex flex-row gap-x-2 tablet:grid tablet:grid-cols-2-auto">
               <LanguagePictures data={data} />
             </div>
           </ul>

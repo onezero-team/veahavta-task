@@ -7,7 +7,7 @@ import aboutLogo from '../../public/assets/about-hands.png'
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
     <WrapperLarge>
-      <div className="flex flex-row-reverse gap-x-20 justify-center mt-36 mobile:flex-col-reverse mobile:gap-y-5 mobile:mb-28 mobile:pr-4">
+      <div className="flex flex-row-reverse gap-x-20 justify-center mt-36 mobile:flex-col-reverse mobile:gap-y-5 mobile:mb-28 mobile:p-2 notMobileOrDesk:flex-col-reverse notMobileOrDesk:gap-y-5 notMobileOrDesk: mb-28 notMobileOrDesk:pr-4">
         <div
           className=" mt-10 flex flex-col justify-start  max-w-xl mobile:flex mobile:flex-col mobile:gap-y-5 "
           id="about-us"

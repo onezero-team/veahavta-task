@@ -8,9 +8,11 @@ module.exports = {
   ],
   theme: {
     screens: {
-      mobile: { max: '768px' },
-      laptop: { max: '1024px' },
-      laptop: { min: '769px' },
+      mobile: { min: '0px', max: '425px' },
+      notMobileOrDesk: { min: '426px', max: '1024px' },
+      laptop: { min: '769px', max: '1024px' },
+      tablet: { min: '426px', max: '768px' },
+      desk: { min: '1025px' },
     },
     colors: {
       dark: 'black',

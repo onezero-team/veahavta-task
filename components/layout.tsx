@@ -34,10 +34,9 @@ export default function Layout({ children, pageProps }: any) {
             height: 100%;
           }
           .app-wrapper {
-            display: grid;
+            display: flex;
             flex-direction: column;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto 1fr auto;
+
             min-height: -webkit-fill-available;
             height: 100%;
           }
