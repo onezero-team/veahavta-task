@@ -11,11 +11,11 @@ function Contact({ text, linkValue, linkType, imagePath, setBackground }) {
             height="44"
             className="contact__image bg-icon-bg rounded-full px-3 py-2 pt-4 ml-3"
           >
-            <Image src={imagePath} width="20" height="20" />
+            <Image src={imagePath} width="20" height="20" alt="" />
           </span>
         ) : (
           <span className="ml-2 ">
-            <Image src={imagePath} width="25" height="25" />
+            <Image src={imagePath} width="25" height="25" alt="" />
           </span>
         )}
         {text}

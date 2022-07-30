@@ -12,7 +12,7 @@ export default function Banner({ data }: HomePageType) {
       className="overflow-hidden relative mobile:max-w-full "
     >
       <div className="absolute  -top-36  left-1 mobile:hidden  ">
-        <Image src={groupImage} />
+        <Image src={groupImage} alt="" />
       </div>
       <div className="wrapper pb-6 bg-banner  mobile:p-10 mobile:pb-36 ">
         <div>

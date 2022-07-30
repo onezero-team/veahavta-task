@@ -27,7 +27,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
           </button>
         </div>
         <div className="max-w-2xl">
-          <Image src={aboutLogo} />
+          <Image src={aboutLogo} alt="" />
         </div>
       </div>
     </WrapperLarge>

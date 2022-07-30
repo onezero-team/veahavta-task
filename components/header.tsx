@@ -26,14 +26,14 @@ export default function Header({ data }: CommonType) {
       <header className="h-header z-10 pt-4 px-4  relative">
         <div className="flex justify-between  relative  items-center pt-1 rounded-lg z-1  bg-light main-header mobile:max-w-full ">
           <div>
-            <Image src={logo} />
+            <Image src={logo} alt="" />
           </div>
           <button
             type="button"
             className="ml-5 mobile:visible laptop:hidden "
             onClick={() => setNavBar(!navBar)}
           >
-            <Image src={burgerIcon} />
+            <Image src={burgerIcon} alt="" />
           </button>
           {navBar && (
             <nav className="flex flex-col self-center  laptop:gap-x-10  text-xl absolute text-center p-5  top-16 bg-light min-w-full rounded-b-2xl">

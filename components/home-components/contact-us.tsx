@@ -15,10 +15,10 @@ export default function ContactUs({ data }: HomePageType) {
     mobile:p-0 mobile:mt-16"
     >
       <span className="circle-1">
-        <Image src={Circle} />
+        <Image src={Circle} alt="" />
       </span>
       <span className="circle-2">
-        <Image src={CircleTwo} />
+        <Image src={CircleTwo} alt="" />
       </span>
       <div className="flex flex-col gap-y-3 mobile:mb-72">
         <h2 className="text-icon-bg text-xl">

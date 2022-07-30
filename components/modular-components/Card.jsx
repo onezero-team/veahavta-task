@@ -8,7 +8,7 @@ function Card({ link, title, text }) {
       `}
     >
       <span className="card__image bg-contact-bg flex items-center justify-center h-full">
-        <Image src={link} width="128" height="128" />
+        <Image src={link} width="128" height="128" alt="" />
       </span>
       <div className="rounded-3xl bg-light h-2/4 mt-10">
         <h2 className="font-bold text-3xl text-icon-bg">{title}</h2>
