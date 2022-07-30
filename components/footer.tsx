@@ -18,9 +18,9 @@ export default function Footer({ data }: CommonType) {
 
   return (
     <WrapperLarge>
-      <footer className="footer bg-light gap-6 grid grid-cols-4-auto px-36 mt-36 pb-36 ">
+      <footer className="footer bg-light gap-6 grid grid-cols-4-auto px-36 mt-36 pb-36 mobile:flex mobile:flex-col mobile:p-0 mobile:items-center mobile:gap-y-16 ">
         <Image src={logo} width="348" height="152" />
-        <div className="footer-buttons flex flex-col gap-y-10 justify-center mr-20 ">
+        <div className="footer-buttons flex flex-col gap-y-10 justify-center mr-20 mobile:mr-0 mobile:gap-y-5">
           <button
             className="footer__button text-header-blue font-bold "
             type="button"
@@ -35,13 +35,13 @@ export default function Footer({ data }: CommonType) {
           </button>
         </div>
 
-        <div className="menu">
+        <div className="menu mobile:hidden">
           <h3 className="font-bold text-2xl mb-2">{data.footerMenuTitle}</h3>
           <ul className="flex flex-col  text-base gap-y-2">
             <HeaderLinks headerData={data.appLinks} />
           </ul>
         </div>
-        <div className="contactUs">
+        <div className="contactUs mobile:mb-20">
           <h3 className="font-bold text-2xl mb-2">
             {data.footerContactUsTitle}
           </h3>

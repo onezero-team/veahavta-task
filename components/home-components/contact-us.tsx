@@ -10,20 +10,20 @@ import ContactForm from '../modular-components/ContactForm'
 export default function ContactUs({ data }: HomePageType) {
   const contactData = data.common.contactUsLinks
   return (
-    <WrapperLarge className="pb-20  grid-cols-2-auto mt-52 bg-contact-bg contacts-container relative p-36">
+    <WrapperLarge className="pb-20  grid-cols-2-auto mt-52 bg-contact-bg contacts-container relative p-36 mobile:block  mobile:p-0">
       <span className="circle-1">
         <Image src={Circle} />
       </span>
       <span className="circle-2">
         <Image src={CircleTwo} />
       </span>
-      <div className="contactUs-text flex flex-col gap-y-3">
+      <div className="flex flex-col gap-y-3 mobile:mb-72">
         <h2 className="text-icon-bg text-xl">
           {data.homepage.contactUsHeading}
         </h2>
         <h3 className="text-4xl font-bold">{data.homepage.contactUsTitle}</h3>
         <p>{data.homepage.contactUsText}</p>
-        <div className="contacts  max-w-xl  grid grid-cols-2-auto gap-y-16 mt-20 z-10">
+        <div className=" max-w-xl  grid grid-cols-2-auto gap-y-16 mt-20 z-10 mobile:flex mobile:flex-col mobile:h-2/4 mobile:gap-y-10 ">
           {contactData.map((contact, index) => {
             return (
               <Contact

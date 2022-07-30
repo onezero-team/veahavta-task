@@ -54,7 +54,7 @@ function ContactForm({
 
   return (
     <form
-      className="form grid grid-cols-2 gap-y-10  bg-light p-12 z-20 rounded-xl  -mt-60"
+      className="grid grid-cols-2 gap-y-10  bg-light p-12 z-20 rounded-xl  -mt-60 shadow-4xl border-solid border-light border-2 mobile:flex mobile:flex-col mobile:p-5"
       onSubmit={formState.handleSubmit}
       id="contact-us"
     >
@@ -149,14 +149,10 @@ function ContactForm({
         </p>
       )}
       <style jsx>{`
-        .form {
-          border: 2px solid #ffffff;
-          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-        }
         .input-container {
           display: flex;
           flex-direction: column;
-          max-width: 260px;
+          max-width: 95%;
         }
         .input {
           border: 1px solid #ffffff;

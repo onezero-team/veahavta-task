@@ -15,13 +15,13 @@ export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
   return (
     <>
-      {/* <OneZeroSkipToMainContent
+      <OneZeroSkipToMainContent
         text={'skipToMainContent'}
         dir={dir}
         className={'bg-light text-primary  '}
-      /> */}
+      />
       <header className="h-header z-10 pt-4 px-4  ">
-        <div className="grid grid-cols-auto-1fr  p-3   rounded-lg z-1  bg-light main-header mobile:max-w-fit ">
+        <div className="grid grid-cols-auto-1fr  p-3   rounded-lg z-1  bg-light main-header mobile:max-w-full ">
           <div className="ml-36">
             <Image src={logo} />
           </div>
@@ -63,8 +63,6 @@ export default function Header({ data }: CommonType) {
               #f4f3fd 38.49%,
               #d3d1fc 72.36%
             );
-          }
-         
           }
         `}</style>
       </header>
