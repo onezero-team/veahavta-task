@@ -1,7 +1,7 @@
 import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { ContactHeading, ItemHeader } from '../data-components/header-text'
-import { ContextText } from '../contact-components/content-text'
+import { Text } from '../data-components/paragraph-text'
 import ContactForm from '../contact-components/contact-form'
 import ContactLinks from '../contact-components/contact-links'
 
@@ -16,9 +16,9 @@ export default function ContactUs({ data }: HomePageType) {
           <ItemHeader className="text-4xl xl:text-xl_4_5 mb-4">
             {data.homepage.contactUsTitle}
           </ItemHeader>
-          <ContextText className=" text-lg whitespace-normal xl:text-xl_1_5">
+          <Text className="text-lg whitespace-normal xl:text-xl_1_5">
             {data.homepage.contactUsText}
-          </ContextText>
+          </Text>
           <WrapperLarge className=" mt-6.5 gap-4 md:grid-cols-1fr-1fr ">
             <ContactLinks
               contactLinks={data.common.contactUsLinks}

@@ -41,7 +41,8 @@ export function InputTextField({
         id={name}
         name={name}
         {...field}
-        {...props} />
+        {...props}
+      />
     </>
   )
 }
@@ -59,7 +60,12 @@ export function TextAreaField({
       <label htmlFor={name} className="font-bold text-xl ">
         {label}{' '}
       </label>
-      <textarea className="mt-3  w-full border border-white shadow-4xl rounded-lg h-37" id={name} name={name} {...field} />
+      <textarea
+        className="mt-3  w-full border border-white shadow-4xl rounded-lg h-37"
+        id={name}
+        name={name}
+        {...field}
+      />
     </>
   )
 }

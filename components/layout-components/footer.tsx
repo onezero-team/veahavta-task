@@ -1,7 +1,7 @@
 import { CommonType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import Logo from '../data-components/Logo'
-import { WhiteButton } from '../data-components/text-button'
+import { WhiteButton } from '../data-components/button-text'
 import { FieldsetHeading } from '../data-components/header-text'
 import MenuHrefList from '../navigation-components/menu-href-list'
 import { ContactLinksTypes } from '../contact-components/contact-links'

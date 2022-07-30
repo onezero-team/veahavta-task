@@ -1,7 +1,7 @@
 import { ReducedContactLinks } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { CircleIcon } from '../data-components/circle-icon'
-import { BaseTextarea } from './content-text'
+import { Text } from '../data-components/paragraph-text'
 
 export default function LinkRow({
   reduce,
@@ -12,7 +12,7 @@ export default function LinkRow({
 }) {
   const map = reduce[type].map((link, idx) => {
     return (
-      <BaseTextarea key={idx}>
+      <Text key={idx}>
         <a
           href={`${link.linkType !== 'email' ? link.linkType : 'mailto'}:${
             link.linkType === 'tel' ? link.linkValue : link.text
@@ -20,7 +20,7 @@ export default function LinkRow({
         >
           {link.text}
         </a>
-      </BaseTextarea>
+      </Text>
     )
   })
 

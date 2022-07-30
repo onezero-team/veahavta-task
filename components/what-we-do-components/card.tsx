@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { Heading } from '../data-components/header-text'
-import { Textarea } from '../contact-components/content-text'
+import { Text } from '../data-components/paragraph-text'
 
 export default function Card({
   title,
   text,
-  img,
+  img
 }: {
   title: string
   text: string
@@ -18,7 +18,7 @@ export default function Card({
       </div>
       <div className=" px-5 py-7.1">
         <Heading className="text-header-blue font-bold mb-1">{title}</Heading>
-        <Textarea>{text}</Textarea>
+        <Text className='text-lg'>{text}</Text>
       </div>
     </div>
   )

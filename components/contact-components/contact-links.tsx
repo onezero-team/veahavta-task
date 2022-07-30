@@ -1,7 +1,7 @@
 import { Common } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { CircleIcon } from '../data-components/circle-icon'
-import { BaseTextarea } from './content-text'
+import { Text } from '../data-components/paragraph-text'
 import { ReducedContactLinks } from '../../lib/interface'
 import LinkRow from './link-row'
 
@@ -26,7 +26,7 @@ export default function ContactLinks({
           className={className}
         />
         <WrapperLarge className=" mx-3.5">
-          <BaseTextarea>{link.text}</BaseTextarea>
+          <Text>{link.text}</Text>
         </WrapperLarge>
       </WrapperLarge>
     </a>

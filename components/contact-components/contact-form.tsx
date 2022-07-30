@@ -1,4 +1,4 @@
-import { BlueButton } from '../data-components/text-button'
+import { BlueButton } from '../data-components/button-text'
 import { Common } from '@/lib/interface'
 import { Formik, Field } from 'formik'
 import { InputTextField, TextAreaField } from './form-components/input-field'

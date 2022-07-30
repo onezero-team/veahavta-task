@@ -2,8 +2,8 @@
 import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { Heading, ItemHeader } from '../data-components/header-text'
-import { Textarea } from '../contact-components/content-text'
-import { BlueButton } from '../data-components/text-button'
+import { Text } from '../data-components/paragraph-text'
+import { BlueButton } from '../data-components/button-text'
 
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
@@ -18,7 +18,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
         <ItemHeader className=" text-4xl mb-9 sm:text-xl_5_5 sm:mb-13">
           {data.homepage.aboutTitle}
         </ItemHeader>
-        <Textarea>{data.homepage.aboutUsText}</Textarea>
+        <Text className='text-lg'>{data.homepage.aboutUsText}</Text>
         <BlueButton
           className="text-xl_1_5 mt-5.1 sm:mt-8.1 "
           text={data.homepage.aboutUsButton}

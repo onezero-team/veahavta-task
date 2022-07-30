@@ -3,7 +3,7 @@ import themePreval from '@/lib/theme.preval'
 import React from 'react'
 import { PageHeader, Heading } from '../data-components/header-text'
 import { WrapperLarge } from '../wrapper'
-import { BlueButton } from '../data-components/text-button'
+import { BlueButton } from '../data-components/button-text'
 import { useLocale } from '@/lib/hooks'
 
 export default function Banner({ data }: HomePageType) {
