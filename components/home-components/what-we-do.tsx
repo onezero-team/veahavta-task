@@ -7,11 +7,15 @@ export default function WhatWeDo({ data }: HomePageType) {
   const cards = data.homepage.whatWeDoCards
   return (
     <WrapperLarge>
-      <div className="whatWeDo-container" id="support-us">
-        <div className="whatWeDo-text">
-          <h2 className="whatWeDo__heading">{data.homepage.whatWeDoHeading}</h2>
-          <h3 className="whatWeDo__title">{data.homepage.whatWeDoTitle}</h3>
-          <div className="cards mt-10">
+      <div className="mt-20 flex flex-col mobile:items-center" id="support-us">
+        <div className="items-center flex flex-col">
+          <h2 className=" text-3xl  text-red  mobile:text-xl">
+            {data.homepage.whatWeDoHeading}
+          </h2>
+          <h3 className="font-bold  text-8xl mobile:hidden">
+            {data.homepage.whatWeDoTitle}
+          </h3>
+          <div className="mt-10 flex flex-row justify-center gap-x-10  max-w-max mobile:flex-col">
             {cards.map((card, index) => (
               <Card
                 key={index}
@@ -22,34 +26,6 @@ export default function WhatWeDo({ data }: HomePageType) {
             ))}
           </div>
         </div>
-        <style jsx>{`
-          .whatWeDo-container {
-            margin-top: 5%;
-            display: flex;
-            flex-direction: column;
-          }
-          .whatWeDo-text {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-          }
-          .whatWeDo__heading {
-            font-weight: 400;
-            font-size: 28px;
-            color: #d25c78;
-          }
-          .whatWeDo__title {
-            font-weight: 700;
-            font-size: 82px;
-          }
-          .cards {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            column-gap: 5%;
-            max-width: 85%;
-          }
-        `}</style>
       </div>
     </WrapperLarge>
   )
