@@ -5,6 +5,7 @@ function Contact({ text, linkValue, linkType, imagePath, setBackground }) {
   return (
     <div className="contact flex ">
       <a
+        target={`_blank`}
         href={
           linkType === 'tel'
             ? `${linkType}:${linkValue}`
