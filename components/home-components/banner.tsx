@@ -18,11 +18,10 @@ export default function Banner({ data }: HomePageType) {
         <div className="laptop:z-50 desk:z-50 tablet:z-50">
           <PageHeader>{data.homepage}</PageHeader>
         </div>
-
-        <a
-          type="button"
-          href="#support-us"
-          className="
+        <button type="button" className=" self-center">
+          <a
+            href="#support-us"
+            className="
           button 
           z-50 text-2xl 
           hover:opacity-90 
@@ -32,15 +31,16 @@ export default function Banner({ data }: HomePageType) {
           h-16 
           bg-icon-bg 
          text-light 
-         rounded-full 
-         mt-5  
-         mobile:mt-10 
-         flex 
-         justify-center 
-         items-center"
-        >
-          {data.homepage.getToKnowUsButton}
-        </a>
+          rounded-full 
+          mt-5  
+          mobile:mt-10 
+          flex 
+          justify-center 
+          items-center"
+          >
+            {data.homepage.getToKnowUsButton}
+          </a>
+        </button>
 
         <style jsx>{`
           .wrapper {
