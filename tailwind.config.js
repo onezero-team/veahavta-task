@@ -48,9 +48,9 @@ module.exports = {
         large: 'lg:text-2xl',
       },
       spacing: {
-        1.6:'7px',
-        2.9:'11px',
-        3.1:'13px',
+        1.6: '7px',
+        2.9: '11px',
+        3.1: '13px',
         5.1: '21px',
         5.5: '22px',
         6.5: '26px',

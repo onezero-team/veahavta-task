@@ -14,9 +14,11 @@ export default function Banner({ data }: HomePageType) {
           <div className="hidden xl:block backgroundImagesLeft bg-center"></div>
         </div>
         <WrapperLarge className="text-center mt-56 sm:mt-42 sm:grid-cols-1fr-auto-1fr  ">
-          <div className="max-w-screen-md col-start-2" >
-            <PageHeader >{data.homepage.title}</PageHeader>
-            <Heading className="mb-3 mt-2.5 md:mt-0.5">{data.homepage.description}</Heading>
+          <div className="max-w-screen-md col-start-2">
+            <PageHeader>{data.homepage.title}</PageHeader>
+            <Heading className="mb-3 mt-2.5 md:mt-0.5">
+              {data.homepage.description}
+            </Heading>
             <BlueButton
               className="text-3xl col-start-2 mx-auto mt-9.9"
               text={data.homepage.getToKnowUsButton}
@@ -31,22 +33,19 @@ export default function Banner({ data }: HomePageType) {
             position: relative;
           }
           div.backgroundImagesRight {
-             position: absolute;
+            position: absolute;
             width: 1920px;
             z-index: -1;
             inset: 0;
-            background: 
-              url('/img/baner/Rectangle 6.png') 1262px 540px no-repeat,
+            background: url('/img/baner/Rectangle 6.png') 1262px 540px no-repeat,
               url('/img/baner/Rectangle 5.png') 1627px 259px no-repeat,
               url('/img/baner/Rectangle 2.png') 1398px 87px no-repeat;
-              
           }
-          div.backgroundImagesLeft{
+          div.backgroundImagesLeft {
             position: absolute;
             z-index: -1;
             inset: 0;
-            background:               
-              url('/img/baner/Rectangle 7.png') 322px 540px no-repeat,
+            background: url('/img/baner/Rectangle 7.png') 322px 540px no-repeat,
               url('/img/baner/Rectangle 8.png') 0px 300px no-repeat,
               url('/img/baner/Rectangle 9.png') 165px 0px no-repeat,
               url('/img/baner/Rectangle 10.png') 637px 0px no-repeat;
