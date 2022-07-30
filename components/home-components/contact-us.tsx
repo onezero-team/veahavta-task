@@ -1,7 +1,7 @@
 import { HomePageType } from '@/lib/interface'
 import React, { useEffect, useState } from 'react'
 import { WrapperLarge } from '../wrapper'
-import Contact from '../modular-components/Contact'
+import Contact from '../modular-components/Contact.jsx'
 import Image from 'next/image'
 import Circle from '../../public/assets/circle.png'
 import CircleTwo from '../../public/assets/circleTwo.png'

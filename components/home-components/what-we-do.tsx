@@ -1,7 +1,7 @@
 import { HomePageType } from '@/lib/interface'
 import React, { useEffect, useState } from 'react'
 import { WrapperLarge } from '../wrapper'
-import Card from '../modular-components/Card'
+import Card from '../modular-components/Card.jsx'
 import Image from 'next/image'
 import RightArrow from '../../public/assets/rightArrow.svg'
 import LeftArrow from '../../public/assets/leftArrow.svg'
@@ -52,10 +52,10 @@ export default function WhatWeDo({ data }: HomePageType) {
             <div className="relative">
               <div className="justify-between absolute inline-flex left-0 right-0  top-60">
                 <button type="button" onClick={nextSlide}>
-                  <Image src={RightArrow} />
+                  <Image src={RightArrow} alt="" />
                 </button>
                 <button type="button" onClick={backSlide}>
-                  <Image src={LeftArrow} />
+                  <Image src={LeftArrow} alt="" />
                 </button>
               </div>
               {cards.map((card, index) => (

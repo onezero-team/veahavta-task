@@ -2,8 +2,8 @@ import { CommonType } from '@/lib/interface'
 import { WrapperLarge } from './wrapper'
 import Image from 'next/image'
 import logo from '../public/assets/navbar-logo.svg'
-import HeaderLinks from './modular-components/HeaderLinks'
-import Contact from './modular-components/Contact'
+import HeaderLinks from './modular-components/HeaderLinks.jsx'
+import Contact from './modular-components/Contact.jsx'
 
 export default function Footer({ data }: CommonType) {
   const contacts = data.contactUsLinks
