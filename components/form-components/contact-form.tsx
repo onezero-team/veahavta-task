@@ -148,6 +148,9 @@ export default function ContactForm({ data }: { data: Common }) {
                     {errors.message}
                   </p>
                 )}
+              {status?.success && (
+                <p className="absolute font-bold">{data.contactUsFormSuccessMessage}</p>
+              )}
               </fieldset>
               <BlueButton
                 text={data.contactUsFormSendButton}
@@ -155,30 +158,11 @@ export default function ContactForm({ data }: { data: Common }) {
                 className="text-xl_2_5 mx-4 my-5"
                 type="submit"
               />
-              {status?.success && (
-                <p className="font-bold">{data.contactUsFormSuccessMessage}</p>
-              )}
             </div>
           </form>
         )}
       </Formik>
-      {/* 
-      <style jsx>
-        {`
-          form.contact-form {
-            position: absolute;
-            min-height: 700px;
-            width: 650px;
-            bottom: 115px;
-            right: ${dir === 'rtl' ? '922px' : 'auto'};
-            left: ${dir === 'ltr' ? '922px' : 'auto'};
-            background: #ffffff;
-            border: 2px solid #ffffff;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 36px;
-          }
-        `}
-      </style> */}
+
     </>
   )
 }

@@ -22,7 +22,7 @@ export const BurgerMenuButton = ({
   return (
     <button
       onClick={onClick}
-      className={`NavBurger rounded-full w-max text-center ${className}`}
+      className={`rounded-full w-max text-center ${className}`}
     >
       <img src={'/icons/navBurger-icon.svg'} alt={alt ? alt : ''} />
     </button>

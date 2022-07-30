@@ -12,7 +12,7 @@ export default function WhatWeDo({ data }: HomePageType) {
     side: 'left' | 'right',
   ) => {
     element.scrollLeft +=
-      side === 'left' ? -(element.clientWidth - 24) : element.clientWidth - 24
+      side === 'left' ? -(element.clientWidth - 12) : element.clientWidth - 12
   }
 
   return (

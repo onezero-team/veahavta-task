@@ -44,7 +44,7 @@ export const WhiteButton = ({
   return (
     <>
       <button
-        className={`rounded-full bg-white text-icon-bg border-2 border-icon-bg w-max font-bold text-center whitespace-nowrap py-3 ${className}`}
+        className={`rounded-full bg-white text-icon-bg border-2 border-icon-bg w-max font-bold text-center whitespace-nowrap py-3 px-2 ${className}`}
       >
         {text}
       </button>

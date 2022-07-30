@@ -34,7 +34,7 @@ export default function Header({ data }: CommonType) {
           />
           <BurgerMenuButton
             alt={data.footerMenuTitle}
-            className={'ml-3 sm:hidden justify-self-end'}
+            className={'mx-3 sm:hidden justify-self-end'}
             onClick={toggleBurgerHandler}
           />
           <ul className="flex flex-col sm:flex-row flex-shrink-0 sm:items-center text-2xl whitespace-nowrap flex-nowrap mr-6">

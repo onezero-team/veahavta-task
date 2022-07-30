@@ -9,14 +9,14 @@ export default function ContactUs({ data }: HomePageType) {
   return (
     <>
       <div className="relative">
-        <div className=" mx-5 my-14 w-100 z-10 xl:absolute xl:mr-80 xl:bottom-33 ">
+        <div className=" mx-5 my-14 xl:w-500 z-10 xl:absolute xl:mr-80 xl:bottom-33 ">
           <ContactHeading className="text-xl_1_5 text-header-blue mb-5.1 bg-white w-max rounded-full xl:font-bold xl:text-center xl:px-6 xl:py-1 ">
             {data.homepage.contactUsHeading}
           </ContactHeading>
           <ItemHeader className="text-4xl xl:text-xl_4_5 mb-4">
             {data.homepage.contactUsTitle}
           </ItemHeader>
-          <ContextText className=" text-lg whitespace-normal ml-24 xl:text-xl_1_5">
+          <ContextText className=" text-lg whitespace-normal xl:text-xl_1_5">
             {data.homepage.contactUsText}
           </ContextText>
           <WrapperLarge className=" mt-6.5 gap-4 md:grid-cols-1fr-1fr ">
