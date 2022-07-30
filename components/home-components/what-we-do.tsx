@@ -42,7 +42,7 @@ export default function WhatWeDo({ data }: HomePageType) {
             {data.homepage.whatWeDoTitle}
           </h3>
           {isComputer ? (
-            <div className="mt-10 flex flex-row justify-center gap-x-10  max-w-max tablet:grid tablet:grid-cols-2-auto tablet:gap-y-10  laptop:grid laptop:grid-cols-2-auto laptop:gap-y-10">
+            <div className="mt-10 flex flex-row px-10 justify-center gap-x-10  max-w-max tablet:grid tablet:grid-cols-2-auto tablet:gap-y-10  laptop:grid laptop:grid-cols-2-auto laptop:gap-y-10">
               {cards.map((card, index) => (
                 <Card
                   key={index}

@@ -45,7 +45,7 @@ export default function Footer({ data }: CommonType) {
           <h3 className="font-bold text-2xl mb-2">
             {data.footerContactUsTitle}
           </h3>
-          <ul className="flex flex-col gap-y-2 laptop:grid laptop:grid-cols-2-auto laptop:gap-y-5 laptop:gap-x-5">
+          <ul className="flex flex-col gap-y-2  notMobileOrDesk:grid  notMobileOrDesk:grid-cols-2-auto  notMobileOrDesk:gap-y-5  notMobileOrDesk:gap-x-5">
             {newArray.map((contact, index) => {
               return (
                 <Contact

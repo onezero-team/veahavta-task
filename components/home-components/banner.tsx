@@ -22,7 +22,7 @@ export default function Banner({ data }: HomePageType) {
         <a
           type="button"
           href="#support-us"
-          className="button z-50 text-2xl hover:opacity-90 cursor-pointer w-48 self-center h-16 bg-icon-bg  text-light rounded-full mt-5  mobile:mt-10 flex justify-center items-center "
+          className="button z-50 text-2xl hover:opacity-90 cursor-pointer w-48 self-center h-16 bg-icon-bg  text-light rounded-full mt-5  mobile:mt-10 flex justify-center items-center"
         >
           {data.homepage.getToKnowUsButton}
         </a>

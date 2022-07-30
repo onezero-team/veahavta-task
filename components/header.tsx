@@ -31,16 +31,16 @@ export default function Header({ data }: CommonType) {
             <Image src={burgerIcon} alt="" />
           </button>
           {navBar && (
-            <nav className="flex flex-col self-center  laptop:gap-x-10  text-xl absolute text-center p-5  top-16 bg-light min-w-full rounded-b-2xl">
+            <nav className="flex flex-col self-center  text-xl absolute text-center p-5  top-16 bg-light min-w-full rounded-b-2xl">
               <HeaderLinks headerData={data.appLinks} />
-              <ul className="flex flex-row  self-center laptop:gap-x-24  text-xl  list  mt-5">
+              <ul className="flex flex-row  self-center laptop:gap-x-24  text-xl   mt-5">
                 <div className="flex flex-row gap-x-2  ">
                   <LanguagePictures data={data} />
                 </div>
               </ul>
             </nav>
           )}
-          <nav className="flex flex-row self-center desk:gap-x-10  notMobileOrDesk:gap-x-5  text-3xl laptop:text-2xl mobile:hidden tablet:text-2xl">
+          <nav className="flex flex-row self-center desk:gap-x-36 notMobileOrDesk:gap-x-5  text-3xl laptop:text-2xl mobile:hidden tablet:text-2xl">
             <HeaderLinks headerData={data.appLinks} />
           </nav>
           <ul className="mobile:hidden">
