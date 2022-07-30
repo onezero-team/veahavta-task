@@ -12,7 +12,7 @@ export default function Banner({ data }: HomePageType) {
       className="overflow-hidden relative mobile:max-w-full "
     >
       <div className="absolute  -top-36  left-1 mobile:hidden  ">
-        <Image src={groupImage} alt="" />
+        <Image src={groupImage} alt="" layout="fixed" />
       </div>
       <div className="wrapper pb-6 bg-banner  mobile:p-10 mobile:pb-36 ">
         <div className="laptop:z-50">
@@ -22,7 +22,7 @@ export default function Banner({ data }: HomePageType) {
         <a
           type="button"
           href="#support-us"
-          className="button text-2xl hover:opacity-90 cursor-pointer w-48 self-center h-16 bg-icon-bg  text-light rounded-full mt-5  mobile:mt-10 flex justify-center items-center "
+          className="button z-50 text-2xl hover:opacity-90 cursor-pointer w-48 self-center h-16 bg-icon-bg  text-light rounded-full mt-5  mobile:mt-10 flex justify-center items-center "
         >
           {data.homepage.getToKnowUsButton}
         </a>
