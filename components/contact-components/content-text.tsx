@@ -22,7 +22,7 @@ export const ContextText = ({
   children,
   className = '',
 }: {
-  children: string
+  children: string | ReactElement
   className?: string
 }) => {
   return <p className={`text-xl ${className} `}>{children}</p>

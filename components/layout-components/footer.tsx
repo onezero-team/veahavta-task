@@ -4,7 +4,7 @@ import Logo from '../data-components/Logo'
 import { WhiteButton } from '../data-components/text-button'
 import { FieldsetHeading } from '../data-components/header-text'
 import MenuHrefList from '../data-components/menu-href-list'
-import { ContactLinksTypes } from '../data-components/contact-links'
+import { ContactLinksTypes } from '../contact-components/contact-links'
 
 export default function Footer({ data }: CommonType) {
   return (

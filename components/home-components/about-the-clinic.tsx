@@ -3,17 +3,17 @@
 import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { Heading, ItemHeader } from '../data-components/header-text'
-import { Textarea } from '../data-components/content-text'
+import { Textarea } from '../contact-components/content-text'
 import Image from 'next/image'
 import { BlueButton } from '../data-components/text-button'
 
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
-    <WrapperLarge className="mt-10 mx-5 pb-10  lg:mx-auto lg:grid-cols-1fr-1fr lg:mt-24 lg:gap-5 lg:max-w-screen-lg xl:max-w-screen-xl">
+    <WrapperLarge className="mt-10 mx-5 lg:mx-auto lg:grid-cols-1fr-1fr lg:mt-24.1 lg:gap-2.9 lg:max-w-screen-lg xl:max-w-screen-xl">
       <div className=" flex justify-center ">
         <img src={'/img/about/Rectangle 8.png'} alt="" />
       </div>
-      <div className="mt-10" id={'about-us'}>
+      <div className="mt-10 lg:mr-24" id={'about-us'}>
         <Heading className=" text-xl_1_5 text-header-blue mb-2 sm:text-xl_2_5 ">
           {data.homepage.aboutHeading}
         </Heading>

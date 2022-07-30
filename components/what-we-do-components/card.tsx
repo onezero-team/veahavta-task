@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Heading } from '../data-components/header-text'
-import { Textarea } from '../data-components/content-text'
+import { Textarea } from '../contact-components/content-text'
 
 export default function Card({
   title,
@@ -16,7 +16,7 @@ export default function Card({
       <div className="flex justify-center items-center bg-card-bg py-16">
         <Image src={img} alt={title} height={128} width={128} />
       </div>
-      <div className=" px-5 py-7">
+      <div className=" px-5 py-7.1">
         <Heading className="text-header-blue font-bold mb-1">{title}</Heading>
         <Textarea>{text}</Textarea>
       </div>

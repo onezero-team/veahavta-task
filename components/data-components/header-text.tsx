@@ -1,7 +1,7 @@
 export const PageHeader = ({ children }: { children: string }) => {
   return (
     <>
-      <h1 className=" text-mobileMainHeader md:text-mainHeader font-bold text-center ">
+      <h1 className="px-8.1 text-mobileMainHeader md:text-mainHeader font-bold text-center ">
         {children}
       </h1>
     </>
@@ -39,12 +39,12 @@ export const Heading = ({
 
 export const ContactHeading = ({
   children,
-  className = '',
+  className = 'text-2xl',
 }: {
   children: string
   className?: string
 }) => {
-  return <h4 className={`text-2xl ${className}`}>{children}</h4>
+  return <h4 className={`${className}`}>{children}</h4>
 }
 export const FieldsetHeading = ({
   children,

@@ -12,7 +12,7 @@ export const BlueButton = ({
 }) => (
   <>
     <button
-      className={`rounded-full bg-icon-bg w-max font-bold text-center  text-white  ${className}`}
+      className={`rounded-full bg-icon-bg w-max font-bold text-center text-white px-8.1 pb-3.1 pt-2.5 ${className}`}
       disabled={disabled}
       {...props}
     >

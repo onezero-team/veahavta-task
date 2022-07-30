@@ -1,6 +1,6 @@
 import { Common } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
-import { CircleIcon } from './circle-icon'
+import { CircleIcon } from '../data-components/circle-icon'
 import { BaseTextarea } from './content-text'
 import { ReducedContactLinks } from '../../lib/interface'
 import LinkRow from './link-row'

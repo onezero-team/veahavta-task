@@ -1,16 +1,16 @@
 import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { ContactHeading, ItemHeader } from '../data-components/header-text'
-import { ContextText } from '../data-components/content-text'
+import { ContextText } from '../contact-components/content-text'
 import ContactForm from '../form-components/contact-form'
-import ContactLinks from '../data-components/contact-links'
+import ContactLinks from '../contact-components/contact-links'
 
 export default function ContactUs({ data }: HomePageType) {
   return (
     <>
       <div className="relative">
         <div className=" mx-5 my-14 w-100 z-10 xl:absolute xl:mr-80 xl:bottom-33 ">
-          <ContactHeading className=" text-header-blue mb-5.1 bg-white w-max rounded-full xl:font-bold xl:text-center xl:px-6 xl:py-1 ">
+          <ContactHeading className="text-xl_1_5 text-header-blue mb-5.1 bg-white w-max rounded-full xl:font-bold xl:text-center xl:px-6 xl:py-1 ">
             {data.homepage.contactUsHeading}
           </ContactHeading>
           <ItemHeader className="text-4xl xl:text-xl_4_5 mb-4">

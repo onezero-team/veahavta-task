@@ -17,7 +17,7 @@ export default function WhatWeDo({ data }: HomePageType) {
 
   return (
     <>
-      <Heading className="text-red mx-5 pt-30 sm:text-center sm:pt-48">
+      <Heading className="text-red mx-5 pt-30 pb-px sm:pb-0  sm:text-center sm:pt-48">
         {data.homepage.whatWeDoHeading}
       </Heading>
 
