@@ -5,34 +5,33 @@ import { Heading, ServicesHeader } from '../data-components/header-text'
 import PagingButton from '../data-components/paging-button'
 import Card from '../what-we-do-components/card'
 
-
 export default function WhatWeDo({ data }: HomePageType) {
   const [leftStop, setLeftStop] = useState(false)
   const [rightStop, setRightStop] = useState(false)
 
-  const { dir } = useLocale();
+  const { dir } = useLocale()
   const contentWrapper = useRef(null)
   const sideScroll = (
     element: HTMLDivElement | any,
     side: 'left' | 'right',
   ) => {
-
-    const pos = element.scrollLeft;
+    const pos = element.scrollLeft
 
     element.scrollLeft +=
-      (side === 'left') ? - (element.clientWidth + 12) : element.clientWidth - 12;
+      side === 'left' ? -(element.clientWidth + 12) : element.clientWidth - 12
 
     if (dir === 'ltr') {
-      (element.scrollLeft > 0) ? setLeftStop(false) : setLeftStop(true);
-      (element.scrollWidth - element.clientWidth > element.scrollLeft) ? setRightStop(false) : setRightStop(true);
+      element.scrollLeft > 0 ? setLeftStop(false) : setLeftStop(true)
+      element.scrollWidth - element.clientWidth > element.scrollLeft
+        ? setRightStop(false)
+        : setRightStop(true)
+    } else {
+      console.log(element.scrollLeft)
+      element.scrollLeft < 0 ? setRightStop(false) : setRightStop(true)
+      element.clientWidth - element.scrollWidth < element.scrollLeft
+        ? setLeftStop(false)
+        : setLeftStop(true)
     }
-    else {
-      console.log(element.scrollLeft);
-      (element.scrollLeft < 0) ? setRightStop(false) : setRightStop(true);
-      ( element.clientWidth - element.scrollWidth  < element.scrollLeft) ? setLeftStop(false) : setLeftStop(true);
-
-    }
-
   }
 
   return (

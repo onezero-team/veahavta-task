@@ -9,7 +9,7 @@ export default function PagingButton({
   className,
   dir,
 }: {
-  disabled?:boolean
+  disabled?: boolean
   onClick?: MouseEventHandler<HTMLButtonElement>
   src: string
   className?: string
@@ -25,7 +25,12 @@ export default function PagingButton({
         box-border shadow-4xl bg-white border-brown-bg border-2 rounded-full
         flex justify-center items-center absolute  top-64 ${className}`}
       >
-        <img src={src} height={13} alt={dir} className={(disabled)? 'opacity-20':''} />
+        <img
+          src={src}
+          height={13}
+          alt={dir}
+          className={disabled ? 'opacity-20' : ''}
+        />
       </button>
     </>
   )
