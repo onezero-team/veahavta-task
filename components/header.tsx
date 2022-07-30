@@ -36,7 +36,7 @@ export default function Header({ data }: CommonType) {
             <Image src={burgerIcon} />
           </button>
           {navBar && (
-            <nav className="flex flex-col self-center  laptop:gap-x-10  text-xl absolute text-center p-5  top-16 bg-light min-w-full">
+            <nav className="flex flex-col self-center  laptop:gap-x-10  text-xl absolute text-center p-5  top-16 bg-light min-w-full rounded-b-2xl">
               <HeaderLinks headerData={data.appLinks} />
             </nav>
           )}
