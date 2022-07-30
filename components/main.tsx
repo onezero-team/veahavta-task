@@ -5,7 +5,7 @@ export default function Main({ children }: { children: React.ReactNode }) {
     <>
       <main
         id="main-content"
-        className=" min-w-full m-auto flex flex-col justify-items-center"
+        className=" max-w-full m-auto flex flex-col justify-items-center box-border"
       >
         {children}
       </main>

@@ -15,19 +15,19 @@ export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
   return (
     <>
-      <OneZeroSkipToMainContent
+      {/* <OneZeroSkipToMainContent
         text={'skipToMainContent'}
         dir={dir}
         className={'bg-light text-primary  '}
-      />
+      /> */}
       <header className="h-header z-10 pt-4 px-4  ">
-        <div className="grid grid-cols-auto-1fr  p-3  rounded-lg z-1  bg-light main-header mobile:max-w-fit ">
+        <div className="grid grid-cols-auto-1fr  p-3   rounded-lg z-1  bg-light main-header mobile:max-w-fit ">
           <div className="ml-36">
             <Image src={logo} />
           </div>
-          <ul className="flex flex-row font-bold gap-x-24 mt-auto text-2xl list">
+          <ul className="flex flex-row font-bold gap-x-24 mt-auto text-2xl list mobile:hidden">
             <HeaderLinks headerData={data.appLinks} />
-            <div className="flex flex-row gap-x-2 font-bold items-center mr-auto">
+            <div className="flex flex-row gap-x-2 font-bold  mr-auto">
               <li>
                 <ChangeLangButton lang="ar" imageProp={arabicLogo}>
                   {data.languageNames[0].ar}
@@ -64,10 +64,7 @@ export default function Header({ data }: CommonType) {
               #d3d1fc 72.36%
             );
           }
-          @media screen and (max-width: 400px) {
-            .list {
-              display: none;
-            }
+         
           }
         `}</style>
       </header>

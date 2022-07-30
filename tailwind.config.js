@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     screens: {
-      mobile: { max: '400px' },
+      mobile: { max: '425px' },
     },
     colors: {
       dark: 'black',

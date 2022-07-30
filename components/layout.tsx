@@ -27,6 +27,7 @@ export default function Layout({ children, pageProps }: any) {
           body {
             min-height: 100% !important;
             height: 100%;
+            width: 100%;
           }
           #__next {
             min-height: -webkit-fill-available;
@@ -45,6 +46,11 @@ export default function Layout({ children, pageProps }: any) {
             outline: none !important;
             box-shadow: 0 0 0 2px ${theme.colors.primary} !important;
             border-radius: ${theme.borderRadius['2xl']};
+          }
+          @media screen and (max-width: 425px) {
+            .app-wrapper {
+              display: flex;
+            }
           }
         `}
       </style>
