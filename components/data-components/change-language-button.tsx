@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
  * @param lang Text direction 'rtl' | 'ltr'
  * @param className Optinal , A string variable representing the class or space-separated classes of the current element.
  * @param children Optinal , collection of an element's child elements
- *  
+ *
  * @returns Render Component
  */
 export const ChangeLangButton = ({

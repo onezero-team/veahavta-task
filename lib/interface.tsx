@@ -33,7 +33,7 @@ export type Common = {
   contactUsFormSuccessMessage: string
   contactUsLinks: Array<{
     text: string
-    linkType: 'tel' | 'address' | 'email' 
+    linkType: 'tel' | 'address' | 'email'
     imagePath: string
     linkValue: string
   }>
@@ -68,9 +68,9 @@ export type Common = {
 }
 
 export type ReducedContactLinks = {
-  tel: Common["contactUsLinks"]
-  address: Common["contactUsLinks"]
-  email: Common["contactUsLinks"]
+  tel: Common['contactUsLinks']
+  address: Common['contactUsLinks']
+  email: Common['contactUsLinks']
 }
 
 export function HOMEPAGE_QUERY(locale: string) {

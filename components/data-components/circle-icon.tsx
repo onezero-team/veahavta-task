@@ -19,7 +19,9 @@ export const CircleIcon = ({
   alt?: string
 }) => {
   return (
-    <div className={`flex rounded-full h-11 w-11 justify-center items-center  ${className}`}>
+    <div
+      className={`flex rounded-full h-11 w-11 justify-center items-center  ${className}`}
+    >
       <img src={src} height={26} alt={alt ? alt : ''} />
     </div>
   )

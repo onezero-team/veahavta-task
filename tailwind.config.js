@@ -63,7 +63,7 @@ module.exports = {
         42: '164px',
         54: '214px',
         86: '330px',
-        90:'480px',
+        90: '480px',
         100: '500px',
 
         banerHight: '780px',

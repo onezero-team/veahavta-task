@@ -2,7 +2,6 @@
 
 import { MouseEventHandler } from 'react'
 
-
 /**
  *  This RFC renders mobile navigation button
  * @param  onClick - Callback to run on user Click
@@ -14,7 +13,7 @@ import { MouseEventHandler } from 'react'
 export const BurgerMenuButton = ({
   onClick,
   className,
-  alt
+  alt,
 }: {
   onClick?: MouseEventHandler<HTMLButtonElement>
   className?: string
@@ -23,8 +22,9 @@ export const BurgerMenuButton = ({
   return (
     <button
       onClick={onClick}
-      className={`NavBurger rounded-full w-max text-center ${className}`}>
-      <img src={'/icons/navBurger-icon.svg'} alt={alt? alt : ''} />
+      className={`NavBurger rounded-full w-max text-center ${className}`}
+    >
+      <img src={'/icons/navBurger-icon.svg'} alt={alt ? alt : ''} />
     </button>
   )
 }
