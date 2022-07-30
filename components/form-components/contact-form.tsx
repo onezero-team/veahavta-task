@@ -67,7 +67,7 @@ export default function ContactForm({ data }: { data: Common }) {
           setSubmitting(false)
         }}
         // validateOnBlur = {(setStatus) => setStatus()}
-        validateOnBlur={true }
+        validateOnBlur={true}
       >
         {({
           handleSubmit,
