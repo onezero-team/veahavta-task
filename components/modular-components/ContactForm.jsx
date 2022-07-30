@@ -143,7 +143,7 @@ function ContactForm({
         ) : null}
       </div>
       <button
-        className=" bg-header-blue w-40 h-16 rounded-full text-contact-bg font-bold text-lg p-3"
+        className="z-40 bg-header-blue w-40 h-16 rounded-full text-contact-bg font-bold text-lg p-3"
         type="submit"
       >
         {submitButton}
