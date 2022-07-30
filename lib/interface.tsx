@@ -29,34 +29,52 @@ export type Homepage = {
   contactUsText: string
 }
 
+export type ContactUsItemType = {
+  text: string
+  linkType: string
+  imagePath: string
+  linkValue: string
+}
+
+export type AppLinkType = {
+  text: string
+  relativeLink: string
+}
+
+export type LanguagesType = {
+  he: string
+  en: string
+  ar: string
+  am: string
+  ti: string
+}
 export type Common = {
-  contactUsLinks: Array<{
-    text: string
-    linkType: string
-    imagePath: string
-    linkValue: string
-  }>
-  appLinks: Array<{
-    text: string
-    relativeLink: string
-  }>
-  languageNames: Array<{
-    he: string
-    en: string
-    ar: string
-    am: string
-    ti: string
-  }>
+  contactUsLinks: Array<ContactUsItemType>
+  appLinks: Array<AppLinkType>
+  languageNames: Array<LanguagesType>
   contactUsFormFirstName: string
   contactUsFormLastName: string
   contactUsFormEmail: string
   contactUsFormPhone: string
   contactUsFormMessage: string
   contactUsFormSendButton: string
+  contactUsFormSuccessMessage: string
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorMessageMissing: string
   footerMenuTitle: string
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+}
+
+export interface CommonComponentProps {
+  homepage: Homepage
+  id: string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {
