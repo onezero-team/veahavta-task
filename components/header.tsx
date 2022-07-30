@@ -21,13 +21,15 @@ export default function Header({ data }: CommonType) {
         className={'bg-light text-primary  '}
       />
       <header className="h-header z-10 pt-4 px-4  ">
-        <div className="grid grid-cols-auto-1fr  p-3   rounded-lg z-1  bg-light main-header mobile:max-w-full ">
-          <div className="ml-36">
+        <div className="flex justify-between    items-center pt-1 rounded-lg z-1  bg-light main-header mobile:max-w-full ">
+          <div>
             <Image src={logo} />
           </div>
-          <ul className="flex flex-row font-bold gap-x-24 mt-auto text-2xl list mobile:hidden">
-            <HeaderLinks headerData={data.appLinks} />
-            <div className="flex flex-row gap-x-2 font-bold  mr-auto">
+          <ul className="flex flex-row   laptop:gap-x-24 gap-x-64  text-xl  list mobile:hidden">
+            <div className="flex gap-x-24 self-center  laptop:gap-x-10  ">
+              <HeaderLinks headerData={data.appLinks} />
+            </div>
+            <div className="flex flex-row gap-x-2  ">
               <li>
                 <ChangeLangButton lang="ar" imageProp={arabicLogo}>
                   {data.languageNames[0].ar}

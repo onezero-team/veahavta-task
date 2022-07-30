@@ -7,12 +7,14 @@ import Image from 'next/image'
 
 export default function Banner({ data }: HomePageType) {
   return (
-    <div id="top-header" className="overflow-hidden relative mobile:max-w-full">
+    <div
+      id="top-header"
+      className="overflow-hidden relative mobile:max-w-full  "
+    >
+      {/* <div className="absolute -bottom-36 mobile:hidden ">
+        <Image src={groupImage} />
+      </div> */}
       <div className="wrapper pb-6 bg-banner  mobile:p-10 mobile:pb-36">
-        <div className="absolute -bottom-36 mobile:hidden">
-          <Image src={groupImage} />
-        </div>
-
         <PageHeader>{data.homepage}</PageHeader>
         <button className="button text-2xl  w-48 self-center h-16 bg-icon-bg  text-light rounded-full mt-5  mobile:mt-10">
           {data.homepage.getToKnowUsButton}
@@ -29,12 +31,6 @@ export default function Banner({ data }: HomePageType) {
               #f4f3fd 38.49%,
               #d3d1fc 72.36%
             );
-            z-index: -1;
-          }
-          @media screen and (max-width: 400px) {
-            .group {
-              display: none;
-            }
           }
         `}</style>
       </div>
