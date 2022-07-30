@@ -11,6 +11,10 @@ export default function WhatWeDo({ data }: HomePageType) {
   const [current, setCurrent] = useState(0)
   const length = cards.length
   const [isComputer, setIsComputer] = useState(false)
+  const [width, setWidth] = useState(0)
+  window.addEventListener('resize', () => {
+    setWidth(window.innerWidth)
+  })
 
   useEffect(() => {
     if (window.innerWidth > 425) {
@@ -18,7 +22,7 @@ export default function WhatWeDo({ data }: HomePageType) {
     } else {
       setIsComputer(false)
     }
-  }, [isComputer])
+  }, [width])
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
