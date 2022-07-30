@@ -12,7 +12,7 @@ export default function ContactUs({ data }: HomePageType) {
   return (
     <WrapperLarge
       className="pb-20  grid-cols-2-auto mt-52 bg-contact-bg contacts-container relative p-36 mobile:block  laptop:p-10 laptop:mt-96
-    mobile:p-0 mobile:mt-16 mobile:pt-20 mobile:px-2"
+    mobile:p-0 mobile:mt-16 mobile:pt-10 mobile:px-2  mobile:pb-24"
     >
       <span className="circle-1">
         <Image src={Circle} alt="" />
