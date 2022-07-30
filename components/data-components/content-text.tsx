@@ -1,8 +1,10 @@
+import { ReactElement } from "react"
+
 export const BaseTextarea = ({
   children,
   className = '',
 }: {
-  children: string
+  children: string |ReactElement
   className?: string
 }) => {
   return <p className={`text-base ${className} `}>{children}</p>

@@ -8,8 +8,8 @@ import ContactLinks from '../data-components/contact-links'
 export default function ContactUs({ data }: HomePageType) {
   return (
     <>
-      <div className='relative'>
-        <div className=" mx-5 my-14 w-100 z-10 xl:absolute xl:mr-80 xl:bottom-33 " >
+      <div className="relative">
+        <div className=" mx-5 my-14 w-100 z-10 xl:absolute xl:mr-80 xl:bottom-33 ">
           <ContactHeading className=" text-header-blue mb-5.1 bg-white w-max rounded-full xl:font-bold xl:text-center xl:px-6 xl:py-1 ">
             {data.homepage.contactUsHeading}
           </ContactHeading>
@@ -52,7 +52,6 @@ export default function ContactUs({ data }: HomePageType) {
               url('/img/contact/Vector.svg') 0 100% no-repeat;
             // z-index:-1;
           }
-
         `}
       </style>
     </>

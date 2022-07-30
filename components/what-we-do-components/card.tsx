@@ -12,26 +12,16 @@ export default function Card({
   img: string
 }) {
   return (
-    <>
-      <div className="card mx-3 first:mr-5 last:ml-5 overflow-clip ">
-        <div className="flex justify-center items-center bg-card-bg py-16">
-          <Image src={img} alt={title} height={128} width={128} />
-        </div>
-        <div className=" px-5 py-7">
-          <Heading className="text-header-blue font-bold mb-1">{title}</Heading>
-          <Textarea>{text}</Textarea>
-        </div>
+
+    <div className=" h-90 w-86 rounded-[31px] shadow-4xl mx-3 first:mr-5 last:ml-5 overflow-clip ">
+      <div className="flex justify-center items-center bg-card-bg py-16">
+        <Image src={img} alt={title} height={128} width={128} />
       </div>
-      <style jsx>
-        {`
-          div.card {
-            height: 480px;
-            width: 330px;
-            border-radius: 31px;
-            box-shadow: 0px 0px 4px 0px #00000040;
-          }
-        `}
-      </style>
-    </>
+      <div className=" px-5 py-7">
+        <Heading className="text-header-blue font-bold mb-1">{title}</Heading>
+        <Textarea>{text}</Textarea>
+      </div>
+    </div>
+
   )
 }
