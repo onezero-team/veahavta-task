@@ -12,11 +12,11 @@ export default function WhatWeDo({ data }: HomePageType) {
   const length = cards.length
   const [isComputer, setIsComputer] = useState(false)
   const [width, setWidth] = useState(0)
-  window.addEventListener('resize', () => {
-    setWidth(window.innerWidth)
-  })
 
   useEffect(() => {
+    window.addEventListener('resize', () => {
+      setWidth(window.innerWidth)
+    })
     if (window.innerWidth > 425) {
       setIsComputer(true)
     } else {
