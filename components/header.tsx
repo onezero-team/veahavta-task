@@ -38,6 +38,35 @@ export default function Header({ data }: CommonType) {
           {navBar && (
             <nav className="flex flex-col self-center  laptop:gap-x-10  text-xl absolute text-center p-5  top-16 bg-light min-w-full rounded-b-2xl">
               <HeaderLinks headerData={data.appLinks} />
+              <ul className="flex flex-row  self-center laptop:gap-x-24  text-xl  list  mt-5">
+                <div className="flex flex-row gap-x-2  ">
+                  <li>
+                    <ChangeLangButton lang="ar" imageProp={arabicLogo}>
+                      {data.languageNames[0].ar}
+                    </ChangeLangButton>
+                  </li>
+                  <li>
+                    <ChangeLangButton lang="he" imageProp={israelLogo}>
+                      {data.languageNames[0].he}
+                    </ChangeLangButton>
+                  </li>
+                  <li>
+                    <ChangeLangButton lang="en" imageProp={englishLogo}>
+                      {data.languageNames[0].en}
+                    </ChangeLangButton>
+                  </li>
+                  <li>
+                    <ChangeLangButton lang="am" imageProp={amharicLogo}>
+                      {data.languageNames[0].am}
+                    </ChangeLangButton>
+                  </li>
+                  <li>
+                    <ChangeLangButton lang="ti" imageProp={tanzaniaLogo}>
+                      {data.languageNames[0].ti}
+                    </ChangeLangButton>
+                  </li>
+                </div>
+              </ul>
             </nav>
           )}
           <nav className="flex  self-center  laptop:gap-x-10  text-3xl laptop:text-2xl mobile:hidden">
