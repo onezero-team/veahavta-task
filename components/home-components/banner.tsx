@@ -11,7 +11,7 @@ export default function Banner({ data }: HomePageType) {
       id="top-header"
       className="overflow-hidden relative mobile:max-w-full "
     >
-      <div className="absolute  -top-36  left-1 mobile:hidden  ">
+      <div className="absolute  -top-56   left-px mobile:hidden  ">
         <Image src={groupImage} alt="" layout="fixed" />
       </div>
       <div className="wrapper pb-6 bg-banner  mobile:p-10 mobile:pb-36 ">
