@@ -34,17 +34,17 @@ export default function Header({ data }: CommonType) {
           />
           <BurgerMenuButton
             alt={data.footerMenuTitle}
-            className={'mx-3 sm:hidden justify-self-end'}
+            className={'mx-3 lg:hidden justify-self-end'}
             onClick={toggleBurgerHandler}
           />
-          <ul className="flex flex-col sm:flex-row flex-shrink-0 sm:items-center text-2xl whitespace-nowrap flex-nowrap mr-6">
+          <ul className="flex flex-col lg:flex-row flex-shrink-0 lg:items-center text-2xl whitespace-nowrap flex-nowrap mr-6">
             <MenuHerfList
               appLinks={data.appLinks}
               className=" text-xl_2_5 ml-8 mr-7 flex-nowrap "
             />
           </ul>
           <ul
-            className={` sm:flex align-middle ${
+            className={` lg:flex align-middle ${
               dir === 'ltr' ? 'ml-auto mr-5' : 'mr-auto ml-2'
             }`}
           >

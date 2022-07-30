@@ -4,14 +4,16 @@ import React from 'react'
 import { PageHeader, Heading } from '../data-components/header-text'
 import { WrapperLarge } from '../wrapper'
 import { BlueButton } from '../data-components/text-button'
+import { useLocale } from '@/lib/hooks'
 
 export default function Banner({ data }: HomePageType) {
+  const { dir } = useLocale()
   return (
     <div id="top-header">
       <div className="wrapper ">
         <div className="background">
-          <div className="hidden xl:block backgroundImagesRight bg-center"></div>
-          <div className="hidden xl:block backgroundImagesLeft bg-center"></div>
+          <div className="hidden xl:block backgroundImagesRight "></div>
+          <div className="hidden xl:block backgroundImagesLeft "></div>
         </div>
         <WrapperLarge className="text-center mt-56 sm:mt-42 sm:grid-cols-1fr-auto-1fr  ">
           <div className="max-w-screen-md col-start-2">
@@ -30,11 +32,11 @@ export default function Banner({ data }: HomePageType) {
             margin-top: -${themePreval.height.header};
             padding-top: ${themePreval.height.header};
             height: 780px;
-            position: relative;
+            position: relative;            
           }
           div.backgroundImagesRight {
             position: absolute;
-            width: 1920px;
+            width: ${dir==='rtl'? '1920px': 'auto'};
             z-index: -1;
             inset: 0;
             background: url('/img/baner/Rectangle 6.png') 1262px 540px no-repeat,
@@ -44,6 +46,7 @@ export default function Banner({ data }: HomePageType) {
           div.backgroundImagesLeft {
             position: absolute;
             z-index: -1;
+            
             inset: 0;
             background: url('/img/baner/Rectangle 7.png') 322px 540px no-repeat,
               url('/img/baner/Rectangle 8.png') 0px 300px no-repeat,

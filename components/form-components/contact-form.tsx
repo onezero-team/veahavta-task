@@ -80,8 +80,8 @@ export default function ContactForm({ data }: { data: Common }) {
           <form
             className={`${
               dir === 'rtl'
-                ? 'xl:left-auto xl:right-formSpace'
-                : ' xl:left-formSpace xl:right-auto'
+                ? 'sm:left-0 sm:right-auto 2xl:right-formSpace'
+                : ' 2xl:left-formSpace sm:right-0 sm:left-auto'
             } 
           sm:w-fit sm:h-formMinHight sm:bottom-formBottom absolute left-0 shadow-4xl bottom-9 w-mobileForm
            mx-5 z-10  border-2 border-white rounded-[36px] bg-white`}
