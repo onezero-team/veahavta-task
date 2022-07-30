@@ -36,24 +36,12 @@ export function InputTextField({
         {label}{' '}
       </label>
       <input
-        className="mt-3"
+        className="mt-3  w-full border border-white shadow-4xl rounded-lg h-15"
         type="text"
         id={name}
         name={name}
         {...field}
-        {...props}
-      />
-      <style jsx>
-        {`
-          input {
-            width: 100%;
-            height: 60px;
-            border: 1px solid #ffffff;
-            box-shadow: 0px 0px 4px 0px #00000040;
-            border-radius: 8px;
-          }
-        `}
-      </style>
+        {...props} />
     </>
   )
 }
@@ -71,19 +59,7 @@ export function TextAreaField({
       <label htmlFor={name} className="font-bold text-xl ">
         {label}{' '}
       </label>
-      <textarea className="mt-3" id={name} name={name} {...field} />
-      <style jsx>
-        {`
-          textarea {
-            width: 100%;
-            height: 145px;
-            border: 1px solid #ffffff;
-            box-shadow: 0px 0px 4px 0px #00000040;
-            border-radius: 8px;
-            resize: none;
-          }
-        `}
-      </style>
+      <textarea className="mt-3  w-full border border-white shadow-4xl rounded-lg h-37" id={name} name={name} {...field} />
     </>
   )
 }

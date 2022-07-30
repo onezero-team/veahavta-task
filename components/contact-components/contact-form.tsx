@@ -1,7 +1,7 @@
 import { BlueButton } from '../data-components/text-button'
 import { Common } from '@/lib/interface'
 import { Formik, Field } from 'formik'
-import { InputTextField, TextAreaField } from './input-field'
+import { InputTextField, TextAreaField } from './form-components/input-field'
 import { useLocale } from '@/lib/hooks'
 
 interface Values {
@@ -95,7 +95,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   component={InputTextField}
                 />
                 {touched.firstName && errors.firstName && (
-                  <p className=" absolute bottom-0 right-1 font-bold text-red">
+                  <p className=" absolute right-1 font-bold text-red">
                     {errors.firstName}
                   </p>
                 )}
@@ -107,7 +107,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   component={InputTextField}
                 />
                 {touched.lastName && errors.lastName && (
-                  <p className="absolute bottom-0 right-1  font-bold text-red">
+                  <p className="absolute  right-1  font-bold text-red">
                     {errors.lastName}
                   </p>
                 )}
@@ -119,7 +119,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   component={InputTextField}
                 />
                 {touched.email && errors.email && (
-                  <p className="absolute bottom-0 right-1  font-bold text-red">
+                  <p className="absolute  right-1  font-bold text-red">
                     {errors.email}
                   </p>
                 )}
@@ -131,7 +131,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   component={InputTextField}
                 />
                 {touched.phone && errors.phone && (
-                  <p className="absolute  bottom-0 right-1 font-bold text-red">
+                  <p className="absolute   right-1 font-bold text-red">
                     {errors.phone}
                   </p>
                 )}
@@ -143,7 +143,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   component={TextAreaField}
                 />
                 {touched.message && errors.message && (
-                  <p className="absolute bottom-1 right-1  font-bold text-red">
+                  <p className="absolute  right-1  font-bold text-red">
                     {errors.message}
                   </p>
                 )}

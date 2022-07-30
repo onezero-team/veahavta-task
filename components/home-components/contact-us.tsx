@@ -2,7 +2,7 @@ import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { ContactHeading, ItemHeader } from '../data-components/header-text'
 import { ContextText } from '../contact-components/content-text'
-import ContactForm from '../form-components/contact-form'
+import ContactForm from '../contact-components/contact-form'
 import ContactLinks from '../contact-components/contact-links'
 
 export default function ContactUs({ data }: HomePageType) {
