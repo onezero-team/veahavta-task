@@ -148,9 +148,11 @@ export default function ContactForm({ data }: { data: Common }) {
                     {errors.message}
                   </p>
                 )}
-              {status?.success && (
-                <p className="absolute font-bold">{data.contactUsFormSuccessMessage}</p>
-              )}
+                {status?.success && (
+                  <p className="absolute font-bold">
+                    {data.contactUsFormSuccessMessage}
+                  </p>
+                )}
               </fieldset>
               <BlueButton
                 text={data.contactUsFormSendButton}
@@ -162,7 +164,6 @@ export default function ContactForm({ data }: { data: Common }) {
           </form>
         )}
       </Formik>
-
     </>
   )
 }
