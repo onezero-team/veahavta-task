@@ -6,7 +6,7 @@ import Image from 'next/image'
 import logo from '../public/assets/navbar-logo.svg'
 import burgerIcon from '../public/assets/burgerIcon.svg'
 import { useState } from 'react'
-import LanguagePictures from './home-components/LanPictures'
+import LanguagePictures from './modular-components/LanPictures.jsx'
 
 export default function Header({ data }: CommonType) {
   const [navBar, setNavBar] = useState(false)
