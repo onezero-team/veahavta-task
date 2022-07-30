@@ -6,13 +6,12 @@ import PagingButton from '../data-components/paging-button'
 import Card from '../what-we-do-components/card'
 
 export default function WhatWeDo({ data }: HomePageType) {
-  const contentWrapper: LegacyRef<HTMLDivElement> = React.useRef()
-
-  const sideScroll = (side: 'left' | 'right') => {
-    contentWrapper.current.scrollLeft +=
+  const contentWrapper = React.useRef(null);
+  const sideScroll = (element: HTMLDivElement | any ,side: 'left' | 'right') => {
+    element.scrollLeft +=
       side === 'left'
-        ? -(contentWrapper.current.clientWidth - 24)
-        : contentWrapper.current.clientWidth - 24
+        ? -(element.clientWidth - 24)
+        : element.clientWidth - 24
   }
 
   return (
@@ -27,7 +26,7 @@ export default function WhatWeDo({ data }: HomePageType) {
         <PagingButton
           dir="left"
           onClick={() => {
-            sideScroll('left')
+            sideScroll(contentWrapper.current,'left')
           }}
           className=" left-2"
           src="./icons/Phone/left.svg"
@@ -36,7 +35,7 @@ export default function WhatWeDo({ data }: HomePageType) {
         <PagingButton
           dir="right"
           onClick={() => {
-            sideScroll('right')
+            sideScroll(contentWrapper.current,'right')
           }}
           className="right-2"
           src="./icons/Phone/right.svg"

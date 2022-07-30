@@ -2,22 +2,24 @@ export const BlueButton = ({
   className = 'text-xl_2_5',
   type,
   text,
+  disabled,
   ...props
 }: {
   className?: string
+  disabled?:boolean
   type?: string
   text?: string
-}) => {
-  return (
-    <>
-      <button
-        className={`rounded-full bg-icon-bg w-max font-bold text-center  text-white  ${className}`}
-        {...props}
-      >
-        {text}
-      </button>
-      <style jsx>
-        {`
+}) => (
+  <>
+    <button
+      className={`rounded-full bg-icon-bg w-max font-bold text-center  text-white  ${className}`}
+      disabled={disabled}
+      {...props}
+    >
+      {text}
+    </button>
+    <style jsx>
+      {`
           button {
             min-width: 185px;
             height: 60px;
@@ -26,10 +28,9 @@ export const BlueButton = ({
             --tw-bg-opacity: 0.2;
           }
         `}
-      </style>
-    </>
-  )
-}
+    </style>
+  </>
+)
 export const WhiteButton = ({
   className = '',
   type,

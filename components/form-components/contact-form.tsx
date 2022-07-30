@@ -66,7 +66,7 @@ export default function ContactForm({ data }: { data: Common }) {
           setStatus({ success: true })
           setSubmitting(false)
         }}
-        // validateOnBlur = {(setStatus) => setStatus()}
+        //OnBlur = {(setStatus) => setStatus()}
         validateOnBlur={true}
       >
         {({
@@ -151,7 +151,7 @@ export default function ContactForm({ data }: { data: Common }) {
               </fieldset>
               <BlueButton
                 text={data.contactUsFormSendButton}
-                disabled={Object.keys(errors).length}
+                disabled = {(Object.keys(errors).length)? true:false}
                 className="text-xl_2_5 mx-4 my-5"
                 type="submit"
               />
