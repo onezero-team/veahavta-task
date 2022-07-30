@@ -4,7 +4,7 @@ import Image from 'next/image'
 function Card({ link, title, text }) {
   return (
     <div
-      className={`card-container flex flex-col justify-center  rounded-3xl w-full  shadow-4xl   mobile:mb-10 mobile: right-0
+      className={`card-container flex flex-col justify-center  rounded-3xl w-full  shadow-4xl  mobile:w-80 mobile:mb-10 mobile: right-0
       `}
     >
       <span className="card__image bg-contact-bg flex items-center justify-center h-full">

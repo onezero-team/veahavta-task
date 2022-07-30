@@ -31,7 +31,7 @@ export default function WhatWeDo({ data }: HomePageType) {
     <WrapperLarge>
       <div className="mt-20 flex flex-col mobile:items-center" id="support-us">
         <div className="items-center flex flex-col">
-          <h2 className=" text-3xl  text-red  mobile:text-xl mobile:self-start mobile:mb-3">
+          <h2 className=" text-3xl  text-red  mobile:text-2xl mobile:self-start mobile:mb-3">
             {data.homepage.whatWeDoHeading}
           </h2>
           <h3 className="font-bold  text-8xl mobile:hidden">

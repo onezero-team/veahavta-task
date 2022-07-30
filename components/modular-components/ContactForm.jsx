@@ -69,10 +69,11 @@ function ContactForm({
           type="text"
           value={formState.values.firstName}
           onChange={formState.handleChange}
+          onBlur={formState.handleBlur}
         ></input>
-        {formState.errors.firstName && (
+        {formState.errors.firstName && formState.touched.firstName ? (
           <p className="text-red font-bold">{formState.errors.firstName}</p>
-        )}
+        ) : null}
       </div>
       <div className="input-container">
         <label htmlFor="lastName" className="font-bold  text-xl">
@@ -85,10 +86,11 @@ function ContactForm({
           type="text"
           value={formState.values.lastName}
           onChange={formState.handleChange}
+          onBlur={formState.handleBlur}
         ></input>
-        {formState.errors.lastName && (
+        {formState.errors.lastName && formState.touched.lastName ? (
           <p className="text-red font-bold">{formState.errors.lastName}</p>
-        )}
+        ) : null}
       </div>
       <div className="input-container">
         <label htmlFor="email" className="font-bold  text-xl">
@@ -101,10 +103,11 @@ function ContactForm({
           type="email"
           value={formState.values.email}
           onChange={formState.handleChange}
+          onBlur={formState.handleBlur}
         ></input>
-        {formState.errors.email && (
+        {formState.errors.email && formState.touched.email ? (
           <p className="text-red font-bold ">{formState.errors.email}</p>
-        )}
+        ) : null}
       </div>
       <div className="input-container">
         <label htmlFor="phone" className="font-bold  text-xl">
@@ -117,10 +120,11 @@ function ContactForm({
           type="tel"
           value={formState.values.phone}
           onChange={formState.handleChange}
+          onBlur={formState.handleBlur}
         ></input>
-        {formState.errors.phone && (
+        {formState.errors.phone && formState.touched.phone ? (
           <p className="text-red font-bold">{formState.errors.phone}</p>
-        )}
+        ) : null}
       </div>
       <div className="input-container col-span-full min-w-full">
         <label htmlFor="text" className="font-bold  text-xl">
@@ -132,10 +136,11 @@ function ContactForm({
           name="text"
           value={formState.values.text}
           onChange={formState.handleChange}
+          onBlur={formState.handleBlur}
         ></textarea>
-        {formState.errors.text && (
+        {formState.errors.text && formState.touched.text ? (
           <p className="text-red font-bold">{formState.errors.text}</p>
-        )}
+        ) : null}
       </div>
       <button
         className=" bg-header-blue w-40 h-16 rounded-full text-contact-bg font-bold text-lg p-3"
