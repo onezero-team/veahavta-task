@@ -9,10 +9,12 @@
     "postinstall": "lefthook install || true"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "formik": "^2.2.9",
     "framer-motion": "^6.5.1",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
+    "heroku-client": "^3.1.0",
     "next": "^12.2.3",
     "next-plugin-preval": "^1.2.4",
     "prettier": "^2.5.1",
