@@ -15,7 +15,7 @@ export default function Banner({ data }: HomePageType) {
         <Image src={groupImage} />
       </div>
       <div className="wrapper pb-6 bg-banner  mobile:p-10 mobile:pb-36 ">
-        <div className=" z-50">
+        <div>
           <PageHeader>{data.homepage}</PageHeader>
         </div>
 

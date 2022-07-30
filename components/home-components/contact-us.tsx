@@ -1,5 +1,5 @@
 import { HomePageType } from '@/lib/interface'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { WrapperLarge } from '../wrapper'
 import Contact from '../modular-components/Contact'
 import Image from 'next/image'
@@ -12,7 +12,7 @@ export default function ContactUs({ data }: HomePageType) {
   return (
     <WrapperLarge
       className="pb-20  grid-cols-2-auto mt-52 bg-contact-bg contacts-container relative p-36 mobile:block  laptop:p-10 laptop:mt-96
-    mobile:p-0"
+    mobile:p-0 mobile:mt-16"
     >
       <span className="circle-1">
         <Image src={Circle} />

@@ -10,8 +10,11 @@ import arabicLogo from '../public/assets/arabic-lan.svg'
 import amharicLogo from '../public/assets/amharic-lan.svg'
 import Image from 'next/image'
 import logo from '../public/assets/navbar-logo.svg'
+import burgerIcon from '../public/assets/burgerIcon.svg'
+import { useState } from 'react'
 
 export default function Header({ data }: CommonType) {
+  const [navBar, setNavBar] = useState(false)
   const { dir } = useLocale()
   return (
     <>
@@ -20,14 +23,26 @@ export default function Header({ data }: CommonType) {
         dir={dir}
         className={'bg-light text-primary  '}
       />
-      <header className="h-header z-10 pt-4 px-4  ">
-        <div className="flex justify-between    items-center pt-1 rounded-lg z-1  bg-light main-header mobile:max-w-full ">
+      <header className="h-header z-10 pt-4 px-4  relative">
+        <div className="flex justify-between  relative  items-center pt-1 rounded-lg z-1  bg-light main-header mobile:max-w-full ">
           <div>
             <Image src={logo} />
           </div>
-          <div className="flex  self-center  laptop:gap-x-10  text-3xl laptop:text-2xl mobile:hidden">
+          <button
+            type="button"
+            className="ml-5 mobile:visible laptop:hidden "
+            onClick={() => setNavBar(!navBar)}
+          >
+            <Image src={burgerIcon} />
+          </button>
+          {navBar && (
+            <nav className="flex flex-col self-center  laptop:gap-x-10  text-xl absolute text-center p-5  top-16 bg-light min-w-full">
+              <HeaderLinks headerData={data.appLinks} />
+            </nav>
+          )}
+          <nav className="flex  self-center  laptop:gap-x-10  text-3xl laptop:text-2xl mobile:hidden">
             <HeaderLinks headerData={data.appLinks} />
-          </div>
+          </nav>
           <ul className="flex flex-row    laptop:gap-x-24  text-xl  list mobile:hidden">
             <div className="flex flex-row gap-x-2  ">
               <li>
