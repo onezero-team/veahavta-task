@@ -25,10 +25,10 @@ export default function Header({ data }: CommonType) {
           <div>
             <Image src={logo} />
           </div>
-          <ul className="flex flex-row   laptop:gap-x-24 gap-x-64  text-xl  list mobile:hidden">
-            <div className="flex gap-x-24 self-center  laptop:gap-x-10  ">
-              <HeaderLinks headerData={data.appLinks} />
-            </div>
+          <div className="flex  self-center  laptop:gap-x-10  text-3xl laptop:text-2xl mobile:hidden">
+            <HeaderLinks headerData={data.appLinks} />
+          </div>
+          <ul className="flex flex-row    laptop:gap-x-24  text-xl  list mobile:hidden">
             <div className="flex flex-row gap-x-2  ">
               <li>
                 <ChangeLangButton lang="ar" imageProp={arabicLogo}>
