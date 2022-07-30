@@ -4,7 +4,17 @@ import Image from 'next/image'
 function Contact({ text, linkValue, linkType, imagePath, setBackground }) {
   return (
     <div className="contact flex ">
-      <a href={`${linkType}:${linkValue}`}>
+      <a
+        href={
+          linkType === 'tel'
+            ? `${linkType}:${linkValue}`
+            : null || linkType === 'email'
+            ? `mailto:${text}`
+            : null || linkType === 'address'
+            ? `http://maps.google.com/?q=${text}`
+            : null
+        }
+      >
         {setBackground ? (
           <span
             width="44"
