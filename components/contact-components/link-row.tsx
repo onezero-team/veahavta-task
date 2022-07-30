@@ -27,7 +27,7 @@ export default function LinkRow({
   return (
     <>
       <CircleIcon src={`/icons/blue-${type}-icon.svg`} alt={type} />
-      <WrapperLarge className=" mr-4">{map}</WrapperLarge>
+      <WrapperLarge className="">{map}</WrapperLarge>
     </>
   )
 }

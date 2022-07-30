@@ -25,7 +25,7 @@ export default function ContactLinks({
           alt={link.linkType}
           className={className}
         />
-        <WrapperLarge className=" mr-4">
+        <WrapperLarge className=" mx-3.5">
           <BaseTextarea>{link.text}</BaseTextarea>
         </WrapperLarge>
       </WrapperLarge>
