@@ -6,7 +6,7 @@ export const BlueButton = ({
   ...props
 }: {
   className?: string
-  disabled?:boolean
+  disabled?: boolean
   type?: string
   text?: string
 }) => (
@@ -20,14 +20,14 @@ export const BlueButton = ({
     </button>
     <style jsx>
       {`
-          button {
-            min-width: 185px;
-            height: 60px;
-          }
-          button:disabled {
-            --tw-bg-opacity: 0.2;
-          }
-        `}
+        button {
+          min-width: 185px;
+          height: 60px;
+        }
+        button:disabled {
+          --tw-bg-opacity: 0.2;
+        }
+      `}
     </style>
   </>
 )

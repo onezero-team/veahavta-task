@@ -151,7 +151,7 @@ export default function ContactForm({ data }: { data: Common }) {
               </fieldset>
               <BlueButton
                 text={data.contactUsFormSendButton}
-                disabled = {(Object.keys(errors).length)? true:false}
+                disabled={Object.keys(errors).length ? true : false}
                 className="text-xl_2_5 mx-4 my-5"
                 type="submit"
               />
