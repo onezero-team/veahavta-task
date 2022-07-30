@@ -1,12 +1,11 @@
 import { HomePageType } from '@/lib/interface'
-import React, { LegacyRef } from 'react'
-import { CircleIcon } from '../data-components/circle-icon'
+import { useRef } from 'react'
 import { Heading, ServicesHeader } from '../data-components/header-text'
-import PagingButton from '../data-components/paging-button'
+import PagingButton from '../what-we-do-components/paging-button'
 import Card from '../what-we-do-components/card'
 
 export default function WhatWeDo({ data }: HomePageType) {
-  const contentWrapper = React.useRef(null)
+  const contentWrapper = useRef(null)
   const sideScroll = (
     element: HTMLDivElement | any,
     side: 'left' | 'right',

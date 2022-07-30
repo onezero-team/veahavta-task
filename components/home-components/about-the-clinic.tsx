@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-
 import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { Heading, ItemHeader } from '../data-components/header-text'
 import { Textarea } from '../contact-components/content-text'
-import Image from 'next/image'
 import { BlueButton } from '../data-components/text-button'
 
 export default function AboutTheClinic({ data }: HomePageType) {

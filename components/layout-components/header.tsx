@@ -1,11 +1,11 @@
 import { useLocale } from '@/lib/hooks'
 import { CommonType } from '@/lib/interface'
-import MenuHerfList from '../data-components/menu-href-list'
+import MenuHerfList from '../navigation-components/menu-href-list'
 import OneZeroSkipToMainContent from '../onezero-skip-to-main-content'
 import Logo from '../data-components/Logo'
-import LanguagesButtonList from '../data-components/languages-button-list'
+import LanguagesButtonList from '../navigation-components/languages-button-list'
 import { WrapperLarge } from '../wrapper'
-import { BurgerMenuButton } from '../data-components/burger-button'
+import { BurgerMenuButton } from '../navigation-components/burger-button'
 import { useState } from 'react'
 
 export default function Header({ data }: CommonType) {

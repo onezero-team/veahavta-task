@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import React, { MouseEventHandler } from 'react'
+import  { MouseEventHandler } from 'react'
 
 export default function PagingButton({
   onClick,
