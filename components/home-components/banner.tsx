@@ -19,9 +19,13 @@ export default function Banner({ data }: HomePageType) {
           <PageHeader>{data.homepage}</PageHeader>
         </div>
 
-        <button className="button text-2xl  w-48 self-center h-16 bg-icon-bg  text-light rounded-full mt-5  mobile:mt-10">
+        <a
+          type="button"
+          href="#support-us"
+          className="button text-2xl hover:opacity-90 cursor-pointer w-48 self-center h-16 bg-icon-bg  text-light rounded-full mt-5  mobile:mt-10 flex justify-center items-center "
+        >
           {data.homepage.getToKnowUsButton}
-        </button>
+        </a>
 
         <style jsx>{`
           .wrapper {
