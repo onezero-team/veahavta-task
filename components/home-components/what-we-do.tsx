@@ -15,23 +15,21 @@ export default function WhatWeDo({ data }: HomePageType) {
     element: HTMLDivElement | any,
     side: 'left' | 'right',
   ) => {
-    const pos = element.scrollLeft
-
-    element.scrollLeft +=
-      side === 'left' ? -(element.clientWidth + 12) : element.clientWidth - 12
-
-    if (dir === 'ltr') {
-      element.scrollLeft > 0 ? setLeftStop(false) : setLeftStop(true)
-      element.scrollWidth - element.clientWidth > element.scrollLeft
-        ? setRightStop(false)
-        : setRightStop(true)
-    } else {
-      console.log(element.scrollLeft)
-      element.scrollLeft < 0 ? setRightStop(false) : setRightStop(true)
-      element.clientWidth - element.scrollWidth < element.scrollLeft
-        ? setLeftStop(false)
-        : setLeftStop(true)
+    if (side === 'left') {
+      element.scrollLeft -= (element.clientWidth + 20)
+      setRightStop(false)
+      
+      if ((dir === 'ltr' && element.clientWidth + 21 > element.scrollLeft ) || (dir === 'rtl' && element.scrollWidth - element.clientWidth < element.clientWidth+21  +  Math.abs(element.scrollLeft)))
+        setLeftStop(true)
     }
+    if (side === 'right') {
+      element.scrollLeft += (element.clientWidth + 20)    
+      setLeftStop(false)
+    
+    if ((dir === 'ltr' && element.scrollLeft + 2*element.clientWidth +21 > element.scrollWidth ) || (dir === 'rtl' &&  Math.abs(element.scrollLeft) < element.clientWidth +21))
+         setRightStop(true)
+    }
+
   }
 
   return (

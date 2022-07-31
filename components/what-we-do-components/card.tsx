@@ -12,7 +12,7 @@ export default function Card({
   img: string
 }) {
   return (
-    <div className=" h-90 w-86 rounded-[31px] shadow-4xl mx-3 first:mr-5 last:ml-5 overflow-clip ">
+    <div className=" h-90 w-86 rounded-[31px] shadow-4xl mx-3 overflow-clip ">
       <div className="flex justify-center items-center bg-card-bg py-16">
         <Image src={img} alt={title} height={128} width={128} />
       </div>

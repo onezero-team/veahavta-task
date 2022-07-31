@@ -19,7 +19,7 @@ export default function PagingButton({
     <>
       <button
         onClick={onClick}
-        disabled={disabled}
+        // disabled={disabled}
         className={`${disabled} 
         h-17 w-17 z-20
         box-border shadow-4xl bg-white border-brown-bg border-2 rounded-full
