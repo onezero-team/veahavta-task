@@ -12,7 +12,7 @@ export default function Banner({ data }: HomePageType) {
         <Image src={groupImage} alt="" width={1650} layout="fixed" />
       </div>
       <div className="wrapper pb-6 bg-banner  sm:p-10 sm:pb-36 ">
-        <div className="md:z-50 lg:z-50 xl:z-50">
+        <div className="md:z-50 lg:z-50 ">
           <PageHeader>{data.homepage}</PageHeader>
         </div>
         <button
