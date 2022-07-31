@@ -52,6 +52,7 @@ export default function WhatWeDo({ data }: HomePageType) {
             gap-x-10  
             max-w-max 
             md:grid md:grid-cols-2-auto md:gap-y-10  
+            sm:flex sm:flex-col
             "
             >
               {cards.map((card, index) => (
