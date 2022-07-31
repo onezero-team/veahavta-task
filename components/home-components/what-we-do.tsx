@@ -33,12 +33,12 @@ export default function WhatWeDo({ data }: HomePageType) {
 
   return (
     <WrapperLarge>
-      <div className="mt-20 flex flex-col mobile:items-center" id="support-us">
+      <div className="mt-20 flex flex-col sm:items-center" id="support-us">
         <div className="items-center flex flex-col">
-          <h2 className=" text-3xl  text-red  mobile:text-2xl mobile:self-start mobile:mb-3">
+          <h2 className=" text-3xl  text-red  sm:text-2xl sm:self-start sm:mb-3">
             {data.homepage.whatWeDoHeading}
           </h2>
-          <h3 className="font-bold  text-8xl mobile:hidden notMobileOrDesk:text-6xl">
+          <h3 className="font-bold  text-8xl sm:hidden md:text-6xl">
             {data.homepage.whatWeDoTitle}
           </h3>
           {isComputer ? (
@@ -51,8 +51,8 @@ export default function WhatWeDo({ data }: HomePageType) {
             justify-center 
             gap-x-10  
             max-w-max 
-            tablet:grid tablet:grid-cols-2-auto tablet:gap-y-10  
-            laptop:grid laptop:grid-cols-2-auto laptop:gap-y-10"
+            md:grid md:grid-cols-2-auto md:gap-y-10  
+            "
             >
               {cards.map((card, index) => (
                 <Card

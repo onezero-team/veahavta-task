@@ -21,17 +21,17 @@ export default function Footer({ data }: CommonType) {
       <footer
         className="
       footer bg-light gap-6 grid grid-cols-4-auto px-36 mt-36 pb-36 
-      mobile:flex mobile:flex-col mobile:p-0 mobile:items-center mobile:gap-y-16
-      laptop:flex laptop:flex-col laptop:items-center  
-      tablet:flex tablet:flex-col tablet:items-center  "
+      sm:flex sm:flex-col sm:p-0 sm:items-center sm:gap-y-16
+      md:flex md:flex-col md:items-center  
+        "
       >
         <Image src={logo} width="348" height="152" alt="" />
         <div
           className="
         footer-buttons flex flex-col gap-y-10 justify-center mr-20 
-        mobile:mr-0 mobile:gap-y-5 
-        laptop:flex-row laptop:mr-0 laptop:gap-x-5 
-        tablet:flex-row tablet:mr-0 tablet:gap-x-5"
+        sm:mr-0 sm:gap-y-5 
+        md:flex-row md:mr-0 md:gap-x-5 
+        "
         >
           <button
             className="footer__button text-header-blue font-bold "
@@ -47,22 +47,22 @@ export default function Footer({ data }: CommonType) {
           </button>
         </div>
 
-        <div className="menu mobile:hidden laptop:hidden tablet:hidden">
+        <div className="menu sm:hidden md:hidden ">
           <h3 className="font-bold text-2xl mb-2">{data.footerMenuTitle}</h3>
           <ul className="flex flex-col  text-base gap-y-2">
             <HeaderLinks headerData={data.appLinks} />
           </ul>
         </div>
-        <div className="contactUs mobile:mb-20">
+        <div className="contactUs sm:mb-20">
           <h3 className="font-bold text-2xl mb-2">
             {data.footerContactUsTitle}
           </h3>
           <ul
             className="flex flex-col gap-y-2  
-          notMobileOrDesk:grid  
-          notMobileOrDesk:grid-cols-2-auto  
-          notMobileOrDesk:gap-y-5  
-          notMobileOrDesk:gap-x-5"
+          md:grid  
+          md:grid-cols-2-auto  
+          md:gap-y-5  
+          md:gap-x-5"
           >
             {newArray.map((contact, index) => {
               return (

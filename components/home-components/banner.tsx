@@ -7,20 +7,17 @@ import groupImage from '../../public/assets/group.png'
 
 export default function Banner({ data }: HomePageType) {
   return (
-    <div
-      id="top-header"
-      className="overflow-hidden relative mobile:max-w-full "
-    >
-      <div className="absolute -top-3/4  right-5   mobile:hidden  notMobileOrDesk:hidden ">
+    <div id="top-header" className="overflow-hidden relative sm:max-w-full ">
+      <div className="absolute -top-3/4  right-5   sm:hidden  md:hidden ">
         <Image src={groupImage} alt="" width={1650} layout="fixed" />
       </div>
-      <div className="wrapper pb-6 bg-banner  mobile:p-10 mobile:pb-36 ">
-        <div className="laptop:z-50 desk:z-50 tablet:z-50">
+      <div className="wrapper pb-6 bg-banner  sm:p-10 sm:pb-36 ">
+        <div className="md:z-50 lg:z-50 xl:z-50">
           <PageHeader>{data.homepage}</PageHeader>
         </div>
         <button
           type="button"
-          className="self-center hover:opacity-90 cursor-pointer z-50"
+          className="self-center hover:opacity-90 cursor-pointer z-50 mt-5"
         >
           <a
             href="#support-us"
@@ -31,7 +28,7 @@ export default function Banner({ data }: HomePageType) {
           bg-icon-bg 
          text-light 
           rounded-full 
-          mobile:mt-10 
+          sm:mt-10 
           flex 
           justify-center 
           items-center

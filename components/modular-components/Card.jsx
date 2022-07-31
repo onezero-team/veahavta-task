@@ -6,8 +6,8 @@ function Card({ link, title, text }) {
     <div
       className={`
       card-container flex flex-col justify-center rounded-3xl w-full  shadow-4xl  
-      mobile:w-80 mobile:mb-10 mobile:right-0 
-      laptop:max-w-sm
+      sm:w-80 sm:mb-10 sm:right-0 
+      md:max-w-sm
       `}
     >
       <span className="card__image bg-contact-bg flex items-center justify-center h-full">

@@ -18,10 +18,9 @@ export default function ContactUs({ data }: HomePageType) {
        contacts-container 
        relative 
        p-36 
-       mobile:block  mobile:p-0 mobile:mt-16 mobile:pt-10 mobile:px-2 mobile:pb-24 
-       tablet:flex tablet:flex-col 
-       laptop:mt-96
-       notMobileOrDesk:mt-20 notMobileOrDesk:p-10
+       sm:block  sm:p-0 sm:mt-16 sm:pt-10 sm:px-2 sm:pb-24 
+       md:flex md:flex-col 
+       md:mt-20 md:p-10
         "
     >
       <span className="circle-1">
@@ -30,13 +29,13 @@ export default function ContactUs({ data }: HomePageType) {
       <span className="circle-2">
         <Image src={CircleTwo} alt="" />
       </span>
-      <div className="flex flex-col gap-y-3 mobile:mb-72  tablet:mb-72">
+      <div className="flex flex-col gap-y-3 sm:mb-72  md:mb-72">
         <h2 className="text-icon-bg text-xl">
           {data.homepage.contactUsHeading}
         </h2>
         <h3 className="text-4xl font-bold">{data.homepage.contactUsTitle}</h3>
         <p>{data.homepage.contactUsText}</p>
-        <div className=" max-w-xl  grid grid-cols-2-auto gap-y-16 mt-20 z-10 mobile:flex mobile:flex-col mobile:h-2/4 mobile:gap-y-10 ">
+        <div className=" max-w-xl  grid grid-cols-2-auto gap-y-16 mt-20 z-10 sm:flex sm:flex-col sm:h-2/4 sm:gap-y-10 ">
           {contactData.map((contact, index) => {
             return (
               <Contact
