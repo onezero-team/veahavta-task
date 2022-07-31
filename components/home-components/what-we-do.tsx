@@ -16,27 +16,27 @@ export default function WhatWeDo({ data }: HomePageType) {
     side: 'left' | 'right',
   ) => {
     if (side === 'left') {
-      element.scrollLeft -= element.clientWidth + 20
+      element.scrollLeft -= element.clientWidth + 5
       setRightStop(false)
 
       if (
-        (dir === 'ltr' && element.clientWidth + 21 > element.scrollLeft) ||
+        (dir === 'ltr' && element.clientWidth + 6 > element.scrollLeft) ||
         (dir === 'rtl' &&
           element.scrollWidth - element.clientWidth <
-            element.clientWidth + 21 + Math.abs(element.scrollLeft))
+            element.clientWidth + 6 + Math.abs(element.scrollLeft))
       )
         setLeftStop(true)
     }
     if (side === 'right') {
-      element.scrollLeft += element.clientWidth + 20
+      element.scrollLeft += element.clientWidth - 5
       setLeftStop(false)
 
       if (
         (dir === 'ltr' &&
-          element.scrollLeft + 2 * element.clientWidth + 21 >
+          element.scrollLeft + 2 * element.clientWidth + 6 >
             element.scrollWidth) ||
         (dir === 'rtl' &&
-          Math.abs(element.scrollLeft) < element.clientWidth + 21)
+          Math.abs(element.scrollLeft) < element.clientWidth + 6)
       )
         setRightStop(true)
     }
