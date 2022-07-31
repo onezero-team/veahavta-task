@@ -83,12 +83,12 @@ export default function ContactForm({ data }: { data: Common }) {
                 ? 'sm:left-5 sm:right-auto 2xl:right-formSpace 2xl:left-auto'
                 : ' 2xl:left-formSpace 2xl:right-auto sm:right-0 sm:left-auto'
             } 
-          w-fit sm:h-formMinHight sm:bottom-formBottom absolute left-5 shadow-4xl bottom-9 
+          w-fit sm:h-formMinHight sm:bottom-formBottom absolute right-0 shadow-4xl bottom-9 
            mx-5 z-10  border-2 border-white rounded-[36px] bg-white`}
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col sm:grid sm:grid-cols-1fr-1fr mt-12 mx-6 relative">
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="firstName"
                   label={data.contactUsFormFirstName}
@@ -100,7 +100,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   </p>
                 )}
               </fieldset>
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="lastName"
                   label={data.contactUsFormLastName}
@@ -112,7 +112,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   </p>
                 )}
               </fieldset>
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="email"
                   label={data.contactUsFormEmail}
@@ -124,7 +124,7 @@ export default function ContactForm({ data }: { data: Common }) {
                   </p>
                 )}
               </fieldset>
-              <fieldset className="my-3 mx-4 ">
+              <fieldset className="my-3 mx-4 relative">
                 <Field
                   name="phone"
                   label={data.contactUsFormPhone}
