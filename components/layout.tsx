@@ -1,9 +1,8 @@
-import Footer from '@/components/footer'
-import Header from '@/components/header'
-import Main from '@/components/main'
+import Footer from '@/components/layout-components/footer'
+import Header from '@/components/layout-components/header'
+import Main from '@/components/layout-components/main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
-import React from 'react'
 
 export default function Layout({ children, pageProps }: any) {
   const { dir, locale, router } = useLocale()
@@ -39,6 +38,10 @@ export default function Layout({ children, pageProps }: any) {
             grid-template-rows: auto auto 1fr auto;
             min-height: -webkit-fill-available;
             height: 100%;
+          }
+
+          * {
+            box-sizing: border-box;
           }
 
           *:focus-visible {
