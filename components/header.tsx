@@ -3,7 +3,8 @@ import { CommonType } from '@/lib/interface'
 import Link from 'next/link'
 import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
-
+import LogoForPage from '../assets/logo.png'
+import Image from 'next/image'
 export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
   return (
@@ -37,7 +38,9 @@ export default function Header({ data }: CommonType) {
 const Logo = () => {
   return (
     <Link href="/">
-      <a>Logo</a>
+      <a>
+        <Image src={LogoForPage} width={142} height={62} alt="logo" />
+      </a>
     </Link>
   )
 }
