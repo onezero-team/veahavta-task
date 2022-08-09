@@ -6,22 +6,35 @@ import Image from 'next/image'
 export default function WhatWeDo({ data }: HomePageType) {
   return (
     <WrapperLarge>
-      <div className="wrapper">
-        <div className="container">
-          <div className="whatWeDoHeading">{data.homepage.whatWeDoHeading}</div>
-          <div className="whatWeDoTitle">{data.homepage.whatWeDoTitle}</div>
-          <div className="cards">
+      <div
+        id="support-us"
+        className="wrapper z-10 flex justify-center h-[790px] "
+      >
+        <div className="container flex flex-col w-full items-center">
+          <p className="whatWeDoHeading text-[28px]">
+            {data.homepage.whatWeDoHeading}
+          </p>
+          <p className="title font-bold text-[82px]">
+            {data.homepage.whatWeDoTitle}
+          </p>
+          <div className="cards flex justify-between items-center w-full mt-10">
             {data.homepage.whatWeDoCards.map((card, index) => (
-              <div className="card" key={index}>
-                <Image
-                  src={card.imagePath}
-                  alt={card.title}
-                  width={338}
-                  height={241}
-                  className="cardImage"
-                />
-                <div className="cardTitle">{card.title}</div>
-                <div className="cardText">{card.text}</div>
+              <div
+                className="card w-[338px] h-[480px] drop-shadow-lg rounded-xl p-2"
+                key={index}
+              >
+                <div className="cardImage">
+                  <Image
+                    src={card.imagePath}
+                    alt={card.title}
+                    width={338}
+                    height={241}
+                  />
+                </div>
+                <div className="cardTitle font-bold text-[28px]">
+                  {card.title}
+                </div>
+                <div className="text-[18px]">{card.text}</div>
               </div>
             ))}
           </div>
@@ -29,80 +42,40 @@ export default function WhatWeDo({ data }: HomePageType) {
       </div>
       <style jsx>{`
         div.wrapper {
-          z-index: 10;
           background: #fff;
-          height: 845px;
-          display: flex;
-          justify-content: center;
         }
-        div.container {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          align-items: center;
-        }
-        div.whatWeDoHeading {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 28px;
-          line-height: 37px;
-          /* identical to box height */
-
-          text-align: center;
-
+        p.whatWeDoHeading {
           color: #d25c78;
         }
-        div.whatWeDoTitle {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 82px;
-          line-height: 107px;
-
-          color: #000000;
-        }
-        div.cards {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          margin-top: 50px;
-        }
         div.card {
-          width: 338px;
-          height: 480px;
           background: #ffffff;
-          border: 2px solid #ffffff;
-          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 31px;
-          border-radius: 31px;
-          padding: 15px;
         }
         div.cardTitle {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 28px;
-          line-height: 37px;
-          /* identical to box height */
-
-          text-align: right;
-
           color: #4e47f9;
         }
-        div.cardText {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 24px;
-          text-align: right;
-          margin-top: 10px;
-          color: #000000;
+        div.cardImage {
+          object-fit: cover;
         }
-      `}</style>{' '}
+        div.cardImage {
+          background: #f4f3fd;
+          border-radius: 31px 31px 0px 0px;
+        }
+        @media screen and (max-width: 768px) {
+          div.wrapper {
+            width: 100vw;
+          }
+          p.title {
+            display: none;
+          }
+          div.cards {
+            flex-direction: column;
+            display: flex;
+          }
+          div.card {
+            margin-bottom: 20px;
+          }
+        }
+      `}</style>
     </WrapperLarge>
   )
 }

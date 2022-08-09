@@ -7,7 +7,7 @@ import Rectangle11 from '../../assets/Rectangle_11.png'
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
     <WrapperLarge>
-      <div className="wrapper z-10 flex justify-center">
+      <div id="about-us" className="wrapper z-10 flex justify-center">
         <div className="container flex w-full justify-around items-center mt-10 mb-10">
           <div className="box-border rounded-lg">
             <Image
@@ -17,11 +17,11 @@ export default function AboutTheClinic({ data }: HomePageType) {
               height={628}
             />
           </div>
-          <div className="flex flex-col m-auto w-2/6">
-            <p className="heading font-normal text-[24px] leading-9 text-right ">
+          <div className="details flex flex-col m-auto w-2/6">
+            <p className="heading font-normal text-[24px] leading-9  ">
               {data.homepage.aboutHeading}
             </p>
-            <h2 className="font-bold text-[52px] leading-tight">
+            <h2 className="title font-bold text-[52px] leading-tight">
               {data.homepage.aboutTitle}
             </h2>
             <p className="aboutUsText text-[18px] mt-10">
@@ -43,6 +43,22 @@ export default function AboutTheClinic({ data }: HomePageType) {
 
         button.aboutUsButton {
           background: #4e47f9;
+        }
+        @media screen and (max-width: 768px) {
+          div.wrapper {
+            background: #fff;
+            width: 100vw;
+          }
+          div.container {
+            flex-direction: column;
+            display: flex;
+          }
+          div.details {
+            width: 80vw;
+          }
+          h2.title {
+            font-size: 2.5rem;
+          }
         }
       `}</style>
     </WrapperLarge>

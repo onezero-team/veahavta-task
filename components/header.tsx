@@ -15,19 +15,22 @@ export default function Header({ data }: CommonType) {
         className={'bg-light text-primary'}
       />
       <header className="h-header z-10 pt-4 px-4">
-        <div className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg bg-light rounded-lg">
+        <div
+          id="menu"
+          className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg bg-light rounded-lg"
+        >
           <Logo />
           <ul className="flex flex-row gap-x-2 justify-between ml-3">
-            <div className="flex flex-row gap-x-10 justify-between ml-3">
+            <div className="links flex flex-row gap-x-10 justify-between ml-3">
               {data.appLinks.map((page, index) => (
                 <li key={index} className="flex items-center">
-                  <Link href={page.relativeLink}>
-                    <a className="text-primary">{page.text}</a>
-                  </Link>
+                  <a href={page.relativeLink} className="text-primary">
+                    {page.text}
+                  </a>
                 </li>
               ))}
             </div>
-            <div className="flex flex-row gap-x-2 justify-between ml-3">
+            <div className="links flex flex-row gap-x-2 justify-between ml-3">
               <li className="flex items-center">
                 <ChangeLangButton className="" lang="en">
                   {data.languageNames[0].en}
@@ -39,9 +42,56 @@ export default function Header({ data }: CommonType) {
                 </ChangeLangButton>
               </li>
             </div>
+            <div className="menu-button hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="menu-button"
+                className="h-6 w-6 cursor-pointer md:hidden block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </div>
           </ul>
         </div>
       </header>
+      <style jsx>{`
+        @media screen and (max-width: 768px) {
+          header {
+            width: 100vw;
+          }
+          #menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          ul {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0;
+          }
+          .links {
+            display: none;
+          }
+          .menu-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            background: #e6e4fd;
+            border-radius: 51px;
+            margin-right: 1rem;
+          }
+        }
+      `}</style>
     </>
   )
 }

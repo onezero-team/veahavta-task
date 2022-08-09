@@ -15,30 +15,30 @@ export default function Banner({ data }: HomePageType) {
     <div id="top-header">
       <div className="wrapper flex flex-col	justify-center items-center h-[790px]">
         <div className="background absolute z-[-1] inset-0">
-          <div className="border-box absolute w-80 h-96 left-[75%] top-[8%] drop-shadow-md rounded-lg">
+          <div className="image border-box absolute w-80 h-96 left-[75%] top-[8%] drop-shadow-md rounded-lg">
             <Image src={Rectangle1} alt="Rectangle 1" />
           </div>
-          <div className="border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[83%] top-[32%]">
+          <div className="image border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[83%] top-[32%]">
             <Image src={Rectangle2} alt="Rectangle 1" />
           </div>
-          <div className="image3 border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[64%] top-[64%] ">
+          <div className="image border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[64%] top-[60%] ">
             <Image src={Rectangle3} alt="Rectangle 3" />
           </div>
-          <div className="image4 border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[17%] top-[65%]">
+          <div className="image border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[17%] top-[60%]">
             <Image src={Rectangle4} alt="Rectangle 4" />
           </div>
-          <div className="image5 border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[-2%] top-[35%] z-10">
+          <div className="image border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[-2%] top-[35%] z-10">
             <Image src={Rectangle5} alt="Rectangle 5" />
           </div>
-          <div className="image6 border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[9%]">
+          <div className="image border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[9%]">
             <Image src={Rectangle6} alt="Rectangle 6" />
           </div>
-          <div className="image7 border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[34%] top-[-24%]">
+          <div className="image border-box absolute w-80 h-96 drop-shadow-md rounded-lg left-[34%] top-[-24%]">
             <Image src={Rectangle7} alt="Rectangle 7" height={380} />
           </div>
         </div>
         <PageHeader>{data.homepage.title}</PageHeader>
-        <p className="w-3/12	text-[28px] text-center	mt-5">
+        <p className="desc w-3/12	text-[28px] text-center	mt-5">
           {data.homepage.description}
         </p>
         <button className="getToKnowUsButton w-44 h-14 rounded-[51px] font-bold text-[white] mt-[10px]">
@@ -59,6 +59,20 @@ export default function Banner({ data }: HomePageType) {
 
           button.getToKnowUsButton {
             background: #4e47f9;
+          }
+          @media screen and (max-width: 768px) {
+            div.image {
+              display: none;
+            }
+            div.wrapper {
+              margin-top: 0;
+              padding-top: 0;
+              width: 100vw;
+            }
+            p.desc {
+              width: 80vw;
+              margin-bottom: 10vw;
+            }
           }
         `}</style>
       </div>

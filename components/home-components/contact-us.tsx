@@ -8,27 +8,33 @@ import Vector_2 from '../../assets/vector_1.png'
 export default function ContactUs({ data }: HomePageType) {
   return (
     <WrapperLarge>
-      <div className="wrapper">
-        <div className="container">
-          <div className="vector">
+      <div id="contact-us" className="wrapper z-10 flex justify-center">
+        <div className="container flex justify-between items-center w-full h-[680px]">
+          <div className="vector absolute opacity-50 left-0 top-[2748px]">
             <Image src={Vector} alt="vector" />
           </div>
-          <div className="vector2">
+          <div className="vector absolute opacity-50 right-0">
             <Image src={Vector_2} alt="vector" />
           </div>
-          <div className="details">
-            <button className="contactUsHeading">
+          <div className="details flex flex-col justify-around h-3/6">
+            <button className="contactUsHeading w-32 h-10 rounded-3xl font-bold text-[22px]">
               {data.homepage.contactUsHeading}
             </button>
-            <div className="contactUsTitle">{data.homepage.contactUsTitle}</div>
-            <div className="contactUsText">{data.homepage.contactUsText}</div>
-            <div className="contactLinks">
+            <div className="font-bold text-[42px] ">
+              {data.homepage.contactUsTitle}
+            </div>
+            <div className="contactUsText text-[22px] w-3/5 ">
+              {data.homepage.contactUsText}
+            </div>
+            <div className="contactLinks grid grid-cols-2">
               {data.common.contactUsLinks.map((item, index) => (
-                <a key={index}>{item.text}</a>
+                <a className="mt-10" key={index}>
+                  {item.text}
+                </a>
               ))}
             </div>
           </div>
-          <div className="contactUsForm">
+          <div className="contactUsForm border-box  w-[650px] h-[700px] left-80 top-[2250px] drop-shadow-lg rounded-3xl">
             <Formik
               initialValues={{
                 email: '',
@@ -76,10 +82,16 @@ export default function ContactUs({ data }: HomePageType) {
                 handleSubmit,
                 isSubmitting,
               }) => (
-                <form onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    <div className="form_container">
-                      <label htmlFor="firstName">
+                <form
+                  className="form flex flex-col justify-center items-center w-full p-4"
+                  onSubmit={handleSubmit}
+                >
+                  <div className="inputs form-group grid grid-cols-2 w-full">
+                    <div className="flex flex-col justify-evenly p-5">
+                      <label
+                        className="font-bold text-[22px]"
+                        htmlFor="firstName"
+                      >
                         {data.common.contactUsFormFirstName}
                       </label>
                       <input
@@ -88,13 +100,17 @@ export default function ContactUs({ data }: HomePageType) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.firstName}
+                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
                       />
                       {errors.firstName &&
                         touched.firstName &&
                         errors.firstName}
                     </div>
-                    <div className="form_container">
-                      <label htmlFor="lastName">
+                    <div className="flex flex-col justify-evenly p-5">
+                      <label
+                        className="font-bold text-[22px]"
+                        htmlFor="lastName"
+                      >
                         {data.common.contactUsFormLastName}
                       </label>
                       <input
@@ -103,11 +119,12 @@ export default function ContactUs({ data }: HomePageType) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.lastName}
+                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
                       />
                       {errors.lastName && touched.lastName && errors.lastName}
                     </div>
-                    <div className="form_container">
-                      <label htmlFor="email">
+                    <div className="flex flex-col justify-evenly p-5">
+                      <label className="font-bold text-[22px]" htmlFor="email">
                         {data.common.contactUsFormEmail}
                       </label>
                       <input
@@ -116,11 +133,12 @@ export default function ContactUs({ data }: HomePageType) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
+                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
                       />
                       {errors.email && touched.email && errors.email}
                     </div>
-                    <div className="form_container">
-                      <label htmlFor="phone">
+                    <div className="flex flex-col justify-evenly p-5">
+                      <label className="font-bold text-[22px]" htmlFor="phone">
                         {data.common.contactUsFormPhone}
                       </label>
                       <input
@@ -129,15 +147,17 @@ export default function ContactUs({ data }: HomePageType) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.phone}
+                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
                       />
                       {errors.phone && touched.phone && errors.phone}
                     </div>
                   </div>
-                  <div className="form_container message">
-                    <label htmlFor="message">
+                  <div className="textfield flex flex-col justify-evenly p-5">
+                    <label className="font-bold text-[22px]" htmlFor="message">
                       {data.common.contactUsFormMessage}
                     </label>
                     <textarea
+                      className="textarea w-[580px] h-[145px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2 "
                       name="message"
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -154,7 +174,7 @@ export default function ContactUs({ data }: HomePageType) {
                     }}
                   >
                     <button
-                      className="sendButton"
+                      className="sendButton w-48 h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-3xl mt-2 font-bold text-[28px]"
                       type="submit"
                       disabled={isSubmitting}
                     >
@@ -169,151 +189,52 @@ export default function ContactUs({ data }: HomePageType) {
       </div>
       <style jsx>{`
         div.wrapper {
-          z-index: 10;
           background: #fff;
-          display: flex;
-          justify-content: center;
           background: #f4f3fd;
         }
-        div.container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          height: 680px;
-        }
-        div.details {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          height: 50%;
-        }
+
         button.contactUsHeading {
-          width: 119px;
-          height: 40px;
           background: #ffffff;
-          border-radius: 51px;
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 22px;
-          line-height: 29px;
           color: #4e47f9;
         }
         div.contactUsForm {
-          box-sizing: border-box;
-          position: absolute;
-          width: 650px;
-          height: 700px;
-          left: 348px;
-          top: 2400px;
           background: #ffffff;
-          border: 2px solid #ffffff;
-          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 36px;
-        }
-        form {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          padding: 15px;
-        }
-        label {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 22px;
-          line-height: 29px;
-          /* identical to box height */
-          text-align: right;
-        }
-        input {
-          width: 260px;
-          height: 60px;
-          border: 1px solid #ffffff;
-          filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
-          border-radius: 8px;
-          margin-top: 10px;
-        }
-        div.form-group {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          width: 100%;
-        }
-        div.form_container {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          padding: 10px;
-        }
-        textarea {
-          width: 570px;
-          height: 145px;
-          border: 1px solid #ffffff;
-          filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
-          border-radius: 8px;
-          padding: 10px;
-          margin-top: 10px;
-        }
-        div.message {
-          width: 100%;
-          padding: 10px;
         }
         button.sendButton {
-          width: 185px;
-          height: 60px;
           background: #4e47f9;
-          border-radius: 51px;
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 28px;
-          line-height: 37px;
-          text-align: center;
           color: #ffffff;
         }
-        div.contactUsTitle {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 42px;
-          line-height: 55px;
-          /* identical to box height */
-          text-align: right;
-          color: #000000;
-        }
-        div.contactUsText {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 22px;
-          line-height: 29px;
-          /* identical to box height */
-
-          text-align: right;
-          width: 70%;
-          color: #000000;
-        }
-        div.contactLinks {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-        a {
-          margin-top: 50px;
-        }
-        div.vector {
-          position: absolute;
-          right: 85.19%;
-          top: 311.12%;
-          opacity: 0.5;
-        }
-        div.vector2 {
-          position: absolute;
-          left: 90.19%;
-          top: 265.12%;
-          opacity: 0.5;
+        @media screen and (max-width: 768px) {
+          div.wrapper {
+            margin-top: 1450px;
+          }
+          div.container {
+            display: flex;
+            flex-direction: column;
+          }
+          div.vector {
+            display: none;
+          }
+          div.details {
+            padding: 20px;
+          }
+          div.contactLinks {
+            display: flex;
+            flex-direction: column;
+          }
+          div.contactUsForm {
+            margin-top: 100px;
+            width: 80vw;
+            height: 100vh;
+          }
+          div.inputs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+          textarea.textarea {
+            width: 63vw;
+          }
         }
       `}</style>{' '}
     </WrapperLarge>
