@@ -11,6 +11,7 @@ import Rectangle5 from '../../assets/Rectangle_8.png'
 import Rectangle6 from '../../assets/Rectangle_9.png'
 import Rectangle7 from '../../assets/Rectangle_10.png'
 export default function Banner({ data }: HomePageType) {
+  console.log('data', data)
   return (
     <div id="top-header">
       <div className="wrapper">
@@ -74,6 +75,9 @@ export default function Banner({ data }: HomePageType) {
         </div>
         <PageHeader>{data.homepage.title}</PageHeader>
         <div className="description">{data.homepage.description}</div>
+        <button className="getToKnowUsButton">
+          {data.homepage.getToKnowUsButton}
+        </button>
         <style jsx>{`
           div.wrapper {
             margin-top: -${themePreval.height.header};
@@ -179,6 +183,20 @@ export default function Banner({ data }: HomePageType) {
             background: url(pexels-pixabay-236164.jpg);
             filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
             border-radius: 8px;
+          }
+          button.getToKnowUsButton {
+            width: 185px;
+            height: 60px;
+            background: #4e47f9;
+            border-radius: 51px;
+            font-family: 'Assistant';
+            font-style: normal;
+            font-weight: 700;
+            line-height: 37px;
+            /* identical to box height */
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
           }
         `}</style>
       </div>
