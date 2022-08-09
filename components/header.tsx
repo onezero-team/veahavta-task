@@ -6,7 +6,6 @@ import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import LogoForPage from '../assets/logo.png'
 import Image from 'next/image'
 export default function Header({ data }: CommonType) {
-  console.log('data', data)
   const { dir } = useLocale()
   return (
     <>

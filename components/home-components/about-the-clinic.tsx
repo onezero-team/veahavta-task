@@ -7,9 +7,9 @@ import Rectangle11 from '../../assets/Rectangle_11.png'
 export default function AboutTheClinic({ data }: HomePageType) {
   return (
     <WrapperLarge>
-      <div className="wrapper">
-        <div className="container">
-          <div className="image">
+      <div className="wrapper z-10 flex justify-center">
+        <div className="container flex w-full justify-around items-center mt-10 mb-10">
+          <div className="box-border rounded-lg">
             <Image
               src={Rectangle11}
               alt="Rectangle 11"
@@ -17,11 +17,17 @@ export default function AboutTheClinic({ data }: HomePageType) {
               height={628}
             />
           </div>
-          <div className="details">
-            <h1 className="heading">{data.homepage.aboutHeading}</h1>
-            <h2 className="title">{data.homepage.aboutTitle}</h2>
-            <p className="aboutUsText">{data.homepage.aboutUsText}</p>
-            <button className="aboutUsButton">
+          <div className="flex flex-col m-auto w-2/6">
+            <p className="heading font-normal text-[24px] leading-9 text-right ">
+              {data.homepage.aboutHeading}
+            </p>
+            <h2 className="font-bold text-[52px] leading-tight">
+              {data.homepage.aboutTitle}
+            </h2>
+            <p className="aboutUsText text-[18px] mt-10">
+              {data.homepage.aboutUsText}
+            </p>
+            <button className="aboutUsButton rounded-[50px] w-48	h-16 font-bold	mt-12 text-[white]	">
               {data.homepage.aboutUsButton}
             </button>
           </div>
@@ -29,69 +35,14 @@ export default function AboutTheClinic({ data }: HomePageType) {
       </div>
       <style jsx>{`
         div.wrapper {
-          z-index: 10;
           background: #fff;
-          height: 845px;
-          display: flex;
-          justify-content: center;
         }
-        div.container {
-          display: flex;
-          width: 100%;
-          justify-content: space-around;
-          align-items: center;
-        }
-        div.image {
-          box-sizing: border-box;
-          background: url(rod-long-89bQBucvJdw-unsplash.jpg);
-          border-radius: 8px;
-        }
-        div.details {
-          display: flex;
-          flex-direction: column;
-          margin: auto;
-          width: 31%;
-        }
-        h2.title {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 52px;
-          line-height: 115%;
-          color: #000000;
-        }
-        h1.heading {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 28px;
-          line-height: 37px;
-          text-align: center;
+        p.heading {
           color: #4e47f9;
-          text-align: right;
         }
-        p.aboutUsText {
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 29px;
-          text-align: right;
-          color: #000000;
-          margin-top: 50px;
-        }
+
         button.aboutUsButton {
           background: #4e47f9;
-          border-radius: 51px;
-          width: 185px;
-          height: 60px;
-          font-family: 'Assistant';
-          font-style: normal;
-          font-weight: 700;
-          line-height: 29px;
-          color: #ffffff;
-          text-align: center;
-          margin-top: 50px;
         }
       `}</style>
     </WrapperLarge>

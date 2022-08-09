@@ -6,7 +6,6 @@ import Vector from '../../assets/vector.png'
 import Image from 'next/image'
 import Vector_2 from '../../assets/vector_1.png'
 export default function ContactUs({ data }: HomePageType) {
-  console.log('data', data)
   return (
     <WrapperLarge>
       <div className="wrapper">
