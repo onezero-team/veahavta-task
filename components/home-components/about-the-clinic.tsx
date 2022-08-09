@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Rectangle11 from '../../assets/Rectangle_11.png'
 
 export default function AboutTheClinic({ data }: HomePageType) {
-  console.log('data', data)
   return (
     <WrapperLarge>
       <div className="wrapper">
@@ -28,7 +27,6 @@ export default function AboutTheClinic({ data }: HomePageType) {
           </div>
         </div>
       </div>
-      ;
       <style jsx>{`
         div.wrapper {
           z-index: 10;

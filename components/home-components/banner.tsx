@@ -11,7 +11,6 @@ import Rectangle5 from '../../assets/Rectangle_8.png'
 import Rectangle6 from '../../assets/Rectangle_9.png'
 import Rectangle7 from '../../assets/Rectangle_10.png'
 export default function Banner({ data }: HomePageType) {
-  console.log('data', data)
   return (
     <div id="top-header">
       <div className="wrapper">
