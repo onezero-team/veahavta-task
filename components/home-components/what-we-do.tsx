@@ -4,7 +4,6 @@ import { WrapperLarge } from '../wrapper'
 import Image from 'next/image'
 
 export default function WhatWeDo({ data }: HomePageType) {
-  console.log('data', data.homepage.whatWeDoCards)
   return (
     <WrapperLarge>
       <div className="wrapper">
@@ -79,6 +78,7 @@ export default function WhatWeDo({ data }: HomePageType) {
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
           border-radius: 31px;
           border-radius: 31px;
+          padding: 15px;
         }
         div.cardTitle {
           font-family: 'Assistant';
