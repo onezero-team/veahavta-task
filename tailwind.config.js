@@ -21,7 +21,13 @@ module.exports = {
       serif: ['"Assistant"', 'sans-serif'],
       mono: ['"Assistant"', 'sans-serif'],
     },
+    fontSize: {
+      82: '82px',
+    },
     extend: {
+      lineHeight: {
+        80: '80px',
+      },
       colors: {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
