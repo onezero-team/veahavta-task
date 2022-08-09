@@ -18,9 +18,8 @@ export default function Header({ data }: CommonType) {
         <div className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg bg-light rounded-lg">
           <Logo />
           <ul className="flex flex-row gap-x-2 justify-between ml-3">
-            {/* pages */}
             <div className="flex flex-row gap-x-10 justify-between ml-3">
-              {data.appLinks.map((page,index) => (
+              {data.appLinks.map((page, index) => (
                 <li key={index} className="flex items-center">
                   <Link href={page.relativeLink}>
                     <a className="text-primary">{page.text}</a>
