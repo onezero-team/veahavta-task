@@ -16,7 +16,7 @@ export async function getStaticProps({ locale }: NextPageContext) {
 }
 
 export default function Home({ data }: HomePageType) {
-  // console.log('Home data\n=========\n', data)
+  console.log('Home data\n=========\n', data)
   return (
     <>
       <Banner data={data} />
