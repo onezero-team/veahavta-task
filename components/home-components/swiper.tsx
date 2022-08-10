@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import { HomePageType } from '@/lib/interface'
-import { WrapperLarge } from '../wrapper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import 'swiper/css'
