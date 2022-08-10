@@ -7,7 +7,6 @@ import 'swiper/css/navigation'
 import { Navigation } from 'swiper'
 
 export default function CardSwiper({ data }: HomePageType) {
-  console.log('data', data)
   return (
     <div className="flex w-full h-full  text-center">
       <Swiper

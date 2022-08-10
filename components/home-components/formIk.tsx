@@ -2,6 +2,9 @@ import { HomePageType } from '@/lib/interface'
 import { WrapperLarge } from '../wrapper'
 import { Formik } from 'formik'
 
+interface LooseObject {
+  [key: string]: any
+}
 export default function ContactUsForm({ data }: HomePageType) {
   return (
     <WrapperLarge>
@@ -15,13 +18,7 @@ export default function ContactUsForm({ data }: HomePageType) {
             phone: '',
           }}
           validate={(values) => {
-            const errors = {
-              email: '',
-              firstName: '',
-              lastName: '',
-              message: '',
-              phone: '',
-            }
+            const errors: LooseObject = {}
             if (!values.email) {
               errors.email = data.common.contactUsFormErrorEmailMissing
             } else if (
@@ -43,7 +40,6 @@ export default function ContactUsForm({ data }: HomePageType) {
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               alert(data.common.contactUsFormSuccessMessage)
-
               setSubmitting(false)
             }, 400)
           }}

@@ -6,7 +6,6 @@ import Image from 'next/image'
 import Vector_2 from '../../assets/Vector_1.png'
 import ContactUsForm from './formIk'
 export default function ContactUs({ data }: HomePageType) {
-  console.log(data)
   return (
     <WrapperLarge>
       <div id="contact-us" className="wrapper z-10 flex justify-center">
