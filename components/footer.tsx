@@ -87,7 +87,8 @@ export default function Footer({
             <a
               href={`http://maps.google.com/?q=${data.common.contactUsLinks[2].text}`}
               target={'_blank'}
-              className={'flex data-contact-row third-row'} rel="noreferrer"
+              className={'flex data-contact-row third-row'}
+              rel="noreferrer"
             >
               <img className={'icon-img'} src={'/icons/location-purple.svg'} />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>

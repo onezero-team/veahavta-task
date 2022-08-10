@@ -116,7 +116,8 @@ export default function ContactUs({ data, getRef }: any) {
                 <a
                   href={`http://maps.google.com/?q=${data.common.contactUsLinks[2].text}`}
                   target={'_blank'}
-                  className={'flex'} rel="noreferrer"
+                  className={'flex'}
+                  rel="noreferrer"
                 >
                   <div
                     className={'my-round-icon flex justify-center items-center'}
