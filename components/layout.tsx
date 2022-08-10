@@ -10,7 +10,7 @@ export default function Layout({
   pageProps,
   aboutRef,
   contactRef,
-    mobileRef
+  mobileRef,
 }: any) {
   const { dir, locale, router } = useLocale()
   const [footerRef, setFooterRef] = useState<HTMLDivElement | null>(null)
