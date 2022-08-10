@@ -420,6 +420,10 @@ export default function ContactUs({ data, getRef }: any) {
             .my-desc-contact {
               width: 0px;
             }
+            
+            .my-title-contact-text {
+            font-size: 22px;
+            }
           }
         `}
       </style>
