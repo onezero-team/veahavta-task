@@ -4,10 +4,10 @@ import '../styles/globals.css'
 import { useRef, useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [aboutTheClinicRef, setAboutTheClinicRef] =
-    useState<HTMLDivElement | null>(null)
+  const [aboutTheClinicRef, setAboutTheClinicRef] = useState<HTMLDivElement | null>(null)
   const [whatWeDoRef, setWhatWeDo] = useState<HTMLDivElement | null>(null)
   const [contactRef, setContactRef] = useState<HTMLDivElement | null>(null)
+  const [formMobileRef, setFormMobileRef] = useState<HTMLDivElement | null>(null)
 
   function getRef(type: string, ref: any) {
     if (type === 'about') {
@@ -21,6 +21,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     if (type === 'contact') {
       setContactRef(ref)
     }
+
+    if (type === "mobile") {
+      setFormMobileRef(ref)
+    }
   }
 
   return (
@@ -28,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       pageProps={pageProps}
       aboutRef={aboutTheClinicRef}
       contactRef={contactRef}
+      mobileRef={formMobileRef}
     >
       <Component
         {...pageProps}

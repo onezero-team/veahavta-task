@@ -5,7 +5,6 @@ import WhatWeDo from '@/components/home-components/what-we-do'
 import { HomePageType, HOMEPAGE_QUERY } from '@/lib/interface'
 import { NextPageContext } from 'next'
 import { request } from '../lib/datocms'
-import Header from '@/components/header'
 
 export async function getStaticProps({ locale }: NextPageContext) {
   const data = await request({

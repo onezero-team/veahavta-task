@@ -56,7 +56,7 @@ export default function Footer({
             <div className={'my-header-footer'}>
               {data.common.footerContactUsTitle}
             </div>
-            <div className={'flex data-contact-row first-row'}>
+            <a href={ `${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[0].linkValue}`} className={'flex data-contact-row first-row'}>
               <img
                 className={'icon-img'}
                 src={'/icons/phone-purple-icon.svg'}
@@ -69,23 +69,23 @@ export default function Footer({
                   {data.common.contactUsLinks[1].text}
                 </div>
               </div>
-            </div>
-            <div className={'flex data-contact-row '}>
+            </a>
+            <a href={`mailto:${data.common.contactUsLinks[3].text}`} className={'flex data-contact-row '}>
               <img className={'icon-img'} src={'/icons/email-purple.svg'} />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
                 <div className={'cursor-default second'}>
                   {data.common.contactUsLinks[3].text}
                 </div>
               </div>
-            </div>
-            <div className={'flex data-contact-row third-row'}>
+            </a>
+            <a href={`http://maps.google.com/?q=${data.common.contactUsLinks[2].text}`} target={"_blank"} className={'flex data-contact-row third-row'}>
               <img className={'icon-img'} src={'/icons/location-purple.svg'} />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
                 <div className={'cursor-default'}>
                   {data.common.contactUsLinks[2].text}
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </footer>

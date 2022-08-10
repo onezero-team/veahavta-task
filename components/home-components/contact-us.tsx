@@ -4,9 +4,11 @@ import { ContactUsForm } from '@/components/design-components/ContactUsForm'
 export default function ContactUs({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
   const contactRef = useRef<HTMLDivElement | null>(null)
+  const contactTitleRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    getRef('contact', contactRef)
+    getRef('contact', contactRef);
+    getRef('mobile', contactTitleRef);
   }, [])
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function ContactUs({ data, getRef }: any) {
   return (
     <>
       <div
-        ref={contactRef}
+
         className={
           'main-container-contact-us relative flex justify-center items-center'
         }
@@ -55,7 +57,7 @@ export default function ContactUs({ data, getRef }: any) {
           <img className={'left-circle' + isEn} src={leftOrRight('left')} />
         </div>
         <div className={'absolute flex justify-between mini-contact-container'}>
-          <div className={'flex flex-col mt-80 my-block-for-res'}>
+          <div ref={contactTitleRef} className={'flex flex-col mt-80 my-block-for-res'}>
             <div className={'contact-heading flex justify-center items-center'}>
               <div className={'contact-heading-text cursor-default'}>
                 {data.homepage.contactUsHeading}
@@ -73,7 +75,7 @@ export default function ContactUs({ data, getRef }: any) {
             </div>
             <div className={'my-block mt-10'}>
               <div className={'my-row-contact flex justify-between'}>
-                <div className={'flex'}>
+                <a href={ `${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[0].linkValue}`} className={'flex'}>
                   <div
                     className={'my-round-icon flex justify-center items-center'}
                   >
@@ -86,8 +88,8 @@ export default function ContactUs({ data, getRef }: any) {
                   >
                     {data.common.contactUsLinks[0].text}
                   </div>
-                </div>
-                <div className={'flex my-m-t'}>
+                </a>
+                <a href={ `${data.common.contactUsLinks[1].linkType}:${data.common.contactUsLinks[1].linkValue}`} className={'flex my-m-t'}>
                   <div
                     className={'my-round-icon flex justify-center items-center'}
                   >
@@ -100,10 +102,10 @@ export default function ContactUs({ data, getRef }: any) {
                   >
                     {data.common.contactUsLinks[1].text}
                   </div>
-                </div>
+                </a>
               </div>
               <div className={'my-row-contact flex justify-between mt-4'}>
-                <div className={'flex'}>
+                <a href={`http://maps.google.com/?q=${data.common.contactUsLinks[2].text}`} target={"_blank"} className={'flex'}>
                   <div
                     className={'my-round-icon flex justify-center items-center'}
                   >
@@ -116,8 +118,8 @@ export default function ContactUs({ data, getRef }: any) {
                   >
                     {data.common.contactUsLinks[2].text}
                   </div>
-                </div>
-                <div className={'flex my-m-t'}>
+                </a>
+                <a href={ `mailto:${data.common.contactUsLinks[3].text}`} className={'flex my-m-t'}>
                   <div
                     className={'my-round-icon flex justify-center items-center'}
                   >
@@ -132,11 +134,11 @@ export default function ContactUs({ data, getRef }: any) {
                   >
                     {data.common.contactUsLinks[3].text}
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
-          <div className={''}>
+          <div ref={contactRef} >
             <ContactUsForm data={data} />
           </div>
         </div>
