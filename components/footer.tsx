@@ -3,19 +3,12 @@ import { WrapperLarge } from './wrapper'
 import { ButtonForFooter } from '@/components/design-components/ButtonForFooter'
 import { useEffect, useRef } from 'react'
 
-interface Props {
-  data: CommonType
-  aboutRef: any
-  contactUsRef: any
-  footerRef: any
-}
-
 export default function Footer({
   data,
   aboutRef,
   contactUsRef,
   footerRef,
-}: Props) {
+}: any) {
   const footerR = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

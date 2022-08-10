@@ -1,16 +1,7 @@
-import { HomePageType } from '@/lib/interface'
 import React, { RefAttributes, useEffect, useRef } from 'react'
-import { WrapperLarge } from '../wrapper'
 import { Button } from '@/components/design-components/Button'
-import { node } from 'prop-types'
 
-interface Props {
-  data: HomePageType
-  getRef: any
-  whatRef: any
-}
-
-export default function AboutTheClinic({ data, getRef, whatRef }: Props) {
+export default function AboutTheClinic({ data, getRef, whatRef }: any) {
   const aboutRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -44,7 +35,7 @@ export default function AboutTheClinic({ data, getRef, whatRef }: Props) {
       </div>
 
       <style jsx>
-        {' '}
+
         {`
           .my-main-container {
             height: 917px;

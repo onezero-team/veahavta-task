@@ -8,7 +8,6 @@ export const ButtonForFooter = ({ text }: Props) => {
       <button className={'btn-footer'}>{text}</button>
 
       <style jsx>
-        {' '}
         {`
           .btn-footer {
             height: 48px;

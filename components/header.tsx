@@ -1,19 +1,11 @@
 import { useLocale } from '@/lib/hooks'
-import { Common, CommonType } from '@/lib/interface'
 import Link from 'next/link'
 import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
-import React, { MouseEventHandler, useEffect, useRef, useState } from 'react'
-import { is } from '@babel/types'
+import React, { useEffect, useRef, useState } from 'react'
 
-interface Props {
-  data: CommonType
-  about: any
-  contact: any
-  footerRef: any
-}
 
-export default function Header({ data, about, contact, footerRef }: Props) {
+export default function Header({ data, about, contact, footerRef }: any) {
   const { dir } = useLocale()
 
   const ulRef = useRef<HTMLUListElement | null>(null)
@@ -42,7 +34,8 @@ export default function Header({ data, about, contact, footerRef }: Props) {
     })
 
     document.addEventListener('click', (event) => {
-      const searchPanel = event.target.closest('.my-nav-net')
+      // @ts-ignore
+      const searchPanel = event?.target?.closest('.my-nav-net')
       if (!searchPanel) {
         addOrRemoveClassForDropDown('remove')
         setIsMenu(true)

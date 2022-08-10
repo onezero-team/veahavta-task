@@ -31,7 +31,6 @@ export const Button = ({ text, type, refBtn }: Props) => {
         <div className={getClass()}>{text}</div>
       </button>
       <style jsx>
-        {' '}
         {`
           .my-button {
             z-index: 5;

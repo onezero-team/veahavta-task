@@ -17,7 +17,6 @@ export async function getStaticProps({ locale }: NextPageContext) {
 }
 
 export default function Home({ data, getRef, about, what }: any) {
-  console.log(data)
   return (
     <>
       <Banner data={data} about={about} />

@@ -21,7 +21,6 @@ export const ServiceCard = ({ imageUrl, title, description }: Props) => {
         </div>
       </div>
       <style jsx>
-        {' '}
         {`
           .card-container {
             height: 480px;

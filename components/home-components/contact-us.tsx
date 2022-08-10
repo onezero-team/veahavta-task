@@ -1,14 +1,7 @@
-import { HomePageType } from '@/lib/interface'
 import React, { useEffect, useRef, useState } from 'react'
-import { WrapperLarge } from '../wrapper'
 import { ContactUsForm } from '@/components/design-components/ContactUsForm'
 
-interface Props {
-  data: HomePageType
-  getRef: any
-}
-
-export default function ContactUs({ data, getRef }: Props) {
+export default function ContactUs({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
   const contactRef = useRef<HTMLDivElement | null>(null)
 

@@ -2,9 +2,7 @@ import { HomePageType } from '@/lib/interface'
 import { Button } from '@/components/design-components/Button'
 import { useFormik } from 'formik'
 
-interface Props {
-  data: HomePageType
-}
+
 
 interface Error {
   firstName: string
@@ -14,7 +12,7 @@ interface Error {
   message: string
 }
 
-export const ContactUsForm = ({ data }: Props) => {
+export const ContactUsForm = ({ data } :HomePageType) => {
   const validate = (values: any) => {
     const errors = {} as Error
 
@@ -162,14 +160,13 @@ export const ContactUsForm = ({ data }: Props) => {
               </div>
             </div>
           </div>
-          <div type={'submit'} className={'mt-9'}>
+          <div className={'mt-9'}>
             <Button text={data.common.contactUsFormSendButton} type={'big'} />
           </div>
         </div>
       </form>
 
       <style jsx>
-        {' '}
         {`
           .main-container-contact-us-form {
             height: 700px;

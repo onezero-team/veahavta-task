@@ -1,13 +1,8 @@
-import { HomePageType } from '@/lib/interface'
 import React, { useEffect, useRef, useState } from 'react'
 import { ServiceCard } from '@/components/design-components/ServiceCard'
 
-interface Props {
-  data: HomePageType
-  getRef: any
-}
 
-export default function WhatWeDo({ data, getRef }: Props) {
+export default function WhatWeDo({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
   const cardContainerRef = useRef<HTMLDivElement | null>(null)
   const mainContainerRef = useRef<HTMLDivElement | null>(null)
@@ -32,7 +27,7 @@ export default function WhatWeDo({ data, getRef }: Props) {
   }, [])
 
   const getWhatWeDoCards = () => {
-    return data.homepage?.whatWeDoCards?.map((card, index) => {
+    return data.homepage?.whatWeDoCards?.map((card: { imagePath: string; title: string; text: string }, index: React.Key | null | undefined) => {
       if (index === 0) {
         return (
           <ServiceCard
@@ -120,7 +115,8 @@ export default function WhatWeDo({ data, getRef }: Props) {
             <div className={'scroll-btn absolute justify-between'}>
               <img
                 onClick={() => {
-                  cardContainerRef.current?.scrollLeft +=
+                  // @ts-ignore
+                  cardContainerRef?.current?.scrollLeft +=
                     scrollDirectionForAddXAxis('left')
                 }}
                 className={'cursor-pointer my-left-btn' + isEn}
@@ -129,6 +125,7 @@ export default function WhatWeDo({ data, getRef }: Props) {
 
               <img
                 onClick={() => {
+                  // @ts-ignore
                   cardContainerRef.current?.scrollLeft +=
                     scrollDirectionForAddXAxis('right')
                 }}

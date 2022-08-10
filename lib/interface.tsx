@@ -57,6 +57,14 @@ export type Common = {
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+  contactUsFormSuccessMessage : string
+  contactUsFormErrorFirstNameMissing :string
+  contactUsFormErrorLastNameMissing : string
+  contactUsFormErrorEmailMissing : string
+  contactUsFormErrorEmailInvalid : string
+  contactUsFormErrorPhoneMissing :string
+  contactUsFormErrorPhoneInvalid : string
+  contactUsFormErrorMessageMissing : string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {

@@ -3,12 +3,9 @@ import themePreval from '@/lib/theme.preval'
 import React from 'react'
 import { Button } from '@/components/design-components/Button'
 
-interface Props {
-  data: HomePageType
-  about: any
-}
 
-export default function Banner({ data, about }: Props) {
+
+export default function Banner({ data, about }: any) {
   const splitSentence = data.homepage.title.split('-')
 
   return (
