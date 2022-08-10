@@ -61,7 +61,7 @@ export default function ContactUsForm({ data }: HomePageType) {
               className="form flex flex-col justify-center items-center w-full p-4"
               onSubmit={handleSubmit}
             >
-              <div className="inputs form-group grid grid-cols-2 w-full">
+              <div className="inputs grid grid-cols-2 w-full">
                 <div className="flex flex-col justify-evenly p-5">
                   <label className="font-bold text-[22px]" htmlFor="firstName">
                     {data.common.contactUsFormFirstName}
@@ -119,35 +119,35 @@ export default function ContactUsForm({ data }: HomePageType) {
                   {errors.phone && touched.phone && errors.phone}
                 </div>
               </div>
-              <div className="textfield flex flex-col justify-evenly p-5">
-                <label className="font-bold text-[22px]" htmlFor="message">
-                  {data.common.contactUsFormMessage}
-                </label>
-                <textarea
-                  className="textarea w-[580px] h-[145px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2 "
-                  name="message"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.message}
-                />
-                {errors.message && touched.message && errors.message}
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  width: '100%',
-                  justifyContent: 'start',
-                  marginTop: '30px',
-                }}
-              >
-                <button
-                  className="sendButton w-48 h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-3xl mt-2 font-bold text-[28px]"
-                  type="submit"
-                  disabled={isSubmitting}
+                <div className="textfield flex flex-col justify-evenly p-5">
+                  <label className="font-bold text-[22px]" htmlFor="message">
+                    {data.common.contactUsFormMessage}
+                  </label>
+                  <textarea
+                    className="textarea w-[580px] h-[145px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2 "
+                    name="message"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.message}
+                  />
+                  {errors.message && touched.message && errors.message}
+                </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    width: '100%',
+                    justifyContent: 'start',
+                    marginTop: '30px',
+                  }}
                 >
-                  {data.common.contactUsFormSendButton}
-                </button>
-              </div>
+                  <button
+                    className="sendButton w-48 h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-3xl mt-2 font-bold text-[28px]"
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    {data.common.contactUsFormSendButton}
+                  </button>
+                </div>
             </form>
           )}
         </Formik>
@@ -169,8 +169,8 @@ export default function ContactUsForm({ data }: HomePageType) {
         @media screen and (max-width: 768px) {
           div.contactUsForm {
             margin-top: 100px;
+            height:100%;
             width: 80vw;
-            height: 100vh;
           }
           div.inputs {
             width: 100%;

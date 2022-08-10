@@ -22,7 +22,7 @@ export default function Footer({ data }: CommonType) {
             {data.footerMenuTitle}
           </span>
           {data.appLinks.map((item, index) => (
-            <a key={index} className="link">
+            <a href={item.relativeLink} key={index} className="link">
               {item.text}
             </a>
           ))}
@@ -31,11 +31,31 @@ export default function Footer({ data }: CommonType) {
           <span className="menu_title font-bold text-[22px]">
             {data.footerContactUsTitle}
           </span>
-          {data.contactUsLinks.map((item, index) => (
-            <a key={index} className="link">
-              {item.text}
-            </a>
-          ))}
+          {data.contactUsLinks.map((item, index) => {
+            if (item.linkType === 'email') {
+              return (
+                <a href={`mailto:${item.text}`} key={index} className="link">
+                  {item.text}
+                </a>
+              )
+            } else if (item.linkType === 'tel') {
+              return (
+                <a href={`tel:${item.text}`} key={index} className="link">
+                  {item.text}
+                </a>
+              )
+            } else if (item.linkType === 'address') {
+              return (
+                <a
+                  href={`https://www.google.com/maps/place/${item.text}`}
+                  key={index}
+                  className="link"
+                >
+                  {item.text}
+                </a>
+              )
+            }
+          })}
         </div>
       </footer>
       <style jsx>{`
@@ -44,8 +64,7 @@ export default function Footer({ data }: CommonType) {
         }
         @media screen and (max-width: 768px) {
           footer {
-            margin-top: 700px;
-            height: 70vh;
+            margin-top: 40%;
             display: flex;
             flex-direction: column;
           }

@@ -5,6 +5,7 @@ import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import LogoForPage from '../assets/logo.png'
 import Image from 'next/image'
+import Navbar from './home-components/Navbar/index'
 export default function Header({ data }: CommonType) {
   const { dir } = useLocale()
   return (
@@ -30,7 +31,7 @@ export default function Header({ data }: CommonType) {
                 </li>
               ))}
             </div>
-            <div className="links flex flex-row gap-x-2 justify-between ml-3">
+            <div className="flags flex flex-row gap-x-2 justify-between ml-3">
               <li className="flex items-center">
                 <ChangeLangButton className="" lang="en">
                   {data.languageNames[0].en}
@@ -42,23 +43,7 @@ export default function Header({ data }: CommonType) {
                 </ChangeLangButton>
               </li>
             </div>
-            {/* <div className="menu-button hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                id="menu-button"
-                className="h-6 w-6 cursor-pointer md:hidden block"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </div> */}
+            <Navbar data={data} />
           </ul>
         </div>
       </header>
@@ -76,6 +61,7 @@ export default function Header({ data }: CommonType) {
             display: flex;
             justify-content: space-between;
             padding-top: 0;
+            width: 50%;
           }
 
           .menu-button {
@@ -87,6 +73,16 @@ export default function Header({ data }: CommonType) {
             background: #e6e4fd;
             border-radius: 51px;
             margin-right: 1rem;
+          }
+          .links {
+            display: none;
+          }
+          .flags {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0;
+            align-items: center;
+            justify-content: center;
           }
         }
       `}</style>

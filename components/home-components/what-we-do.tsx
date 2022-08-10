@@ -2,6 +2,7 @@ import { HomePageType } from '@/lib/interface'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
 import Image from 'next/image'
+import CardSwiper from './swiper'
 
 export default function WhatWeDo({ data }: HomePageType) {
   return (
@@ -17,7 +18,7 @@ export default function WhatWeDo({ data }: HomePageType) {
           <p className="title font-bold text-[82px]">
             {data.homepage.whatWeDoTitle}
           </p>
-          <div className="cards flex justify-between items-center w-full mt-10">
+          <div className="cards flex justify-between w-full mt-10">
             {data.homepage.whatWeDoCards.map((card, index) => (
               <div
                 className="card w-[338px] h-[480px] drop-shadow-lg rounded-xl p-2"
@@ -38,6 +39,7 @@ export default function WhatWeDo({ data }: HomePageType) {
               </div>
             ))}
           </div>
+          <CardSwiper data={data} />
         </div>
       </div>
       <style jsx>{`
@@ -65,11 +67,10 @@ export default function WhatWeDo({ data }: HomePageType) {
             width: 100vw;
           }
           p.title {
-            display: none;
+            text-align: center;
           }
           div.cards {
-            flex-direction: column;
-            display: flex;
+            display: none;
           }
           div.card {
             margin-bottom: 20px;

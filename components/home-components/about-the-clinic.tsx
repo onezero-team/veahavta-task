@@ -36,6 +36,7 @@ export default function AboutTheClinic({ data }: HomePageType) {
       <style jsx>{`
         div.wrapper {
           background: #fff;
+          z-index: 10;
         }
         p.heading {
           color: #4e47f9;

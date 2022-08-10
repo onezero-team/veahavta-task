@@ -49,7 +49,50 @@ export default function ContactUs({ data }: HomePageType) {
                       </a>
                     </div>
                   )
+                } else if (item.linkType === 'tel') {
+                  return (
+                    <div className="flex items-center w-full" key={index}>
+                      <div className="img mt-10">
+                        <Image
+                          src={item.imagePath}
+                          alt="vector"
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <a
+                        href={`tel:${item.text}`}
+                        className="text mt-10"
+                        key={index}
+                      >
+                        {item.text}
+                      </a>
+                    </div>
+                  )
+                } else if (item.linkType === 'address') {
+                  return (
+                    <div className="flex items-center w-full" key={index}>
+                      <div className="img mt-10">
+                        <Image
+                          src={item.imagePath}
+                          alt="vector"
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <a
+                        href={`https://www.google.com/maps/place/${item.text}`}
+                        className="text mt-10"
+                        key={index}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.text}
+                      </a>
+                    </div>
+                  )
                 }
+
                 return (
                   <div className="flex items-center w-full" key={index}>
                     <div className="img mt-10">
@@ -81,12 +124,10 @@ export default function ContactUs({ data }: HomePageType) {
         }
 
         @media screen and (max-width: 768px) {
-          div.wrapper {
-            margin-top: 1450px;
-          }
           div.container {
             display: flex;
             flex-direction: column;
+            height: 100%;
           }
           div.vector {
             display: none;
@@ -106,6 +147,14 @@ export default function ContactUs({ data }: HomePageType) {
           }
           div.contactLinks div .text {
             padding-right: 20px;
+          }
+          div.details {
+            margin-top: 2px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
         }
       `}</style>{' '}
