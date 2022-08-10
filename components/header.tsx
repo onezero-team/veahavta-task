@@ -14,7 +14,8 @@ export default function Header({ data }: CommonType) {
         dir={dir}
         className={'bg-light text-primary'}
       />
-      <header className="h-header z-10 pt-4 px-4">
+      <header id="outer-container" className="h-header z-10 pt-4 px-4">
+
         <div
           id="menu"
           className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg bg-light rounded-lg"
@@ -42,7 +43,7 @@ export default function Header({ data }: CommonType) {
                 </ChangeLangButton>
               </li>
             </div>
-            <div className="menu-button hidden">
+            {/* <div className="menu-button hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="menu-button"
@@ -58,7 +59,7 @@ export default function Header({ data }: CommonType) {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-            </div>
+            </div> */}
           </ul>
         </div>
       </header>
@@ -77,9 +78,7 @@ export default function Header({ data }: CommonType) {
             justify-content: space-between;
             padding-top: 0;
           }
-          .links {
-            display: none;
-          }
+       
           .menu-button {
             display: flex;
             justify-content: center;

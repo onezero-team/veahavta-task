@@ -43,6 +43,12 @@ export default function AboutTheClinic({ data }: HomePageType) {
 
         button.aboutUsButton {
           background: #4e47f9;
+          transition: all 0.3s ease-in-out;
+        }
+        button.aboutUsButton:hover {
+          background: white;
+          color: #4e47f9;
+          transition: all 0.3s ease-in-out;
         }
         @media screen and (max-width: 768px) {
           div.wrapper {

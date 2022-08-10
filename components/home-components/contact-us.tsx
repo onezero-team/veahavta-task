@@ -5,7 +5,9 @@ import { Formik } from 'formik'
 import Vector from '../../assets/vector.png'
 import Image from 'next/image'
 import Vector_2 from '../../assets/vector_1.png'
+import ContactUsForm from './formIk'
 export default function ContactUs({ data }: HomePageType) {
+  console.log(data)
   return (
     <WrapperLarge>
       <div id="contact-us" className="wrapper z-10 flex justify-center">
@@ -27,164 +29,45 @@ export default function ContactUs({ data }: HomePageType) {
               {data.homepage.contactUsText}
             </div>
             <div className="contactLinks grid grid-cols-2">
-              {data.common.contactUsLinks.map((item, index) => (
-                <a className="mt-10" key={index}>
-                  {item.text}
-                </a>
-              ))}
+              {data.common.contactUsLinks.map((item, index) => {
+                if (item.linkType === 'email') {
+                  return (
+                    <div className="flex items-center w-full" key={index}>
+                      <div className="img mt-10">
+                        <Image
+                          src={item.imagePath}
+                          alt="vector"
+                          width={50}
+                          height={50}
+                        />
+                      </div>
+                      <a
+                        href={`mailto:${item.text}`}
+                        className="text mt-10"
+                        key={index}
+                      >
+                        {item.text}
+                      </a>
+                    </div>
+                  )
+                }
+                return (
+                  <div className="flex items-center w-full" key={index}>
+                    <div className="img mt-10">
+                      <Image
+                        src={item.imagePath}
+                        alt="vector"
+                        width={50}
+                        height={50}
+                      />
+                    </div>
+                    <a className="text mt-10">{item.text}</a>
+                  </div>
+                )
+              })}
             </div>
           </div>
-          <div className="contactUsForm border-box  w-[650px] h-[700px] left-80 top-[2250px] drop-shadow-lg rounded-3xl">
-            <Formik
-              initialValues={{
-                email: '',
-                firstName: '',
-                lastName: '',
-                message: '',
-                phone: '',
-              }}
-              validate={(values) => {
-                const errors = {}
-                if (!values.email) {
-                  errors.email = data.common.contactUsFormErrorEmailMissing
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = data.common.contactUsFormErrorEmailInvalid
-                } else if (!values.firstName) {
-                  errors.firstName =
-                    data.common.contactUsFormErrorFirstNameMissing
-                } else if (!values.lastName) {
-                  errors.lastName =
-                    data.common.contactUsFormErrorLastNameMissing
-                } else if (!values.message) {
-                  errors.message = data.common.contactUsFormErrorMessageMissing
-                } else if (!values.phone) {
-                  errors.phone = data.common.contactUsFormErrorPhoneMissing
-                }
-
-                return errors
-              }}
-              onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  alert(data.common.contactUsFormSuccessMessage)
-
-                  setSubmitting(false)
-                }, 400)
-              }}
-            >
-              {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                handleSubmit,
-                isSubmitting,
-              }) => (
-                <form
-                  className="form flex flex-col justify-center items-center w-full p-4"
-                  onSubmit={handleSubmit}
-                >
-                  <div className="inputs form-group grid grid-cols-2 w-full">
-                    <div className="flex flex-col justify-evenly p-5">
-                      <label
-                        className="font-bold text-[22px]"
-                        htmlFor="firstName"
-                      >
-                        {data.common.contactUsFormFirstName}
-                      </label>
-                      <input
-                        type="text"
-                        name="firstName"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.firstName}
-                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
-                      />
-                      {errors.firstName &&
-                        touched.firstName &&
-                        errors.firstName}
-                    </div>
-                    <div className="flex flex-col justify-evenly p-5">
-                      <label
-                        className="font-bold text-[22px]"
-                        htmlFor="lastName"
-                      >
-                        {data.common.contactUsFormLastName}
-                      </label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.lastName}
-                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
-                      />
-                      {errors.lastName && touched.lastName && errors.lastName}
-                    </div>
-                    <div className="flex flex-col justify-evenly p-5">
-                      <label className="font-bold text-[22px]" htmlFor="email">
-                        {data.common.contactUsFormEmail}
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.email}
-                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
-                      />
-                      {errors.email && touched.email && errors.email}
-                    </div>
-                    <div className="flex flex-col justify-evenly p-5">
-                      <label className="font-bold text-[22px]" htmlFor="phone">
-                        {data.common.contactUsFormPhone}
-                      </label>
-                      <input
-                        type="text"
-                        name="phone"
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.phone}
-                        className="w-full h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2"
-                      />
-                      {errors.phone && touched.phone && errors.phone}
-                    </div>
-                  </div>
-                  <div className="textfield flex flex-col justify-evenly p-5">
-                    <label className="font-bold text-[22px]" htmlFor="message">
-                      {data.common.contactUsFormMessage}
-                    </label>
-                    <textarea
-                      className="textarea w-[580px] h-[145px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2 "
-                      name="message"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.message}
-                    />
-                    {errors.message && touched.message && errors.message}
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      width: '100%',
-                      justifyContent: 'start',
-                      marginTop: '30px',
-                    }}
-                  >
-                    <button
-                      className="sendButton w-48 h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-3xl mt-2 font-bold text-[28px]"
-                      type="submit"
-                      disabled={isSubmitting}
-                    >
-                      {data.common.contactUsFormSendButton}
-                    </button>
-                  </div>
-                </form>
-              )}
-            </Formik>
-          </div>
+          <ContactUsForm data={data} />
         </div>
       </div>
       <style jsx>{`
@@ -197,13 +80,7 @@ export default function ContactUs({ data }: HomePageType) {
           background: #ffffff;
           color: #4e47f9;
         }
-        div.contactUsForm {
-          background: #ffffff;
-        }
-        button.sendButton {
-          background: #4e47f9;
-          color: #ffffff;
-        }
+
         @media screen and (max-width: 768px) {
           div.wrapper {
             margin-top: 1450px;
@@ -215,25 +92,21 @@ export default function ContactUs({ data }: HomePageType) {
           div.vector {
             display: none;
           }
-          div.details {
-            padding: 20px;
-          }
+
           div.contactLinks {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+          }
+          div.contactLinks div {
             display: flex;
-            flex-direction: column;
+            justify-content: start;
           }
-          div.contactUsForm {
-            margin-top: 100px;
-            width: 80vw;
-            height: 100vh;
+          div.contactLinks div .img {
+            padding-right: 15%;
           }
-          div.inputs {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-          }
-          textarea.textarea {
-            width: 63vw;
+          div.contactLinks div .text {
+            padding-right: 20px;
           }
         }
       `}</style>{' '}

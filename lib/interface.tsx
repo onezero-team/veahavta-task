@@ -7,6 +7,8 @@ export type HomePageType = {
 
 export type CommonType = {
   data: Common
+  outerContainerId: string
+  pageWrapId: string
 }
 
 export type Homepage = {
