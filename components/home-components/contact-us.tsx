@@ -1,10 +1,9 @@
 import { HomePageType } from '@/lib/interface'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
-import { Formik } from 'formik'
-import Vector from '../../assets/vector.png'
+import Vector from '../../assets/Vector.png'
 import Image from 'next/image'
-import Vector_2 from '../../assets/vector_1.png'
+import Vector_2 from '../../assets/Vector_1.png'
 import ContactUsForm from './formIk'
 export default function ContactUs({ data }: HomePageType) {
   console.log(data)
