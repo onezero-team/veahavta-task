@@ -5,6 +5,7 @@ import WhatWeDo from '@/components/home-components/what-we-do'
 import { HomePageType, HOMEPAGE_QUERY } from '@/lib/interface'
 import { NextPageContext } from 'next'
 import { request } from '../lib/datocms'
+import Header from '@/components/header'
 
 export async function getStaticProps({ locale }: NextPageContext) {
   const data = await request({
@@ -15,16 +16,16 @@ export async function getStaticProps({ locale }: NextPageContext) {
   }
 }
 
-export default function Home({ data }: HomePageType) {
-  // console.log('Home data\n=========\n', data)
+export default function Home({ data, getRef, about, what }: any) {
+  console.log(data)
   return (
     <>
-      <Banner data={data} />
-      <AboutTheClinic data={data} />
-      <WhatWeDo data={data} />
-      <ContactUs data={data} />
-      Here is the structure of the home page data:
-      <pre className="bg-dark text-light">{JSON.stringify(data, null, 2)}</pre>
+      <Banner data={data} about={about} />
+      <AboutTheClinic data={data} getRef={getRef} whatRef={what} />
+      <WhatWeDo data={data} getRef={getRef} />
+      <ContactUs data={data} getRef={getRef} />
+      {/*Here is the structure of the home page data:*/}
+      {/*<pre className="bg-dark text-light">{JSON.stringify(data, null, 2)}</pre>*/}
     </>
   )
 }

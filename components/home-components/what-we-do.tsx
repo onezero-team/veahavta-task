@@ -1,7 +1,296 @@
 import { HomePageType } from '@/lib/interface'
-import React from 'react'
-import { WrapperLarge } from '../wrapper'
+import React, { useEffect, useRef, useState } from 'react'
+import { ServiceCard } from '@/components/design-components/ServiceCard'
 
-export default function WhatWeDo({ data }: HomePageType) {
-  return <WrapperLarge>What We Do </WrapperLarge>
+interface Props {
+  data: HomePageType
+  getRef: any
+}
+
+export default function WhatWeDo({ data, getRef }: Props) {
+  const [isEn, setIsEn] = useState<string>('')
+  const cardContainerRef = useRef<HTMLDivElement | null>(null)
+  const mainContainerRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    if (
+      window.location.pathname !== '/' &&
+      window.location.pathname !== '/ar'
+    ) {
+      if (isEn === '') {
+        setIsEn('-en')
+      }
+    } else {
+      if (isEn === '-en') {
+        setIsEn('')
+      }
+    }
+  })
+
+  useEffect(() => {
+    getRef('whatWeDo', mainContainerRef)
+  }, [])
+
+  const getWhatWeDoCards = () => {
+    return data.homepage?.whatWeDoCards?.map((card, index) => {
+      if (index === 0) {
+        return (
+          <ServiceCard
+            key={index}
+            imageUrl={card.imagePath}
+            title={card.title}
+            description={card.text}
+          />
+        )
+      } else if (index !== 0 && isEn === '') {
+        return (
+          <div key={index} className={'mr-5'}>
+            <ServiceCard
+              imageUrl={card.imagePath}
+              title={card.title}
+              description={card.text}
+            />
+          </div>
+        )
+      } else {
+        return (
+          <div key={index} className={'ml-5'}>
+            <ServiceCard
+              imageUrl={card.imagePath}
+              title={card.title}
+              description={card.text}
+            />
+          </div>
+        )
+      }
+    })
+  }
+
+  function leftOrRight(type: string) {
+    if (type === 'left') {
+      if (isEn === '') {
+        return '/icons/right-button-for-card.svg'
+      } else {
+        return '/icons/left-button-for-card.svg'
+      }
+    } else {
+      if (isEn === '') {
+        return '/icons/left-button-for-card.svg'
+      } else {
+        return '/icons/right-button-for-card.svg'
+      }
+    }
+  }
+
+  function scrollDirectionForAddXAxis(type: string) {
+    if (type === 'left') {
+      if (isEn === '') {
+        return Math.abs(355)
+      } else {
+        return -Math.abs(355)
+      }
+    } else {
+      if (isEn === '') {
+        return -Math.abs(355)
+      } else {
+        return Math.abs(355)
+      }
+    }
+  }
+
+  return (
+    <>
+      <div ref={mainContainerRef} className={'my-main-container-what-we-do'}>
+        <div className={'w-full flex justify-center'}>
+          <div className={'flex flex-col items-center move-left'}>
+            <div className={'my-header-what cursor-default'}>
+              {data.homepage.whatWeDoHeading}
+            </div>
+            <div className={'my-title-what cursor-default'}>
+              {data.homepage.whatWeDoTitle}
+            </div>
+          </div>
+        </div>
+        <div className={'w-full flex justify-center card-main-container'}>
+          <div
+            ref={cardContainerRef}
+            className={'card-container flex justify-between'}
+          >
+            {getWhatWeDoCards()}
+            <div className={'scroll-btn absolute justify-between'}>
+              <img
+                onClick={() => {
+                  cardContainerRef.current?.scrollLeft +=
+                    scrollDirectionForAddXAxis('left')
+                }}
+                className={'cursor-pointer my-left-btn' + isEn}
+                src={leftOrRight('left')}
+              />
+
+              <img
+                onClick={() => {
+                  cardContainerRef.current?.scrollLeft +=
+                    scrollDirectionForAddXAxis('right')
+                }}
+                className={'cursor-pointer my-right-btn' + isEn}
+                src={leftOrRight('right')}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <style jsx>
+        {`
+          .my-main-container-what-we-do {
+            min-height: 948px;
+          }
+
+          .scroll-btn {
+            display: none;
+            width: 88.77%;
+          }
+
+          .my-right-btn {
+            margin-top: 200px;
+            margin-left: -33px;
+          }
+
+          .my-left-btn {
+            margin-right: -35px;
+            margin-top: 200px;
+          }
+
+          .my-right-btn-en {
+            margin-top: 200px;
+            margin-right: -35px;
+          }
+
+          .my-left-btn-en {
+            margin-top: 200px;
+            margin-left: -22px;
+          }
+
+          .card-container {
+            width: 1430px;
+            margin-top: 58px;
+            height: 550px;
+          }
+
+          .my-title-what {
+            height: auto;
+            width: auto;
+            left: 691px;
+            top: 1730px;
+            font-family: Assistant;
+            font-size: 82px;
+            font-weight: 700;
+            line-height: 107px;
+            text-align: left;
+            color: black;
+          }
+
+          .my-header-what {
+            height: auto;
+            width: auto;
+            left: 872px;
+            top: 1692px;
+            font-family: Assistant;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 37px;
+            color: #d25c78;
+            margin-top: 50px;
+          }
+
+          @media only screen and (max-width: 1500px) {
+            .card-container {
+              width: 1430px;
+              margin-top: 58px;
+              overflow: auto;
+              overflow-y: hidden;
+              width: 90vw;
+            }
+
+            .card-container::-webkit-scrollbar {
+              display: none;
+            }
+
+            .my-title-what {
+              display: none;
+            }
+
+            .make-margin {
+              margin: 10px;
+            }
+
+            .scroll-btn {
+              display: flex;
+            }
+          }
+
+          @media only screen and (max-width: 1340px) {
+            .my-main-container-what-we-do {
+              height: 1300px;
+            }
+          }
+
+          @media only screen and (max-width: 484px) {
+            .my-main-container-what-we-do {
+              height: 1450px;
+            }
+          }
+
+          @media only screen and (max-width: 1406px) {
+            .my-title-what {
+              display: none;
+            }
+          }
+
+          @media only screen and (max-width: 550px) {
+            .my-left-btn-en {
+              margin-top: 200px;
+              margin-left: -22px;
+            }
+
+            .my-right-btn-en {
+              margin-top: 200px;
+              margin-right: -25px;
+            }
+          }
+
+          @media only screen and (max-width: 998px) {
+            .my-title-what {
+              display: none;
+            }
+
+            .make-margin {
+              margin: 10px;
+            }
+          }
+
+          @media only screen and (max-width: 685px) {
+            .my-right-btn {
+              margin-top: 200px;
+              margin-left: -13px;
+            }
+
+            .my-left-btn {
+              margin-right: -17px;
+              margin-top: 200px;
+            }
+          }
+
+          @media only screen and (max-width: 413px) {
+            .my-title-what {
+              display: none;
+            }
+
+            .make-margin {
+              margin: 10px;
+            }
+          }
+        `}
+      </style>
+    </>
+  )
 }
