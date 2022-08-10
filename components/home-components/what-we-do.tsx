@@ -10,7 +10,7 @@ export default function WhatWeDo({ data, getRef }: any) {
   function changeXAxis() {
     if (window.innerWidth > 500) {
       if (xAxis !== 355) {
-        setXAxis(355);
+        setXAxis(355)
       }
     } else {
       if (xAxis !== 255) {
@@ -20,10 +20,9 @@ export default function WhatWeDo({ data, getRef }: any) {
   }
 
   useEffect(() => {
-    changeXAxis();
-    window.addEventListener('resize', changeXAxis);
-
-  },[])
+    changeXAxis()
+    window.addEventListener('resize', changeXAxis)
+  }, [])
 
   useEffect(() => {
     if (

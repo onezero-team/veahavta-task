@@ -77,7 +77,10 @@ export default function Footer({
               href={`mailto:${data.common.contactUsLinks[3].text}`}
               className={'flex data-contact-row cursor-default'}
             >
-              <img className={'icon-img cursor-pointer'} src={'/icons/email-purple.svg'} />
+              <img
+                className={'icon-img cursor-pointer'}
+                src={'/icons/email-purple.svg'}
+              />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
                 <div className={'second cursor-pointer'}>
                   {data.common.contactUsLinks[3].text}
@@ -90,7 +93,10 @@ export default function Footer({
               className={'flex data-contact-row third-row cursor-default'}
               rel="noreferrer"
             >
-              <img className={'icon-img cursor-pointer'} src={'/icons/location-purple.svg'} />
+              <img
+                className={'icon-img cursor-pointer'}
+                src={'/icons/location-purple.svg'}
+              />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
                 <div className={'cursor-pointer'}>
                   {data.common.contactUsLinks[2].text}
