@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ServiceCard } from '@/components/design-components/ServiceCard'
 
-
 export default function WhatWeDo({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
   const cardContainerRef = useRef<HTMLDivElement | null>(null)
@@ -27,38 +26,43 @@ export default function WhatWeDo({ data, getRef }: any) {
   }, [])
 
   const getWhatWeDoCards = () => {
-    return data.homepage?.whatWeDoCards?.map((card: { imagePath: string; title: string; text: string }, index: React.Key | null | undefined) => {
-      if (index === 0) {
-        return (
-          <ServiceCard
-            key={index}
-            imageUrl={card.imagePath}
-            title={card.title}
-            description={card.text}
-          />
-        )
-      } else if (index !== 0 && isEn === '') {
-        return (
-          <div key={index} className={'mr-5'}>
+    return data.homepage?.whatWeDoCards?.map(
+      (
+        card: { imagePath: string; title: string; text: string },
+        index: React.Key | null | undefined,
+      ) => {
+        if (index === 0) {
+          return (
             <ServiceCard
+              key={index}
               imageUrl={card.imagePath}
               title={card.title}
               description={card.text}
             />
-          </div>
-        )
-      } else {
-        return (
-          <div key={index} className={'ml-5'}>
-            <ServiceCard
-              imageUrl={card.imagePath}
-              title={card.title}
-              description={card.text}
-            />
-          </div>
-        )
-      }
-    })
+          )
+        } else if (index !== 0 && isEn === '') {
+          return (
+            <div key={index} className={'mr-5'}>
+              <ServiceCard
+                imageUrl={card.imagePath}
+                title={card.title}
+                description={card.text}
+              />
+            </div>
+          )
+        } else {
+          return (
+            <div key={index} className={'ml-5'}>
+              <ServiceCard
+                imageUrl={card.imagePath}
+                title={card.title}
+                description={card.text}
+              />
+            </div>
+          )
+        }
+      },
+    )
   }
 
   function leftOrRight(type: string) {

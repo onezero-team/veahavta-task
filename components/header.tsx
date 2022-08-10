@@ -4,7 +4,6 @@ import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import React, { useEffect, useRef, useState } from 'react'
 
-
 export default function Header({ data, about, contact, footerRef }: any) {
   const { dir } = useLocale()
 

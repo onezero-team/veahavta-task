@@ -35,7 +35,6 @@ export default function AboutTheClinic({ data, getRef, whatRef }: any) {
       </div>
 
       <style jsx>
-
         {`
           .my-main-container {
             height: 917px;

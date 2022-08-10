@@ -2,8 +2,6 @@ import { HomePageType } from '@/lib/interface'
 import { Button } from '@/components/design-components/Button'
 import { useFormik } from 'formik'
 
-
-
 interface Error {
   firstName: string
   lastName: string
@@ -12,7 +10,7 @@ interface Error {
   message: string
 }
 
-export const ContactUsForm = ({ data } :HomePageType) => {
+export const ContactUsForm = ({ data }: HomePageType) => {
   const validate = (values: any) => {
     const errors = {} as Error
 
