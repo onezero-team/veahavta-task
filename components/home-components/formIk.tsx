@@ -15,7 +15,13 @@ export default function ContactUsForm({ data }: HomePageType) {
             phone: '',
           }}
           validate={(values) => {
-            const errors = {}
+            const errors = {
+              email: '',
+              firstName: '',
+              lastName: '',
+              message: '',
+              phone: '',
+            }
             if (!values.email) {
               errors.email = data.common.contactUsFormErrorEmailMissing
             } else if (

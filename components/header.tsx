@@ -15,7 +15,6 @@ export default function Header({ data }: CommonType) {
         className={'bg-light text-primary'}
       />
       <header id="outer-container" className="h-header z-10 pt-4 px-4">
-
         <div
           id="menu"
           className="grid grid-cols-auto-1fr gap-x-6 mx-auto max-w-screen-lg bg-light rounded-lg"
@@ -78,7 +77,7 @@ export default function Header({ data }: CommonType) {
             justify-content: space-between;
             padding-top: 0;
           }
-       
+
           .menu-button {
             display: flex;
             justify-content: center;
