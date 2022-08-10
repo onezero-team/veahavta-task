@@ -119,35 +119,35 @@ export default function ContactUsForm({ data }: HomePageType) {
                   {errors.phone && touched.phone && errors.phone}
                 </div>
               </div>
-                <div className="textfield flex flex-col justify-evenly p-5">
-                  <label className="font-bold text-[22px]" htmlFor="message">
-                    {data.common.contactUsFormMessage}
-                  </label>
-                  <textarea
-                    className="textarea w-[580px] h-[145px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2 "
-                    name="message"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.message}
-                  />
-                  {errors.message && touched.message && errors.message}
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    width: '100%',
-                    justifyContent: 'start',
-                    marginTop: '30px',
-                  }}
+              <div className="textfield flex flex-col justify-evenly p-5">
+                <label className="font-bold text-[22px]" htmlFor="message">
+                  {data.common.contactUsFormMessage}
+                </label>
+                <textarea
+                  className="textarea w-[580px] h-[145px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-lg mt-2 "
+                  name="message"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.message}
+                />
+                {errors.message && touched.message && errors.message}
+              </div>
+              <div
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  justifyContent: 'start',
+                  marginTop: '30px',
+                }}
+              >
+                <button
+                  className="sendButton w-48 h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-3xl mt-2 font-bold text-[28px]"
+                  type="submit"
+                  disabled={isSubmitting}
                 >
-                  <button
-                    className="sendButton w-48 h-14 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] rounded-3xl mt-2 font-bold text-[28px]"
-                    type="submit"
-                    disabled={isSubmitting}
-                  >
-                    {data.common.contactUsFormSendButton}
-                  </button>
-                </div>
+                  {data.common.contactUsFormSendButton}
+                </button>
+              </div>
             </form>
           )}
         </Formik>
@@ -169,7 +169,7 @@ export default function ContactUsForm({ data }: HomePageType) {
         @media screen and (max-width: 768px) {
           div.contactUsForm {
             margin-top: 100px;
-            height:100%;
+            height: 100%;
             width: 80vw;
           }
           div.inputs {

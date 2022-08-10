@@ -140,10 +140,7 @@ export default function ContactUs({ data }: HomePageType) {
           }
           div.contactLinks div {
             display: flex;
-            justify-content: start;
-          }
-          div.contactLinks div .img {
-            padding-right: 15%;
+            justify-content: space-between;
           }
           div.contactLinks div .text {
             padding-right: 20px;

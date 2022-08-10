@@ -12,7 +12,7 @@ import Rectangle6 from '../../assets/Rectangle_9.png'
 import Rectangle7 from '../../assets/Rectangle_10.png'
 export default function Banner({ data }: HomePageType) {
   return (
-    <div id="top-header" className='h-2/10'>
+    <div id="top-header" className="h-2/10">
       <div className="wrapper flex flex-col	justify-center items-center h-[790px]">
         <div className="background absolute z-[-1] inset-0">
           <div className="image border-box absolute w-80 h-96 left-[75%] top-[8%] drop-shadow-md rounded-lg">
