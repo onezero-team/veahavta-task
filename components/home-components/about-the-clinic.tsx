@@ -198,6 +198,17 @@ export default function AboutTheClinic({ data, getRef, whatRef }: any) {
               margin-top: 52px;
             }
           }
+          
+          @media only screen and (max-width: 586px) {
+            .my-title {
+            font-size: 30px;
+            }
+            
+            .my-desc-container {
+            align-items: center;
+            width: 90%;
+            }
+          }
         `}
       </style>
     </>

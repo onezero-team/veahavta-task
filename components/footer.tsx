@@ -58,28 +58,28 @@ export default function Footer({
             </div>
             <a
               href={`${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[0].linkValue}`}
-              className={'flex data-contact-row first-row'}
+              className={'flex data-contact-row first-row cursor-default'}
             >
               <img
-                className={'icon-img'}
+                className={'icon-img cursor-pointer'}
                 src={'/icons/phone-purple-icon.svg'}
               />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
-                <div className={'cursor-default'}>
+                <div className={'cursor-pointer'}>
                   {data.common.contactUsLinks[0].text}
                 </div>
-                <div className={'cursor-default'}>
+                <div className={'cursor-pointer'}>
                   {data.common.contactUsLinks[1].text}
                 </div>
               </div>
             </a>
             <a
               href={`mailto:${data.common.contactUsLinks[3].text}`}
-              className={'flex data-contact-row '}
+              className={'flex data-contact-row cursor-default'}
             >
-              <img className={'icon-img'} src={'/icons/email-purple.svg'} />
+              <img className={'icon-img cursor-pointer'} src={'/icons/email-purple.svg'} />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
-                <div className={'cursor-default second'}>
+                <div className={'second cursor-pointer'}>
                   {data.common.contactUsLinks[3].text}
                 </div>
               </div>
@@ -87,12 +87,12 @@ export default function Footer({
             <a
               href={`http://maps.google.com/?q=${data.common.contactUsLinks[2].text}`}
               target={'_blank'}
-              className={'flex data-contact-row third-row'}
+              className={'flex data-contact-row third-row cursor-default'}
               rel="noreferrer"
             >
-              <img className={'icon-img'} src={'/icons/location-purple.svg'} />
+              <img className={'icon-img cursor-pointer'} src={'/icons/location-purple.svg'} />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
-                <div className={'cursor-default'}>
+                <div className={'cursor-pointer'}>
                   {data.common.contactUsLinks[2].text}
                 </div>
               </div>

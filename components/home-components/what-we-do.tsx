@@ -5,6 +5,25 @@ export default function WhatWeDo({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
   const cardContainerRef = useRef<HTMLDivElement | null>(null)
   const mainContainerRef = useRef<HTMLDivElement | null>(null)
+  const [xAxis, setXAxis] = useState<number>(355)
+
+  function changeXAxis() {
+    if (window.innerWidth > 500) {
+      if (xAxis !== 355) {
+        setXAxis(355);
+      }
+    } else {
+      if (xAxis !== 255) {
+        setXAxis(255)
+      }
+    }
+  }
+
+  useEffect(() => {
+    changeXAxis();
+    window.addEventListener('resize', changeXAxis);
+
+  },[])
 
   useEffect(() => {
     if (
@@ -84,15 +103,15 @@ export default function WhatWeDo({ data, getRef }: any) {
   function scrollDirectionForAddXAxis(type: string) {
     if (type === 'left') {
       if (isEn === '') {
-        return Math.abs(355)
+        return Math.abs(xAxis)
       } else {
-        return -Math.abs(355)
+        return -Math.abs(xAxis)
       }
     } else {
       if (isEn === '') {
-        return -Math.abs(355)
+        return -Math.abs(xAxis)
       } else {
-        return Math.abs(355)
+        return Math.abs(xAxis)
       }
     }
   }
