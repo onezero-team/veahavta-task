@@ -396,7 +396,7 @@ export default function ContactUs({ data, getRef }: any) {
               width: 150px;
               margin-top: 2px;
             }
-            
+
             .round-icon-desc.my-two-en {
               width: 150px;
               margin-top: 4px;
