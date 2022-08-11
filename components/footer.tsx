@@ -65,7 +65,7 @@ export default function Footer({
                 src={'/icons/phone-purple-icon.svg'}
               />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
-                <div className={'cursor-pointer'}>
+                <div className={'cursor-pointer my-w-f-t'}>
                   {data.common.contactUsLinks[0].text}
                 </div>
                 <div className={'cursor-pointer'}>
@@ -132,6 +132,7 @@ export default function Footer({
             margin-top: 104px;
             width: 270px;
           }
+          
 
           .my-image-logo {
             width: 348px;
@@ -209,6 +210,10 @@ export default function Footer({
             .my-menu-contact-footer {
               margin-top: 50px;
               margin-bottom: 100px;
+            }
+            
+            .my-footer-container {
+            height: 671px;
             }
           }
         `}

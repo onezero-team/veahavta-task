@@ -264,17 +264,7 @@ export default function WhatWeDo({ data, getRef }: any) {
             }
           }
 
-          @media only screen and (max-width: 550px) {
-            .my-left-btn-en {
-              margin-top: 200px;
-              margin-left: -22px;
-            }
-
-            .my-right-btn-en {
-              margin-top: 200px;
-              margin-right: -25px;
-            }
-          }
+          
 
           @media only screen and (max-width: 998px) {
             .my-title-what {
@@ -295,6 +285,28 @@ export default function WhatWeDo({ data, getRef }: any) {
             .my-left-btn {
               margin-right: -17px;
               margin-top: 200px;
+            }
+          }
+          
+          @media only screen and (max-width: 550px) {
+            .my-left-btn-en {
+              margin-top: 200px;
+              margin-left: -22px;
+            }
+
+            .my-right-btn-en {
+              margin-top: 200px;
+              margin-right: -5px;
+            }
+            
+            .my-left-btn {
+              margin-top: 200px;
+              margin-right: -14px;
+            }
+
+            .my-right-btn {
+              margin-top: 200px;
+              margin-left: 2px;
             }
           }
 
