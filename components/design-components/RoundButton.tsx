@@ -1,19 +1,22 @@
-import React from "react";
+import React from 'react'
 
 interface Props {
-   imageIcon : string
+  imageIcon: string
 }
 
 export const RoundButton = ({ imageIcon }: Props) => {
+  return (
+    <>
+      <div
+        className={
+          'my-round-icon flex justify-center cursor-pointer items-center'
+        }
+      >
+        <img src={imageIcon} />
+      </div>
 
-    return (
-        <>
-            <div className={'my-round-icon flex justify-center cursor-pointer items-center'}>
-                <img src={imageIcon} />
-            </div>
-
-            <style jsx>
-                {`
+      <style jsx>
+        {`
           .my-round-icon {
             height: 44px;
             width: 44px;
@@ -23,7 +26,7 @@ export const RoundButton = ({ imageIcon }: Props) => {
             border-radius: 50%;
           }
         `}
-            </style>
-        </>
-    )
+      </style>
+    </>
+  )
 }
