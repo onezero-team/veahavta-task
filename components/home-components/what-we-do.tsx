@@ -289,12 +289,12 @@ export default function WhatWeDo({ data, getRef }: any) {
           @media only screen and (max-width: 550px) {
             .my-left-btn-en {
               margin-top: 200px;
-              margin-left: -22px;
+              margin-left: -12px;
             }
 
             .my-right-btn-en {
               margin-top: 200px;
-              margin-right: -5px;
+              margin-right: -16px;
             }
 
             .my-left-btn {
@@ -304,7 +304,7 @@ export default function WhatWeDo({ data, getRef }: any) {
 
             .my-right-btn {
               margin-top: 200px;
-              margin-left: 2px;
+              margin-left: -17px;
             }
           }
 
