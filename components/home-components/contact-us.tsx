@@ -391,9 +391,9 @@ export default function ContactUs({ data, getRef }: any) {
             .my-title-contact-text {
               font-size: 22px;
             }
-            
+
             .round-icon-desc.my-two {
-            width: 150px;
+              width: 150px;
             }
           }
         `}
