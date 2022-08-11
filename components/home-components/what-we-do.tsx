@@ -264,8 +264,6 @@ export default function WhatWeDo({ data, getRef }: any) {
             }
           }
 
-          
-
           @media only screen and (max-width: 998px) {
             .my-title-what {
               display: none;
@@ -287,7 +285,7 @@ export default function WhatWeDo({ data, getRef }: any) {
               margin-top: 200px;
             }
           }
-          
+
           @media only screen and (max-width: 550px) {
             .my-left-btn-en {
               margin-top: 200px;
@@ -298,7 +296,7 @@ export default function WhatWeDo({ data, getRef }: any) {
               margin-top: 200px;
               margin-right: -5px;
             }
-            
+
             .my-left-btn {
               margin-top: 200px;
               margin-right: -14px;

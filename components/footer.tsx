@@ -132,7 +132,6 @@ export default function Footer({
             margin-top: 104px;
             width: 270px;
           }
-          
 
           .my-image-logo {
             width: 348px;
@@ -211,9 +210,9 @@ export default function Footer({
               margin-top: 50px;
               margin-bottom: 100px;
             }
-            
+
             .my-footer-container {
-            height: 671px;
+              height: 671px;
             }
           }
         `}
