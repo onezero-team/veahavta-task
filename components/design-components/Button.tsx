@@ -1,89 +1,88 @@
-import {useLocale} from "@/lib/hooks";
+import { useLocale } from '@/lib/hooks'
 
 interface Props {
-    text: string
-    type: string
-    refBtn?: any
+  text: string
+  type: string
+  refBtn?: any
 }
 
-export const Button = ({text, type, refBtn}: Props) => {
+export const Button = ({ text, type, refBtn }: Props) => {
+  const { dir } = useLocale()
 
-    const {dir} = useLocale();
-
-    function getClass() {
-        if (type === 'big') {
-            if (dir === 'rtl') {
-                return 'my-font-size-big';
-            } else {
-                return 'my-font-size-big-en';
-            }
-        } else {
-            return 'my-font-size-small'
-        }
+  function getClass() {
+    if (type === 'big') {
+      if (dir === 'rtl') {
+        return 'my-font-size-big'
+      } else {
+        return 'my-font-size-big-en'
+      }
+    } else {
+      return 'my-font-size-small'
     }
+  }
 
-    function onClickBtn() {
-        if (refBtn !== null && refBtn !== undefined) {
-            refBtn?.current.scrollIntoView()
-        } else {
-        }
+  function onClickBtn() {
+    if (refBtn !== null && refBtn !== undefined) {
+      refBtn?.current.scrollIntoView()
+    } else {
     }
+  }
 
-    return (
-        <>
-            <button
-                onClick={() => {
-                    onClickBtn()
-                }}
-                className={'my-button'}
-            >
-                <div className={getClass()}>{text}</div>
-            </button>
-            <style jsx>
-                {`
-                  .my-button {
-                    z-index: 5;
-                    cursor: pointer;
-                    height: 60px;
-                    width: 185px;
-                    left: 868px;
-                    top: 579px;
-                    border-radius: 51px;
-                    background: #4e47f9;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                  }
+  return (
+    <>
+      <button
+        onClick={() => {
+          onClickBtn()
+        }}
+        className={'my-button'}
+      >
+        <div className={getClass()}>{text}</div>
+      </button>
+      <style jsx>
+        {`
+          .my-button {
+            z-index: 5;
+            cursor: pointer;
+            height: 60px;
+            width: 185px;
+            left: 868px;
+            top: 579px;
+            border-radius: 51px;
+            background: #4e47f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
 
-                  .my-font-size-big {
-                    text-align: center;
-                    font-family: Assistant;
-                    font-size: 28px;
-                    font-weight: 700;
-                    line-height: 37px;
-                    color: white;
-                  }
+          .my-font-size-big {
+            text-align: center;
+            font-family: Assistant;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 37px;
+            color: white;
+          }
 
-                  .my-font-size-big-en {
-                    text-align: center;
-                    font-family: Assistant;
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 37px;
-                    color: white;
-                  }
+          .my-font-size-big-en {
+            text-align: center;
+            font-family: Assistant;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 37px;
+            color: white;
+          }
 
-                  .my-font-size-small {
-                    font-family: Assistant;
-                    font-size: 22px;
-                    font-weight: 700;
-                    line-height: 29px;
-                    letter-spacing: 0em;
-                    text-align: center;
-                    color: white;
-                  }
-                `}
-            </style>
-        </>
-    )
+          .my-font-size-small {
+            font-family: Assistant;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+          }
+        `}
+      </style>
+    </>
+  )
 }
