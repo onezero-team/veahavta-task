@@ -194,7 +194,7 @@ export default function ContactUs({ data, getRef }: any) {
 
           .round-icon-desc.my-one-en {
             height: 21px;
-            width: 112px;
+            width: 118px;
             left: 1182px;
             top: 537px;
             font-family: Assistant;
@@ -399,7 +399,7 @@ export default function ContactUs({ data, getRef }: any) {
 
             .round-icon-desc.my-two-en {
               width: 150px;
-              margin-top: 4px;
+              margin-top: 2px;
             }
           }
         `}
