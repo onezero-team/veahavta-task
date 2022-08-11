@@ -50,23 +50,23 @@ export default function WhatWeDo({ data, getRef }: any) {
       ) => {
         if (index === 0 && isEn === '') {
           return (
-              <div key={index} className={'mr-2'}>
-                <ServiceCard
-                    imageUrl={card.imagePath}
-                    title={card.title}
-                    description={card.text}
-                />
-              </div>
+            <div key={index} className={'mr-2'}>
+              <ServiceCard
+                imageUrl={card.imagePath}
+                title={card.title}
+                description={card.text}
+              />
+            </div>
           )
         } else if (index === 0 && isEn === '-en') {
           return (
-              <div key={index} className={'ml-2'}>
-                <ServiceCard
-                    imageUrl={card.imagePath}
-                    title={card.title}
-                    description={card.text}
-                />
-              </div>
+            <div key={index} className={'ml-2'}>
+              <ServiceCard
+                imageUrl={card.imagePath}
+                title={card.title}
+                description={card.text}
+              />
+            </div>
           )
         } else if (index !== 0 && isEn === '') {
           return (
