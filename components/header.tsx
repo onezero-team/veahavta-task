@@ -172,13 +172,13 @@ export default function Header({
 
           @media only screen and (max-width: 960px) {
             .flag-container {
-              width: 50%;
+              width: 47%;
             }
           }
 
-          @media only screen and (max-width: 819px) {
+          @media only screen and (max-width: 870px) {
             .flag-container {
-              width: 47%;
+              width: 39%;
             }
           }
 
