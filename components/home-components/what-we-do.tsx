@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ServiceCard } from '@/components/design-components/ServiceCard'
-import {useLocale} from "@/lib/hooks";
+import { useLocale } from '@/lib/hooks'
 
 export default function WhatWeDo({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
   const cardContainerRef = useRef<HTMLDivElement | null>(null)
   const mainContainerRef = useRef<HTMLDivElement | null>(null)
   const [xAxis, setXAxis] = useState<number>(355)
-  const {dir} = useLocale();
+  const { dir } = useLocale()
 
   function changeXAxis() {
     if (window.innerWidth > 500) {
@@ -27,7 +27,7 @@ export default function WhatWeDo({ data, getRef }: any) {
   }, [])
 
   useEffect(() => {
-    if (dir === "ltr") {
+    if (dir === 'ltr') {
       if (isEn === '') {
         setIsEn('-en')
       }
@@ -36,7 +36,7 @@ export default function WhatWeDo({ data, getRef }: any) {
         setIsEn('')
       }
     }
-  },[dir])
+  }, [dir])
 
   useEffect(() => {
     getRef('whatWeDo', mainContainerRef)

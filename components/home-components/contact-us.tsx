@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ContactUsForm } from '@/components/design-components/ContactUsForm'
 import { RoundButton } from '@/components/design-components/RoundButton'
-import {useLocale} from "@/lib/hooks";
+import { useLocale } from '@/lib/hooks'
 
 export default function ContactUs({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
   const contactRef = useRef<HTMLDivElement | null>(null)
   const contactTitleRef = useRef<HTMLDivElement | null>(null)
-  const {dir} = useLocale();
+  const { dir } = useLocale()
 
   useEffect(() => {
     getRef('contact', contactRef)
@@ -15,7 +15,7 @@ export default function ContactUs({ data, getRef }: any) {
   }, [])
 
   useEffect(() => {
-    if (dir === "ltr") {
+    if (dir === 'ltr') {
       if (isEn === '') {
         setIsEn('-en')
       }
