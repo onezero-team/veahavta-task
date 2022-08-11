@@ -175,15 +175,12 @@ export default function Header({
               width: 50%;
             }
           }
-          
-          
 
           @media only screen and (max-width: 819px) {
             .flag-container {
               width: 47%;
             }
           }
-          
 
           @media only screen and (max-width: 767px) {
             .my-text-headers {
