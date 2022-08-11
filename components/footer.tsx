@@ -72,7 +72,7 @@ export default function Footer({
                   {data.common.contactUsLinks[0].text}
                 </a>
                 <a
-                  href={`${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[1].linkValue}`}
+                  href={`${data.common.contactUsLinks[1].linkType}:${data.common.contactUsLinks[1].linkValue}`}
                   className={'cursor-pointer'}
                 >
                   {data.common.contactUsLinks[1].text}
