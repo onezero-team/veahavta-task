@@ -48,14 +48,25 @@ export default function WhatWeDo({ data, getRef }: any) {
         card: { imagePath: string; title: string; text: string },
         index: React.Key | null | undefined,
       ) => {
-        if (index === 0) {
+        if (index === 0 && isEn === '') {
           return (
-            <ServiceCard
-              key={index}
-              imageUrl={card.imagePath}
-              title={card.title}
-              description={card.text}
-            />
+              <div key={index} className={'mr-2'}>
+                <ServiceCard
+                    imageUrl={card.imagePath}
+                    title={card.title}
+                    description={card.text}
+                />
+              </div>
+          )
+        } else if (index === 0 && isEn === '-en') {
+          return (
+              <div key={index} className={'ml-2'}>
+                <ServiceCard
+                    imageUrl={card.imagePath}
+                    title={card.title}
+                    description={card.text}
+                />
+              </div>
           )
         } else if (index !== 0 && isEn === '') {
           return (
