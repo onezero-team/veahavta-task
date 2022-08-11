@@ -65,12 +65,12 @@ export default function Footer({
                 src={'/icons/phone-purple-icon.svg'}
               />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
-                <div className={'cursor-pointer my-w-f-t'}>
+                <a href={`${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[0].linkValue}`} className={'cursor-pointer my-w-f-t'}>
                   {data.common.contactUsLinks[0].text}
-                </div>
-                <div className={'cursor-pointer'}>
+                </a>
+                <a href={`${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[1].linkValue}`} className={'cursor-pointer'}>
                   {data.common.contactUsLinks[1].text}
-                </div>
+                </a>
               </div>
             </a>
             <a
