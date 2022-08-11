@@ -394,6 +394,12 @@ export default function ContactUs({ data, getRef }: any) {
 
             .round-icon-desc.my-two {
               width: 150px;
+              margin-top: 2px;
+            }
+            
+            .round-icon-desc.my-two-en {
+              width: 150px;
+              margin-top: 4px;
             }
           }
         `}
