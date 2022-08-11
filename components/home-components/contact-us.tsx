@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ContactUsForm } from '@/components/design-components/ContactUsForm'
+import {RoundButton} from "@/components/design-components/RoundButton";
 
 export default function ContactUs({ data, getRef }: any) {
   const [isEn, setIsEn] = useState<string>('')
@@ -81,13 +82,8 @@ export default function ContactUs({ data, getRef }: any) {
                   href={`${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[0].linkValue}`}
                   className={'flex cursor-default'}
                 >
-                  <div
-                    className={
-                      'my-round-icon flex justify-center items-center  cursor-pointer'
-                    }
-                  >
-                    <img src={'/icons/phone-icon.svg'} />
-                  </div>
+
+                  <RoundButton imageIcon={'/icons/phone-icon.svg'}/>
                   <div
                     className={
                       'round-icon-desc my-zero' + isEn + ' cursor-pointer'
@@ -100,13 +96,8 @@ export default function ContactUs({ data, getRef }: any) {
                   href={`${data.common.contactUsLinks[1].linkType}:${data.common.contactUsLinks[1].linkValue}`}
                   className={'flex my-m-t cursor-default'}
                 >
-                  <div
-                    className={
-                      'my-round-icon flex justify-center items-center cursor-pointer'
-                    }
-                  >
-                    <img src={'/icons/phone-icon.svg'} />
-                  </div>
+
+                  <RoundButton imageIcon={'/icons/phone-icon.svg'}/>
                   <div
                     className={
                       'round-icon-desc my-one' + isEn + ' ml-3 cursor-pointer'
@@ -123,13 +114,7 @@ export default function ContactUs({ data, getRef }: any) {
                   className={'flex cursor-default'}
                   rel="noreferrer"
                 >
-                  <div
-                    className={
-                      'my-round-icon flex justify-center items-center cursor-pointer'
-                    }
-                  >
-                    <img src={'/icons/location-icon.svg'} />
-                  </div>
+                  <RoundButton imageIcon={'/icons/location-icon.svg'}/>
                   <div
                     className={
                       'round-icon-desc my-two' + isEn + ' cursor-pointer'
@@ -142,13 +127,8 @@ export default function ContactUs({ data, getRef }: any) {
                   href={`mailto:${data.common.contactUsLinks[3].text}`}
                   className={'flex my-m-t cursor-default'}
                 >
-                  <div
-                    className={
-                      'my-round-icon flex justify-center cursor-pointer items-center'
-                    }
-                  >
-                    <img src={'/icons/email-icon.svg'} />
-                  </div>
+
+                  <RoundButton imageIcon={'/icons/email-icon.svg'}/>
                   <div
                     className={
                       'round-icon-desc my-three' +
@@ -288,14 +268,7 @@ export default function ContactUs({ data, getRef }: any) {
             color: black;
           }
 
-          .my-round-icon {
-            height: 44px;
-            width: 44px;
-            left: 1525px;
-            top: 536px;
-            background: #4e47f9;
-            border-radius: 50%;
-          }
+          
 
           .my-title-contact-text {
             font-family: Assistant;
