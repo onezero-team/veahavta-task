@@ -262,12 +262,7 @@ export default function WhatWeDo({ data, getRef }: any) {
               height: 1300px;
             }
           }
-
-          @media only screen and (max-width: 484px) {
-            .my-main-container-what-we-do {
-              height: 1450px;
-            }
-          }
+          
 
           @media only screen and (max-width: 1406px) {
             .my-title-what {
@@ -316,6 +311,12 @@ export default function WhatWeDo({ data, getRef }: any) {
             .my-right-btn {
               margin-top: 200px;
               margin-left: -17px;
+            }
+          }
+          
+          @media only screen and (max-width: 484px) {
+            .my-main-container-what-we-do {
+              height: 1450px;
             }
           }
 
