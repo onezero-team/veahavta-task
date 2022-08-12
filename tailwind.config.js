@@ -7,6 +7,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      sm: { max: '1000px' },
+      md: { min: '1001px' , max: '1649px' },
+      lg: {min: '1650px'},
+    },
     colors: {
       dark: 'black',
       light: 'white',
@@ -28,7 +33,7 @@ module.exports = {
         'icon-bg': '#4E47F9',
         success: '#7AD17C',
         red: '#D25C78',
-        blue: '#01559A',
+        blue: '#4E47F9',
         'brown-bg': '#E5E5E5',
         azure: '#E2F7F9',
       },
@@ -56,6 +61,18 @@ module.exports = {
         '1fr': '1fr',
         'auto-1fr': 'auto 1fr',
       },
+      zIndex: {
+        bg: '-1',
+      },
+    },
+    fontSize: {
+      xs: '16px',
+      s: '18px',
+      medium: '22px',
+      lg: '28px',
+      xl: '42px',
+      '2xl': '52px',
+      '3xl': '82px',
     },
   },
   plugins: [],

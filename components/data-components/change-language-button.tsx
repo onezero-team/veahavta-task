@@ -2,8 +2,6 @@
 import { useRouter } from 'next/router'
 
 export const ChangeLangButton = ({
-  className,
-  children,
   lang,
 }: {
   className?: string
@@ -16,7 +14,7 @@ export const ChangeLangButton = ({
     router.push({ pathname, query }, asPath, { locale: lang })
   }
   return (
-    <div>
+    <div className="">
       <button onClick={() => changeLocale(lang)}>{lang}</button>
     </div>
   )

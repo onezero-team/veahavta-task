@@ -33,14 +33,10 @@ export default function Layout({ children, pageProps }: any) {
             height: 100%;
           }
           .app-wrapper {
-            display: grid;
+            display: flex;
             flex-direction: column;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto 1fr auto;
             min-height: -webkit-fill-available;
-            height: 100%;
           }
-
           *:focus-visible {
             outline: none !important;
             box-shadow: 0 0 0 2px ${theme.colors.primary} !important;
