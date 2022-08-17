@@ -5,14 +5,20 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './components/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      sm: {max: '640px'},
+      md: {min: '798px'},
+    },
     colors: {
       dark: 'black',
       light: 'white',
       primary: '#01559A',
       accent: '#D25C78',
       red: '#D25C78',
+      lightPurple: '#E6E4FD',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
