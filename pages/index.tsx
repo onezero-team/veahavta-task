@@ -18,10 +18,10 @@ export async function getStaticProps({ locale }: NextPageContext) {
 export default function Home({ data }: any) {
   return (
     <>
-      <Banner data={data}  />
-      <AboutTheClinic data={data}  />
-      <WhatWeDo data={data}  />
-      <ContactUs data={data}  />
+      <Banner data={data} />
+      <AboutTheClinic data={data} />
+      <WhatWeDo data={data} />
+      <ContactUs data={data} />
     </>
   )
 }

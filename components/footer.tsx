@@ -1,16 +1,26 @@
 import { ButtonForFooter } from '@/components/design-components/ButtonForFooter'
-import {useLocale} from "@/lib/hooks";
+import { useLocale } from '@/lib/hooks'
 
-export default function Footer({data,}: any) {
-
-  const { dir } = useLocale();
+export default function Footer({ data }: any) {
+  const { dir } = useLocale()
 
   return (
     <>
-      <footer id={"footer"} className="bg-light h-[671px] lgx:h-96 flex justify-center items-center">
-        <div className={'flex flex-col  lgmx:w-[62%] lgmx:flex-row lgmx:justify-between items-center'}>
+      <footer
+        id={'footer'}
+        className="bg-light h-[671px] lgx:h-96 flex justify-center items-center"
+      >
+        <div
+          className={
+            'flex flex-col  lgmx:w-[62%] lgmx:flex-row lgmx:justify-between items-center'
+          }
+        >
           <div>
-            <img className={'w-[348px] h-40 mt-16 lgmx:-mt-36'} alt={"logo"} src={'/image/BigLogo.svg'} />
+            <img
+              className={'w-[348px] h-40 mt-16 lgmx:-mt-36'}
+              alt={'logo'}
+              src={'/image/BigLogo.svg'}
+            />
           </div>
           <div className={'mt-10 lgmx:-mt-32 flex flex-col'}>
             <ButtonForFooter text={data.common.footerScheduleButton} />
@@ -18,14 +28,24 @@ export default function Footer({data,}: any) {
               <ButtonForFooter text={data.common.footerSupportUsButton} />
             </div>
           </div>
-          <div className={`hidden xl:flex flex-col ${dir === "ltr" ? '-mt-36' : "-mt-28"}`}>
+          <div
+            className={`hidden xl:flex flex-col ${
+              dir === 'ltr' ? '-mt-36' : '-mt-28'
+            }`}
+          >
             <div className={'text-xl font-bold cursor-default -mt-0.5'}>
               {data.common.footerMenuTitle}
             </div>
-            <a href={"#about"} className={'font-normal mt-2 text-lg cursor-pointer'}>
+            <a
+              href={'#about'}
+              className={'font-normal mt-2 text-lg cursor-pointer'}
+            >
               {data.homepage.aboutHeading}
             </a>
-            <a href={"#contact"} className={'font-normal mt-2 text-lg cursor-pointer'}>
+            <a
+              href={'#contact'}
+              className={'font-normal mt-2 text-lg cursor-pointer'}
+            >
               {data.common.footerContactUsTitle}
             </a>
             <div className={'font-normal  text-lg mt-2 cursor-pointer'}>
@@ -69,8 +89,15 @@ export default function Footer({data,}: any) {
                 </div>
               </div>
             </a>
-            <a href={`mailto:${data.common.contactUsLinks[3].text}`} className={'flex mt-1.5 cursor-default'}>
-              <img className={'mt-2.5 cursor-pointer'} alt={"email"} src={'/icons/email-purple.svg'}/>
+            <a
+              href={`mailto:${data.common.contactUsLinks[3].text}`}
+              className={'flex mt-1.5 cursor-default'}
+            >
+              <img
+                className={'mt-2.5 cursor-pointer'}
+                alt={'email'}
+                src={'/icons/email-purple.svg'}
+              />
               <div className={'flex flex-col mt-2 mr-3 ml-3'}>
                 <div className={'w-32 cursor-pointer'}>
                   {data.common.contactUsLinks[3].text}
@@ -83,7 +110,11 @@ export default function Footer({data,}: any) {
               className={'flex mt-1.5 mx-1.5 cursor-default'}
               rel="noreferrer"
             >
-              <img className={'mt-2.5 cursor-pointer'} alt={"location"} src={'/icons/location-purple.svg'}/>
+              <img
+                className={'mt-2.5 cursor-pointer'}
+                alt={'location'}
+                src={'/icons/location-purple.svg'}
+              />
               <div className={'flex flex-col mt-2 mr-3 ml-3'}>
                 <div className={'cursor-pointer'}>
                   {data.common.contactUsLinks[2].text}

@@ -3,10 +3,9 @@ import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-
   return (
     <Layout pageProps={pageProps}>
-      <Component {...pageProps}/>
+      <Component {...pageProps} />
     </Layout>
   )
 }

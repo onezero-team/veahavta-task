@@ -13,16 +13,16 @@ module.exports = {
   },
   theme: {
     screens: {
-      xs : "340px",
-      sm : "500px",
-      smx : "586px",
-      md : "768px",
-      lg : "976px",
-      lgmx : "1270px",
-      lgx : "1340px",
-      xl : "1420px",
-      xml : "1500px",
-      xxl : "1925px",
+      xs: '340px',
+      sm: '500px',
+      smx: '586px',
+      md: '768px',
+      lg: '976px',
+      lgmx: '1270px',
+      lgx: '1340px',
+      xl: '1420px',
+      xml: '1500px',
+      xxl: '1925px',
     },
     colors: {
       dark: 'black',
@@ -30,7 +30,7 @@ module.exports = {
       primary: '#01559A',
       accent: '#D25C78',
       red: '#D25C78',
-      blueContactUsHeader : '#4e47f9',
+      blueContactUsHeader: '#4e47f9',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
@@ -43,9 +43,9 @@ module.exports = {
       colors: {
         'header-blue': '#4E47F9',
         'contact-bg': '#f4f3fd',
-        'contact-header' : '#4e47f9',
+        'contact-header': '#4e47f9',
         'icon-bg': '#4E47F9',
-        'button-footer-bg' : '#4e47f9',
+        'button-footer-bg': '#4e47f9',
         success: '#7AD17C',
         red: '#D25C78',
         blue: '#01559A',
@@ -59,7 +59,12 @@ module.exports = {
       boxShadow: {
         '4xl': '0px 0px 4px #00000040',
       },
-      height: { header: '95px', banner : '780px', card : "480px", cardDesc : "136px" },
+      height: {
+        header: '95px',
+        banner: '780px',
+        card: '480px',
+        cardDesc: '136px',
+      },
       minHeight: {
         'screen-50': '50vh',
       },
@@ -78,22 +83,22 @@ module.exports = {
       },
     },
   },
-  plugins: [plugin(function ({ addUtilities }) {
-    addUtilities({
-          '.scrollbar-hide': {
-            /* IE and Edge */
-            '-ms-overflow-style': 'none',
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
 
-            /* Firefox */
-            'scrollbar-width': 'none',
+          /* Firefox */
+          'scrollbar-width': 'none',
 
-            /* Safari and Chrome */
-            '&::-webkit-scrollbar': {
-              display: 'none'
-            }
-          }
-        }
-    )
-  })],
-
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        },
+      })
+    }),
+  ],
 }
