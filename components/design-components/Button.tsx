@@ -42,7 +42,7 @@ export const Button = ({ text, type, href, isSubmit }: Props) => {
           }
         }}
         className={
-          'z-[5] cursor-pointer bg-button-footer-bg h-[60px] w-[185px] rounded-[51px] flex justify-center items-center'
+          'z-[5] cursor-pointer bg-button-footer-bg h-[60px] w-[185px] rounded-mr flex justify-center items-center'
         }
       >
         <div className={' text-center text-light font-bold ' + getClass()}>

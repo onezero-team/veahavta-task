@@ -12,12 +12,12 @@ export default function Footer({ data }: any) {
       >
         <div
           className={
-            'flex flex-col  lgmx:w-[62%] lgmx:flex-row lgmx:justify-between items-center'
+            'flex flex-col  lgmx:w-3/5 lgmx:flex-row lgmx:justify-between items-center'
           }
         >
           <div>
             <img
-              className={'w-[348px] h-40 mt-16 lgmx:-mt-36'}
+              className={'w-96 h-40 mt-16 lgmx:-mt-36'}
               alt={'logo'}
               src={'/image/BigLogo.svg'}
             />

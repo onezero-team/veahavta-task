@@ -87,7 +87,7 @@ export default function ContactUs({ data }: any) {
             >
               <div
                 className={
-                  'font-bold text-2xl bg-light w-32 lgx:text-center h-10 rounded-[51px] text-contact-header cursor-default'
+                  'font-bold text-2xl bg-light w-32 lgx:text-center h-10 rounded-mr text-contact-header cursor-default'
                 }
               >
                 {data.homepage.contactUsHeading}

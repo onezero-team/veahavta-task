@@ -1,5 +1,3 @@
-import { HomePageType } from '@/lib/interface'
-import themePreval from '@/lib/theme.preval'
 import React from 'react'
 import { Button } from '@/components/design-components/Button'
 
