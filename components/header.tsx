@@ -3,18 +3,25 @@ import Link from 'next/link'
 import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import React, { useEffect, useRef, useState } from 'react'
+import {useRouter} from "next/router";
 
-export default function Header({
-  data,
-  about,
-  contact,
-  footerRef,
-  mobileRef,
-}: any) {
+export default function Header({ data } : any) {
+
   const { dir } = useLocale()
 
-  const ulRef = useRef<HTMLUListElement | null>(null)
-  const [isMenu, setIsMenu] = useState<boolean>(true)
+  const ulRef = useRef<HTMLUListElement | null>(null);
+  const [isMenu, setIsMenu] = useState<boolean>(true);
+  const router = useRouter();
+
+  function hrefForContactUs() {
+    if (window?.innerWidth <= 1340) {
+      router.push("#contact-text").then()
+    } else {
+      if (window?.innerWidth >= 1341){
+        router.push("#contact").then()
+      }
+    }
+  }
 
   const addOrRemoveClassForDropDown = (type: string) => {
     if (type === 'add') {
@@ -67,25 +74,13 @@ export default function Header({
 
   return (
     <>
-      <OneZeroSkipToMainContent
-        text={'skipToMainContent'}
-        dir={dir}
-        className={'bg-light text-primary'}
-      />
+      <OneZeroSkipToMainContent text={'skipToMainContent'} dir={dir} className={'bg-light text-primary'}/>
       <header className="w-screen h-header z-10 pt-4 px-4">
-        <nav
-          className={
-            'my-nav-net bg-light  md:flex mx-auto md:items-center gap-x-6  max-w-screen-lg rounded-lg  '
-          }
-        >
+        <nav className={'my-nav-net bg-light  md:flex mx-auto md:items-center gap-x-6  max-w-screen-lg rounded-lg  md:p-1'}>
           <div className={' flex justify-between items-center mx-2'}>
             <Logo />
             <span className={'text-3xl cursor-pointer md:hidden block'}>
-              <img
-                id={'menu'}
-                onClick={(e) => openMenu(e)}
-                src={'/image/iphone-nav-icon.svg'}
-              />
+              <img id={'menu'} alt={"iphone-nav-icon"} onClick={(e) => openMenu(e)} src={'/image/iphone-nav-icon.svg'}/>
             </span>
           </div>
           <ul
@@ -95,53 +90,25 @@ export default function Header({
                 bg-light  w-full left-0 md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all
                 ease-in duration-500 justify-between "
           >
-            <div className={'flex my-text-headers'}>
-              <div className={'flex'}>
-                <li
-                  className={
-                    'mx-2 my-6 md:my-0 font-body font-normal cursor-pointer'
-                  }
-                >
+            <div className={'flex justify-center items-center md:justify-start md:items-start'}>
+              <div className={'flex space-x-5 rtl:space-x-reverse px-3'}>
+                <li className={'cursor-pointer'}>
                   {data.common.appLinks[0].text}
                 </li>
-                <li
-                  onClick={() => {
-                    about.current?.scrollIntoView()
-                  }}
-                  className={
-                    'mx-2 my-6 md:my-0 font-body about-h font-normal cursor-pointer'
-                  }
-                >
-                  {data.common.appLinks[1].text}
+                <li className={'cursor-pointer'}>
+                  <a href={"#about"}>{data.common.appLinks[1].text}</a>
                 </li>
-                <li
-                  onClick={() => {
-                    if (window?.innerWidth <= 1340) {
-                      mobileRef.current?.scrollIntoView()
-                    } else {
-                      contact.current?.scrollIntoView()
-                    }
-                  }}
-                  className={
-                    'mx-2 my-6 md:my-0 font-body font-normal cursor-pointer'
-                  }
-                >
-                  {data.common.appLinks[2].text}
+                <li  className={'cursor-pointer'}>
+                  <div
+                  onClick={hrefForContactUs}>{data.common.appLinks[2].text}</div>
                 </li>
-                <li
-                  onClick={() => {
-                    footerRef.current?.scrollIntoView()
-                  }}
-                  className={
-                    'mx-2 my-6 md:my-0 font-body font-normal cursor-pointer'
-                  }
-                >
-                  {data.common.appLinks[3].text}
+                <li className={'cursor-pointer'}>
+                  <a href={"#footer"}>{data.common.appLinks[3].text}</a>
                 </li>
               </div>
             </div>
 
-            <div className={'flex justify-around flag-container'}>
+            <div className={'flex justify-around space-x-2 rtl:space-x-reverse px-3'}>
               <li className={'flex my-6 md:my-0 cursor-pointer'}>
                 <ChangeLangButton className="" lang="ar" />
               </li>
@@ -161,57 +128,14 @@ export default function Header({
           </ul>
         </nav>
       </header>
-
-      <style jsx>
-        {`
-          .flag-container {
-            padding-left: 10px;
-            padding-right: 10px;
-            width: 40%;
-          }
-
-          @media only screen and (max-width: 960px) {
-            .flag-container {
-              width: 47%;
-            }
-          }
-
-          @media only screen and (max-width: 870px) {
-            .flag-container {
-              width: 39%;
-            }
-          }
-
-          @media only screen and (max-width: 767px) {
-            .my-text-headers {
-              justify-content: space-around;
-              width: 100%;
-            }
-
-            .flag-container {
-              width: 100%;
-            }
-          }
-
-          @media only screen and (max-width: 388px) {
-            .about-h {
-              width: 50px;
-            }
-
-            .flag-container {
-              width: 100%;
-            }
-          }
-        `}
-      </style>
     </>
   )
 }
 
 const Logo = () => {
   return (
-    <Link href="/">
-      <img src="image/Logo.svg" />
+    <Link href={"/"}>
+      <img alt={"logo"} src="image/Logo.svg" />
     </Link>
   )
 }

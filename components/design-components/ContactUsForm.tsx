@@ -1,6 +1,7 @@
 import { HomePageType } from '@/lib/interface'
 import { Button } from '@/components/design-components/Button'
 import { useFormik } from 'formik'
+import {Input} from "@/components/design-components/Input";
 
 interface Error {
   firstName: string
@@ -61,88 +62,61 @@ export const ContactUsForm = ({ data }: HomePageType) => {
     <>
       <form
         onSubmit={formik.handleSubmit}
-        className={'main-container-contact-us-form flex justify-center'}
+        className={'h-[823px] lgx:h-[700px] w-[290px] xs:w-[300px] sm:-w-[350px] lgx:w-[650px] bg-light rounded-[36px] flex ' +
+            'justify-center border-2 border-solid border-light shadow-4xl'}
       >
-        <div className={'row-container flex flex-col'}>
-          <div className={'row flex justify-between'}>
+        <div className={'w-[85%] mt-4 lgx:mt-14 flex flex-col'}>
+          <div className={'flex flex-col lgx:flex-row mt-2 lgx:mt-0 justify-between'}>
             <div className={'flex flex-col'}>
-              <div className={'my-title-contact'}>
+              <div className={'font-bold text-xl cursor-default'}>
                 {data.common.contactUsFormFirstName}
               </div>
               <div className={'my-input-contact'}>
-                <input
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.firstName}
-                  name={'firstName'}
-                  className={'my-input-obj'}
-                  type={'text'}
-                />
+                <Input handlerBlur={formik.handleBlur} handlerChange={formik.handleChange} value={formik.values.firstName} name={'firstName'} type={'text'}/>
                 {formik.touched.firstName && formik.errors.firstName ? (
-                  <div className={'my-error'}>{formik.errors.firstName}</div>
+                  <div className={'text-red'}>{formik.errors.firstName}</div>
                 ) : null}
               </div>
             </div>
             <div className={'flex flex-col'}>
-              <div className={'my-title-contact'}>
+              <div className={'font-bold text-xl cursor-default'}>
                 {data.common.contactUsFormLastName}
               </div>
               <div className={'my-input-contact'}>
-                <input
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.lastName}
-                  name={'lastName'}
-                  className={'my-input-obj'}
-                  type={'text'}
-                />
+                <Input handlerBlur={formik.handleBlur} handlerChange={formik.handleChange} value={formik.values.lastName} name={'lastName'} type={'text'}/>
                 {formik.touched.lastName && formik.errors.lastName ? (
-                  <div className={'my-error'}>{formik.errors.lastName}</div>
+                  <div className={'text-red'}>{formik.errors.lastName}</div>
                 ) : null}
               </div>
             </div>
           </div>
-          <div className={'row flex justify-between mt-6'}>
+          <div className={'flex flex-col lgx:flex-row mt-2 lgx:mt-0 flex justify-between mt-6'}>
             <div className={'flex flex-col'}>
-              <div className={'my-title-contact'}>
+              <div className={'font-bold text-xl cursor-default'}>
                 {data.common.contactUsFormEmail}
               </div>
               <div className={'my-input-contact'}>
-                <input
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.email}
-                  name={'email'}
-                  className={'my-input-obj'}
-                  type={'text'}
-                />
+                <Input handlerBlur={formik.handleBlur} handlerChange={formik.handleChange} value={formik.values.email} name={'email'} type={'email'}/>
                 {formik.touched.email && formik.errors.email ? (
-                  <div className={'my-error'}>{formik.errors.email}</div>
+                  <div className={'text-red'}>{formik.errors.email}</div>
                 ) : null}
               </div>
             </div>
             <div className={'flex flex-col'}>
-              <div className={'my-title-contact'}>
+              <div className={'font-bold text-xl cursor-default'}>
                 {data.common.contactUsFormPhone}
               </div>
               <div className={'my-input-contact'}>
-                <input
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.phone}
-                  name={'phone'}
-                  className={'my-input-obj'}
-                  type={'text'}
-                />
+                <Input handlerBlur={formik.handleBlur} handlerChange={formik.handleChange} value={formik.values.phone} name={'phone'} type={'tel'}/>
                 {formik.touched.phone && formik.errors.phone ? (
-                  <div className={'my-error'}>{formik.errors.phone}</div>
+                  <div className={'text-red'}>{formik.errors.phone}</div>
                 ) : null}
               </div>
             </div>
           </div>
           <div className={'row flex mt-8'}>
             <div className={'flex flex-col'}>
-              <div className={'my-title-contact'}>
+              <div className={'font-bold text-xl cursor-default'}>
                 {data.common.contactUsFormMessage}
               </div>
               <div className={'my-text-area-contact'}>
@@ -151,123 +125,20 @@ export const ContactUsForm = ({ data }: HomePageType) => {
                   onChange={formik.handleChange}
                   value={formik.values.message}
                   name={'message'}
-                  className={'my-text-area-obj'}
+                  className={'h-[90px] w-[250px] mt-1 lgx:h-[145px] lgx:w-[550px] rounded-lg bg-light' +
+                      ' border-1 border-solid border-light shadow-4xl resize-none lgx:mt-3.5'}
                 />
                 {formik.touched.message && formik.errors.message ? (
-                  <div className={'my-error'}>{formik.errors.message}</div>
+                  <div className={'text-red'}>{formik.errors.message}</div>
                 ) : null}
               </div>
             </div>
           </div>
-          <div className={'my-mt-f-b'}>
-            <Button text={data.common.contactUsFormSendButton} type={'big'} />
+          <div className={'mt-2.5 lgx:mt-5'}>
+            <Button text={data.common.contactUsFormSendButton} type={'big'} isSubmit={true} />
           </div>
         </div>
       </form>
-
-      <style jsx>
-        {`
-          .main-container-contact-us-form {
-            height: 700px;
-            width: 650px;
-            left: 348px;
-            top: 20px;
-            border-radius: 36px;
-            border: 2px solid #ffffff;
-            box-shadow: 0px 0px 4px 0px #00000040;
-            background: white;
-          }
-
-          .my-error {
-            color: red;
-          }
-
-          .my-title-contact {
-            left: 873px;
-            top: 85px;
-            font-family: Assistant;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 29px;
-            letter-spacing: 0em;
-            color: black;
-            cursor: default;
-          }
-
-          .row-container {
-            width: 85%;
-            margin-top: 65px;
-          }
-
-          .my-input-obj {
-            height: 60px;
-            width: 260px;
-            left: 688px;
-            top: 128px;
-            border-radius: 8px;
-            border: 1px solid #ffffff;
-            box-shadow: 0px 0px 4px 0px #00000040;
-            background: white;
-            outline: none;
-            margin-top: 14px;
-          }
-
-          .my-mt-f-b {
-            margin-top: 11px;
-          }
-
-          .my-text-area-obj {
-            height: 145px;
-            width: 550px;
-            left: 398px;
-            top: 384px;
-            border-radius: 8px;
-            background: white;
-            border: 1px solid #ffffff;
-            box-shadow: 0px 0px 4px 0px #00000040;
-            resize: none;
-            margin-top: 14px;
-          }
-
-          @media only screen and (max-width: 1340px) {
-            .row {
-              flex-direction: column;
-              margin-top: 2px;
-            }
-
-            .row-container {
-              justify-content: center;
-              align-items: center;
-              margin-top: 15px;
-            }
-
-            .my-text-area-obj {
-              height: 128px;
-              width: 260px;
-              margin-top: 5px;
-            }
-
-            .main-container-contact-us-form {
-              height: 823px;
-              width: 350px;
-            }
-          }
-
-          @media only screen and (max-width: 500px) {
-            .main-container-contact-us-form {
-              height: 823px;
-              width: 300px;
-            }
-          }
-
-          @media only screen and (max-width: 340px) {
-            .main-container-contact-us-form {
-              height: 823px;
-              width: 290px;
-            }
-          }
-        `}
-      </style>
     </>
   )
 }

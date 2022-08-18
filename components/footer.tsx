@@ -1,72 +1,52 @@
-import { CommonType } from '@/lib/interface'
-import { WrapperLarge } from './wrapper'
 import { ButtonForFooter } from '@/components/design-components/ButtonForFooter'
-import { useEffect, useRef } from 'react'
+import {useLocale} from "@/lib/hooks";
 
-export default function Footer({
-  data,
-  aboutRef,
-  contactUsRef,
-  footerRef,
-}: any) {
-  const footerR = useRef<HTMLDivElement>(null)
+export default function Footer({data,}: any) {
 
-  useEffect(() => {
-    footerRef(footerR)
-  }, [])
+  const { dir } = useLocale();
 
   return (
     <>
-      <footer className="bg-light my-footer-container flex justify-center">
-        <div ref={footerR} className={'inner-container-footer'}>
-          <div className={'my-logo-footer'}>
-            <img className={'my-image-logo'} src={'/image/BigLogo.svg'} />
+      <footer id={"footer"} className="bg-light h-[671px] lgx:h-96 flex justify-center items-center">
+        <div className={'flex flex-col  lgmx:w-[62%] lgmx:flex-row lgmx:justify-between items-center'}>
+          <div>
+            <img className={'w-[348px] h-40 mt-16 lgmx:-mt-36'} alt={"logo"} src={'/image/BigLogo.svg'} />
           </div>
-          <div className={'buttons flex flex-col'}>
+          <div className={'mt-10 lgmx:-mt-32 flex flex-col'}>
             <ButtonForFooter text={data.common.footerScheduleButton} />
             <div className={'mt-2.5'}>
               <ButtonForFooter text={data.common.footerSupportUsButton} />
             </div>
           </div>
-          <div className={'my-menu-footer'}>
-            <div className={'my-header-footer'}>
+          <div className={`hidden xl:flex flex-col ${dir === "ltr" ? '-mt-36' : "-mt-28"}`}>
+            <div className={'text-xl font-bold cursor-default -mt-0.5'}>
               {data.common.footerMenuTitle}
             </div>
-            <div
-              onClick={() => {
-                aboutRef.current?.scrollIntoView()
-              }}
-              className={'link-font cursor-pointer'}
-            >
+            <a href={"#about"} className={'font-normal mt-2 text-lg cursor-pointer'}>
               {data.homepage.aboutHeading}
-            </div>
-            <div
-              onClick={() => {
-                contactUsRef.current?.scrollIntoView()
-              }}
-              className={'link-font cursor-pointer'}
-            >
+            </a>
+            <a href={"#contact"} className={'font-normal mt-2 text-lg cursor-pointer'}>
               {data.common.footerContactUsTitle}
-            </div>
-            <div className={'link-font cursor-pointer'}>
+            </a>
+            <div className={'font-normal  text-lg mt-2 cursor-pointer'}>
               {data.common.footerSupportUsButton}
             </div>
           </div>
-          <div className={'my-menu-contact-footer'}>
-            <div className={'my-header-footer'}>
+          <div className={'mt-12 mb-28 lgmx:mb-0 lgmx:-mt-20 w-72'}>
+            <div className={'text-xl font-bold cursor-default'}>
               {data.common.footerContactUsTitle}
             </div>
             <a
               href={`${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[0].linkValue}`}
-              className={'flex data-contact-row first-row cursor-default'}
+              className={'flex mt-1.5 mx-0.5 cursor-default'}
             >
               <img
-                className={'icon-img cursor-pointer'}
+                className={'mt-2.5 cursor-pointer'}
                 src={'/icons/phone-purple-icon.svg'}
               />
               <div className={'flex flex-col mt-3 mr-3 ml-3'}>
                 <div
-                  className={'cursor-pointer my-w-f-t'}
+                  className={'cursor-pointer'}
                   onClick={() => {
                     window.open(
                       `${data.common.contactUsLinks[0].linkType}:${data.common.contactUsLinks[0].linkValue}`,
@@ -89,16 +69,10 @@ export default function Footer({
                 </div>
               </div>
             </a>
-            <a
-              href={`mailto:${data.common.contactUsLinks[3].text}`}
-              className={'flex data-contact-row cursor-default'}
-            >
-              <img
-                className={'icon-img cursor-pointer'}
-                src={'/icons/email-purple.svg'}
-              />
-              <div className={'flex flex-col mt-3 mr-3 ml-3'}>
-                <div className={'second cursor-pointer'}>
+            <a href={`mailto:${data.common.contactUsLinks[3].text}`} className={'flex mt-1.5 cursor-default'}>
+              <img className={'mt-2.5 cursor-pointer'} alt={"email"} src={'/icons/email-purple.svg'}/>
+              <div className={'flex flex-col mt-2 mr-3 ml-3'}>
+                <div className={'w-32 cursor-pointer'}>
                   {data.common.contactUsLinks[3].text}
                 </div>
               </div>
@@ -106,14 +80,11 @@ export default function Footer({
             <a
               href={`http://maps.google.com/?q=${data.common.contactUsLinks[2].text}`}
               target={'_blank'}
-              className={'flex data-contact-row third-row cursor-default'}
+              className={'flex mt-1.5 mx-1.5 cursor-default'}
               rel="noreferrer"
             >
-              <img
-                className={'icon-img cursor-pointer'}
-                src={'/icons/location-purple.svg'}
-              />
-              <div className={'flex flex-col mt-3 mr-3 ml-3'}>
+              <img className={'mt-2.5 cursor-pointer'} alt={"location"} src={'/icons/location-purple.svg'}/>
+              <div className={'flex flex-col mt-2 mr-3 ml-3'}>
                 <div className={'cursor-pointer'}>
                   {data.common.contactUsLinks[2].text}
                 </div>
@@ -122,117 +93,6 @@ export default function Footer({
           </div>
         </div>
       </footer>
-      <style jsx>
-        {`
-          .my-footer-container {
-            min-height: 389px;
-          }
-
-          .first-row {
-            margin-right: 3px;
-            margin-left: 3px;
-          }
-
-          .third-row {
-            margin-right: 5px;
-            margin-left: 5px;
-          }
-
-          .inner-container-footer {
-            width: 62%;
-            display: flex;
-            justify-content: space-between;
-          }
-
-          .my-menu-contact-footer {
-            margin-top: 104px;
-            width: 270px;
-          }
-
-          .my-image-logo {
-            width: 348px;
-            height: 152px;
-            margin-top: 62px;
-          }
-
-          .buttons {
-            margin-top: 106px;
-          }
-
-          .my-menu-footer {
-            display: flex;
-            flex-direction: column;
-            margin-top: 106px;
-          }
-
-          .my-header-footer {
-            height: 29px;
-            left: 779px;
-            font-family: Assistant;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 29px;
-            letter-spacing: 0em;
-            color: black;
-            cursor: default;
-          }
-
-          .link-font {
-            width: 94px;
-            left: 741px;
-            font-family: Assistant;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 34px;
-            letter-spacing: 0em;
-            color: black;
-            margin-top: 2px;
-          }
-
-          .data-contact-row {
-            margin-top: 5px;
-          }
-
-          .second {
-            width: 134px;
-          }
-
-          .icon-img {
-            margin-top: 11px;
-          }
-
-          @media only screen and (max-width: 1420px) {
-            .my-menu-footer {
-              display: none;
-            }
-          }
-
-          @media only screen and (max-width: 1270px) {
-            .my-menu-footer {
-              display: none;
-            }
-
-            .inner-container-footer {
-              flex-direction: column;
-              align-items: center;
-              height: 600px;
-            }
-
-            .buttons {
-              margin-top: 38px;
-            }
-
-            .my-menu-contact-footer {
-              margin-top: 50px;
-              margin-bottom: 100px;
-            }
-
-            .my-footer-container {
-              height: 671px;
-            }
-          }
-        `}
-      </style>
     </>
   )
 }
