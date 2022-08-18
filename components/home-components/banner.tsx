@@ -47,7 +47,6 @@ export default function Banner({ data }: any) {
             />
           </div>
         </div>
-        <style jsx>{``}</style>
       </div>
     </div>
   )
