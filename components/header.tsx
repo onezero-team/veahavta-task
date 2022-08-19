@@ -27,7 +27,10 @@ export default function Header({ data }: CommonType) {
 const Logo = () => {
   return (
     <Link href="/">
-      <img className="object-contain max-w-[142px]" src="veahavta_logo_tiny.jpg" />
+      <img
+        className="object-contain max-w-[142px]"
+        src="veahavta_logo_tiny.jpg"
+      />
     </Link>
   )
 }

@@ -9,8 +9,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: {max: '640px'},
-      md: {min: '798px'},
+      sm: { max: '1100px' },
+      'min-md': {min: '1100px'}, 
+      md: { min: '1100px', max: '1500px' },
+      lg: { min: '1500px' },
     },
     colors: {
       dark: 'black',
@@ -18,7 +20,8 @@ module.exports = {
       primary: '#01559A',
       accent: '#D25C78',
       red: '#D25C78',
-      lightPurple: '#E6E4FD',
+      'light-purple': '#E6E4FD',
+      'accent-purple': '#4E47F9',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
@@ -26,6 +29,10 @@ module.exports = {
       sans: ['"Assistant"', 'sans-serif'],
       serif: ['"Assistant"', 'sans-serif'],
       mono: ['"Assistant"', 'sans-serif'],
+    },
+    fontSize: {
+      xxl: ['82px', '1.15'],
+      md: ['28px', '1.3']
     },
     extend: {
       colors: {
