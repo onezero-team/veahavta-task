@@ -8,7 +8,7 @@ export default function NavBar({ data }: CommonType) {
     <div className="min-md:flex items-center justify-between bg-white p-3 min-md:pr-10 pr-7 pl-[22px]">
       <button
         onClick={() => setOpen(!open)}
-        className="cursor-pointer flex justify-center items-center rounded-full min-md:hidden w-[42px] h-[42px] bg-lightPurple"
+        className="cursor-pointer flex justify-center items-center rounded-full min-md:hidden w-[42px] h-[42px] bg-light-purple"
       >
         <img src="hamburger-menu.svg" className="w-6 h-5"></img>
       </button>
@@ -19,7 +19,7 @@ export default function NavBar({ data }: CommonType) {
         }`}
       >
         {data.appLinks.map((link) => (
-          <li key={link.text} className="min-md:ml-8 text-xl min-md:my-0 my-7">
+          <li key={link.text} className="min-md:ml-8 text-md min-md:my-0 my-7">
             <a href={`/${link.relativeLink}`} className="duration-500">
               {link.text}
             </a>

@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     screens: {
       sm: { max: '1100px' },
-      'min-md': {min: '1100px'}, 
-      md: { min: '1100px', max: '1500px' },
+      'min-md': { min: '1100px' },
+      md: { min: '1100px', max: '1600px' },
       lg: { min: '1500px' },
     },
     colors: {
@@ -32,7 +32,9 @@ module.exports = {
     },
     fontSize: {
       xxl: ['82px', '1.15'],
-      md: ['28px', '1.3']
+      xl: ['52px', '1.15'],
+      md: ['28px', '1.3'],
+      paragraph: ['18px', '1.6']
     },
     extend: {
       colors: {
