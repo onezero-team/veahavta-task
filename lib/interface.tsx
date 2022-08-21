@@ -19,11 +19,7 @@ export type Homepage = {
   aboutUsButton: string
   whatWeDoHeading: string
   whatWeDoTitle: string
-  whatWeDoCards: Array<{
-    title: string
-    text: string
-    imagePath: string
-  }>
+  whatWeDoCards: Array<whatWeDoCards>
   contactUsHeading: string
   contactUsTitle: string
   contactUsText: string
@@ -58,6 +54,13 @@ export type Common = {
   footerScheduleButton: string
   footerSupportUsButton: string
 }
+
+export type whatWeDoCards = {
+  title: string
+  text: string
+  imagePath: string
+}
+
 
 export function HOMEPAGE_QUERY(locale: string) {
   return `

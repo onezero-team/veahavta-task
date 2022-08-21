@@ -9,9 +9,10 @@ module.exports = {
   ],
   theme: {
     screens: {
+      xs: {max: '800px'},
       sm: { max: '1100px' },
       'min-md': { min: '1100px' },
-      md: { min: '1100px', max: '1600px' },
+      md: { min: '1100px', max: '1500px' },
       lg: { min: '1500px' },
     },
     colors: {
@@ -34,7 +35,7 @@ module.exports = {
       xxl: ['82px', '1.15'],
       xl: ['52px', '1.15'],
       md: ['28px', '1.3'],
-      paragraph: ['18px', '1.6']
+      paragraph: ['18px', '1.6'],
     },
     extend: {
       colors: {
