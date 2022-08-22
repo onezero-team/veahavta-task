@@ -1,32 +1,50 @@
-import { HomePageType } from '@/lib/interface'
-import themePreval from '@/lib/theme.preval'
 import React from 'react'
-import { PageHeader } from '../data-components/header-text'
+import { Button } from '../designComp/button'
 
-export default function Banner({ data }: HomePageType) {
+export default function Banner({ data }: any) {
+  const splitSentence = data.homepage.title.split('-')
+
   return (
     <div id="top-header">
-      <div className="wrapper">
-        <div className="background"></div>
-        <PageHeader>{data.homepage.title}</PageHeader>
-
-        <style jsx>{`
-          div.wrapper {
-            margin-top: -${themePreval.height.header};
-            padding-top: ${themePreval.height.header};
-            position: relative;
+      <div className="h-banner relative overflow-hidden -mt-24">
+        <div className={'absolute hidden lgx:block xxl:hidden'}>
+          <img src={'/image/image-for-banner.png'} />
+        </div>
+        <div className="background absolute z-[-1] inset-0"></div>
+        <div
+          className={
+            'flex flex-wrap h-full flex-col justify-center items-center'
           }
-          div.background {
-            position: absolute;
-            z-index: -1;
-            inset: 0;
-            background: linear-gradient(
-              109.17deg,
-              rgba(1, 157, 177, 0.21) 38.49%,
-              #019db1 98.95%
-            );
-          }
-        `}</style>
+        >
+          <div
+            className={
+              'flex flex-shrink cursor-default font-body font-bold text-lg xml:text-7xl md:text-4xl'
+            }
+          >
+            {splitSentence[0] + ' - '}
+          </div>
+          <div
+            className={
+              'flex flex-shrink cursor-default font-body font-bold text-lg xml:text-7xl md:text-4xl'
+            }
+          >
+            {splitSentence[1]}
+          </div>
+          <div
+            className={
+              'flex flex-shrink text-center font-body text-sm md:text-[22px] xml:text-[24px] mt-5 px-1'
+            }
+          >
+            {data.homepage.description}
+          </div>
+          <div className={'mt-24 z-[5]'}>
+            <Button
+              text={data.homepage.getToKnowUsButton}
+              type={'big'}
+              href={'#about'}
+            />
+          </div>
+        </div>
       </div>
     </div>
   )
