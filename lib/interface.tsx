@@ -37,7 +37,7 @@ export type Common = {
   contactUsFormErrorPhoneMissing: string
   contactUsFormErrorPhoneInvalid: string
   contactUsFormErrorMessageMissing: string
-  contactUsFormSuccessMessage(contactUsFormSuccessMessage: any)
+  // contactUsFormSuccessMessage(contactUsFormSuccessMessage: any)
   contactUsLinks: Array<{
     text: string
     linkType: string

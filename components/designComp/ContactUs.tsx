@@ -52,8 +52,8 @@ export const ContactUsForm = ({ data }: HomePageType) => {
       message: '',
     },
     validate,
-    onSubmit: (values, onSubmitProps) => {
-      alert(data.common.contactUsFormSuccessMessage)
+    onSubmit: (_values, onSubmitProps) => {
+      alert(data.common.contactUsLinks)
       onSubmitProps.resetForm()
     },
   })
