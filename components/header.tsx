@@ -4,6 +4,7 @@ import { ChangeLangButton } from './data-components/change-language-button'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
+// import logoImg from '/images/Logo'
 
 export default function Header({ data }: any) {
   const { dir } = useLocale()
@@ -156,7 +157,7 @@ export default function Header({ data }: any) {
 const Logo = () => {
   return (
     <Link href={'/'}>
-      <img alt={'logo'} src="image/Logo.svg" />
+      <img alt={'logo'} src='/images/Logo' />
     </Link>
   )
 }
