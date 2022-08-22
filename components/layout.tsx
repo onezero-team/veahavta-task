@@ -1,6 +1,6 @@
 import Footer from '@/components/footer'
 import Header from './header'
-import Main from './Main'
+import Main from './main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
 import React from 'react'
