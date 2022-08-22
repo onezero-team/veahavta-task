@@ -1,5 +1,5 @@
 import { HomePageType } from '@/lib/interface'
-import { Button } from './button';
+import { Button } from './Button';
 import { useFormik } from 'formik';
 import {Input} from './Input';
 
