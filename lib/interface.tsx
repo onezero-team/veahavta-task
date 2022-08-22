@@ -30,6 +30,14 @@ export type Homepage = {
 }
 
 export type Common = {
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorMessageMissing: string
+  // contactUsFormSuccessMessage(contactUsFormSuccessMessage: any)
   contactUsLinks: Array<{
     text: string
     linkType: string
