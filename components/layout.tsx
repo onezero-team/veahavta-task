@@ -1,5 +1,5 @@
 import Footer from '@/components/footer'
-import Header from './Header'
+import Header from './header'
 import Main from './Main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
