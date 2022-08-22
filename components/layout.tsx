@@ -1,6 +1,6 @@
 import Footer from '@/components/footer'
-import Header from '@/components/header'
-import Main from '@/components/main'
+import Header from './Header'
+import Main from './Main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
 import React from 'react'
@@ -51,8 +51,6 @@ export default function Layout({ children, pageProps }: any) {
 
           *:focus-visible {
             outline: none !important;
-            box-shadow: 0 0 0 2px ${theme.colors.primary} !important;
-            border-radius: ${theme.borderRadius['2xl']};
           }
 
           .welcome-div {
