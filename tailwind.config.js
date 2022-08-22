@@ -23,6 +23,7 @@ module.exports = {
       xl: '1420px',
       xml: '1500px',
       xxl: '1925px',
+      '2xl': '2100px',
     },
     colors: {
       dark: 'black',
