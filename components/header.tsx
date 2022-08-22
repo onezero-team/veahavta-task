@@ -98,7 +98,7 @@ export default function Header({ data }: any) {
           </div>
           <ul
             ref={ulRef}
-            className="md:flex justify-end md:items-center z-[-1] md:z-auto
+            className="md:flex md:items-center z-[-1] md:z-auto
                 md:static absolute
                 bg-light  w-full left-0 md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all
                 ease-in duration-500 justify-between "
@@ -157,7 +157,7 @@ export default function Header({ data }: any) {
 const Logo = () => {
   return (
     <Link href={'/'}>
-      <img alt={'logo'} src='/images/Logo' />
+      <img alt={'logo'} src='/image/Logo.svg' />
     </Link>
   )
 }

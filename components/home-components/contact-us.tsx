@@ -76,7 +76,7 @@ export default function ContactUs({ data }: any) {
         </div>
         <div
           className={
-            'absolute flex justify-between flex-col items-center w-fit justify-center mt-[-950px] lgx:w-[1300px] lgx:-mt-64 lgx:flex-row'
+            'absolute flex justify-between flex-col items-center w-fit mt-[-950px] lgx:w-[1300px] lgx:-mt-64 lgx:flex-row'
           }
         >
           <div id={'contact-text'} className={'flex flex-col mt-80  mb-12  '}>

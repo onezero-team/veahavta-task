@@ -19,7 +19,7 @@ export default function Footer({ data }: any) {
             <img
               className={'w-96 h-40 mt-16 lgmx:-mt-36'}
               alt={'logo'}
-              src={'/image/BigLogo.svg'}
+              src='/image/BigLogo.svg'
             />
           </div>
           <div className={'mt-10 lgmx:-mt-32 flex flex-col'}>

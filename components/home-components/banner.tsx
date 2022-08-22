@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../designComp/button'
+import { Button } from '../designComp/Button'
 
 export default function Banner({ data }: any) {
   const splitSentence = data.homepage.title.split('-')
