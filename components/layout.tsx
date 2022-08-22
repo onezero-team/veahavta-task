@@ -51,6 +51,8 @@ export default function Layout({ children, pageProps }: any) {
 
           *:focus-visible {
             outline: none !important;
+            box-shadow: 0 0 0 2px ${theme.colors.primary} !important;
+            border-radius: ${theme.borderRadius['2xl']};
           }
 
           .welcome-div {
