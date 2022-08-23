@@ -26,12 +26,7 @@ export type Homepage = {
 }
 
 export type Common = {
-  contactUsLinks: Array<{
-    text: string
-    linkType: string
-    imagePath: string
-    linkValue: string
-  }>
+  contactUsLinks: Array<contactUsLinks>
   appLinks: Array<{
     text: string
     relativeLink: string
@@ -49,10 +44,24 @@ export type Common = {
   contactUsFormPhone: string
   contactUsFormMessage: string
   contactUsFormSendButton: string
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorMessageMissing: string
   footerMenuTitle: string
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+}
+
+export type contactUsLinks = {
+  text: string
+  linkType: string
+  imagePath: string
+  linkValue: string
 }
 
 export type whatWeDoCards = {
@@ -61,6 +70,13 @@ export type whatWeDoCards = {
   imagePath: string
 }
 
+export type FormData = {
+  firstName?: string
+  lastName?: string
+  email?: string
+  phone?: string
+  more?: string
+}
 
 export function HOMEPAGE_QUERY(locale: string) {
   return `
