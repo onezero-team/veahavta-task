@@ -5,7 +5,7 @@ import React from 'react'
 export default function Card({ data }: { data: whatWeDoCards }) {
   const { dir } = useLocale()
   return (
-    <div className="ml-4 shadow-4xl rounded-[31px] w-[340px] h-[480px] overflow-hidden">
+    <div className="sm:mx-8  ml-px shadow-4xl rounded-[31px] w-[340px] h-[480px] xs:w-[260px] xs:h-[364px] overflow-hidden">
       <div className="bg-contact-bg flex justify-center items-center h-1/2">
         <img className="h-[128px]" src={data.imagePath} />
       </div>

@@ -27,10 +27,7 @@ export type Homepage = {
 
 export type Common = {
   contactUsLinks: Array<contactUsLinks>
-  appLinks: Array<{
-    text: string
-    relativeLink: string
-  }>
+  appLinks: Array<appLinks>
   languageNames: Array<{
     he: string
     en: string
@@ -62,6 +59,11 @@ export type contactUsLinks = {
   linkType: string
   imagePath: string
   linkValue: string
+}
+
+export type appLinks ={
+  text: string
+  relativeLink: string
 }
 
 export type whatWeDoCards = {

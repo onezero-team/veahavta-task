@@ -17,12 +17,12 @@ export default function FormInput({
 }) {
   return (
     <div className={`${name === 'more' && className} flex flex-col`}>
-      <label className="my-2" htmlFor={name}>
-        <h3 className='text-sm font-bold'>{label}</h3>
+      <label className="my-2 mt-4" htmlFor={name}>
+        <h3 className="text-sm font-bold">{label}</h3>
       </label>
       <Field
         className={`h-3/7 rounded-[8px] px-2 py-4 text-paragraph shadow-4xl ${
-          name === 'more' && 'h-[110px]'
+          name === 'more' && 'h-32'
         }`}
         name={name}
         type={type}

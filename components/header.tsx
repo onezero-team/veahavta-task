@@ -30,6 +30,7 @@ const Logo = () => {
       <img
         className="object-contain max-w-[142px]"
         src="veahavta_logo_tiny.jpg"
+        alt="Logo"
       />
     </Link>
   )

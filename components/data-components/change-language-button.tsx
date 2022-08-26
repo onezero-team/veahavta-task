@@ -18,7 +18,7 @@ export const ChangeLangButton = ({
   return (
     <div>
       <button onClick={() => changeLocale(lang)}>
-        <img src={`languages/${lang}.png`} />
+        <img src={`languages/${lang}.png`} alt={lang} />
       </button>
     </div>
   )

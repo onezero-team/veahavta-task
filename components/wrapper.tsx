@@ -14,7 +14,7 @@ export function WrapperLarge({
   id?: string
 }) {
   return (
-    <section id={id} className={`grid ${className}`}>
+    <section id={id} className={`grid sm:px-5 ${className}`}>
       {children}
     </section>
   )

@@ -2,6 +2,7 @@ import { HomePageType } from '@/lib/interface'
 import React from 'react'
 import { WrapperLarge } from '../wrapper'
 import CarouselCards from '../carousel'
+import { PageHeader } from '../data-components/header-text'
 
 export default function WhatWeDo({ data }: HomePageType) {
   return (
@@ -9,9 +10,9 @@ export default function WhatWeDo({ data }: HomePageType) {
       <h3 className="text-red text-md justify-self-center sm:justify-self-start">
         {data.homepage.whatWeDoHeading}
       </h3>
-      <h2 className="font-bold text-xxl text-center mb-[58px] sm:hidden">
+      <PageHeader className="mb-[58px] sm:hidden">
         {data.homepage.whatWeDoTitle}
-      </h2>
+      </PageHeader>
       <CarouselCards data={data}></CarouselCards>
     </WrapperLarge>
   )
