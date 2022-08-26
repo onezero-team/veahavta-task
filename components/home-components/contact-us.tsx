@@ -25,8 +25,12 @@ export default function ContactUs({ data }: HomePageType) {
         <h3 className="bg-light rounded-[50px] text-accent-purple text-sm font-bold px-6 sm:px-0 py-1 mb-4">
           {data.homepage.contactUsHeading}
         </h3>
-        <h2 className="text-lg sm:text-md font-bold">{data.homepage.contactUsTitle}</h2>
-        <p className="text-sm sm:text-paragraph">{data.homepage.contactUsText}</p>
+        <h2 className="text-lg sm:text-md font-bold">
+          {data.homepage.contactUsTitle}
+        </h2>
+        <p className="text-sm sm:text-paragraph">
+          {data.homepage.contactUsText}
+        </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-9 gap-y-2 mt-10">
           {data.common.contactUsLinks.map((item, i) => {
             return <ContactInfo key={i} data={item} />

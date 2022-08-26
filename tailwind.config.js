@@ -11,7 +11,7 @@ module.exports = {
     screens: {
       xs: { max: '850px' },
       sm: { max: '1100px' },
-      'min-sm': {min: '850px' , max: '1100px'},
+      'min-sm': { min: '850px', max: '1100px' },
       'min-md': { min: '1100px' },
       md: { min: '1100px', max: '1500px' },
       lg: { min: '1500px' },
@@ -25,7 +25,7 @@ module.exports = {
       red: '#D25C78',
       'light-purple': '#E6E4FD',
       'accent-purple': '#4E47F9',
-      'opaque-dark': 'rgba(0,0,0,.5)'
+      'opaque-dark': 'rgba(0,0,0,.5)',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
@@ -36,14 +36,14 @@ module.exports = {
     },
     fontSize: {
       '2xl': ['82px', '1.15'],
-      '2xl-mobile': [ '38px','1.15'],
+      '2xl-mobile': ['38px', '1.15'],
       xl: ['52px', '1.15'],
-      'xl-mobile': [ '36px','1.15'],
+      'xl-mobile': ['36px', '1.15'],
       lg: ['42px', '1.3'],
       md: ['28px', '1.3'],
       sm: ['22px', '1.3'],
       paragraph: ['18px', '1.6'],
-      'sm-paragraph': ['16px', '2.1']
+      'sm-paragraph': ['16px', '2.1'],
     },
     extend: {
       colors: {

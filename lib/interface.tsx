@@ -61,7 +61,7 @@ export type contactUsLinks = {
   linkValue: string
 }
 
-export type appLinks ={
+export type appLinks = {
   text: string
   relativeLink: string
 }

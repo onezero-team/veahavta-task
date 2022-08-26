@@ -21,12 +21,12 @@ const responsive = {
   smallDesktop: {
     breakpoint: { max: 1500, min: 1100 },
     items: 3,
-    paritialVisibilityGutter: 60
+    paritialVisibilityGutter: 60,
   },
   tablet: {
     breakpoint: { max: 1100, min: 800 },
     items: 2,
-    paritialVisibilityGutter: 100
+    paritialVisibilityGutter: 100,
   },
   mobile: {
     breakpoint: { max: 850, min: 0 },
@@ -56,7 +56,11 @@ const CustomRightArrow = ({ onClick }: ArrowProps) => {
       className="absolute right-0 flex items-center justify-center shadow-4xl rounded-[51px] w-[68px] h-[68px] bg-light overflow-hidden"
       onClick={onClick}
     >
-      <img src="icons/arrow-icon.svg" alt="arrow to the right" className='pl-1'></img>
+      <img
+        src="icons/arrow-icon.svg"
+        alt="arrow to the right"
+        className="pl-1"
+      ></img>
     </button>
   )
 }
@@ -67,7 +71,11 @@ const CustomLeftArrow = ({ onClick }: ArrowProps) => {
       className="absolute left-0 flex items-center justify-center shadow-4xl rounded-[51px] w-[68px] h-[68px] bg-light overflow-hidden"
       onClick={onClick}
     >
-      <img src="icons/arrow-icon.svg" alt="arrow to the left" className="rotate-180 pl-1"></img>
+      <img
+        src="icons/arrow-icon.svg"
+        alt="arrow to the left"
+        className="rotate-180 pl-1"
+      ></img>
     </button>
   )
 }
