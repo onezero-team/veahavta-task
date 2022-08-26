@@ -1,6 +1,7 @@
 import { whatWeDoCards } from '@/lib/interface'
 import { useLocale } from '@/lib/hooks'
 import React from 'react'
+import Image from 'next/image'
 
 export default function Card({ data }: { data: whatWeDoCards }) {
   const { dir } = useLocale()

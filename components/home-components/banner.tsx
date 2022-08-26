@@ -57,8 +57,8 @@ export default function Banner({ data }: HomePageType) {
 
         <style jsx>{`
           div.wrapper {
-            margin-top: -${themePreval.height.header};
-            padding-top: 22px;
+            margin-top: -95px;
+            padding-top: 95px;
             position: relative;
             overflow: hidden;
             height: 780px;
