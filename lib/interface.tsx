@@ -19,27 +19,15 @@ export type Homepage = {
   aboutUsButton: string
   whatWeDoHeading: string
   whatWeDoTitle: string
-  whatWeDoCards: Array<{
-    title: string
-    text: string
-    imagePath: string
-  }>
+  whatWeDoCards: Array<whatWeDoCards>
   contactUsHeading: string
   contactUsTitle: string
   contactUsText: string
 }
 
 export type Common = {
-  contactUsLinks: Array<{
-    text: string
-    linkType: string
-    imagePath: string
-    linkValue: string
-  }>
-  appLinks: Array<{
-    text: string
-    relativeLink: string
-  }>
+  contactUsLinks: Array<contactUsLinks>
+  appLinks: Array<appLinks>
   languageNames: Array<{
     he: string
     en: string
@@ -53,10 +41,43 @@ export type Common = {
   contactUsFormPhone: string
   contactUsFormMessage: string
   contactUsFormSendButton: string
+  contactUsFormErrorFirstNameMissing: string
+  contactUsFormErrorLastNameMissing: string
+  contactUsFormErrorEmailMissing: string
+  contactUsFormErrorEmailInvalid: string
+  contactUsFormErrorPhoneMissing: string
+  contactUsFormErrorPhoneInvalid: string
+  contactUsFormErrorMessageMissing: string
   footerMenuTitle: string
   footerContactUsTitle: string
   footerScheduleButton: string
   footerSupportUsButton: string
+}
+
+export type contactUsLinks = {
+  text: string
+  linkType: string
+  imagePath: string
+  linkValue: string
+}
+
+export type appLinks = {
+  text: string
+  relativeLink: string
+}
+
+export type whatWeDoCards = {
+  title: string
+  text: string
+  imagePath: string
+}
+
+export type FormData = {
+  firstName?: string
+  lastName?: string
+  email?: string
+  phone?: string
+  more?: string
 }
 
 export function HOMEPAGE_QUERY(locale: string) {
