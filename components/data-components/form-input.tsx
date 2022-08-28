@@ -21,7 +21,7 @@ export default function FormInput({
         <h3 className="text-sm font-bold">{label}</h3>
       </label>
       <Field
-        className={`h-3/7 rounded-[8px] px-2 py-4 text-paragraph shadow-4xl ${
+        className={`h-3/7 rounded-[8px] px-2 py-4 text-paragraph appearance-none shadow-4xl ${
           name === 'more' && 'h-32'
         }`}
         name={name}

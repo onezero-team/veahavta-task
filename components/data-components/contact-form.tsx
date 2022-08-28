@@ -50,7 +50,7 @@ export default function ContactForm({ data }: { data: Common }) {
       }}
     >
       {({ errors, touched }) => (
-        <Form className="bg-light rounded-[36px] shadow-4xl md:w-10/12 lg:w-2/3 gap-x-4 px-8 lg:grid sm:py-4 sm:mt-16 xs:grid-cols-1 grid-cols-2 lg:px-12 md:py-14 lg:pb-24 lg:pt-12 sm:pb-10 relative z-10">
+        <Form className="bg-light rounded-[36px] appearance-none shadow-4xl md:w-10/12 lg:w-2/3 gap-x-4 px-8 lg:grid sm:py-4 sm:mt-16 xs:grid-cols-1 grid-cols-2 lg:px-12 md:py-14 lg:pb-24 lg:pt-12 sm:pb-10 relative z-10">
           <FormInput
             label={data.contactUsFormFirstName}
             name="firstName"
